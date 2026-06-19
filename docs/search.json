@@ -47,5 +47,12 @@
     "title": "Sabina de Virginia",
     "section": "",
     "text": "Árbol considerado fósil viviente…"
+  },
+  {
+    "objectID": "mapa.html",
+    "href": "mapa.html",
+    "title": "Mapa Interactivo",
+    "section": "",
+    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nWarning in validateCoords(lng, lat, funcName): Data contains 31 rows with\neither missing or invalid lat/lon values and will be ignored"
   }
 ]
