@@ -29,3 +29,4 @@ puntos <- puntos %>%
     latitud = as.numeric(latitud),
     longitud = as.numeric(longitud)
   )
+

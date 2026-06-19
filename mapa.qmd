@@ -178,7 +178,12 @@ año_plantacion
 #     ),
 # ) %>%
   addAwesomeMarkers(
-  data = aves,
+  # data = aves,
+  data = dplyr::filter(
+     aves,
+     !is.na(latitud),
+     !is.na(longitud)
+   ),
   lng = ~longitud,
   lat = ~latitud,
   icon = icono_ave,
@@ -204,7 +209,12 @@ año_plantacion
 ) %>%
 
   addAwesomeMarkers(
-  data = puntos,
+  # data = puntos,
+    data = dplyr::filter(
+     puntos,
+     !is.na(latitud),
+     !is.na(longitud)
+   ),
   lng = ~longitud,
   lat = ~latitud,
   icon = icono_poi,
