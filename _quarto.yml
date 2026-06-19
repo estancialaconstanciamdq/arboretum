@@ -1,0 +1,13 @@
+project:
+  type: website
+
+resources:
+  - fotos/*
+
+website:
+  title: "Lab del Arboretum"
+
+format:
+  html:
+    theme: cosmo
+

@@ -1,0 +1,241 @@
+---
+title: "Mapa Interactivo"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+source("scripts/cargar_datos.R")
+
+library(leaflet)
+library(htmltools)
+
+
+icono_arbol <- awesomeIcons(
+  icon = "tree",
+  library = "fa",
+  markerColor = "green",
+  iconColor = "white"
+)
+
+icono_ave <- awesomeIcons(
+  icon = "dove",
+  library = "fa",
+  markerColor = "blue",
+  iconColor = "white"
+)
+
+icono_poi <- awesomeIcons(
+  icon = "star",
+  library = "fa",
+  markerColor = "red",
+  iconColor = "white"
+)
+
+```
+
+```{r}
+
+# leaflet() %>%
+# 
+# addProviderTiles(
+#   providers$Esri.WorldImagery,
+#   group = "Satélite"
+# ) %>%
+# 
+# addCircleMarkers(
+# 
+#   data = arboles,
+# 
+#   lng = ~longitud,
+#   lat = ~latitud,
+# 
+#   radius = 6,
+# 
+#   color = "darkgreen",
+# 
+#   fillOpacity = 0.9,
+# 
+#   group = "Árboles",
+# 
+#   popup = ~paste0(
+#   "<h3>", nombre_comun, "</h3>",
+#   "<i>", nombre_cientifico, "</i><br><br>",
+#   "<b>Continente:</b> ", continente, "<br>",
+#   "<b>Plantado:</b> ", año_plantacion
+# )
+# 
+# ) %>%
+# 
+# addCircleMarkers(
+# 
+#   data = aves,
+# 
+#   lng = ~longitud,
+#   lat = ~latitud,
+# 
+#   radius = 5,
+# 
+#   color = "blue",
+# 
+#   fillOpacity = 0.9,
+# 
+#   group = "Aves",
+# 
+#   popup = ~paste0(
+#   "<h3>", especie, "</h3>",
+#   "<i>", nombre_cientifico, "</i><br><br>",
+# 
+# )
+# 
+# ) %>%
+# 
+#   
+ 
+
+
+leaflet() %>%
+
+addProviderTiles(
+  providers$Esri.WorldImagery,
+  group = "Satélite"
+) %>%
+
+ addAwesomeMarkers(
+
+   data = dplyr::filter(
+     arboles,
+     !is.na(latitud),
+     !is.na(longitud)
+   ),
+
+   lng = ~longitud,
+   lat = ~latitud,
+
+   icon = icono_arbol,
+
+   group = "Árboles",
+
+   # popup = ~paste0(
+   #   "<h3>", nombre_comun, "</h3>",
+   #   "<i>", nombre_cientifico, "</i><br><br>",
+   #   "<b>Continente:</b> ", continente, "<br>",
+   #   "<b>Plantado:</b> ", año_plantacion
+   # )
+   popup = ~paste0(
+
+"<h3>", nombre_comun, "</h3>",
+
+"<i>", nombre_cientifico, "</i><br><br>",
+
+  ifelse(
+    is.na(foto),
+    "",
+    paste0(
+      "<img src='fotos/",
+      foto,
+      "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
+      
+    )
+  ),
+
+"<b>Continente:</b> ",
+continente,
+"<br>",
+
+"<b>Plantado:</b> ",
+año_plantacion
+
+)
+
+ )%>%
+
+# addAwesomeMarkers(
+#   data = aves,
+#   lng = ~longitud,
+#   lat = ~latitud,
+#   icon = icono_ave,
+#   group = "Aves",
+#   # popup = ~paste0(
+#   #   "<h3>", especie, "</h3>",
+#   #   "<i>", nombre_cientifico, "</i><br><br>"
+#   # )
+#     popup = ~paste0(
+# 
+#     "<h3>", especie, "</h3>",
+# 
+#     "<i>", nombre_cientifico, "</i><br><br>",
+# 
+#     ifelse(
+#       is.na(foto),
+#       "",
+#       paste0(
+#         "<img src='fotos/",
+#         foto,
+#         "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
+#       )
+#     ),
+# ) %>%
+  addAwesomeMarkers(
+  data = aves,
+  lng = ~longitud,
+  lat = ~latitud,
+  icon = icono_ave,
+  group = "Aves",
+
+  popup = ~paste0(
+
+    "<h3>", especie, "</h3>",
+
+    "<i>", nombre_cientifico, "</i><br><br>",
+
+    ifelse(
+      is.na(foto),
+      "",
+      paste0(
+        "<img src='fotos/",
+        foto,
+        "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
+      )
+    )
+
+  )
+
+) %>%
+
+  addAwesomeMarkers(
+  data = puntos,
+  lng = ~longitud,
+  lat = ~latitud,
+  icon = icono_poi,
+  group = "Puntos de interés",
+  # popup = ~paste0(
+  #   "<h3>", nombre, "</h3>",
+  #   "<b>Tipo:</b> ", tipo, "<br><br>",
+  #   descripcion
+  # )
+    popup = ~paste0(
+
+    "<h3>", nombre, "</h3>",
+
+    "<i>", descripcion, "</i><br><br>",
+
+    ifelse(
+      is.na(foto),
+      "",
+      paste0(
+        "<img src='fotos/",
+        foto,
+        "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
+      )
+    )
+
+  )
+)%>%
+
+addLayersControl(
+  overlayGroups = c("Árboles", "Aves", "Puntos de interés"),
+  options = layersControlOptions(collapsed = FALSE)
+)
+```

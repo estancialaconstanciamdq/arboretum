@@ -1,0 +1,25 @@
+ArboretumMap/
+
+├── _quarto.yml
+├── index.qmd
+├── mapa.qmd
+├── especies.qmd
+├── aves.qmd
+├── styles.css
+│
+├── data/
+│     Arboretum_Master.xlsx
+│
+├── fotos/
+│
+├── scripts/
+│     cargar_datos.R
+│     crear_mapa.R
+│
+├── gis/
+│     senderos.geojson
+│     sectores.geojson
+│     limites.geojson      	
+│
+├── outputs/
+

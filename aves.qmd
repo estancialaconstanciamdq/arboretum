@@ -1,0 +1,89 @@
+---
+title: "Aves del Arboretum"
+subtitle: "Especies registradas en el predio"
+format: html
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(readxl)
+library(dplyr)
+
+archivo <- "data/Arboretum_Master.xlsx"
+
+aves <- read_excel(
+  archivo,
+  sheet = "Aves"
+)
+
+# Eliminar registros sin nombre de especie
+
+aves <- aves %>%
+  filter(
+    !is.na(especie),
+    !is.na(foto),
+    foto != ""
+  )
+```
+
+
+# 🐦 Aves del Arboretum
+
+Galería de especies observadas en el arboretum.
+
+```{r results='asis', echo=FALSE}
+
+cat("::: {.grid}\n\n")
+
+for(i in seq_len(nrow(aves))) {
+
+  cat("::: {.g-col-3}\n\n")
+
+  cat("::: {.card}\n\n")
+
+  # Foto
+
+  if(
+    !is.na(aves$foto[i]) &&
+    aves$foto[i] != ""
+  ){
+
+    cat(
+      paste0(
+        "<div style='text-align:center;'>",
+        "![](fotos/",
+        aves$foto[i],
+        "){width=180}",
+        "</div>\n\n"
+      )
+    )
+
+  }
+
+  # Nombre de la especie
+
+  cat(
+    paste0(
+      "<div style='text-align:center;'>",
+      "<strong>",
+      aves$especie[i],
+      "</strong>",
+      "</div>\n\n"
+    )
+  )
+
+  cat(":::\n\n")
+  cat(":::\n\n")
+
+}
+
+cat(":::\n")
+
+```
+
+---
+
+*Las fotografías fueron relevadas por los equipos de biólogos y ecólogos que trabajan en Estancia La Constancia.*
