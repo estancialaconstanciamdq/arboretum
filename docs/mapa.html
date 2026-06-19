@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab del Arboretum - Mapa Interactivo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+
+<link href="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+
+<link href="site_libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mapa Interactivo</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in validateCoords(lng, lat, funcName): Data contains 31 rows with
+either missing or invalid lat/lon values and will be ignored</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-128710ed5f8dcdb6095d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-128710ed5f8dcdb6095d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satélite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addAwesomeMarkers","args":[[-38.056791,-38.056472,-38.056541,-38.056569,-38.056549,-38.056437,-38.056372,-38.056239,-38.056201,-38.056054,-38.056331,-38.056329,-38.056373,-38.056551,-38.056644,-38.056727,-38.056678,-38.056844,-38.057062,-38.057076,-38.057192,-38.056909,-38.05684,-38.056934,-38.056656,-38.055929,-38.056056,-38.056057,-38.056168,-38.056127,-38.056093,-38.056374,-38.056545,-38.0558,-38.05574,-38.05573,-38.05576,-38.05564,-38.05563,-38.05561,-38.05576,-38.05573,-38.05572,-38.05574,-38.05569,-38.05572,-38.05585,-38.05578,-38.0559,-38.05577,-38.05564,-38.05567,-38.05553,-38.05554,-38.0555,-38.0556,-38.05523,-38.05521,-38.05508,-38.05502,-38.05503,-38.05532,-38.05529,-38.05553,-38.05566,-38.05593,-38.056,-38.05622,-38.05649,-38.05608,-38.0561,-38.05547,-38.05527,-38.05461,-38.05491,-38.05494,-38.05503,-38.05506,-38.05528,-38.05525,-38.05504,-38.0551],[-57.680154,-57.680521,-57.680555,-57.680685,-57.680737,-57.680856,-57.681121,-57.68099,-57.680907,-57.680894,-57.680572,-57.68043,-57.679866,-57.679765,-57.679769,-57.679967,-57.6801,-57.680508,-57.680232,-57.680527,-57.680583,-57.680885,-57.681064,-57.681113,-57.68126,-57.680409,-57.679651,-57.679449,-57.679357,-57.679297,-57.679557,-57.679314,-57.679395,-57.682849,-57.682864,-57.682739,-57.682726,-57.682655,-57.682537,-57.682472,-57.682429,-57.682438,-57.682395,-57.68213,-57.68208,-57.68198,-57.681933,-57.68175,-57.681743,-57.681628,-57.681649,-57.681577,-57.681601,-57.681418,-57.681415,-57.681349,-57.681177,-57.681096,-57.680938,-57.680618,-57.680501,-57.680429,-57.680601,-57.680985,-57.681065,-57.681297,-57.681529,-57.681656,-57.682174,-57.682552,-57.682554,-57.682776,-57.68253,-57.681095,-57.681428,-57.681583,-57.681492,-57.681479,-57.681835,-57.681941,-57.680912,-57.680595],{"icon":"tree","markerColor":"green","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,"Árboles",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h3>Sabina de Virginia<\/h3><i>Sabina virginiana (L.) Antoine<\/i><br><br><img src='fotos/Sabina.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> 2004","<h3>Pino<\/h3><i>Pinus sp.<\/i><br><br><img src='fotos/Pino.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Roble común<\/h3><i>Quercus robur L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Falso muérdago<\/h3><i>Ilex aquifolium L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Cedro del Himalaya<\/h3><i>Cedrus deodara (Roxb. ex D. Don) G. Don<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Casuarina<\/h3><i>Casuarina equisetifolia L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Falso laurel<\/h3><i>Nerium oleander L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Libocedro de California<\/h3><i>Calocedrus decurrens (Torr.) Florin<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Cedro azul<\/h3><i>Cedrus atlantica (Endl.) Manetti ex Carrière<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>-<\/h3><i>-<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Eucalyptus globulus Labill.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Cipres<\/h3><i>Cupressus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Roble rojo americano<\/h3><i>Quercus rubra L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Abeto<\/h3><i>Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Picea sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Limpiatubos<\/h3><i>Callistemon imperialis<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Abelia<\/h3><i>Abelia x grandiflora L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Crataegus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Magnolia<\/h3><i>Magnolia grandiflora L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Plátano<\/h3><i>Platanus x hispanica<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Tilo<\/h3><i>Tilia sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Araucaria Australiana<\/h3><i>Araucaria bidwillii Hook.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cupressus macrocarpa var. lutea topacio<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cupressus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Casuarina<\/h3><i>Casuarina equisetifolia L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Encina<\/h3><i>Quercus baloot Griff.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Pino mexicano amarillo<\/h3><i>Pinus patula Schltdl. & Cham.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Araucaria Australiana<\/h3><i>Araucaria bidwillii Hook.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Álamo blanco<\/h3><i>Populu alba L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Castaño de Indias<\/h3><i>Aesculus hippocastanum L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>?Alcanforero<\/h3><i>?Cinnamomum camphora<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Cedro japonés<\/h3><i>Cryptomeria japonica (Thunb. ex L. f.) D. Don<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>Liquidambar<\/h3><i>Liquidambar sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Quercus rubra L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Chamaecyparis lawsoniana<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Chamaecyparis obtusa<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Spiraea cantoniensis<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Spiraea cantoniensis<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Acer palmatum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Crataegus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Dodonaea viscosa<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Chamaecyparis lawsoniana<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Ligustrum lucidum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus sp.`<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cinnamomum camphora<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Revisar<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Acacia dealbata<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Quercus rubra L.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Dodonaea viscosa<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Acacia dealbata<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Liquidambar formosana<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Spiraea cantoniensis<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Pyracantha coccinea<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Dodonaea viscosa<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Ligustrum lucidum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Revisar<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Eucalyptus cinerea<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Sequoia semprevirens<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Pinus radiata<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Nothofagus dombeyi<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Nothofagus obliqua 2<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cryptomeria japónica<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Ginkgo biloba<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Eucalyptus globulus Labill.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Taxodium mucronatum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Fraxinus angustifolia<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Fraxinus exelsior<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Pinus radiata<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Eucalyptus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Celtis tala<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Brahea Armata Palmatum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Celtis tala<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Celtis tala<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus atlantica (Endl.) Manetti ex Carrière<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Cedrus atlantica (Endl.) Manetti ex Carrière<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Taxodium mucronatum<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Fagus sylvatica<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA","<h3>NA<\/h3><i>Quercus sp.<\/i><br><br><b>Continente:<\/b> NA<br><b>Plantado:<\/b> NA"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[[-38.056791,-38.056472,null,null,null,null,-38.057253,null,-38.055589,-38.055318,null,null,null,null,null,null,-38.053451,null,null,null,-38.055082,null,null,-38.057346,null,-38.05569,null,null,null,null,-38.057103,null,null,null,-38.057196,null,-38.05434,null,null,-38.055633,-38.054685,null,null,null,-38.055817,null],[-57.680154,-57.680521,null,null,null,null,-57.680219,null,-57.679961,-57.681131,null,null,null,null,null,null,-57.683277,null,null,null,-57.682054,null,null,-57.679361,null,-57.684317,null,null,null,null,-57.682547,null,null,null,-57.682281,null,-57.685511,null,null,-57.68124,-57.683684,null,null,null,-57.682558,null],{"icon":"dove","markerColor":"blue","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,"Aves",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h3>Benteveo<\/h3><i>Pitangus sulphuratus<\/i><br><br><img src='fotos/Benteveo.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Zorzal colorado<\/h3><i>Turdus rufiventris<\/i><br><br><img src='fotos/Zorzalcolorado.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Biguá<\/h3><i>Nannopterum brasilianum<\/i><br><br>","<h3>Cabecitanegra<\/h3><i>Spinus magellanicus<\/i><br><br>","<h3>Calandria<\/h3><i>Mimus saturninus<\/i><br><br>","<h3>Carancho<\/h3><i>Caracara plancus<\/i><br><br>","<h3>Carpintero campestre<\/h3><i>Colaptes campestris<\/i><br><br><img src='fotos/CarpinterosCampestres.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Chiflón<\/h3><i>Syrigma sibilatrix<\/i><br><br>","<h3>Chimango<\/h3><i>Milvago chimango<\/i><br><br><img src='fotos/Chimango.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Chingolo<\/h3><i>Zonotrichia capensis<\/i><br><br><img src='fotos/Chingolo.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Colibrí común<\/h3><i>Chlorostilbon lucidus<\/i><br><br>","<h3>Colibrí garganta blanca<\/h3><i>Leucochloris albicollis<\/i><br><br>","<h3>Corbatita<\/h3><i>Sporophila caerulescens<\/i><br><br>","<h3>Cotorra<\/h3><i>Myiopsitta monachus<\/i><br><br>","<h3>Cuervillo cara pelada<\/h3><i>Phimosus infuscatus<\/i><br><br>","<h3>Cuervillo de cañada<\/h3><i>Plegadis chihi<\/i><br><br>","<h3>Gavilán mixto<\/h3><i>Parabuteo unicinctus<\/i><br><br><img src='fotos/GavilanMixto.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Gaviota cocinera<\/h3><i>Larus dominicanus<\/i><br><br>","<h3>Golondrina<\/h3><i>Progne chalybea<\/i><br><br>","<h3>Golondrina tijerita<\/h3><i>Hirundo rustica<\/i><br><br>","<h3>Gorrión<\/h3><i>Passer domesticus<\/i><br><br><img src='fotos/Gorrion.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Halcón aplomado<\/h3><i>Falco femoralis<\/i><br><br>","<h3>Halconcito colorado<\/h3><i>Falco sparverius<\/i><br><br>","<h3>Hornero<\/h3><i>Furnarius rufus<\/i><br><br><img src='fotos/Hornero.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Jilguero<\/h3><i>Sicalis flaveola<\/i><br><br>","<h3>Lechucita de las vizcacheras<\/h3><i>Athene cunicularia<\/i><br><br><img src='fotos/LechucitaVizcachera.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Lechuza de campanario<\/h3><i>Tyto alba<\/i><br><br>","<h3>Milano blanco<\/h3><i>Elanus leucurus<\/i><br><br>","<h3>Músico<\/h3><i>Agelaioides badius<\/i><br><br>","<h3>Paloma doméstica<\/h3><i>Columba livia<\/i><br><br>","<h3>Pecho amarillo<\/h3><i>Pseudoleistes virescens<\/i><br><br><img src='fotos/PechoAmarillo.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Pecho colorado<\/h3><i>Leistes superciliaris<\/i><br><br>","<h3>Picazuro<\/h3><i>Patagioenas picazuro<\/i><br><br>","<h3>Piojito<\/h3><i>Serpophaga subcristata<\/i><br><br>","<h3>Pirincho<\/h3><i>Guira guira<\/i><br><br><img src='fotos/Pirincho.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Ratona<\/h3><i>Troglodytes aedon<\/i><br><br>","<h3>Suirirí real<\/h3><i>Tyrannus melancholicus<\/i><br><br><img src='fotos/Suiriríreal.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Tacuarita azul<\/h3><i>Polioptila dumicola<\/i><br><br>","<h3>Taguató<\/h3><i>Rupornis magnirostris<\/i><br><br>","<h3>Tero común<\/h3><i>Vanellus chilensis<\/i><br><br><img src='fotos/Tero.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Tijereta<\/h3><i>Tyrannus savana<\/i><br><br><img src='fotos/TyrannusSavana.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Torcacita<\/h3><i>Columbina picui<\/i><br><br>","<h3>Torcaza<\/h3><i>Zenaida auriculata<\/i><br><br>","<h3>Tordo pico corto<\/h3><i>Molothrus bonariensis<\/i><br><br>","<h3>Tordo renegrido<\/h3><i>Molothrus bonariensis<\/i><br><br><img src='fotos/Tordorenegrido.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Zorzal<\/h3><i>Turdus amaurochalinus<\/i><br><br>"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[[-38.056014,-38.056937,-38.056911,-38.056685],[-57.683935,-57.67995,-57.680886,-57.680563],{"icon":"star","markerColor":"red","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,"Puntos de interés",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h3>Estacionamiento<\/h3><i>Acceso principal<\/i><br><br><img src='fotos/entrada.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Fuente<\/h3><i>Excelente para observar aves<\/i><br><br><img src='fotos/Fuente.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Araucaria Australiana<\/h3><i>Uno de los ejemplares más destacados<\/i><br><br><img src='fotos/araucaria.jpg' style='max-width:100px; height:auto; border-radius:8px;'><br><br>","<h3>Cedro de Cristal<\/h3><i>NA<\/i><br><br>"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["Árboles","Aves","Puntos de interés"],{"collapsed":false,"autoZIndex":true,"position":"topright"}]}],"limits":{"lat":[-38.057346,-38.053451],"lng":[-57.685511,-57.679297]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
