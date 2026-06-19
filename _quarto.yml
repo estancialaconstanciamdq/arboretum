@@ -3,7 +3,8 @@ project:
   output-dir: docs
 
 resources:
-  - fotos/*
+   - fotos/**
+  
 
 website:
   title: "Lab del Arboretum"
