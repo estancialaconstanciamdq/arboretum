@@ -183,7 +183,6 @@ año_plantacion
   lat = ~latitud,
   icon = icono_ave,
   group = "Aves",
-
   popup = ~paste0(
 
     "<h3>", especie, "</h3>",
