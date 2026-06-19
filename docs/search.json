@@ -35,13 +35,6 @@
     "text": "🌳 Especies destacadas\nEjemplares seleccionados por su valor botánico, histórico o paisajístico.\n\n\n\n🌳 Sabina de Virginia\n\n\n\nFamilia: Cupressaceae\n\n\n\n\n🌳 Pino\n\n\n\nFamilia: Pinaceae\n\n\n\n\n🌳 Falso muérdago\nFamilia: NA\n\n\n\n\n🌳 Abeto\nFamilia: Pinaceae\n\n\n\n\n🌳 Limpiatubos\nFamilia: Myrtaceae"
   },
   {
-    "objectID": "mapa.html",
-    "href": "mapa.html",
-    "title": "Mapa Interactivo",
-    "section": "",
-    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nWarning in validateCoords(lng, lat, funcName): Data contains 31 rows with\neither missing or invalid lat/lon values and will be ignored"
-  },
-  {
     "objectID": "fichas/sabina.html",
     "href": "fichas/sabina.html",
     "title": "Sabina de Virginia",
@@ -54,5 +47,12 @@
     "title": "Sabina de Virginia",
     "section": "",
     "text": "Árbol considerado fósil viviente…"
+  },
+  {
+    "objectID": "mapa.html",
+    "href": "mapa.html",
+    "title": "Mapa Interactivo",
+    "section": "",
+    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nWarning in validateCoords(lng, lat, funcName): Data contains 31 rows with\neither missing or invalid lat/lon values and will be ignored"
   }
 ]
