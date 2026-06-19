@@ -194,7 +194,7 @@ año_plantacion
       is.na(foto),
       "",
       paste0(
-        "<img src='./fotos/",
+        "<img src='fotos/",
         foto,
         "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
       )
@@ -225,7 +225,7 @@ año_plantacion
       is.na(foto),
       "",
       paste0(
-        "<img src='./fotos/",
+        "<img src='fotos/",
         foto,
         "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
       )

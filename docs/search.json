@@ -40,5 +40,19 @@
     "title": "Mapa Interactivo",
     "section": "",
     "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nWarning in validateCoords(lng, lat, funcName): Data contains 31 rows with\neither missing or invalid lat/lon values and will be ignored"
+  },
+  {
+    "objectID": "fichas/sabina.html",
+    "href": "fichas/sabina.html",
+    "title": "Sabina de Virginia",
+    "section": "",
+    "text": "Sabina\n\n\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U\n\n\nÁrbol considerado fósil viviente…"
+  },
+  {
+    "objectID": "fichas/sabina.html#historia",
+    "href": "fichas/sabina.html#historia",
+    "title": "Sabina de Virginia",
+    "section": "",
+    "text": "Árbol considerado fósil viviente…"
   }
 ]
