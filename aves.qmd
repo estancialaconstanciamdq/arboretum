@@ -44,6 +44,7 @@ for(i in seq_len(nrow(aves))) {
 
   cat("::: {.card}\n\n")
 
+
   # Foto
 
   if(
@@ -53,34 +54,34 @@ for(i in seq_len(nrow(aves))) {
 
     cat(
       paste0(
-        "<div style='text-align:center;'>",
         "![](fotos/",
         aves$foto[i],
-        "){width=180}",
-        "</div>\n\n"
+        "){width=150}\n\n"
       )
     )
 
   }
 
-  # Nombre de la especie
+
+  # Nombre
 
   cat(
     paste0(
-      "<div style='text-align:center;'>",
-      "<strong>",
+      "### ",
       aves$especie[i],
-      "</strong>",
-      "</div>\n\n"
+      "\n\n"
     )
   )
 
+
   cat(":::\n\n")
+
   cat(":::\n\n")
 
 }
 
 cat(":::\n")
+
 
 ```
 
