@@ -23,23 +23,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "🌿 Laboratorio del Arboretum",
+    "title": "Laboratorio del Arboretum",
     "section": "",
-    "text": "Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia.\nEste espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.\n\n\n\n\n\n\n\n\n\n\nConozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico\nExplorar especies →\n\n\n\nGalería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna.\nExplorar aves →\n\n\n\nRecorra virtualmente los senderos, sectores y puntos de interés del arboretum.\nExplorar mapa →\n\n\n\n\n\nEl Laboratorio del Arboretum integra los relevamientos biológicos y ecológicos desarrollados en Estancia La Constancia.\nLa información presentada surge de actividades de monitoreo de flora, fauna y paisaje realizadas por equipos técnicos, investigadores y colaboradores del establecimiento.\nEl arboretum constituye un espacio destinado a la conservación, investigación y educación ambiental, promoviendo el conocimiento de la biodiversidad local.\n\n\n\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo, conservación e investigación en Estancia La Constancia."
+    "text": "Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia.\nEste espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica."
   },
   {
     "objectID": "index.html#explorar",
     "href": "index.html#explorar",
-    "title": "🌿 Laboratorio del Arboretum",
-    "section": "",
-    "text": "Conozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico\nExplorar especies →\n\n\n\nGalería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna.\nExplorar aves →\n\n\n\nRecorra virtualmente los senderos, sectores y puntos de interés del arboretum.\nExplorar mapa →"
+    "title": "Laboratorio del Arboretum",
+    "section": "Explorar",
+    "text": "Explorar\n\n\n🌳 Especies destacadas\nConozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico.\nExplorar especies →\n\n\n🐦 Aves\nGalería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna.\nExplorar aves →\n\n\n📍 Mapa interactivo\nRecorra virtualmente los senderos, sectores y puntos de interés del arboretum.\nExplorar mapa →"
   },
   {
     "objectID": "index.html#acerca-del-laboratorio",
     "href": "index.html#acerca-del-laboratorio",
-    "title": "🌿 Laboratorio del Arboretum",
-    "section": "",
-    "text": "El Laboratorio del Arboretum integra los relevamientos biológicos y ecológicos desarrollados en Estancia La Constancia.\nLa información presentada surge de actividades de monitoreo de flora, fauna y paisaje realizadas por equipos técnicos, investigadores y colaboradores del establecimiento.\nEl arboretum constituye un espacio destinado a la conservación, investigación y educación ambiental, promoviendo el conocimiento de la biodiversidad local.\n\n\n\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo, conservación e investigación en Estancia La Constancia."
+    "title": "Laboratorio del Arboretum",
+    "section": "Acerca del Laboratorio",
+    "text": "Acerca del Laboratorio\nEl Laboratorio del Arboretum integra los relevamientos biológicos y ecológicos desarrollados en Estancia La Constancia.\nLa información presentada surge de actividades de monitoreo de flora, fauna y paisaje realizadas por equipos técnicos, investigadores y colaboradores del establecimiento.\nEl arboretum constituye un espacio destinado a la conservación, investigación y educación ambiental, promoviendo el conocimiento de la biodiversidad local."
   },
   {
     "objectID": "fichas/sabina.html",
@@ -54,5 +54,12 @@
     "title": "Sabina de Virginia",
     "section": "",
     "text": "Árbol considerado fósil viviente…"
+  },
+  {
+    "objectID": "index.html#créditos",
+    "href": "index.html#créditos",
+    "title": "Laboratorio del Arboretum",
+    "section": "Créditos",
+    "text": "Créditos\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo, conservación e investigación en Estancia La Constancia."
   }
 ]
