@@ -179,8 +179,38 @@ año_plantacion
 #       )
 #     ),
 # ) %>%
+#   addAwesomeMarkers(
+#   # data = aves,
+#   data = dplyr::filter(
+#      aves,
+#      !is.na(latitud),
+#      !is.na(longitud)
+#    ),
+#   lng = ~longitud,
+#   lat = ~latitud,
+#   icon = icono_ave,
+#   group = "Aves",
+#   popup = ~paste0(
+# 
+#     "<h3>", especie, "</h3>",
+# 
+#     "<i>", nombre_cientifico, "</i><br><br>",
+#     
+# 
+#     ifelse(
+#       is.na(foto),
+#       "",
+#       paste0(
+#         "<img src='fotos/",
+#         foto,
+#         "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
+#       )
+#     )
+#   )
+# 
+# ) %>%
+  
   addAwesomeMarkers(
-  # data = aves,
   data = dplyr::filter(
      aves,
      !is.na(latitud),
@@ -191,23 +221,23 @@ año_plantacion
   icon = icono_ave,
   group = "Aves",
   popup = ~paste0(
-
     "<h3>", especie, "</h3>",
-
     "<i>", nombre_cientifico, "</i><br><br>",
-
-    ifelse(
+    
+    # 1. Bloque de la Foto
+    dplyr::if_else(
       is.na(foto),
       "",
-      paste0(
-        "<img src='fotos/",
-        foto,
-        "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>"
-      )
+      paste0("<img src='fotos/", foto, "' style='max-width:100px; height:auto; border-radius:8px;'><br><br>")
+    ),
+    
+    # 2. Bloque de la Época de Observación (Debajo de la foto)
+    dplyr::if_else(
+      is.na(observacion),
+      "",
+      paste0("<b>Época de Observación:</b> ", observacion, "<br><br>")
     )
-
   )
-
 ) %>%
 
   addAwesomeMarkers(
