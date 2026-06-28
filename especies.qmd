@@ -33,7 +33,7 @@ arboles_destacados <- arboles %>%
 
 ```
 
-# 🌳 Especies destacadas
+<!-- # 🌳 Especies destacadas -->
 
 Ejemplares seleccionados por su valor botánico, histórico o paisajístico.
 ```{r results='asis', echo=FALSE}
