@@ -53,7 +53,7 @@ cat("::: {.card}\n\n")
 
 cat(
 paste0(
-"### 🌳 [",
+"####  [",
 arboles_destacados$nombre_comun[i],
 "](fichas/",
 arboles_destacados$ficha[i],
