@@ -13,5 +13,47 @@
   },
   "aves.qmd": {
     "aves.html": "bd6964db"
+  },
+  "fichas/secuoiaroja.qmd": {
+    "secuoiaroja.html": "bdb260c9"
+  },
+  "fichas/roblerojo.qmd": {
+    "roblerojo.html": "e0825e66"
+  },
+  "fichas/abeto.qmd": {
+    "abeto.html": "fd6d7887"
+  },
+  "fichas/araucariaaustraliana.qmd": {
+    "araucariaaustraliana.html": "007fc892"
+  },
+  "fichas/arboldelostulipanes.qmd": {
+    "arboldelostulipanes.html": "5259612d"
+  },
+  "fichas/castanodeindias.qmd": {
+    "castanodeindias.html": "13cb0876"
+  },
+  "fichas/cedroazul.qmd": {
+    "cedroazul.html": "25ffdb04"
+  },
+  "fichas/cedrodelhimalaya.qmd": {
+    "cedrodelhimalaya.html": "4d22d8ec"
+  },
+  "fichas/cedrojapones.qmd": {
+    "cedrojapones.html": "be60792e"
+  },
+  "fichas/damara.qmd": {
+    "damara.html": "bbc57434"
+  },
+  "fichas/encina.qmd": {
+    "encina.html": "1e3ec562"
+  },
+  "fichas/gingko.qmd": {
+    "gingko.html": "35da8d05"
+  },
+  "fichas/limpiatubos.qmd": {
+    "limpiatubos.html": "58789be4"
+  },
+  "fichas/roblecomun.qmd": {
+    "roblecomun.html": "1ff0b41c"
   }
 }
