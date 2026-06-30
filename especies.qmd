@@ -46,7 +46,8 @@ for(i in seq_len(nrow(arboles_destacados))) {
 cat("::: {.g-col-4}\n\n")
 
 
-cat("::: {.card}\n\n")
+# cat("::: {.card}\n\n")
+cat("::: {.card .text-center}\n\n")
 
 
 # Nombre
