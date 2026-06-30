@@ -1,0 +1,26 @@
+---
+title: "Sabina de Virginia"
+format: html
+---
+
+<!-- # 🌳 Sabina de Virginia -->
+
+
+![Sabina](../fotos/Sabina.jpg)
+
+
+**Nombre científico:**
+*Sabina virginiana (L.) Antoine.*
+
+
+**Familia:**
+Cupressaceae
+
+
+**Origen:**
+E.E.U.U
+
+
+## Historia
+
+Árbol considerado fósil viviente...
