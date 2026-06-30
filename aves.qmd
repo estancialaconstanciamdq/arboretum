@@ -42,7 +42,8 @@ for(i in seq_len(nrow(aves))) {
 
   cat("::: {.g-col-3}\n\n")
 
-  cat("::: {.card}\n\n")
+  # cat("::: {.card}\n\n")
+  cat("::: {.card .text-center}\n\n")
 
 
   # Foto
@@ -67,7 +68,7 @@ for(i in seq_len(nrow(aves))) {
 
   cat(
     paste0(
-      "### ",
+      "#### ",
       aves$especie[i],
       "\n\n"
     )
