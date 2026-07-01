@@ -1,12 +1,12 @@
 ---
-title: "Sabina de Virginia"
+title: "Sequoiadendron giganteum"
 format: html
 ---
 
 <!-- # 🌳 Sabina de Virginia -->
 
 
-![Sabina](../fotos/Sabina.jpg)
+![Sabina](../fotos/Sequoiaroja.jpg)
 
 
 **Nombre científico:**

@@ -7,6 +7,10 @@ execute:
   message: false
 ---
 
+::: {.lead}
+Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. **Seleccioná cada punto en el mapa para descubrir más detalles.**
+:::
+   
 ```{r}
 source("scripts/cargar_datos.R")
 

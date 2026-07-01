@@ -1,16 +1,16 @@
 ---
-title: "Sabina de Virginia"
+title: "Cedro de Cristal"
 format: html
 ---
 
 <!-- # 🌳 Sabina de Virginia -->
 
 
-![Sabina](../fotos/Sabina.jpg)
+![Sabina](../fotos/Cedrodecristal.jpg)
 
 
 **Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+*Agathis dammara*
 
 
 **Familia:**
