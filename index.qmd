@@ -10,7 +10,11 @@ Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia.
 
 Este espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.
 
-![](fotos/portada3.jpg){fig-align="center" .rounded .shadow-sm alt="Panel del Arboretum Data Lab"}
+<!-- ![](fotos/portada3.jpg){fig-align="center" .rounded .shadow-sm alt="Panel del Arboretum Data Lab"} -->
+
+<div style="text-align: center; margin-bottom: 2rem;">
+  <img src="fotos/portada3.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Panel del Arboretum Data Lab">
+</div>
 
 <!-- ## Explorar -->
 
