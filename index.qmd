@@ -20,7 +20,7 @@ Este espacio reúne información sobre las especies vegetales, aves y principale
 
 Conozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico.
 
-[Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm role="button"}
+[Explorar especies →](especies.qmd){.btn .btn-success .btn-sm role="button"}
 :::
 
 ::: g-col-4
@@ -28,7 +28,7 @@ Conozca los ejemplares más representativos de la flora del arboretum, incluyend
 
 Galería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna.
 
-[Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm role="button"}
+[Explorar aves →](aves.qmd){.btn .btn-success .btn-sm role="button"}
 :::
 
 ::: g-col-4
@@ -36,22 +36,36 @@ Galería fotográfica de aves registradas en Estancia La Constancia a través de
 
 Recorra virtualmente los senderos, sectores y puntos de interés del arboretum.
 
-[Explorar mapa →](mapa.qmd){.btn .btn-outline-success .btn-sm role="button"}
+[Explorar mapa →](mapa.qmd){.btn .btn-success .btn-sm role="button"}
 :::
 :::
+
+<!-- --- -->
+
+<!-- ## Acerca del Laboratorio -->
+
+<!-- El Laboratorio del Arboretum integra los relevamientos biológicos y ecológicos desarrollados en Estancia La Constancia. -->
+
+<!-- La información presentada surge de actividades de monitoreo de flora, fauna y paisaje realizadas por equipos técnicos, investigadores y colaboradores del establecimiento. -->
+
+<!-- El arboretum constituye un espacio destinado a la conservación, investigación y educación ambiental, promoviendo el conocimiento de la biodiversidad local. -->
+
+<!-- --- -->
+
+<!-- ## Créditos -->
+
+<!-- Las fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo, conservación e investigación en Estancia La Constancia. -->
 
 ---
 
+::: grid
+::: g-col-7
 ## Acerca del Laboratorio
+El Laboratorio del Arboretum integra los relevamientos biológicos desarrollados en Estancia La Constancia para promover la conservación, investigación y educación ambiental de la biodiversidad local.
+:::
 
-El Laboratorio del Arboretum integra los relevamientos biológicos y ecológicos desarrollados en Estancia La Constancia.
-
-La información presentada surge de actividades de monitoreo de flora, fauna y paisaje realizadas por equipos técnicos, investigadores y colaboradores del establecimiento.
-
-El arboretum constituye un espacio destinado a la conservación, investigación y educación ambiental, promoviendo el conocimiento de la biodiversidad local.
-
----
-
+::: g-col-5
 ## Créditos
-
-Las fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo, conservación e investigación en Estancia La Constancia.
+Las fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento.
+:::
+:::
