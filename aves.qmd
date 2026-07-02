@@ -57,7 +57,7 @@ for(i in seq_len(nrow(aves))) {
       paste0(
         "![](fotos/",
         aves$foto[i],
-        "){width=150}\n\n"
+        "){width=150 style='height:150px; object-fit:cover; border-radius:8px;'}\n\n"
       )
     )
 
