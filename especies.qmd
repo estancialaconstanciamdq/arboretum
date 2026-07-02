@@ -70,15 +70,25 @@ if(
 !is.na(arboles_destacados$foto[i])
 ){
 
+# cat(
+# paste0(
+# "<div style='text-align:center;'>",
+# "![](fotos/",
+# arboles_destacados$foto[i],
+# "){width=150}",
+# "</div>\n\n"
+# )
+# )
 cat(
 paste0(
 "<div style='text-align:center;'>",
 "![](fotos/",
 arboles_destacados$foto[i],
-"){width=150}",
+"){width=150 style='height:150px; object-fit:cover; border-radius:8px;'}",
 "</div>\n\n"
 )
 )
+  
 
 }
 
