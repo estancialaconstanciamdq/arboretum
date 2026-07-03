@@ -1,0 +1,39 @@
+---
+title: "Etiquetas con código QR"
+subtitle: "Para imprimir y colocar junto a cada ejemplar"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+source("scripts/cargar_datos.R")
+et <- arboles %>%
+  filter(file.exists(file.path("qr", paste0(slug, ".png")))) %>%
+  arrange(nombre_comun)
+esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);gsub(">","&gt;",x,fixed=TRUE)}
+```
+
+Cada etiqueta lleva el código QR que abre la ficha del árbol. Usá el botón de imprimir del navegador (Ctrl+P) para generar la hoja; podés recortar por las líneas.
+
+```{r results='asis'}
+cat('<style>
+.et-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.5rem;}
+.et-card{border:1px dashed #bbb;border-radius:8px;padding:.6rem;text-align:center;page-break-inside:avoid;}
+.et-card img{width:120px;height:120px;}
+.et-card .n{font-weight:700;margin-top:.3rem;font-size:.95rem;line-height:1.15;}
+.et-card .s{font-style:italic;color:#555;font-size:.78rem;}
+@media print{.navbar,.et-hint{display:none !important;} body{margin:0;}}
+</style>')
+cat('<div class="et-grid">')
+for (i in seq_len(nrow(et))) {
+  a <- et[i, ]
+  nom <- if (tiene_valor(a$nombre_comun)) a$nombre_comun else if (tiene_valor(a$nombre_cientifico)) a$nombre_cientifico else a$ID
+  sci <- if (tiene_valor(a$nombre_cientifico)) esc(a$nombre_cientifico) else "&nbsp;"
+  cat(sprintf('<div class="et-card"><img src="qr/%s.png" alt="QR %s"><div class="n">%s</div><div class="s">%s</div></div>',
+    esc(a$slug), esc(nom), esc(nom), sci))
+}
+cat('</div>')
+```

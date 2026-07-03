@@ -5,6 +5,7 @@ project:
 
 resources:
    - fotos/**
+   - qr/**
   
 
 website:
@@ -26,6 +27,8 @@ website:
         href: aves.qmd
       - text: "Estadísticas"
         href: estadisticas.qmd
+      - text: "Etiquetas"
+        href: etiquetas.qmd
 
 format:
   html:

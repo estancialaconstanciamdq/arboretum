@@ -88,6 +88,15 @@ construir_ficha <- function(t) {
     ))
   }
 
+  # Código QR (si existe la imagen generada por scripts/generar_qr.py)
+  qr_rel <- file.path("qr", paste0(t$slug, ".png"))
+  if (file.exists(qr_rel)) {
+    add(sprintf(
+      "## Código QR\n\n![Código QR de la ficha](../qr/%s.png){width=130}\n\nEscaneá para abrir esta ficha en el celular.\n",
+      t$slug
+    ))
+  }
+
   # Footer
   add("---\n\n[« Volver a las especies](../especies.qmd)\n")
 
