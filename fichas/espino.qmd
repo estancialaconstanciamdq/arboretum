@@ -1,0 +1,25 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB082).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Espino"
+format: html
+---
+
+**Nombre científico:** *Eucalyptus sp.*
+
+
+**Continente:** Hemisferio Norte
+
+
+## Ubicación
+
+Coordenadas: -38.05527, -57.68253
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,22 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB039).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Hipericón canario"
+format: html
+---
+
+**Nombre científico:** *Hypericum x moserianum*
+
+
+**Familia:** Hypericaceae
+
+
+**Continente:** África (Islas Canarias)
+
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,28 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB002).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Pino"
+format: html
+---
+
+**Nombre científico:** *Pinus sp.*
+
+
+**Familia:** Pinaceae
+
+
+**Continente:** Hemisferio Norte / Variable
+
+
+## Ubicación
+
+Coordenadas: -38.056472, -57.680521
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

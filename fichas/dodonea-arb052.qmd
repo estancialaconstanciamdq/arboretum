@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB052).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Dodonea"
+format: html
+---
+
+**Nombre científico:** *Dodonaea viscosa*
+
+
+**Familia:** Sapindaceae
+
+
+**Origen:** Australia
+
+
+**Continente:** Oceanía / América / África (Cosmopolita tropical)
+
+
+## Ubicación
+
+Coordenadas: -38.05572, -57.682395
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

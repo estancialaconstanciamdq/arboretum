@@ -1,0 +1,25 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB064).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Cedro"
+format: html
+---
+
+**Nombre científico:** *Cedrus sp.*
+
+
+**Continente:** África / Asia / Europa
+
+
+## Ubicación
+
+Coordenadas: -38.0555, -57.681415
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

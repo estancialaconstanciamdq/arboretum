@@ -1,0 +1,28 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB024).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Cipreses"
+format: html
+---
+
+**Nombre científico:** *Cupressus sp.*
+
+
+**Familia:** Cupressaceae
+
+
+**Continente:** Hemisferio Norte / Variable
+
+
+## Ubicación
+
+Coordenadas: -38.056934, -57.681113
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

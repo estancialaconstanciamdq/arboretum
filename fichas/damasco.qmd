@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB084).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Damasco"
+format: html
+---
+
+**Nombre científico:** *Brahea Armata Palmatum*
+
+
+**Familia:** Arecaceae
+
+
+**Origen:** Norte América
+
+
+**Continente:** Asia (Central)
+
+
+## Ubicación
+
+Coordenadas: -38.05491, -57.681428
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

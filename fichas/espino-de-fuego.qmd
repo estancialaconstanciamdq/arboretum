@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB065).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Espino de fuego"
+format: html
+---
+
+**Nombre científico:** *Pyracantha coccinea*
+
+
+**Familia:** Rosaceae
+
+
+**Origen:** Europa, Asia
+
+
+**Continente:** Europa / Asia
+
+
+## Ubicación
+
+Coordenadas: -38.0556, -57.681349
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

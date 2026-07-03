@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB044).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Aliso andino"
+format: html
+---
+
+**Nombre científico:** *Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.*
+
+
+**Familia:** Pinaceae
+
+
+**Origen:** América
+
+
+**Continente:** América (del Norte y del Sur)
+
+
+## Ubicación
+
+Coordenadas: -38.05574, -57.682864
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,25 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB015).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Picea sp."
+format: html
+---
+
+**Nombre científico:** *Picea sp.*
+
+
+**Familia:** Pinaceae
+
+
+## Ubicación
+
+Coordenadas: -38.056644, -57.679769
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

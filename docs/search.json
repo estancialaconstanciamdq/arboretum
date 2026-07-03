@@ -7,11 +7,641 @@
     "text": "Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Seleccioná cada punto en el mapa para descubrir más detalles."
   },
   {
-    "objectID": "aves.html",
-    "href": "aves.html",
-    "title": "Aves del Arboretum",
+    "objectID": "fichas/tilo.html",
+    "href": "fichas/tilo.html",
+    "title": "Tilo",
     "section": "",
-    "text": "🐦 Aves del Arboretum\nGalería de especies observadas en el arboretum.\n\n\n\n\n\nBenteveo\n\n\n\n\n\n\n\nZorzal colorado\n\n\n\n\n\n\n\nCalandria\n\n\n\n\n\n\n\nCarancho\n\n\n\n\n\n\n\nChimango\n\n\n\n\n\n\n\nChingolo\n\n\n\n\n\n\n\nGavilán mixto\n\n\n\n\n\n\n\nGorrión\n\n\n\n\n\n\n\nHornero\n\n\n\n\n\n\n\nLechucita de las vizcacheras\n\n\n\n\n\n\n\nPecho amarillo\n\n\n\n\n\n\n\nPicazuro\n\n\n\n\n\n\n\nPirincho\n\n\n\n\n\n\n\nSuirirí real\n\n\n\n\n\n\n\nTero común\n\n\n\n\n\n\n\nTijereta\n\n\n\n\n\n\n\nTorcaza\n\n\n\n\n\n\n\nTordo renegrido\n\n\n\n\n\nLas fotografías fueron relevadas por los equipos de biólogos y ecólogos que trabajan en Estancia La Constancia."
+    "text": "Nombre científico: Tilia sp.\nFamilia: Malvaceae\nContinente: Hemisferio Norte / Variable\nAño de plantación: 1990"
+  },
+  {
+    "objectID": "fichas/tilo.html#ubicación",
+    "href": "fichas/tilo.html#ubicación",
+    "title": "Tilo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.057192, -57.680583\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/secuoya.html",
+    "href": "fichas/secuoya.html",
+    "title": "Secuoya",
+    "section": "",
+    "text": "Nombre científico: Sequoia semprevirens\nFamilia: Cupressaceae\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/secuoya.html#ubicación",
+    "href": "fichas/secuoya.html#ubicación",
+    "title": "Secuoya",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05503, -57.680501\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/sabina.html",
+    "href": "fichas/sabina.html",
+    "title": "Sabina de Virginia",
+    "section": "",
+    "text": "Nombre científico: Sabina virginiana (L.) Antoine\nFamilia: Cupressaceae\nOrigen: E.E.U.U\nContinente: América del Norte\nAño de plantación: 2004"
+  },
+  {
+    "objectID": "fichas/sabina.html#ubicación",
+    "href": "fichas/sabina.html#ubicación",
+    "title": "Sabina de Virginia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056791, -57.680154\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/roblecomun.html",
+    "href": "fichas/roblecomun.html",
+    "title": "Roble común",
+    "section": "",
+    "text": "Nombre científico: Quercus robur L.\nFamilia: Fagaceae\nOrigen: Europa\nContinente: Europa / Asia Occidental"
+  },
+  {
+    "objectID": "fichas/roblecomun.html#ubicación",
+    "href": "fichas/roblecomun.html#ubicación",
+    "title": "Roble común",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056541, -57.680555\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/roble-rojo-arb043.html",
+    "href": "fichas/roble-rojo-arb043.html",
+    "title": "Roble rojo",
+    "section": "",
+    "text": "Nombre científico: Quercus rubra L.\nFamilia: Fagaceae\nOrigen: Europa\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/roble-rojo-arb043.html#ubicación",
+    "href": "fichas/roble-rojo-arb043.html#ubicación",
+    "title": "Roble rojo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0558, -57.682849\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/platano.html",
+    "href": "fichas/platano.html",
+    "title": "Plátano",
+    "section": "",
+    "text": "Nombre científico: Platanus x hispanica\nFamilia: Platanaceae\nOrigen: Europa\nContinente: Europa / Origen Híbrido"
+  },
+  {
+    "objectID": "fichas/platano.html#ubicación",
+    "href": "fichas/platano.html#ubicación",
+    "title": "Plátano",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.057076, -57.680527\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/pino-radiata.html",
+    "href": "fichas/pino-radiata.html",
+    "title": "Pino radiata",
+    "section": "",
+    "text": "Nombre científico: Pinus radiata\nFamilia: Pinaceae\nOrigen: Norte América\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/pino-radiata.html#ubicación",
+    "href": "fichas/pino-radiata.html#ubicación",
+    "title": "Pino radiata",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05547, -57.682776\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/pino-insigne.html",
+    "href": "fichas/pino-insigne.html",
+    "title": "Pino insigne",
+    "section": "",
+    "text": "Nombre científico: Pinus radiata\nFamilia: Pinaceae\nOrigen: Norte América\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/pino-insigne.html#ubicación",
+    "href": "fichas/pino-insigne.html#ubicación",
+    "title": "Pino insigne",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05532, -57.680429\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/magnolia.html",
+    "href": "fichas/magnolia.html",
+    "title": "Magnolia",
+    "section": "",
+    "text": "Nombre científico: Magnolia grandiflora L.\nFamilia: Magnoliaceae\nOrigen: E.E.U.U\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/magnolia.html#ubicación",
+    "href": "fichas/magnolia.html#ubicación",
+    "title": "Magnolia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.057062, -57.680232\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/macasar-arb045.html",
+    "href": "fichas/macasar-arb045.html",
+    "title": "Macasar",
+    "section": "",
+    "text": "Nombre científico: Chamaecyparis lawsoniana\nFamilia: Cupressaceae\nOrigen: Norte América\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/macasar-arb045.html#ubicación",
+    "href": "fichas/macasar-arb045.html#ubicación",
+    "title": "Macasar",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05573, -57.682739\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/liquidambar-de-formosa.html",
+    "href": "fichas/liquidambar-de-formosa.html",
+    "title": "Liquidámbar de Formosa",
+    "section": "",
+    "text": "Nombre científico: Liquidambar formosana\nFamilia: Altingiaceae\nOrigen: Asia\nContinente: Asia (China / Taiwán)"
+  },
+  {
+    "objectID": "fichas/liquidambar-de-formosa.html#ubicación",
+    "href": "fichas/liquidambar-de-formosa.html#ubicación",
+    "title": "Liquidámbar de Formosa",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05553, -57.681601\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ligustro-arb067.html",
+    "href": "fichas/ligustro-arb067.html",
+    "title": "Ligustro",
+    "section": "",
+    "text": "Nombre científico: Ligustrum lucidum\nFamilia: Olives\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/ligustro-arb067.html#ubicación",
+    "href": "fichas/ligustro-arb067.html#ubicación",
+    "title": "Ligustro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05521, -57.681096\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/libocedro-de-california.html",
+    "href": "fichas/libocedro-de-california.html",
+    "title": "Libocedro de California",
+    "section": "",
+    "text": "Nombre científico: Calocedrus decurrens (Torr.) Florin\nFamilia: Cupressaceae\nOrigen: E.E.U.U\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/libocedro-de-california.html#ubicación",
+    "href": "fichas/libocedro-de-california.html#ubicación",
+    "title": "Libocedro de California",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056239, -57.68099\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/haya-comun.html",
+    "href": "fichas/haya-comun.html",
+    "title": "Haya común",
+    "section": "",
+    "text": "Nombre científico: Fagus sylvatica\nFamilia: Fagaceae\nOrigen: Europa\nContinente: Europa"
+  },
+  {
+    "objectID": "fichas/haya-comun.html#ubicación",
+    "href": "fichas/haya-comun.html#ubicación",
+    "title": "Haya común",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05504, -57.680912\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/gingko.html",
+    "href": "fichas/gingko.html",
+    "title": "Ginkgo",
+    "section": "",
+    "text": "Nombre científico: Acer palmatum\nFamilia: Sapindaceae\nOrigen: Asia\nContinente: Asia (China)\nAño de plantación: 2002"
+  },
+  {
+    "objectID": "fichas/gingko.html#ubicación",
+    "href": "fichas/gingko.html#ubicación",
+    "title": "Ginkgo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05576, -57.682429\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/falso-laurel.html",
+    "href": "fichas/falso-laurel.html",
+    "title": "Falso laurel",
+    "section": "",
+    "text": "Nombre científico: Nerium oleander L.\nFamilia: Apocynaceae\nOrigen: Europa-Asia\nContinente: Europa (Mediterráneo) / Asia"
+  },
+  {
+    "objectID": "fichas/falso-laurel.html#ubicación",
+    "href": "fichas/falso-laurel.html#ubicación",
+    "title": "Falso laurel",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056372, -57.681121\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/eucalipto-blanco.html",
+    "href": "fichas/eucalipto-blanco.html",
+    "title": "Eucalipto blanco",
+    "section": "",
+    "text": "Nombre científico: Eucalyptus globulus Labill.\nFamilia: Myrtaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/eucalipto-blanco.html#ubicación",
+    "href": "fichas/eucalipto-blanco.html#ubicación",
+    "title": "Eucalipto blanco",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05622, -57.681656\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/espino-de-fuego.html",
+    "href": "fichas/espino-de-fuego.html",
+    "title": "Espino de fuego",
+    "section": "",
+    "text": "Nombre científico: Pyracantha coccinea\nFamilia: Rosaceae\nOrigen: Europa, Asia\nContinente: Europa / Asia"
+  },
+  {
+    "objectID": "fichas/espino-de-fuego.html#ubicación",
+    "href": "fichas/espino-de-fuego.html#ubicación",
+    "title": "Espino de fuego",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0556, -57.681349\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/encina.html",
+    "href": "fichas/encina.html",
+    "title": "Encina",
+    "section": "",
+    "text": "Nombre científico: Quercus baloot Griff.\nFamilia: Fagaceae\nOrigen: Europa\nContinente: Europa (Mediterráneo) / África del Norte"
+  },
+  {
+    "objectID": "fichas/encina.html#ubicación",
+    "href": "fichas/encina.html#ubicación",
+    "title": "Encina",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.055929, -57.680409\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/dodonea-arb066.html",
+    "href": "fichas/dodonea-arb066.html",
+    "title": "Dodonea",
+    "section": "",
+    "text": "Nombre científico: Dodonaea viscosa\nFamilia: Sapindaceae\nOrigen: Australia\nContinente: Oceanía / América / África"
+  },
+  {
+    "objectID": "fichas/dodonea-arb066.html#ubicación",
+    "href": "fichas/dodonea-arb066.html#ubicación",
+    "title": "Dodonea",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05523, -57.681177\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/damasco.html",
+    "href": "fichas/damasco.html",
+    "title": "Damasco",
+    "section": "",
+    "text": "Nombre científico: Brahea Armata Palmatum\nFamilia: Arecaceae\nOrigen: Norte América\nContinente: Asia (Central)"
+  },
+  {
+    "objectID": "fichas/damasco.html#ubicación",
+    "href": "fichas/damasco.html#ubicación",
+    "title": "Damasco",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05491, -57.681428\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/criptomeria.html",
+    "href": "fichas/criptomeria.html",
+    "title": "Criptomeria",
+    "section": "",
+    "text": "Nombre científico: Cryptomeria japónica\nFamilia: Cupressaceae\nOrigen: Asia\nContinente: Asia (Japón)"
+  },
+  {
+    "objectID": "fichas/criptomeria.html#ubicación",
+    "href": "fichas/criptomeria.html#ubicación",
+    "title": "Criptomeria",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05566, -57.681065\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb063.html",
+    "href": "fichas/corona-de-novia-arb063.html",
+    "title": "Corona de novia",
+    "section": "",
+    "text": "Nombre científico: Spiraea cantoniensis\nFamilia: Rosaceae\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb063.html#ubicación",
+    "href": "fichas/corona-de-novia-arb063.html#ubicación",
+    "title": "Corona de novia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05554, -57.681418\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb047.html",
+    "href": "fichas/corona-de-novia-arb047.html",
+    "title": "Corona de novia",
+    "section": "",
+    "text": "Nombre científico: Spiraea cantoniensis\nFamilia: Rosaceae\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb047.html#ubicación",
+    "href": "fichas/corona-de-novia-arb047.html#ubicación",
+    "title": "Corona de novia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05564, -57.682655\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cipreses.html",
+    "href": "fichas/cipreses.html",
+    "title": "Cipreses",
+    "section": "",
+    "text": "Nombre científico: Cupressus sp.\nFamilia: Cupressaceae\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/cipreses.html#ubicación",
+    "href": "fichas/cipreses.html#ubicación",
+    "title": "Cipreses",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056934, -57.681113\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cipres-de-monterrey.html",
+    "href": "fichas/cipres-de-monterrey.html",
+    "title": "Ciprés de Monterrey",
+    "section": "",
+    "text": "Nombre científico: Cupressus macrocarpa var. lutea topacio\nFamilia: Cupressaceae\nOrigen: E.E.U.U\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/cipres-de-monterrey.html#ubicación",
+    "href": "fichas/cipres-de-monterrey.html#ubicación",
+    "title": "Ciprés de Monterrey",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05684, -57.681064\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cipres-de-hinoki.html",
+    "href": "fichas/cipres-de-hinoki.html",
+    "title": "Ciprés de Hinoki",
+    "section": "",
+    "text": "Nombre científico: Chamaecyparis obtusa\nFamilia: Cupressaceae\nOrigen: Norte América\nContinente: Asia (Japón)"
+  },
+  {
+    "objectID": "fichas/cipres-de-hinoki.html#ubicación",
+    "href": "fichas/cipres-de-hinoki.html#ubicación",
+    "title": "Ciprés de Hinoki",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05576, -57.682726\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedrodelhimalaya.html",
+    "href": "fichas/cedrodelhimalaya.html",
+    "title": "Cedro del Himalaya",
+    "section": "",
+    "text": "Nombre científico: Cedrus deodara (Roxb. ex D. Don) G. Don\nFamilia: Pinaceae\nOrigen: Asia\nContinente: Asia"
+  },
+  {
+    "objectID": "fichas/cedrodelhimalaya.html#ubicación",
+    "href": "fichas/cedrodelhimalaya.html#ubicación",
+    "title": "Cedro del Himalaya",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056549, -57.680737\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-del-himalaya.html",
+    "href": "fichas/cedro-del-himalaya.html",
+    "title": "Cedro del Himalaya",
+    "section": "",
+    "text": "Nombre científico: Dodonaea viscosa\nFamilia: Sapindaceae\nOrigen: Australia\nContinente: Asia"
+  },
+  {
+    "objectID": "fichas/cedro-del-himalaya.html#ubicación",
+    "href": "fichas/cedro-del-himalaya.html#ubicación",
+    "title": "Cedro del Himalaya",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05564, -57.681649\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-del-atlas-arb087.html",
+    "href": "fichas/cedro-del-atlas-arb087.html",
+    "title": "Cedro del Atlas",
+    "section": "",
+    "text": "Nombre científico: Cedrus atlantica (Endl.) Manetti ex Carrière\nFamilia: Pinaceae\nOrigen: África-Europa\nContinente: África (Norte)"
+  },
+  {
+    "objectID": "fichas/cedro-del-atlas-arb087.html#ubicación",
+    "href": "fichas/cedro-del-atlas-arb087.html#ubicación",
+    "title": "Cedro del Atlas",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05506, -57.681479\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-arb064.html",
+    "href": "fichas/cedro-arb064.html",
+    "title": "Cedro",
+    "section": "",
+    "text": "Nombre científico: Cedrus sp.\nContinente: África / Asia / Europa"
+  },
+  {
+    "objectID": "fichas/cedro-arb064.html#ubicación",
+    "href": "fichas/cedro-arb064.html#ubicación",
+    "title": "Cedro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0555, -57.681415\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-arb049.html",
+    "href": "fichas/cedro-arb049.html",
+    "title": "Cedro",
+    "section": "",
+    "text": "Nombre científico: Cedrus sp.\nContinente: África / Asia / Europa"
+  },
+  {
+    "objectID": "fichas/cedro-arb049.html#ubicación",
+    "href": "fichas/cedro-arb049.html#ubicación",
+    "title": "Cedro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05561, -57.682472\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/casuarina-arb006.html",
+    "href": "fichas/casuarina-arb006.html",
+    "title": "Casuarina",
+    "section": "",
+    "text": "Nombre científico: Casuarina equisetifolia L.\nFamilia: Casuarinaceae\nOrigen: Australia\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/casuarina-arb006.html#ubicación",
+    "href": "fichas/casuarina-arb006.html#ubicación",
+    "title": "Casuarina",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056437, -57.680856\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/carex-arb086.html",
+    "href": "fichas/carex-arb086.html",
+    "title": "Carex",
+    "section": "",
+    "text": "Nombre científico: Celtis tala\nFamilia: Cannabaceae\nOrigen: Sudamérica\nContinente: Global"
+  },
+  {
+    "objectID": "fichas/carex-arb086.html#ubicación",
+    "href": "fichas/carex-arb086.html#ubicación",
+    "title": "Carex",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05503, -57.681492\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/carex-arb083.html",
+    "href": "fichas/carex-arb083.html",
+    "title": "Carex",
+    "section": "",
+    "text": "Nombre científico: Celtis tala\nFamilia: Cannabaceae\nOrigen: Sudamérica\nContinente: Global"
+  },
+  {
+    "objectID": "fichas/carex-arb083.html#ubicación",
+    "href": "fichas/carex-arb083.html#ubicación",
+    "title": "Carex",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05461, -57.681095\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/canforero.html",
+    "href": "fichas/canforero.html",
+    "title": "Canforero",
+    "section": "",
+    "text": "Nombre científico: Cinnamomum camphora\nFamilia: Lauraceae\nOrigen: Asia\nContinente: Asia (China / Japón)"
+  },
+  {
+    "objectID": "fichas/canforero.html#ubicación",
+    "href": "fichas/canforero.html#ubicación",
+    "title": "Canforero",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05585, -57.681933\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/boj-arb068.html",
+    "href": "fichas/boj-arb068.html",
+    "title": "Boj",
+    "section": "",
+    "text": "Nombre científico: Revisar\nContinente: Europa / Asia / África"
+  },
+  {
+    "objectID": "fichas/boj-arb068.html#ubicación",
+    "href": "fichas/boj-arb068.html#ubicación",
+    "title": "Boj",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05508, -57.680938\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/arboldelostulipanes.html",
+    "href": "fichas/arboldelostulipanes.html",
+    "title": "Árbol de los tulipanes",
+    "section": "",
+    "text": "Nombre científico: Liriodendron tulipifera\nFamilia: Magnoliaceae\nContinente: América del Norte\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/arb011.html",
+    "href": "fichas/arb011.html",
+    "title": "Eucalyptus globulus Labill.",
+    "section": "",
+    "text": "Nombre científico: Eucalyptus globulus Labill.\nFamilia: Myrtaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/arb011.html#ubicación",
+    "href": "fichas/arb011.html#ubicación",
+    "title": "Eucalyptus globulus Labill.",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056331, -57.680572\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/araucariaaustraliana-arb028.html",
+    "href": "fichas/araucariaaustraliana-arb028.html",
+    "title": "Araucaria Australiana",
+    "section": "",
+    "text": "Nombre científico: Araucaria bidwillii Hook.\nFamilia: Araucariaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/araucariaaustraliana-arb028.html#ubicación",
+    "href": "fichas/araucariaaustraliana-arb028.html#ubicación",
+    "title": "Araucaria Australiana",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056057, -57.679449\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/aliso-andino.html",
+    "href": "fichas/aliso-andino.html",
+    "title": "Aliso andino",
+    "section": "",
+    "text": "Nombre científico: Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.\nFamilia: Pinaceae\nOrigen: América\nContinente: América (del Norte y del Sur)"
+  },
+  {
+    "objectID": "fichas/aliso-andino.html#ubicación",
+    "href": "fichas/aliso-andino.html#ubicación",
+    "title": "Aliso andino",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05574, -57.682864\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/alamo-blanco.html",
+    "href": "fichas/alamo-blanco.html",
+    "title": "Álamo blanco",
+    "section": "",
+    "text": "Nombre científico: Populu alba L.\nFamilia: Salicaceae\nOrigen: Europa-Asia\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/alamo-blanco.html#ubicación",
+    "href": "fichas/alamo-blanco.html#ubicación",
+    "title": "Álamo blanco",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056168, -57.679357\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ahuehuete-arb078.html",
+    "href": "fichas/ahuehuete-arb078.html",
+    "title": "Ahuehuete",
+    "section": "",
+    "text": "Nombre científico: Taxodium mucronatum\nFamilia: Cupressaceae\nOrigen: América Central\nContinente: América del Norte (México)"
+  },
+  {
+    "objectID": "fichas/ahuehuete-arb078.html#ubicación",
+    "href": "fichas/ahuehuete-arb078.html#ubicación",
+    "title": "Ahuehuete",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05649, -57.682174\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/acacia-mimosa-arb061.html",
+    "href": "fichas/acacia-mimosa-arb061.html",
+    "title": "Acacia mimosa",
+    "section": "",
+    "text": "Nombre científico: Acacia dealbata\nFamilia: Fabaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/acacia-mimosa-arb061.html#ubicación",
+    "href": "fichas/acacia-mimosa-arb061.html#ubicación",
+    "title": "Acacia mimosa",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05567, -57.681577\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/abeto.html",
+    "href": "fichas/abeto.html",
+    "title": "Abeto",
+    "section": "",
+    "text": "Nombre científico: Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.\nFamilia: Pinaceae\nOrigen: E.E.U.U\nContinente: América (del Norte y del Sur)"
+  },
+  {
+    "objectID": "fichas/abeto.html#ubicación",
+    "href": "fichas/abeto.html#ubicación",
+    "title": "Abeto",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056551, -57.679765\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/abelia.html",
+    "href": "fichas/abelia.html",
+    "title": "Abelia",
+    "section": "",
+    "text": "Nombre científico: Abelia x grandiflora L.\nFamilia: Caprifoliaceae\nContinente: Asia (Origen hortícola/Híbrido)"
+  },
+  {
+    "objectID": "fichas/abelia.html#ubicación",
+    "href": "fichas/abelia.html#ubicación",
+    "title": "Abelia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056678, -57.6801\nVer en el mapa »\n\n« Volver a las especies"
   },
   {
     "objectID": "especies.html",
@@ -19,6 +649,727 @@
     "title": "Especies destacadas",
     "section": "",
     "text": "Ejemplares seleccionados por su valor botánico, histórico o paisajístico.\n\n\n\nSabina de Virginia\n\n\n\nFamilia: Cupressaceae\n\n\n\n\nRoble común\n\n\n\nFamilia: Fagaceae\n\n\n\n\nCedro del Himalaya\n\n\n\nFamilia: Pinaceae\n\n\n\n\nCedro azul\n\n\n\nFamilia: Pinaceae\n\n\n\n\nRoble rojo americano\n\n\n\nFamilia: Fagaceae\n\n\n\n\nAbeto\n\n\n\nFamilia: Pinaceae\n\n\n\n\nLimpiatubos\n\n\n\nFamilia: Myrtaceae\n\n\n\n\nAraucaria Australiana\n\n\n\nFamilia: Araucariaceae\n\n\n\n\nEncina\nFamilia: Fagaceae\n\n\n\n\nCastaño de Indias\n\n\n\nFamilia: Sapindaceae\n\n\n\n\nCedro japonés\n\n\n\nFamilia: Cupressaceae\n\n\n\n\nSecuoya roja\n\n\n\nFamilia: Cupressaceae\n\n\n\n\nDamara\n\n\n\nFamilia: Araucariaceae\n\n\n\n\nÁrbol de los tulipanes\nFamilia: Magnoliaceae\n\n\n\n\nGinkgo\nFamilia: Sapindaceae"
+  },
+  {
+    "objectID": "aves.html",
+    "href": "aves.html",
+    "title": "Aves del Arboretum",
+    "section": "",
+    "text": "Se registraron 46 especies de aves en el establecimiento. Buscá por nombre o filtrá por tipo de residencia.\n\n\n\nBuscar\n\n\nResidenciaTodasMigratorioPermanenteVisitante\n\n\n\n\n\n\n\n\n\n\n\n\nBenteveo\n\n\nPitangus sulphuratus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nBiguá\n\n\nNannopterum brasilianum\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nCabecita negra\n\n\nSpinus magellanicus\n\nPermanente\n\nTodo el año (Más visible en Otoño/Invierno)\n\n\n\n\n\n\n\n\n\nCalandria\n\n\nMimus saturninus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nCarancho\n\n\nCaracara plancus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nCarpintero campestre\n\n\nColaptes campestris\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nChiflón\n\n\nSyrigma sibilatrix\n\nPermanente / Visitante estival\n\nTodo el año (Mayor abundancia en Primavera/Verano)\n\n\n\n\n\n\n\n\n\nChimango\n\n\nMilvago chimango\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nChingolo\n\n\nZonotrichia capensis\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nColibrí común\n\n\nChlorostilbon lucidus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nColibrí garganta blanca\n\n\nLeucochloris albicollis\n\nVisitante invernal / Escaso\n\nOtoño e Invierno\n\n\n\n\n\n🕊️\n\n\n\nCorbatita\n\n\nSporophila caerulescens\n\nMigratorio estival\n\nPrimavera y Verano\n\n\n\n\n\n🕊️\n\n\n\nCotorra\n\n\nMyiopsitta monachus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nCuervillo cara pelada\n\n\nPhimosus infuscatus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nCuervillo de cañada\n\n\nPlegadis chihi\n\nPermanente / Movimientos locales\n\nTodo el año\n\n\n\n\n\n\n\n\n\nGavilán mixto\n\n\nParabuteo unicinctus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nGaviota cocinera\n\n\nLarus dominicanus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nGolondrina\n\n\nProgne chalybea\n\nMigratorio estival\n\nPrimavera y Verano\n\n\n\n\n\n🕊️\n\n\n\nGolondrina tijerita\n\n\nHirundo rustica\n\nMigratorio estival\n\nPrimavera y Verano\n\n\n\n\n\n\n\n\n\nGorrión\n\n\nPasser domesticus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nHalconcito colorado\n\n\nFalco sparverius\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nHalcón aplomado\n\n\nFalco femoralis\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nHornero\n\n\nFurnarius rufus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nJilguero\n\n\nSicalis flaveola\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nLechucita de las vizcacheras\n\n\nAthene cunicularia\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nLechuza de campanario\n\n\nTyto alba\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nMilano blanco\n\n\nElanus leucurus\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nMúsico\n\n\nAgelaioides badius\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nPaloma doméstica\n\n\nColumba livia\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nPecho amarillo\n\n\nPseudoleistes virescens\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nPecho colorado\n\n\nLeistes superciliaris\n\nMigratorio estival\n\nPrimavera y Verano\n\n\n\n\n\n\n\n\n\nPicazuro\n\n\nPatagioenas picazuro\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nPiojito\n\n\nSerpophaga subcristata\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nPirincho\n\n\nGuira guira\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nRatona\n\n\nTroglodytes aedon\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nSuirirí real\n\n\nTyrannus melancholicus\n\nMigratorio estival\n\nPrimavera y Verano\n\n\n\n\n\n🕊️\n\n\n\nTacuarita azul\n\n\nPolioptila dumicola\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nTaguató\n\n\nRupornis magnirostris\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nTero común\n\n\nVanellus chilensis\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nTijereta\n\n\nTyrannus savana\n\nMigratorio estival\n\nPrimavera y Verano (Emblemático de Verano)\n\n\n\n\n\n🕊️\n\n\n\nTorcacita\n\n\nColumbina picui\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nTorcaza\n\n\nZenaida auriculata\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nTordo pico corto\n\n\nMolothrus bonariensis\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\n\n\n\nTordo renegrido\n\n\nMolothrus bonariensis\n\nPermanente\n\nTodo el año\n\n\n\n\n\n🕊️\n\n\n\nZorzal\n\n\nTurdus amaurochalinus\n\nMigratorio interno / Permanente\n\nTodo el año (Más abundante en Otoño/Invierno)\n\n\n\n\n\n\n\n\n\nZorzal colorado\n\n\nTurdus rufiventris\n\nPermanente\n\nTodo el año\n\n\n\n\n\n\nLas fotografías fueron relevadas por los equipos de biólogos y ecólogos que trabajan en Estancia La Constancia."
+  },
+  {
+    "objectID": "catalogo.html",
+    "href": "catalogo.html",
+    "title": "Catálogo de especies",
+    "section": "",
+    "text": "Explorá los 91 ejemplares. Escribí en el buscador o combiná los filtros; cada nombre abre su ficha.\n\n\n\nBuscar\n\n\nFamiliaTodosAltingiaceaeApocynaceaeAraucariaceaeArecaceaeCannabaceaeCaprifoliaceaeCasuarinaceaeCupressaceaeFabaceaeFagaceaeGinkgoaceaeHypericaceaeLauraceaeMagnoliaceaeMalvaceaeMyrtaceaeNothofagaceaeOleaceaeOlivesPinaceaePlatanaceaeRhamnaceaeRosaceaeSalicaceaeSapindaceae\n\n\nGrupoTodosConíferaPalmeraSin clasificar\n\n\nOrigenTodosÁfricaAméricaAmérica del NorteAmérica del SurAsiaCosmopolitaEuropaHemisferio NorteOceaníaOrigen hortícola/híbridoSin datoVarias regiones\n\n\n\n\n\n\n\n\n\nNombre común\n\n\nNombre científico\n\n\nFamilia\n\n\nGrupo\n\n\nOrigen\n\n\n\n\n\n\nAbelia\n\n\nAbelia x grandiflora L.\n\n\nCaprifoliaceae\n\n\nSin clasificar\n\n\nOrigen hortícola/híbrido\n\n\n\n\nAbeto\n\n\nAbies concolor (Gordon & Glend.) Lindl. ex Hildebr.\n\n\nPinaceae\n\n\nConífera\n\n\nAmérica\n\n\n\n\nAbeto de Douglas\n\n\nCeanothus thyrsiflorus\n\n\nRhamnaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nAcacia mimosa\n\n\nAcacia dealbata\n\n\nFabaceae\n\n\nSin clasificar\n\n\nOceanía\n\n\n\n\nAcacia mimosa\n\n\nAcacia dealbata\n\n\nFabaceae\n\n\nSin clasificar\n\n\nOceanía\n\n\n\n\nAhuehuete\n\n\nTaxodium mucronatum\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nAhuehuete\n\n\nTaxodium mucronatum\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nAhuehuete\n\n\nTaxodium mucronatum\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nÁlamo blanco\n\n\nPopulu alba L.\n\n\nSalicaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\n?Alcanforero\n\n\n?Cinnamomum camphora\n\n\nLauraceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nAliso andino\n\n\nAbies concolor (Gordon & Glend.) Lindl. ex Hildebr.\n\n\nPinaceae\n\n\nConífera\n\n\nAmérica\n\n\n\n\nAraucaria Australiana\n\n\nAraucaria bidwillii Hook.\n\n\nAraucariaceae\n\n\nConífera\n\n\nOceanía\n\n\n\n\nAraucaria Australiana\n\n\nAraucaria bidwillii Hook.\n\n\nAraucariaceae\n\n\nConífera\n\n\nOceanía\n\n\n\n\nARB010\n\n\n\n\n\nMyrtaceae\n\n\nSin clasificar\n\n\nSin dato\n\n\n\n\nÁrbol de los tulipanes\n\n\nLiriodendron tulipifera\n\n\nMagnoliaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nBoj\n\n\nRevisar\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nBoj\n\n\nRevisar\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nBoj común\n\n\nFraxinus angustifolia\n\n\nOleaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nCanforero\n\n\nCinnamomum camphora\n\n\nLauraceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nCarex\n\n\nCeltis tala\n\n\nCannabaceae\n\n\nSin clasificar\n\n\nCosmopolita\n\n\n\n\nCarex\n\n\nCeltis tala\n\n\nCannabaceae\n\n\nSin clasificar\n\n\nCosmopolita\n\n\n\n\nCarex\n\n\nCeltis tala\n\n\nCannabaceae\n\n\nSin clasificar\n\n\nCosmopolita\n\n\n\n\nCarex\n\n\nCeltis tala\n\n\nCannabaceae\n\n\nSin clasificar\n\n\nCosmopolita\n\n\n\n\nCastaño de Indias\n\n\nAesculus hippocastanum L.\n\n\nSapindaceae\n\n\nSin clasificar\n\n\nEuropa\n\n\n\n\nCasuarina\n\n\nCasuarina equisetifolia L.\n\n\nCasuarinaceae\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nCasuarina\n\n\nCasuarina equisetifolia L.\n\n\nCasuarinaceae\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nCedro\n\n\nCedrus sp.\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nCedro\n\n\nCedrus sp.`\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nCedro\n\n\nCedrus sp.\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nCedro\n\n\nCedrus sp.\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nCedro azul\n\n\nCedrus atlantica (Endl.) Manetti ex Carrière\n\n\nPinaceae\n\n\nConífera\n\n\nÁfrica\n\n\n\n\nCedro del Atlas\n\n\nCedrus atlantica (Endl.) Manetti ex Carrière\n\n\nPinaceae\n\n\nConífera\n\n\nÁfrica\n\n\n\n\nCedro del Atlas\n\n\nCedrus atlantica (Endl.) Manetti ex Carrière\n\n\nPinaceae\n\n\nConífera\n\n\nÁfrica\n\n\n\n\nCedro del Himalaya\n\n\nCedrus deodara (Roxb. ex D. Don) G. Don\n\n\nPinaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nCedro del Himalaya\n\n\nDodonaea viscosa\n\n\nSapindaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nCedro japonés\n\n\nCryptomeria japonica (Thunb. ex L. f.) D. Don\n\n\nCupressaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nCipres\n\n\nCupressus sp.\n\n\nCupressaceae\n\n\nConífera\n\n\nHemisferio Norte\n\n\n\n\nCiprés de Hinoki\n\n\nChamaecyparis obtusa\n\n\nCupressaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nCiprés de las Guaitecas\n\n\nAustrocedrus chilensis\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Sur\n\n\n\n\nCiprés de Monterrey\n\n\nCupressus macrocarpa var. lutea topacio\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nCipreses\n\n\nCupressus sp.\n\n\nCupressaceae\n\n\nConífera\n\n\nHemisferio Norte\n\n\n\n\nCoihue\n\n\nNothofagus dombeyi\n\n\nNothofagaceae\n\n\nSin clasificar\n\n\nAmérica del Sur\n\n\n\n\nCorona de novia\n\n\nSpiraea cantoniensis\n\n\nRosaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nCorona de novia\n\n\nSpiraea cantoniensis\n\n\nRosaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nCorona de novia\n\n\nSpiraea cantoniensis\n\n\nRosaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nCrataegus\n\n\nCrataegus sp.\n\n\nRosaceae\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nCriptomeria\n\n\nCryptomeria japónica\n\n\nCupressaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nDamara\n\n\nAgathis dammara\n\n\nAraucariaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nDamasco\n\n\nBrahea Armata Palmatum\n\n\nArecaceae\n\n\nPalmera\n\n\nAsia\n\n\n\n\nDodonea\n\n\nDodonaea viscosa\n\n\nSapindaceae\n\n\nSin clasificar\n\n\nCosmopolita\n\n\n\n\nDodonea\n\n\nDodonaea viscosa\n\n\nSapindaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nDuraznero\n\n\nFraxinus exelsior\n\n\nOleaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nEncina\n\n\nQuercus baloot Griff.\n\n\nFagaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nEspino\n\n\nEucalyptus sp.\n\n\n—\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nEspino blanco\n\n\nCrataegus sp.\n\n\nRosaceae\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nEspino de fuego\n\n\nPyracantha coccinea\n\n\nRosaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nEucalipto blanco\n\n\nEucalyptus globulus Labill.\n\n\nMyrtaceae\n\n\nSin clasificar\n\n\nOceanía\n\n\n\n\nEucalipto medicinal\n\n\nEucalyptus cinerea\n\n\nMyrtaceae\n\n\nSin clasificar\n\n\nOceanía\n\n\n\n\nEucalyptus globulus Labill.\n\n\nEucalyptus globulus Labill.\n\n\nMyrtaceae\n\n\nSin clasificar\n\n\nOceanía\n\n\n\n\nFalso laurel\n\n\nNerium oleander L.\n\n\nApocynaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nFalso muérdago\n\n\nIlex aquifolium L.\n\n\n—\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nGinkgo\n\n\nAcer palmatum\n\n\nSapindaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nGinkgo\n\n\nGinkgo biloba\n\n\nGinkgoaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nHaya común\n\n\nFagus sylvatica\n\n\nFagaceae\n\n\nSin clasificar\n\n\nEuropa\n\n\n\n\nHipericón canario\n\n\nHypericum x moserianum\n\n\nHypericaceae\n\n\nSin clasificar\n\n\nÁfrica\n\n\n\n\nLibocedro de California\n\n\nCalocedrus decurrens (Torr.) Florin\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nLigustro\n\n\nLigustrum lucidum\n\n\nOlives\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nLigustro\n\n\nLigustrum lucidum\n\n\nOlives\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nLimpiatubos\n\n\nCallistemon imperialis\n\n\nMyrtaceae\n\n\nSin clasificar\n\n\nAmérica del Sur\n\n\n\n\nLiquidambar\n\n\nLiquidambar sp.\n\n\nAltingiaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nLiquidámbar de Formosa\n\n\nLiquidambar formosana\n\n\nAltingiaceae\n\n\nSin clasificar\n\n\nAsia\n\n\n\n\nMacasar\n\n\nChamaecyparis lawsoniana\n\n\nCupressaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nMacasar\n\n\nChamaecyparis lawsoniana\n\n\nCupressaceae\n\n\nConífera\n\n\nAsia\n\n\n\n\nMagnolia\n\n\nMagnolia grandiflora L.\n\n\nMagnoliaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nOlmo\n\n\nQuercus sp.\n\n\n—\n\n\nSin clasificar\n\n\nHemisferio Norte\n\n\n\n\nPicea sp.\n\n\nPicea sp.\n\n\nPinaceae\n\n\nConífera\n\n\nSin dato\n\n\n\n\nPino\n\n\nPinus sp.\n\n\nPinaceae\n\n\nConífera\n\n\nHemisferio Norte\n\n\n\n\nPino insigne\n\n\nPinus radiata\n\n\nPinaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nPino mexicano amarillo\n\n\nPinus patula Schltdl. & Cham.\n\n\nPinaceae\n\n\nConífera\n\n\nVarias regiones\n\n\n\n\nPino radiata\n\n\nPinus radiata\n\n\nPinaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nPlátano\n\n\nPlatanus x hispanica\n\n\nPlatanaceae\n\n\nSin clasificar\n\n\nOrigen hortícola/híbrido\n\n\n\n\nRoble común\n\n\nQuercus robur L.\n\n\nFagaceae\n\n\nSin clasificar\n\n\nVarias regiones\n\n\n\n\nRoble pellín\n\n\nNothofagus obliqua 2\n\n\nNothofagaceae\n\n\nSin clasificar\n\n\nAmérica del Sur\n\n\n\n\nRoble rojo\n\n\nQuercus rubra L.\n\n\nFagaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nRoble rojo\n\n\nQuercus rubra L.\n\n\nFagaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nRoble rojo americano\n\n\nQuercus rubra L.\n\n\nFagaceae\n\n\nSin clasificar\n\n\nAmérica del Norte\n\n\n\n\nSabina de Virginia\n\n\nSabina virginiana (L.) Antoine\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nSecuoya\n\n\nSequoia semprevirens\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nSecuoya roja\n\n\nSequoiadendron giganteum\n\n\nCupressaceae\n\n\nConífera\n\n\nAmérica del Norte\n\n\n\n\nTejo común\n\n\nLarix decidua\n\n\nPinaceae\n\n\nConífera\n\n\nVarias regiones\n\n\n\n\nTilo\n\n\nTilia sp.\n\n\nMalvaceae\n\n\nSin clasificar\n\n\nHemisferio Norte"
+  },
+  {
+    "objectID": "catalogo.html#a",
+    "href": "catalogo.html#a",
+    "title": "Catálogo de especies",
+    "section": "A",
+    "text": "A\n\nAbelia — Abelia x grandiflora L.\nAbeto — Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.\nAbeto de Douglas — Ceanothus thyrsiflorus\nAcacia mimosa — Acacia dealbata\nAcacia mimosa — Acacia dealbata\nAhuehuete — Taxodium mucronatum\nAhuehuete — Taxodium mucronatum\nAhuehuete — Taxodium mucronatum\nÁlamo blanco — Populu alba L.\n?Alcanforero — ?Cinnamomum camphora\nAliso andino — Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.\nAraucaria Australiana — Araucaria bidwillii Hook.\nAraucaria Australiana — Araucaria bidwillii Hook.\nARB010\nÁrbol de los tulipanes — Liriodendron tulipifera"
+  },
+  {
+    "objectID": "catalogo.html#b",
+    "href": "catalogo.html#b",
+    "title": "Catálogo de especies",
+    "section": "B",
+    "text": "B\n\nBoj — Revisar\nBoj — Revisar\nBoj común — Fraxinus angustifolia"
+  },
+  {
+    "objectID": "catalogo.html#c",
+    "href": "catalogo.html#c",
+    "title": "Catálogo de especies",
+    "section": "C",
+    "text": "C\n\nCanforero — Cinnamomum camphora\nCarex — Celtis tala\nCarex — Celtis tala\nCarex — Celtis tala\nCarex — Celtis tala\nCastaño de Indias — Aesculus hippocastanum L.\nCasuarina — Casuarina equisetifolia L.\nCasuarina — Casuarina equisetifolia L.\nCedro — Cedrus sp.\nCedro — Cedrus sp.`\nCedro — Cedrus sp.\nCedro — Cedrus sp.\nCedro azul — Cedrus atlantica (Endl.) Manetti ex Carrière\nCedro del Atlas — Cedrus atlantica (Endl.) Manetti ex Carrière\nCedro del Atlas — Cedrus atlantica (Endl.) Manetti ex Carrière\nCedro del Himalaya — Cedrus deodara (Roxb. ex D. Don) G. Don\nCedro del Himalaya — Dodonaea viscosa\nCedro japonés — Cryptomeria japonica (Thunb. ex L. f.) D. Don\nCipres — Cupressus sp.\nCiprés de Hinoki — Chamaecyparis obtusa\nCiprés de las Guaitecas — Austrocedrus chilensis\nCiprés de Monterrey — Cupressus macrocarpa var. lutea topacio\nCipreses — Cupressus sp.\nCoihue — Nothofagus dombeyi\nCorona de novia — Spiraea cantoniensis\nCorona de novia — Spiraea cantoniensis\nCorona de novia — Spiraea cantoniensis\nCrataegus — Crataegus sp.\nCriptomeria — Cryptomeria japónica"
+  },
+  {
+    "objectID": "catalogo.html#d",
+    "href": "catalogo.html#d",
+    "title": "Catálogo de especies",
+    "section": "D",
+    "text": "D\n\nDamara — Agathis dammara\nDamasco — Brahea Armata Palmatum\nDodonea — Dodonaea viscosa\nDodonea — Dodonaea viscosa\nDuraznero — Fraxinus exelsior"
+  },
+  {
+    "objectID": "catalogo.html#e",
+    "href": "catalogo.html#e",
+    "title": "Catálogo de especies",
+    "section": "E",
+    "text": "E\n\nEncina — Quercus baloot Griff.\nEspino — Eucalyptus sp.\nEspino blanco — Crataegus sp.\nEspino de fuego — Pyracantha coccinea\nEucalipto blanco — Eucalyptus globulus Labill.\nEucalipto medicinal — Eucalyptus cinerea\nEucalyptus globulus Labill."
+  },
+  {
+    "objectID": "catalogo.html#f",
+    "href": "catalogo.html#f",
+    "title": "Catálogo de especies",
+    "section": "F",
+    "text": "F\n\nFalso laurel — Nerium oleander L.\nFalso muérdago — Ilex aquifolium L."
+  },
+  {
+    "objectID": "catalogo.html#g",
+    "href": "catalogo.html#g",
+    "title": "Catálogo de especies",
+    "section": "G",
+    "text": "G\n\nGinkgo — Acer palmatum\nGinkgo — Ginkgo biloba"
+  },
+  {
+    "objectID": "catalogo.html#h",
+    "href": "catalogo.html#h",
+    "title": "Catálogo de especies",
+    "section": "H",
+    "text": "H\n\nHaya común — Fagus sylvatica\nHipericón canario — Hypericum x moserianum"
+  },
+  {
+    "objectID": "catalogo.html#l",
+    "href": "catalogo.html#l",
+    "title": "Catálogo de especies",
+    "section": "L",
+    "text": "L\n\nLibocedro de California — Calocedrus decurrens (Torr.) Florin\nLigustro — Ligustrum lucidum\nLigustro — Ligustrum lucidum\nLimpiatubos — Callistemon imperialis\nLiquidambar — Liquidambar sp.\nLiquidámbar de Formosa — Liquidambar formosana"
+  },
+  {
+    "objectID": "catalogo.html#m",
+    "href": "catalogo.html#m",
+    "title": "Catálogo de especies",
+    "section": "M",
+    "text": "M\n\nMacasar — Chamaecyparis lawsoniana\nMacasar — Chamaecyparis lawsoniana\nMagnolia — Magnolia grandiflora L."
+  },
+  {
+    "objectID": "catalogo.html#o",
+    "href": "catalogo.html#o",
+    "title": "Catálogo de especies",
+    "section": "O",
+    "text": "O\n\nOlmo — Quercus sp."
+  },
+  {
+    "objectID": "catalogo.html#p",
+    "href": "catalogo.html#p",
+    "title": "Catálogo de especies",
+    "section": "P",
+    "text": "P\n\nPicea sp.\nPino — Pinus sp.\nPino insigne — Pinus radiata\nPino mexicano amarillo — Pinus patula Schltdl. & Cham.\nPino radiata — Pinus radiata\nPlátano — Platanus x hispanica"
+  },
+  {
+    "objectID": "catalogo.html#r",
+    "href": "catalogo.html#r",
+    "title": "Catálogo de especies",
+    "section": "R",
+    "text": "R\n\nRoble común — Quercus robur L.\nRoble pellín — Nothofagus obliqua 2\nRoble rojo — Quercus rubra L.\nRoble rojo — Quercus rubra L.\nRoble rojo americano — Quercus rubra L."
+  },
+  {
+    "objectID": "catalogo.html#s",
+    "href": "catalogo.html#s",
+    "title": "Catálogo de especies",
+    "section": "S",
+    "text": "S\n\nSabina de Virginia — Sabina virginiana (L.) Antoine\nSecuoya — Sequoia semprevirens\nSecuoya roja — Sequoiadendron giganteum"
+  },
+  {
+    "objectID": "catalogo.html#t",
+    "href": "catalogo.html#t",
+    "title": "Catálogo de especies",
+    "section": "T",
+    "text": "T\n\nTejo común — Larix decidua\nTilo — Tilia sp.\n\n\n91 ejemplares registrados."
+  },
+  {
+    "objectID": "estadisticas.html",
+    "href": "estadisticas.html",
+    "title": "Estadísticas",
+    "section": "",
+    "text": "91\n\n\nEjemplares\n\n\n\n\n64\n\n\nEspecies\n\n\n\n\n48\n\n\nGéneros\n\n\n\n\n25\n\n\nFamilias\n\n\n\n\n15\n\n\nDestacados\n\n\n\n\n1996\n\n\nAño medio de plantación"
+  },
+  {
+    "objectID": "estadisticas.html#ejemplares-por-familia",
+    "href": "estadisticas.html#ejemplares-por-familia",
+    "title": "Estadísticas",
+    "section": "Ejemplares por familia",
+    "text": "Ejemplares por familia\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVer tabla\n\n\n\n\n\n\n\n\n\n\nFamilia\nEjemplares\n\n\n\n\nCupressaceae\n16\n\n\nPinaceae\n12\n\n\nFagaceae\n6\n\n\nRosaceae\n6\n\n\nMyrtaceae\n5\n\n\nSapindaceae\n5\n\n\nCannabaceae\n4\n\n\nAraucariaceae\n3\n\n\nAltingiaceae\n2\n\n\nCasuarinaceae\n2\n\n\nFabaceae\n2\n\n\nLauraceae\n2\n\n\nMagnoliaceae\n2\n\n\nNothofagaceae\n2\n\n\nOleaceae\n2\n\n\nOlives\n2\n\n\nApocynaceae\n1\n\n\nArecaceae\n1\n\n\nCaprifoliaceae\n1\n\n\nGinkgoaceae\n1\n\n\nHypericaceae\n1\n\n\nMalvaceae\n1\n\n\nPlatanaceae\n1\n\n\nRhamnaceae\n1\n\n\nSalicaceae\n1"
+  },
+  {
+    "objectID": "estadisticas.html#ejemplares-por-continente",
+    "href": "estadisticas.html#ejemplares-por-continente",
+    "title": "Estadísticas",
+    "section": "Ejemplares por continente",
+    "text": "Ejemplares por continente\n\n\n\n\n\nContinente\nEjemplares\n\n\n\n\nAsia\n19\n\n\nAmérica del Norte\n17\n\n\nVarias regiones\n17\n\n\nHemisferio Norte\n10\n\n\nOceanía\n7\n\n\nCosmopolita\n5\n\n\nAmérica del Sur\n4\n\n\nÁfrica\n4\n\n\nAmérica\n2\n\n\nEuropa\n2\n\n\nOrigen hortícola/híbrido\n2\n\n\nSin dato\n2"
+  },
+  {
+    "objectID": "estadisticas.html#ejemplares-por-grupo",
+    "href": "estadisticas.html#ejemplares-por-grupo",
+    "title": "Estadísticas",
+    "section": "Ejemplares por grupo",
+    "text": "Ejemplares por grupo\n\n\n\n\n\n\n\n\n\n\nTodas las cifras y gráficos se calculan automáticamente a partir de data/Arboretum_Master.xlsx en cada render."
+  },
+  {
+    "objectID": "fichas/abeto-de-douglas.html",
+    "href": "fichas/abeto-de-douglas.html",
+    "title": "Abeto de Douglas",
+    "section": "",
+    "text": "Nombre científico: Ceanothus thyrsiflorus\nFamilia: Rhamnaceae\nContinente: América del Norte\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/acacia-mimosa-arb058.html",
+    "href": "fichas/acacia-mimosa-arb058.html",
+    "title": "Acacia mimosa",
+    "section": "",
+    "text": "Nombre científico: Acacia dealbata\nFamilia: Fabaceae\nOrigen: Acacia dealbata\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/acacia-mimosa-arb058.html#ubicación",
+    "href": "fichas/acacia-mimosa-arb058.html#ubicación",
+    "title": "Acacia mimosa",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0559, -57.681743\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ahuehuete-arb035.html",
+    "href": "fichas/ahuehuete-arb035.html",
+    "title": "Ahuehuete",
+    "section": "",
+    "text": "Nombre científico: Taxodium mucronatum\nFamilia: Cupressaceae\nContinente: América del Norte (México)\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ahuehuete-arb089.html",
+    "href": "fichas/ahuehuete-arb089.html",
+    "title": "Ahuehuete",
+    "section": "",
+    "text": "Nombre científico: Taxodium mucronatum\nFamilia: Cupressaceae\nOrigen: América Central\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/ahuehuete-arb089.html#ubicación",
+    "href": "fichas/ahuehuete-arb089.html#ubicación",
+    "title": "Ahuehuete",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05525, -57.681941\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/alcanforero.html",
+    "href": "fichas/alcanforero.html",
+    "title": "?Alcanforero",
+    "section": "",
+    "text": "Nombre científico: ?Cinnamomum camphora\nFamilia: Lauraceae\nOrigen: Asia\nContinente: Asia / Europa"
+  },
+  {
+    "objectID": "fichas/alcanforero.html#ubicación",
+    "href": "fichas/alcanforero.html#ubicación",
+    "title": "?Alcanforero",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056093, -57.679557\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/araucariaaustraliana-arb022.html",
+    "href": "fichas/araucariaaustraliana-arb022.html",
+    "title": "Araucaria Australiana",
+    "section": "",
+    "text": "Nombre científico: Araucaria bidwillii Hook.\nFamilia: Araucariaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/araucariaaustraliana-arb022.html#ubicación",
+    "href": "fichas/araucariaaustraliana-arb022.html#ubicación",
+    "title": "Araucaria Australiana",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056909, -57.680885\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/arb010.html",
+    "href": "fichas/arb010.html",
+    "title": "ARB010",
+    "section": "",
+    "text": "Familia: Myrtaceae"
+  },
+  {
+    "objectID": "fichas/arb010.html#ubicación",
+    "href": "fichas/arb010.html#ubicación",
+    "title": "ARB010",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056054, -57.680894\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/arb015.html",
+    "href": "fichas/arb015.html",
+    "title": "Picea sp.",
+    "section": "",
+    "text": "Nombre científico: Picea sp.\nFamilia: Pinaceae"
+  },
+  {
+    "objectID": "fichas/arb015.html#ubicación",
+    "href": "fichas/arb015.html#ubicación",
+    "title": "Picea sp.",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056644, -57.679769\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/boj-arb057.html",
+    "href": "fichas/boj-arb057.html",
+    "title": "Boj",
+    "section": "",
+    "text": "Nombre científico: Revisar\nContinente: Europa / Asia / África"
+  },
+  {
+    "objectID": "fichas/boj-arb057.html#ubicación",
+    "href": "fichas/boj-arb057.html#ubicación",
+    "title": "Boj",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05578, -57.68175\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/boj-comun.html",
+    "href": "fichas/boj-comun.html",
+    "title": "Boj común",
+    "section": "",
+    "text": "Nombre científico: Fraxinus angustifolia\nFamilia: Oleaceae\nOrigen: Europa\nContinente: Europa / Asia Occidental / África del Norte"
+  },
+  {
+    "objectID": "fichas/boj-comun.html#ubicación",
+    "href": "fichas/boj-comun.html#ubicación",
+    "title": "Boj común",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05608, -57.682552\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/carex-arb040.html",
+    "href": "fichas/carex-arb040.html",
+    "title": "Carex",
+    "section": "",
+    "text": "Nombre científico: Celtis tala\nFamilia: Cannabaceae\nContinente: Global / Cosmopolita\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/carex-arb085.html",
+    "href": "fichas/carex-arb085.html",
+    "title": "Carex",
+    "section": "",
+    "text": "Nombre científico: Celtis tala\nFamilia: Cannabaceae\nOrigen: Sudamérica\nContinente: Global"
+  },
+  {
+    "objectID": "fichas/carex-arb085.html#ubicación",
+    "href": "fichas/carex-arb085.html#ubicación",
+    "title": "Carex",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05494, -57.681583\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/castanodeindias.html",
+    "href": "fichas/castanodeindias.html",
+    "title": "Castaño de Indias",
+    "section": "",
+    "text": "Nombre científico: Aesculus hippocastanum L.\nFamilia: Sapindaceae\nOrigen: Europa\nContinente: Europa (Balcanes)"
+  },
+  {
+    "objectID": "fichas/castanodeindias.html#ubicación",
+    "href": "fichas/castanodeindias.html#ubicación",
+    "title": "Castaño de Indias",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056127, -57.679297\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/casuarina-arb025.html",
+    "href": "fichas/casuarina-arb025.html",
+    "title": "Casuarina",
+    "section": "",
+    "text": "Nombre científico: Casuarina equisetifolia L.\nFamilia: Casuarinaceae\nOrigen: Australia\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/casuarina-arb025.html#ubicación",
+    "href": "fichas/casuarina-arb025.html#ubicación",
+    "title": "Casuarina",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056656, -57.68126\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-arb055.html",
+    "href": "fichas/cedro-arb055.html",
+    "title": "Cedro",
+    "section": "",
+    "text": "Nombre científico: Cedrus sp.`\nContinente: África / Asia / Europa"
+  },
+  {
+    "objectID": "fichas/cedro-arb055.html#ubicación",
+    "href": "fichas/cedro-arb055.html#ubicación",
+    "title": "Cedro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05572, -57.68198\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-arb075.html",
+    "href": "fichas/cedro-arb075.html",
+    "title": "Cedro",
+    "section": "",
+    "text": "Nombre científico: Cedrus sp.\nContinente: África / Asia / Europa"
+  },
+  {
+    "objectID": "fichas/cedro-arb075.html#ubicación",
+    "href": "fichas/cedro-arb075.html#ubicación",
+    "title": "Cedro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05593, -57.681297\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedro-del-atlas-arb088.html",
+    "href": "fichas/cedro-del-atlas-arb088.html",
+    "title": "Cedro del Atlas",
+    "section": "",
+    "text": "Nombre científico: Cedrus atlantica (Endl.) Manetti ex Carrière\nFamilia: Pinaceae\nOrigen: África-Europa\nContinente: África (Norte)"
+  },
+  {
+    "objectID": "fichas/cedro-del-atlas-arb088.html#ubicación",
+    "href": "fichas/cedro-del-atlas-arb088.html#ubicación",
+    "title": "Cedro del Atlas",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05528, -57.681835\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedroazul.html",
+    "href": "fichas/cedroazul.html",
+    "title": "Cedro azul",
+    "section": "",
+    "text": "Nombre científico: Cedrus atlantica (Endl.) Manetti ex Carrière\nFamilia: Pinaceae\nOrigen: África-Europa\nContinente: África (Norte)"
+  },
+  {
+    "objectID": "fichas/cedroazul.html#ubicación",
+    "href": "fichas/cedroazul.html#ubicación",
+    "title": "Cedro azul",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056201, -57.680907\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cedrojapones.html",
+    "href": "fichas/cedrojapones.html",
+    "title": "Cedro japonés",
+    "section": "",
+    "text": "Nombre científico: Cryptomeria japonica (Thunb. ex L. f.) D. Don\nFamilia: Cupressaceae\nOrigen: Asia\nContinente: Asia (Japón)"
+  },
+  {
+    "objectID": "fichas/cedrojapones.html#ubicación",
+    "href": "fichas/cedrojapones.html#ubicación",
+    "title": "Cedro japonés",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056374, -57.679314\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cipres-de-las-guaitecas.html",
+    "href": "fichas/cipres-de-las-guaitecas.html",
+    "title": "Ciprés de las Guaitecas",
+    "section": "",
+    "text": "Nombre científico: Austrocedrus chilensis\nFamilia: Cupressaceae\nContinente: América del Sur (Andes)\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/cipres.html",
+    "href": "fichas/cipres.html",
+    "title": "Cipres",
+    "section": "",
+    "text": "Nombre científico: Cupressus sp.\nFamilia: Cupressaceae\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/cipres.html#ubicación",
+    "href": "fichas/cipres.html#ubicación",
+    "title": "Cipres",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056329, -57.68043\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/coihue.html",
+    "href": "fichas/coihue.html",
+    "title": "Coihue",
+    "section": "",
+    "text": "Nombre científico: Nothofagus dombeyi\nFamilia: Nothofagaceae\nOrigen: Sudamérica\nContinente: América del Sur (Patagonia)"
+  },
+  {
+    "objectID": "fichas/coihue.html#ubicación",
+    "href": "fichas/coihue.html#ubicación",
+    "title": "Coihue",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05529, -57.680601\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb048.html",
+    "href": "fichas/corona-de-novia-arb048.html",
+    "title": "Corona de novia",
+    "section": "",
+    "text": "Nombre científico: Spiraea cantoniensis\nFamilia: Rosaceae\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/corona-de-novia-arb048.html#ubicación",
+    "href": "fichas/corona-de-novia-arb048.html#ubicación",
+    "title": "Corona de novia",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05563, -57.682537\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/crataegus.html",
+    "href": "fichas/crataegus.html",
+    "title": "Crataegus",
+    "section": "",
+    "text": "Nombre científico: Crataegus sp.\nFamilia: Rosaceae\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/crataegus.html#ubicación",
+    "href": "fichas/crataegus.html#ubicación",
+    "title": "Crataegus",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056844, -57.680508\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/damara.html",
+    "href": "fichas/damara.html",
+    "title": "Damara",
+    "section": "",
+    "text": "Nombre científico: Agathis dammara\nFamilia: Araucariaceae\nContinente: Asia (Sudeste Asiático)\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/dodonea-arb052.html",
+    "href": "fichas/dodonea-arb052.html",
+    "title": "Dodonea",
+    "section": "",
+    "text": "Nombre científico: Dodonaea viscosa\nFamilia: Sapindaceae\nOrigen: Australia\nContinente: Oceanía / América / África (Cosmopolita tropical)"
+  },
+  {
+    "objectID": "fichas/dodonea-arb052.html#ubicación",
+    "href": "fichas/dodonea-arb052.html#ubicación",
+    "title": "Dodonea",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05572, -57.682395\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/duraznero.html",
+    "href": "fichas/duraznero.html",
+    "title": "Duraznero",
+    "section": "",
+    "text": "Nombre científico: Fraxinus exelsior\nFamilia: Oleaceae\nOrigen: Europa\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/duraznero.html#ubicación",
+    "href": "fichas/duraznero.html#ubicación",
+    "title": "Duraznero",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0561, -57.682554\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/espino-blanco.html",
+    "href": "fichas/espino-blanco.html",
+    "title": "Espino blanco",
+    "section": "",
+    "text": "Nombre científico: Crataegus sp.\nFamilia: Rosaceae\nOrigen: Europa, Asia, Norte América\nContinente: Hemisferio Norte"
+  },
+  {
+    "objectID": "fichas/espino-blanco.html#ubicación",
+    "href": "fichas/espino-blanco.html#ubicación",
+    "title": "Espino blanco",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05573, -57.682438\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/espino.html",
+    "href": "fichas/espino.html",
+    "title": "Espino",
+    "section": "",
+    "text": "Nombre científico: Eucalyptus sp.\nContinente: Hemisferio Norte"
+  },
+  {
+    "objectID": "fichas/espino.html#ubicación",
+    "href": "fichas/espino.html#ubicación",
+    "title": "Espino",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05527, -57.68253\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/eucalipto-medicinal.html",
+    "href": "fichas/eucalipto-medicinal.html",
+    "title": "Eucalipto medicinal",
+    "section": "",
+    "text": "Nombre científico: Eucalyptus cinerea\nFamilia: Myrtaceae\nOrigen: Australia\nContinente: Oceanía (Australia)"
+  },
+  {
+    "objectID": "fichas/eucalipto-medicinal.html#ubicación",
+    "href": "fichas/eucalipto-medicinal.html#ubicación",
+    "title": "Eucalipto medicinal",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05502, -57.680618\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/falso-muerdago.html",
+    "href": "fichas/falso-muerdago.html",
+    "title": "Falso muérdago",
+    "section": "",
+    "text": "Nombre científico: Ilex aquifolium L.\nOrigen: Europa\nContinente: Europa / África del Norte / Asia"
+  },
+  {
+    "objectID": "fichas/falso-muerdago.html#ubicación",
+    "href": "fichas/falso-muerdago.html#ubicación",
+    "title": "Falso muérdago",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056569, -57.680685\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ginkgo.html",
+    "href": "fichas/ginkgo.html",
+    "title": "Ginkgo",
+    "section": "",
+    "text": "Nombre científico: Ginkgo biloba\nFamilia: Ginkgoaceae\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/ginkgo.html#ubicación",
+    "href": "fichas/ginkgo.html#ubicación",
+    "title": "Ginkgo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056, -57.681529\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/hipericon-canario.html",
+    "href": "fichas/hipericon-canario.html",
+    "title": "Hipericón canario",
+    "section": "",
+    "text": "Nombre científico: Hypericum x moserianum\nFamilia: Hypericaceae\nContinente: África (Islas Canarias)\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/ligustro-arb054.html",
+    "href": "fichas/ligustro-arb054.html",
+    "title": "Ligustro",
+    "section": "",
+    "text": "Nombre científico: Ligustrum lucidum\nFamilia: Olives\nOrigen: Asia\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/ligustro-arb054.html#ubicación",
+    "href": "fichas/ligustro-arb054.html#ubicación",
+    "title": "Ligustro",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05569, -57.68208\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/limpiatubos.html",
+    "href": "fichas/limpiatubos.html",
+    "title": "Limpiatubos",
+    "section": "",
+    "text": "Nombre científico: Callistemon imperialis\nFamilia: Myrtaceae\nOrigen: Australia\nContinente: América del Sur\nAño de plantación: 1988"
+  },
+  {
+    "objectID": "fichas/limpiatubos.html#ubicación",
+    "href": "fichas/limpiatubos.html#ubicación",
+    "title": "Limpiatubos",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056727, -57.679967\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/liquidambar.html",
+    "href": "fichas/liquidambar.html",
+    "title": "Liquidambar",
+    "section": "",
+    "text": "Nombre científico: Liquidambar sp.\nFamilia: Altingiaceae\nContinente: América del Norte / Asia"
+  },
+  {
+    "objectID": "fichas/liquidambar.html#ubicación",
+    "href": "fichas/liquidambar.html#ubicación",
+    "title": "Liquidambar",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056545, -57.679395\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/macasar-arb053.html",
+    "href": "fichas/macasar-arb053.html",
+    "title": "Macasar",
+    "section": "",
+    "text": "Nombre científico: Chamaecyparis lawsoniana\nFamilia: Cupressaceae\nOrigen: Norte América\nContinente: Asia (China)"
+  },
+  {
+    "objectID": "fichas/macasar-arb053.html#ubicación",
+    "href": "fichas/macasar-arb053.html#ubicación",
+    "title": "Macasar",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05574, -57.68213\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/olmo.html",
+    "href": "fichas/olmo.html",
+    "title": "Olmo",
+    "section": "",
+    "text": "Nombre científico: Quercus sp.\nContinente: Hemisferio Norte"
+  },
+  {
+    "objectID": "fichas/olmo.html#ubicación",
+    "href": "fichas/olmo.html#ubicación",
+    "title": "Olmo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.0551, -57.680595\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/pino-mexicano-amarillo.html",
+    "href": "fichas/pino-mexicano-amarillo.html",
+    "title": "Pino mexicano amarillo",
+    "section": "",
+    "text": "Nombre científico: Pinus patula Schltdl. & Cham.\nFamilia: Pinaceae\nOrigen: México\nContinente: Europa (Mediterráneo) / África del Norte"
+  },
+  {
+    "objectID": "fichas/pino-mexicano-amarillo.html#ubicación",
+    "href": "fichas/pino-mexicano-amarillo.html#ubicación",
+    "title": "Pino mexicano amarillo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056056, -57.679651\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/pino.html",
+    "href": "fichas/pino.html",
+    "title": "Pino",
+    "section": "",
+    "text": "Nombre científico: Pinus sp.\nFamilia: Pinaceae\nContinente: Hemisferio Norte / Variable"
+  },
+  {
+    "objectID": "fichas/pino.html#ubicación",
+    "href": "fichas/pino.html#ubicación",
+    "title": "Pino",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056472, -57.680521\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/roble-pellin.html",
+    "href": "fichas/roble-pellin.html",
+    "title": "Roble pellín",
+    "section": "",
+    "text": "Nombre científico: Nothofagus obliqua 2\nFamilia: Nothofagaceae\nOrigen: Sudamérica\nContinente: América del Sur (Patagonia)"
+  },
+  {
+    "objectID": "fichas/roble-pellin.html#ubicación",
+    "href": "fichas/roble-pellin.html#ubicación",
+    "title": "Roble pellín",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05553, -57.680985\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/roble-rojo-arb059.html",
+    "href": "fichas/roble-rojo-arb059.html",
+    "title": "Roble rojo",
+    "section": "",
+    "text": "Nombre científico: Quercus rubra L.\nFamilia: Fagaceae\nOrigen: Europa\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/roble-rojo-arb059.html#ubicación",
+    "href": "fichas/roble-rojo-arb059.html#ubicación",
+    "title": "Roble rojo",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.05577, -57.681628\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/roblerojo.html",
+    "href": "fichas/roblerojo.html",
+    "title": "Roble rojo americano",
+    "section": "",
+    "text": "Nombre científico: Quercus rubra L.\nFamilia: Fagaceae\nOrigen: Europa\nContinente: América del Norte"
+  },
+  {
+    "objectID": "fichas/roblerojo.html#ubicación",
+    "href": "fichas/roblerojo.html#ubicación",
+    "title": "Roble rojo americano",
+    "section": "Ubicación",
+    "text": "Ubicación\nCoordenadas: -38.056373, -57.679866\nVer en el mapa »\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/secuoiaroja.html",
+    "href": "fichas/secuoiaroja.html",
+    "title": "Secuoya roja",
+    "section": "",
+    "text": "Nombre científico: Sequoiadendron giganteum\nFamilia: Cupressaceae\nContinente: América del Norte\n\n« Volver a las especies"
+  },
+  {
+    "objectID": "fichas/tejo-comun.html",
+    "href": "fichas/tejo-comun.html",
+    "title": "Tejo común",
+    "section": "",
+    "text": "Nombre científico: Larix decidua\nFamilia: Pinaceae\nContinente: Europa / África del Norte / Asia\n\n« Volver a las especies"
   },
   {
     "objectID": "index.html",
@@ -42,20 +1393,6 @@
     "text": "Acerca del Laboratorio\nEl Laboratorio del Arboretum integra los relevamientos biológicos desarrollados en Estancia La Constancia para promover la conservación, investigación y educación ambiental de la biodiversidad local."
   },
   {
-    "objectID": "fichas/sabina.html",
-    "href": "fichas/sabina.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/sabina.html#historia",
-    "href": "fichas/sabina.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
     "objectID": "index.html#créditos",
     "href": "index.html#créditos",
     "title": "Laboratorio del Arboretum",
@@ -63,199 +1400,17 @@
     "text": "Créditos\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento."
   },
   {
-    "objectID": "fichas/secuoiaroja.html",
-    "href": "fichas/secuoiaroja.html",
-    "title": "Sequoiadendron giganteum",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
+    "objectID": "estadisticas.html#ejemplares-por-origen",
+    "href": "estadisticas.html#ejemplares-por-origen",
+    "title": "Estadísticas",
+    "section": "Ejemplares por origen",
+    "text": "Ejemplares por origen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVer tabla\n\n\n\n\n\n\n\n\n\n\nOrigen\nEjemplares\n\n\n\n\nAsia\n19\n\n\nAmérica del Norte\n17\n\n\nVarias regiones\n17\n\n\nHemisferio Norte\n10\n\n\nOceanía\n7\n\n\nCosmopolita\n5\n\n\nAmérica del Sur\n4\n\n\nÁfrica\n4\n\n\nAmérica\n2\n\n\nEuropa\n2\n\n\nOrigen hortícola/híbrido\n2\n\n\nSin dato\n2"
   },
   {
-    "objectID": "fichas/secuoiaroja.html#historia",
-    "href": "fichas/secuoiaroja.html#historia",
-    "title": "Sequoiadendron giganteum",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/roblerojo.html",
-    "href": "fichas/roblerojo.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/roblerojo.html#historia",
-    "href": "fichas/roblerojo.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/roblecomun.html",
-    "href": "fichas/roblecomun.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/roblecomun.html#historia",
-    "href": "fichas/roblecomun.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/gingko.html",
-    "href": "fichas/gingko.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/gingko.html#historia",
-    "href": "fichas/gingko.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/damara.html",
-    "href": "fichas/damara.html",
-    "title": "Cedro de Cristal",
-    "section": "",
-    "text": "Sabina\nNombre científico: Agathis dammara\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/damara.html#historia",
-    "href": "fichas/damara.html#historia",
-    "title": "Cedro de Cristal",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/cedrodelhimalaya.html",
-    "href": "fichas/cedrodelhimalaya.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/cedrodelhimalaya.html#historia",
-    "href": "fichas/cedrodelhimalaya.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/castanodeindias.html",
-    "href": "fichas/castanodeindias.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/castanodeindias.html#historia",
-    "href": "fichas/castanodeindias.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/araucariaaustraliana.html",
-    "href": "fichas/araucariaaustraliana.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/araucariaaustraliana.html#historia",
-    "href": "fichas/araucariaaustraliana.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/abeto.html",
-    "href": "fichas/abeto.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/abeto.html#historia",
-    "href": "fichas/abeto.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/arboldelostulipanes.html",
-    "href": "fichas/arboldelostulipanes.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/arboldelostulipanes.html#historia",
-    "href": "fichas/arboldelostulipanes.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/cedroazul.html",
-    "href": "fichas/cedroazul.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/cedroazul.html#historia",
-    "href": "fichas/cedroazul.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/cedrojapones.html",
-    "href": "fichas/cedrojapones.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/cedrojapones.html#historia",
-    "href": "fichas/cedrojapones.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/encina.html",
-    "href": "fichas/encina.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/encina.html#historia",
-    "href": "fichas/encina.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
-  },
-  {
-    "objectID": "fichas/limpiatubos.html",
-    "href": "fichas/limpiatubos.html",
-    "title": "Sabina de Virginia",
-    "section": "",
-    "text": "Sabina\nNombre científico: Sabina virginiana (L.) Antoine.\nFamilia: Cupressaceae\nOrigen: E.E.U.U"
-  },
-  {
-    "objectID": "fichas/limpiatubos.html#historia",
-    "href": "fichas/limpiatubos.html#historia",
-    "title": "Sabina de Virginia",
-    "section": "Historia",
-    "text": "Historia\nÁrbol considerado fósil viviente…"
+    "objectID": "index.html#ejemplares-destacados",
+    "href": "index.html#ejemplares-destacados",
+    "title": "Laboratorio del Arboretum",
+    "section": "Ejemplares destacados",
+    "text": "Ejemplares destacados\n\n\n\n\nAbeto\n\n\n\n\n\n\nAraucaria Australiana\n\n\n\n\n\n\nCastaño de Indias\n\n\n\n\n\n\nCedro azul"
   }
 ]

@@ -2,7 +2,20 @@
 title: "Laboratorio del Arboretum"
 subtitle: "Estancia La Constancia • Data Lab"
 page-layout: full
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+source("scripts/cargar_datos.R")
+
+destacados <- arboles %>%
+  dplyr::filter(destacado == 1, tiene_valor(foto)) %>%
+  dplyr::arrange(nombre_comun)
+```
 
 <!-- # 🌿 Laboratorio del Arboretum -->
 
@@ -10,39 +23,21 @@ Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia.
 
 Este espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.
 
-<!-- ![](fotos/portada3.jpg){fig-align="center" .rounded .shadow-sm alt="Panel del Arboretum Data Lab"} -->
-
 <div style="text-align: center; margin-bottom: 2rem;">
   <img src="fotos/portada2.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Panel del Arboretum Data Lab">
 </div>
 
-<!-- ## Explorar -->
+## Ejemplares destacados
 
-<!-- ::: grid -->
-<!-- ::: g-col-4 -->
-<!-- ### 🌳 Especies destacadas -->
-
-<!-- Conozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico. -->
-
-<!-- [Explorar especies →](especies.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-
-<!-- ::: g-col-4 -->
-<!-- ### 🐦 Aves -->
-
-<!-- Galería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna. -->
-
-<!-- [Explorar aves →](aves.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-
-<!-- ::: g-col-4 -->
-<!-- ### 📍 Mapa interactivo -->
-
-<!-- Recorra virtualmente los senderos, sectores y puntos de interés del arboretum. -->
-
-<!-- [Explorar mapa →](mapa.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-<!-- ::: -->
+```{r results='asis'}
+cat('<div class="grid">')
+for (i in seq_len(min(4, nrow(destacados)))) {
+  d <- destacados[i, ]
+  cat(sprintf('<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;"><a href="fichas/%s.html" style="text-decoration:none;color:inherit;"><img src="fotos/%s" style="width:100%%;height:140px;object-fit:cover;"><div class="p-2"><b>%s</b></div></a></div>',
+    d$slug, d$foto, d$nombre_comun))
+}
+cat('</div>')
+```
 
 ## Explorar
 

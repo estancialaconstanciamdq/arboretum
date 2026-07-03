@@ -1,26 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB032).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Cedro japonés"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Cedrojapones.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Cryptomeria japonica (Thunb. ex L. f.) D. Don*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Cupressaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** Asia
 
 
-**Familia:**
-Cupressaceae
+**Continente:** Asia (Japón)
 
 
-**Origen:**
-E.E.U.U
+## Ubicación
 
+Coordenadas: -38.056374, -57.679314
 
-## Historia
+[Ver en el mapa »](../mapa.qmd)
 
-Árbol considerado fósil viviente...
+---
+
+[« Volver a las especies](../especies.qmd)
+

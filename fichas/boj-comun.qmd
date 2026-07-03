@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB079).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Boj común"
+format: html
+---
+
+**Nombre científico:** *Fraxinus angustifolia*
+
+
+**Familia:** Oleaceae
+
+
+**Origen:** Europa
+
+
+**Continente:** Europa / Asia Occidental / África del Norte
+
+
+## Ubicación
+
+Coordenadas: -38.05608, -57.682552
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

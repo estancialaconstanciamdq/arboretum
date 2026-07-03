@@ -9,107 +9,51 @@ format: html
 #| message: false
 #| warning: false
 
-library(readxl)
-library(dplyr)
-
-
-# Archivo maestro
-
-archivo <- "data/Arboretum_Master.xlsx"
-
-
-# Leer hoja Árboles
-
-arboles <- read_excel(
-  archivo,
-  sheet = "Árboles"
-)
-
-
-# Seleccionar ejemplares destacados
+# Shared loader: gives `arboles` with the same `slug` used by the fichas.
+source("scripts/cargar_datos.R")
 
 arboles_destacados <- arboles %>%
   filter(destacado == 1)
-
 ```
 
 <!-- # 🌳 Especies destacadas -->
 
 Ejemplares seleccionados por su valor botánico, histórico o paisajístico.
+
 ```{r results='asis', echo=FALSE}
 
 cat("::: {.grid}\n\n")
 
-for(i in seq_len(nrow(arboles_destacados))) {
+for (i in seq_len(nrow(arboles_destacados))) {
 
+  a <- arboles_destacados[i, ]
 
-cat("::: {.g-col-4}\n\n")
+  cat("::: {.g-col-4}\n\n")
+  cat("::: {.card .text-center}\n\n")
 
+  # Nombre -> enlace a la ficha generada (mismo slug que generar_fichas.R)
+  cat(paste0(
+    "####  [", a$nombre_comun, "](fichas/", a$slug, ".qmd)\n\n"
+  ))
 
-# cat("::: {.card}\n\n")
-cat("::: {.card .text-center}\n\n")
+  # Foto pequeña
+  if (tiene_valor(a$foto)) {
+    cat(paste0(
+      "<div style='text-align:center;'>",
+      "![](fotos/", a$foto,
+      "){width=150 style='height:150px; object-fit:cover; border-radius:8px;'}",
+      "</div>\n\n"
+    ))
+  }
 
+  # Info mínima
+  if (tiene_valor(a$familia)) {
+    cat(paste0("**Familia:** ", a$familia, "\n\n"))
+  }
 
-# Nombre
-
-cat(
-paste0(
-"####  [",
-arboles_destacados$nombre_comun[i],
-"](fichas/",
-arboles_destacados$ficha[i],
-".qmd)\n\n"
-)
-)
-
-
-# Foto pequeña
-
-if(
-"foto" %in% names(arboles_destacados) &&
-!is.na(arboles_destacados$foto[i])
-){
-
-# cat(
-# paste0(
-# "<div style='text-align:center;'>",
-# "![](fotos/",
-# arboles_destacados$foto[i],
-# "){width=150}",
-# "</div>\n\n"
-# )
-# )
-cat(
-paste0(
-"<div style='text-align:center;'>",
-"![](fotos/",
-arboles_destacados$foto[i],
-"){width=150 style='height:150px; object-fit:cover; border-radius:8px;'}",
-"</div>\n\n"
-)
-)
-  
-
-}
-
-
-# info mínima
-
-cat(
-paste0(
-"**Familia:** ",
-arboles_destacados$familia[i],
-"\n\n"
-)
-)
-
-
-cat(":::\n\n")
-
-cat(":::\n\n")
-
+  cat(":::\n\n")
+  cat(":::\n\n")
 }
 
 cat(":::\n")
-
 ```

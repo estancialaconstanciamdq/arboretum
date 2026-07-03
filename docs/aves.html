@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -39,11 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -67,13 +68,62 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./fotos/logo_la_constancia.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab del Arboretum</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./mapa.html"> 
+<span class="menu-text">Mapa</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./catalogo.html"> 
+<span class="menu-text">Catálogo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./especies.html"> 
+<span class="menu-text">Destacadas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./aves.html" aria-current="page"> 
+<span class="menu-text">Aves</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./estadisticas.html"> 
+<span class="menu-text">Estadísticas</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -100,160 +150,838 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="aves-del-arboretum" class="level1">
-<h1>🐦 Aves del Arboretum</h1>
-<p>Galería de especies observadas en el arboretum.</p>
-<div class="grid">
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Benteveo.jpg" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="benteveo" class="level4">
-<h4 class="anchored" data-anchor-id="benteveo">Benteveo</h4>
-</section>
+<p>Se registraron 46 especies de aves en el establecimiento. Buscá por nombre o filtrá por tipo de residencia.</p>
+<style>
+  .ave-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
+  .ave-controles label{font-size:.8rem;color:#555;display:block;}
+  .ave-controles input,.ave-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #ave-conteo{color:#666;font-size:.85rem;margin:.2rem 0 1rem;}
+  .ave-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem;}
+  .ave-card{border:1px solid #eee;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);background:#fff;}
+  .ave-foto{height:150px;background:#eef4f0;display:flex;align-items:center;justify-content:center;}
+  .ave-foto img{width:100%;height:150px;object-fit:cover;}
+  .ave-foto .ph{font-size:2.4rem;color:#9cc3b1;}
+  .ave-info{padding:.6rem .7rem;}
+  .ave-info h4{margin:.1rem 0;font-size:1rem;}
+  .ave-info .sci{font-style:italic;color:#666;font-size:.85rem;margin-bottom:.4rem;}
+  .ave-badge{display:inline-block;font-size:.72rem;padding:.1rem .5rem;border:1px solid #1E4A38;color:#1E4A38;border-radius:999px;}
+  .ave-info .season{font-size:.78rem;color:#555;margin-top:.35rem;}
+</style>
+<div class="ave-controles">
+<div>
+<label>Buscar</label><input type="text" id="ave-q" placeholder="nombre o especie...">
+</div>
+<div>
+<label>Residencia</label><select id="ave-res"><option value="">Todas</option><option value="Migratorio">Migratorio</option><option value="Permanente">Permanente</option><option value="Visitante">Visitante</option></select>
 </div>
 </div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Zorzalcolorado.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="zorzal-colorado" class="level4">
-<h4 class="anchored" data-anchor-id="zorzal-colorado">Zorzal colorado</h4>
-</section>
+<div id="ave-conteo">
+
 </div>
+<div id="ave-grid" class="ave-grid">
+<div class="ave-card" data-res="Permanente" data-buscar="benteveo pitangus sulphuratus">
+<div class="ave-foto">
+<img src="fotos/Benteveo.jpg" alt="Benteveo">
 </div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Calandria.jpg" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="calandria" class="level4">
-<h4 class="anchored" data-anchor-id="calandria">Calandria</h4>
-</section>
+<div class="ave-info">
+<h4 class="anchored">
+Benteveo
+</h4>
+<div class="sci">
+Pitangus sulphuratus
 </div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Carancho.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="carancho" class="level4">
-<h4 class="anchored" data-anchor-id="carancho">Carancho</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Chimango.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="chimango" class="level4">
-<h4 class="anchored" data-anchor-id="chimango">Chimango</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Chingolo.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="chingolo" class="level4">
-<h4 class="anchored" data-anchor-id="chingolo">Chingolo</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/GavilanMixto.jpg" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="gavilán-mixto" class="level4">
-<h4 class="anchored" data-anchor-id="gavilán-mixto">Gavilán mixto</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Gorrion.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="gorrión" class="level4">
-<h4 class="anchored" data-anchor-id="gorrión">Gorrión</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Hornero.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="hornero" class="level4">
-<h4 class="anchored" data-anchor-id="hornero">Hornero</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/LechucitaVizcachera.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="lechucita-de-las-vizcacheras" class="level4">
-<h4 class="anchored" data-anchor-id="lechucita-de-las-vizcacheras">Lechucita de las vizcacheras</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/PechoAmarillo.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="pecho-amarillo" class="level4">
-<h4 class="anchored" data-anchor-id="pecho-amarillo">Pecho amarillo</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Picazuro.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="picazuro" class="level4">
-<h4 class="anchored" data-anchor-id="picazuro">Picazuro</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Pirincho.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="pirincho" class="level4">
-<h4 class="anchored" data-anchor-id="pirincho">Pirincho</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Suiriríreal.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="suirirí-real" class="level4">
-<h4 class="anchored" data-anchor-id="suirirí-real">Suirirí real</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Tero.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="tero-común" class="level4">
-<h4 class="anchored" data-anchor-id="tero-común">Tero común</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/TyrannusSavana.jpg" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="tijereta" class="level4">
-<h4 class="anchored" data-anchor-id="tijereta">Tijereta</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Torcaza.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="torcaza" class="level4">
-<h4 class="anchored" data-anchor-id="torcaza">Torcaza</h4>
-</section>
-</div>
-</div>
-<div class="g-col-3">
-<div class="card text-center">
-<p><img src="fotos/Tordorenegrido.JPG" class="img-fluid" style="height:150px; object-fit:cover; border-radius:8px;" width="150"></p>
-<section id="tordo-renegrido" class="level4">
-<h4 class="anchored" data-anchor-id="tordo-renegrido">Tordo renegrido</h4>
-</section>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
 </div>
 </div>
 </div>
+<div class="ave-card" data-res="Permanente" data-buscar="bigua nannopterum brasilianum">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Biguá
+</h4>
+<div class="sci">
+Nannopterum brasilianum
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="cabecita negra spinus magellanicus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Cabecita negra
+</h4>
+<div class="sci">
+Spinus magellanicus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año (Más visible en Otoño/Invierno)
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="calandria mimus saturninus">
+<div class="ave-foto">
+<img src="fotos/Calandria.jpg" alt="Calandria">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Calandria
+</h4>
+<div class="sci">
+Mimus saturninus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="carancho caracara plancus">
+<div class="ave-foto">
+<img src="fotos/Carancho.JPG" alt="Carancho">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Carancho
+</h4>
+<div class="sci">
+Caracara plancus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="carpintero campestre colaptes campestris">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Carpintero campestre
+</h4>
+<div class="sci">
+Colaptes campestris
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="chiflon syrigma sibilatrix">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Chiflón
+</h4>
+<div class="sci">
+Syrigma sibilatrix
+</div>
+<span class="ave-badge">Permanente / Visitante estival</span>
+<div class="season">
+Todo el año (Mayor abundancia en Primavera/Verano)
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="chimango milvago chimango">
+<div class="ave-foto">
+<img src="fotos/Chimango.JPG" alt="Chimango">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Chimango
+</h4>
+<div class="sci">
+Milvago chimango
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="chingolo zonotrichia capensis">
+<div class="ave-foto">
+<img src="fotos/Chingolo.JPG" alt="Chingolo">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Chingolo
+</h4>
+<div class="sci">
+Zonotrichia capensis
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="colibri comun chlorostilbon lucidus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Colibrí común
+</h4>
+<div class="sci">
+Chlorostilbon lucidus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Visitante" data-buscar="colibri garganta blanca leucochloris albicollis">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Colibrí garganta blanca
+</h4>
+<div class="sci">
+Leucochloris albicollis
+</div>
+<span class="ave-badge">Visitante invernal / Escaso</span>
+<div class="season">
+Otoño e Invierno
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="corbatita sporophila caerulescens">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Corbatita
+</h4>
+<div class="sci">
+Sporophila caerulescens
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="cotorra myiopsitta monachus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Cotorra
+</h4>
+<div class="sci">
+Myiopsitta monachus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="cuervillo cara pelada phimosus infuscatus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Cuervillo cara pelada
+</h4>
+<div class="sci">
+Phimosus infuscatus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="cuervillo de canada plegadis chihi">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Cuervillo de cañada
+</h4>
+<div class="sci">
+Plegadis chihi
+</div>
+<span class="ave-badge">Permanente / Movimientos locales</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="gavilan mixto parabuteo unicinctus">
+<div class="ave-foto">
+<img src="fotos/GavilanMixto.jpg" alt="Gavilán mixto">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Gavilán mixto
+</h4>
+<div class="sci">
+Parabuteo unicinctus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="gaviota cocinera larus dominicanus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Gaviota cocinera
+</h4>
+<div class="sci">
+Larus dominicanus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="golondrina progne chalybea">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Golondrina
+</h4>
+<div class="sci">
+Progne chalybea
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="golondrina tijerita hirundo rustica">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Golondrina tijerita
+</h4>
+<div class="sci">
+Hirundo rustica
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="gorrion passer domesticus">
+<div class="ave-foto">
+<img src="fotos/Gorrion.JPG" alt="Gorrión">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Gorrión
+</h4>
+<div class="sci">
+Passer domesticus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="halconcito colorado falco sparverius">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Halconcito colorado
+</h4>
+<div class="sci">
+Falco sparverius
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="halcon aplomado falco femoralis">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Halcón aplomado
+</h4>
+<div class="sci">
+Falco femoralis
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="hornero furnarius rufus">
+<div class="ave-foto">
+<img src="fotos/Hornero.JPG" alt="Hornero">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Hornero
+</h4>
+<div class="sci">
+Furnarius rufus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="jilguero sicalis flaveola">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Jilguero
+</h4>
+<div class="sci">
+Sicalis flaveola
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="lechucita de las vizcacheras athene cunicularia">
+<div class="ave-foto">
+<img src="fotos/LechucitaVizcachera.JPG" alt="Lechucita de las vizcacheras">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Lechucita de las vizcacheras
+</h4>
+<div class="sci">
+Athene cunicularia
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="lechuza de campanario tyto alba">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Lechuza de campanario
+</h4>
+<div class="sci">
+Tyto alba
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="milano blanco elanus leucurus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Milano blanco
+</h4>
+<div class="sci">
+Elanus leucurus
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="musico agelaioides badius">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Músico
+</h4>
+<div class="sci">
+Agelaioides badius
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="paloma domestica columba livia">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Paloma doméstica
+</h4>
+<div class="sci">
+Columba livia
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="pecho amarillo pseudoleistes virescens">
+<div class="ave-foto">
+<img src="fotos/PechoAmarillo.JPG" alt="Pecho amarillo">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Pecho amarillo
+</h4>
+<div class="sci">
+Pseudoleistes virescens
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="pecho colorado leistes superciliaris">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Pecho colorado
+</h4>
+<div class="sci">
+Leistes superciliaris
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="picazuro patagioenas picazuro">
+<div class="ave-foto">
+<img src="fotos/Picazuro.JPG" alt="Picazuro">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Picazuro
+</h4>
+<div class="sci">
+Patagioenas picazuro
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="piojito serpophaga subcristata">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Piojito
+</h4>
+<div class="sci">
+Serpophaga subcristata
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="pirincho guira guira">
+<div class="ave-foto">
+<img src="fotos/Pirincho.JPG" alt="Pirincho">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Pirincho
+</h4>
+<div class="sci">
+Guira guira
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="ratona troglodytes aedon">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Ratona
+</h4>
+<div class="sci">
+Troglodytes aedon
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="suiriri real tyrannus melancholicus">
+<div class="ave-foto">
+<img src="fotos/Suiriríreal.JPG" alt="Suirirí real">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Suirirí real
+</h4>
+<div class="sci">
+Tyrannus melancholicus
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="tacuarita azul polioptila dumicola">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Tacuarita azul
+</h4>
+<div class="sci">
+Polioptila dumicola
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="taguato rupornis magnirostris">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Taguató
+</h4>
+<div class="sci">
+Rupornis magnirostris
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="tero comun vanellus chilensis">
+<div class="ave-foto">
+<img src="fotos/Tero.JPG" alt="Tero común">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Tero común
+</h4>
+<div class="sci">
+Vanellus chilensis
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Migratorio" data-buscar="tijereta tyrannus savana">
+<div class="ave-foto">
+<img src="fotos/TyrannusSavana.jpg" alt="Tijereta">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Tijereta
+</h4>
+<div class="sci">
+Tyrannus savana
+</div>
+<span class="ave-badge">Migratorio estival</span>
+<div class="season">
+Primavera y Verano (Emblemático de Verano)
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="torcacita columbina picui">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Torcacita
+</h4>
+<div class="sci">
+Columbina picui
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="torcaza zenaida auriculata">
+<div class="ave-foto">
+<img src="fotos/Torcaza.JPG" alt="Torcaza">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Torcaza
+</h4>
+<div class="sci">
+Zenaida auriculata
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="tordo pico corto molothrus bonariensis">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Tordo pico corto
+</h4>
+<div class="sci">
+Molothrus bonariensis
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="tordo renegrido molothrus bonariensis">
+<div class="ave-foto">
+<img src="fotos/Tordorenegrido.JPG" alt="Tordo renegrido">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Tordo renegrido
+</h4>
+<div class="sci">
+Molothrus bonariensis
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="zorzal turdus amaurochalinus">
+<div class="ave-foto">
+<span class="ph">🕊️</span>
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Zorzal
+</h4>
+<div class="sci">
+Turdus amaurochalinus
+</div>
+<span class="ave-badge">Migratorio interno / Permanente</span>
+<div class="season">
+Todo el año (Más abundante en Otoño/Invierno)
+</div>
+</div>
+</div>
+<div class="ave-card" data-res="Permanente" data-buscar="zorzal colorado turdus rufiventris">
+<div class="ave-foto">
+<img src="fotos/Zorzalcolorado.JPG" alt="Zorzal colorado">
+</div>
+<div class="ave-info">
+<h4 class="anchored">
+Zorzal colorado
+</h4>
+<div class="sci">
+Turdus rufiventris
+</div>
+<span class="ave-badge">Permanente</span>
+<div class="season">
+Todo el año
+</div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var q=document.getElementById("ave-q"), fr=document.getElementById("ave-res"),
+      cards=document.querySelectorAll("#ave-grid .ave-card"), conteo=document.getElementById("ave-conteo");
+  function aplica(){
+    var qs=(q.value||"").toLowerCase(), vr=fr.value, n=0;
+    cards.forEach(function(c){
+      var ok=c.dataset.buscar.indexOf(qs)>=0 && (!vr || c.dataset.res===vr);
+      c.style.display=ok?"":"none"; if(ok)n++;
+    });
+    conteo.textContent=n+" de "+cards.length+" especies";
+  }
+  [q,fr].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  aplica();
+})();
+</script>
 <hr>
 <p><em>Las fotografías fueron relevadas por los equipos de biólogos y ecólogos que trabajan en Estancia La Constancia.</em></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

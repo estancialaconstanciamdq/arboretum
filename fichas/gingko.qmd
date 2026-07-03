@@ -1,26 +1,34 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB050).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Ginkgo"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+**Nombre científico:** *Acer palmatum*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Sapindaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** Asia
 
 
-**Familia:**
-Cupressaceae
+**Continente:** Asia (China)
 
 
-**Origen:**
-E.E.U.U
+**Año de plantación:** 2002
 
 
-## Historia
+## Ubicación
 
-Árbol considerado fósil viviente...
+Coordenadas: -38.05576, -57.682429
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

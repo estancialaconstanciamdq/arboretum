@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB085).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Carex"
+format: html
+---
+
+**Nombre científico:** *Celtis tala*
+
+
+**Familia:** Cannabaceae
+
+
+**Origen:** Sudamérica
+
+
+**Continente:** Global
+
+
+## Ubicación
+
+Coordenadas: -38.05494, -57.681583
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

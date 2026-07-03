@@ -1,0 +1,25 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB091).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Olmo"
+format: html
+---
+
+**Nombre científico:** *Quercus sp.*
+
+
+**Continente:** Hemisferio Norte
+
+
+## Ubicación
+
+Coordenadas: -38.0551, -57.680595
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

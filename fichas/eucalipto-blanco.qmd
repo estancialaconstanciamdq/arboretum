@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB077).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Eucalipto blanco"
+format: html
+---
+
+**Nombre científico:** *Eucalyptus globulus Labill.*
+
+
+**Familia:** Myrtaceae
+
+
+**Origen:** Australia
+
+
+**Continente:** Oceanía (Australia)
+
+
+## Ubicación
+
+Coordenadas: -38.05622, -57.681656
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

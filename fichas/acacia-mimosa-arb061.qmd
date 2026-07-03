@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB061).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Acacia mimosa"
+format: html
+---
+
+**Nombre científico:** *Acacia dealbata*
+
+
+**Familia:** Fabaceae
+
+
+**Origen:** Australia
+
+
+**Continente:** Oceanía (Australia)
+
+
+## Ubicación
+
+Coordenadas: -38.05567, -57.681577
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB056).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Canforero"
+format: html
+---
+
+**Nombre científico:** *Cinnamomum camphora*
+
+
+**Familia:** Lauraceae
+
+
+**Origen:** Asia
+
+
+**Continente:** Asia (China / Japón)
+
+
+## Ubicación
+
+Coordenadas: -38.05585, -57.681933
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

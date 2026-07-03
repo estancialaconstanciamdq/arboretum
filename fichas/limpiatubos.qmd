@@ -1,26 +1,36 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB016).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Limpiatubos"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Limpiatubos.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Callistemon imperialis*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Myrtaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** Australia
 
 
-**Familia:**
-Cupressaceae
+**Continente:** América del Sur
 
 
-**Origen:**
-E.E.U.U
+**Año de plantación:** 1988
 
 
-## Historia
+## Ubicación
 
-Árbol considerado fósil viviente...
+Coordenadas: -38.056727, -57.679967
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

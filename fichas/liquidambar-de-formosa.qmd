@@ -1,0 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB062).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Liquidámbar de Formosa"
+format: html
+---
+
+![](../fotos/Liquidambar.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Liquidambar formosana*
+
+
+**Familia:** Altingiaceae
+
+
+**Origen:** Asia
+
+
+**Continente:** Asia (China / Taiwán)
+
+
+## Ubicación
+
+Coordenadas: -38.05553, -57.681601
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

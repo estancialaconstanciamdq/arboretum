@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  pre-render: scripts/generar_fichas.R
 
 resources:
    - fotos/**
@@ -8,8 +9,26 @@ resources:
 
 website:
   title: "Lab del Arboretum"
+  navbar:
+    background: dark        # navbar oscuro (el verde exacto se aplica en styles.css)
+    logo: fotos/logo_la_constancia.svg
+    title: "Lab del Arboretum"
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Mapa"
+        href: mapa.qmd
+      - text: "Catálogo"
+        href: catalogo.qmd
+      - text: "Destacadas"
+        href: especies.qmd
+      - text: "Aves"
+        href: aves.qmd
+      - text: "Estadísticas"
+        href: estadisticas.qmd
 
 format:
   html:
     theme: cosmo
+    css: styles.css
 

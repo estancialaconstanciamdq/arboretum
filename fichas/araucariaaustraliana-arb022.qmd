@@ -1,0 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB022).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Araucaria Australiana"
+format: html
+---
+
+![](../fotos/Araucaria.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Araucaria bidwillii Hook.*
+
+
+**Familia:** Araucariaceae
+
+
+**Origen:** Australia
+
+
+**Continente:** Oceanía (Australia)
+
+
+## Ubicación
+
+Coordenadas: -38.056909, -57.680885
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

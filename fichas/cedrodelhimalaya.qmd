@@ -1,26 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB005).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Cedro del Himalaya"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Cedroverdedeodara.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Cedrus deodara (Roxb. ex D. Don) G. Don*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Pinaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** Asia
 
 
-**Familia:**
-Cupressaceae
+**Continente:** Asia
 
 
-**Origen:**
-E.E.U.U
+## Ubicación
 
+Coordenadas: -38.056549, -57.680737
 
-## Historia
+[Ver en el mapa »](../mapa.qmd)
 
-Árbol considerado fósil viviente...
+---
+
+[« Volver a las especies](../especies.qmd)
+

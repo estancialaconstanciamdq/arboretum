@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB059).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Roble rojo"
+format: html
+---
+
+**Nombre científico:** *Quercus rubra L.*
+
+
+**Familia:** Fagaceae
+
+
+**Origen:** Europa
+
+
+**Continente:** América del Norte
+
+
+## Ubicación
+
+Coordenadas: -38.05577, -57.681628
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

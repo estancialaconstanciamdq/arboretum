@@ -1,0 +1,22 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB035).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Ahuehuete"
+format: html
+---
+
+**Nombre científico:** *Taxodium mucronatum*
+
+
+**Familia:** Cupressaceae
+
+
+**Continente:** América del Norte (México)
+
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

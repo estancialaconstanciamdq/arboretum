@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB047).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Corona de novia"
+format: html
+---
+
+**Nombre científico:** *Spiraea cantoniensis*
+
+
+**Familia:** Rosaceae
+
+
+**Origen:** Asia
+
+
+**Continente:** Asia (China)
+
+
+## Ubicación
+
+Coordenadas: -38.05564, -57.682655
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

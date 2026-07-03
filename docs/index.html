@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -39,11 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -67,13 +68,62 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./fotos/logo_la_constancia.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab del Arboretum</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./mapa.html"> 
+<span class="menu-text">Mapa</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./catalogo.html"> 
+<span class="menu-text">Catálogo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./especies.html"> 
+<span class="menu-text">Destacadas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./aves.html"> 
+<span class="menu-text">Aves</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./estadisticas.html"> 
+<span class="menu-text">Estadísticas</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -103,28 +153,42 @@ ul.task-list li input[type="checkbox"] {
 <!-- # 🌿 Laboratorio del Arboretum -->
 <p>Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia.</p>
 <p>Este espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.</p>
-<!-- ![](fotos/portada3.jpg){fig-align="center" .rounded .shadow-sm alt="Panel del Arboretum Data Lab"} -->
 <div style="text-align: center; margin-bottom: 2rem;">
 <p><img src="fotos/portada2.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Panel del Arboretum Data Lab"></p>
 </div>
-<!-- ## Explorar -->
-<!-- ::: grid -->
-<!-- ::: g-col-4 -->
-<!-- ### 🌳 Especies destacadas -->
-<!-- Conozca los ejemplares más representativos de la flora del arboretum, incluyendo árboles de gran interés botánico, paisajístico e histórico. -->
-<!-- [Explorar especies →](especies.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-<!-- ::: g-col-4 -->
-<!-- ### 🐦 Aves -->
-<!-- Galería fotográfica de aves registradas en Estancia La Constancia a través de actividades de monitoreo y observación de fauna. -->
-<!-- [Explorar aves →](aves.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-<!-- ::: g-col-4 -->
-<!-- ### 📍 Mapa interactivo -->
-<!-- Recorra virtualmente los senderos, sectores y puntos de interés del arboretum. -->
-<!-- [Explorar mapa →](mapa.qmd){.btn .btn-success .btn-sm role="button"} -->
-<!-- ::: -->
-<!-- ::: -->
+<section id="ejemplares-destacados" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplares-destacados">Ejemplares destacados</h2>
+<div class="grid">
+<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
+<a href="fichas/abeto.html" style="text-decoration:none;color:inherit;"><img src="fotos/Abeto.jpg" style="width:100%;height:140px;object-fit:cover;">
+<div class="p-2">
+<b>Abeto</b>
+</div>
+</a>
+</div>
+<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
+<a href="fichas/araucariaaustraliana-arb022.html" style="text-decoration:none;color:inherit;"><img src="fotos/Araucaria.jpg" style="width:100%;height:140px;object-fit:cover;">
+<div class="p-2">
+<b>Araucaria Australiana</b>
+</div>
+</a>
+</div>
+<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
+<a href="fichas/castanodeindias.html" style="text-decoration:none;color:inherit;"><img src="fotos/Castanodeindias.jpg" style="width:100%;height:140px;object-fit:cover;">
+<div class="p-2">
+<b>Castaño de Indias</b>
+</div>
+</a>
+</div>
+<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
+<a href="fichas/cedroazul.html" style="text-decoration:none;color:inherit;"><img src="fotos/Cedroazul.jpg" style="width:100%;height:140px;object-fit:cover;">
+<div class="p-2">
+<b>Cedro azul</b>
+</div>
+</a>
+</div>
+</div>
+</section>
 <section id="explorar" class="level2">
 <h2 class="anchored" data-anchor-id="explorar">Explorar</h2>
 <div class="grid">

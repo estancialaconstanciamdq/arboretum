@@ -1,0 +1,30 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB004).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Falso muérdago"
+format: html
+---
+
+![](../fotos/Falsomuerdago.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Ilex aquifolium L.*
+
+
+**Origen:** Europa
+
+
+**Continente:** Europa / África del Norte / Asia
+
+
+## Ubicación
+
+Coordenadas: -38.056569, -57.680685
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

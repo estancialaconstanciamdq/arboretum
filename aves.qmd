@@ -2,88 +2,96 @@
 title: "Aves del Arboretum"
 subtitle: "Especies registradas en el predio"
 format: html
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
 ```{r}
-#| echo: false
-#| message: false
-#| warning: false
+source("scripts/cargar_datos.R")
 
-library(readxl)
-library(dplyr)
+# Todas las aves con especie registrada (con o sin foto)
+av <- aves %>%
+  filter(tiene_valor(especie)) %>%
+  mutate(
+    res  = ifelse(tiene_valor(residencia), residencia, "Sin dato"),
+    res_norm = dplyr::case_when(
+      grepl("Permanente", res) ~ "Permanente",
+      grepl("Migrat",     res) ~ "Migratorio",
+      grepl("Visitante",  res) ~ "Visitante",
+      TRUE                     ~ res
+    ),
+    obs  = ifelse(tiene_valor(observacion), observacion, ""),
+    sci  = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
+  ) %>%
+  arrange(especie)
 
-archivo <- "data/Arboretum_Master.xlsx"
-
-aves <- read_excel(
-  archivo,
-  sheet = "Aves"
-)
-
-# Eliminar registros sin nombre de especie
-
-aves <- aves %>%
-  filter(
-    !is.na(especie),
-    !is.na(foto),
-    foto != ""
-  )
+esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);x<-gsub(">","&gt;",x,fixed=TRUE);gsub('"',"&quot;",x,fixed=TRUE)}
+opciones <- function(v) paste0("<option value=\"\">Todas</option>", paste0("<option value=\"",esc(v),"\">",esc(v),"</option>",collapse=""))
 ```
 
+Se registraron `r nrow(av)` especies de aves en el establecimiento. Buscá por nombre o filtrá por tipo de residencia.
 
-# 🐦 Aves del Arboretum
+```{r results='asis'}
+cat(sprintf('
+<style>
+  .ave-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
+  .ave-controles label{font-size:.8rem;color:#555;display:block;}
+  .ave-controles input,.ave-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #ave-conteo{color:#666;font-size:.85rem;margin:.2rem 0 1rem;}
+  .ave-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem;}
+  .ave-card{border:1px solid #eee;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);background:#fff;}
+  .ave-foto{height:150px;background:#eef4f0;display:flex;align-items:center;justify-content:center;}
+  .ave-foto img{width:100%%;height:150px;object-fit:cover;}
+  .ave-foto .ph{font-size:2.4rem;color:#9cc3b1;}
+  .ave-info{padding:.6rem .7rem;}
+  .ave-info h4{margin:.1rem 0;font-size:1rem;}
+  .ave-info .sci{font-style:italic;color:#666;font-size:.85rem;margin-bottom:.4rem;}
+  .ave-badge{display:inline-block;font-size:.72rem;padding:.1rem .5rem;border:1px solid #1E4A38;color:#1E4A38;border-radius:999px;}
+  .ave-info .season{font-size:.78rem;color:#555;margin-top:.35rem;}
+</style>
+<div class="ave-controles">
+  <div><label>Buscar</label><input type="text" id="ave-q" placeholder="nombre o especie..."></div>
+  <div><label>Residencia</label><select id="ave-res">%s</select></div>
+</div>
+<div id="ave-conteo"></div>
+<div class="ave-grid" id="ave-grid">',
+opciones(sort(unique(av$res_norm)))))
 
-Galería de especies observadas en el arboretum.
-
-```{r results='asis', echo=FALSE}
-
-cat("::: {.grid}\n\n")
-
-for(i in seq_len(nrow(aves))) {
-
-  cat("::: {.g-col-3}\n\n")
-
-  # cat("::: {.card}\n\n")
-  cat("::: {.card .text-center}\n\n")
-
-
-  # Foto
-
-  if(
-    !is.na(aves$foto[i]) &&
-    aves$foto[i] != ""
-  ){
-
-    cat(
-      paste0(
-        "![](fotos/",
-        aves$foto[i],
-        "){width=150 style='height:150px; object-fit:cover; border-radius:8px;'}\n\n"
-      )
-    )
-
-  }
-
-
-  # Nombre
-
-  cat(
-    paste0(
-      "#### ",
-      aves$especie[i],
-      "\n\n"
-    )
-  )
-
-
-  cat(":::\n\n")
-
-  cat(":::\n\n")
-
+for (i in seq_len(nrow(av))) {
+  a <- av[i, ]
+  buscar <- tolower(iconv(paste(a$especie, a$sci), to = "ASCII//TRANSLIT"))
+  foto <- if (tiene_valor(a$foto))
+    sprintf('<img src="fotos/%s" alt="%s">', esc(a$foto), esc(a$especie))
+  else '<span class="ph">🕊️</span>'
+  cat(sprintf(
+'<div class="ave-card" data-res="%s" data-buscar="%s"><div class="ave-foto">%s</div><div class="ave-info"><h4>%s</h4><div class="sci">%s</div><span class="ave-badge">%s</span>%s</div></div>\n',
+    esc(a$res_norm), esc(buscar), foto,
+    esc(a$especie),
+    ifelse(nzchar(a$sci), esc(a$sci), "&nbsp;"),
+    esc(a$res),
+    ifelse(nzchar(a$obs), paste0('<div class="season">', esc(a$obs), '</div>'), "")
+  ))
 }
 
-cat(":::\n")
-
-
+cat('</div>
+<script>
+(function(){
+  var q=document.getElementById("ave-q"), fr=document.getElementById("ave-res"),
+      cards=document.querySelectorAll("#ave-grid .ave-card"), conteo=document.getElementById("ave-conteo");
+  function aplica(){
+    var qs=(q.value||"").toLowerCase(), vr=fr.value, n=0;
+    cards.forEach(function(c){
+      var ok=c.dataset.buscar.indexOf(qs)>=0 && (!vr || c.dataset.res===vr);
+      c.style.display=ok?"":"none"; if(ok)n++;
+    });
+    conteo.textContent=n+" de "+cards.length+" especies";
+  }
+  [q,fr].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  aplica();
+})();
+</script>')
 ```
 
 ---

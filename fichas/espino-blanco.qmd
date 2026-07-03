@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB051).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Espino blanco"
+format: html
+---
+
+**Nombre científico:** *Crataegus sp.*
+
+
+**Familia:** Rosaceae
+
+
+**Origen:** Europa, Asia, Norte América
+
+
+**Continente:** Hemisferio Norte
+
+
+## Ubicación
+
+Coordenadas: -38.05573, -57.682438
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

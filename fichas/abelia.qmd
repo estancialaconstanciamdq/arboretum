@@ -1,0 +1,28 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB017).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Abelia"
+format: html
+---
+
+**Nombre científico:** *Abelia x grandiflora L.*
+
+
+**Familia:** Caprifoliaceae
+
+
+**Continente:** Asia (Origen hortícola/Híbrido)
+
+
+## Ubicación
+
+Coordenadas: -38.056678, -57.6801
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

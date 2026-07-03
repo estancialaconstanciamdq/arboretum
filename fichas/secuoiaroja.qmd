@@ -1,26 +1,24 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB034).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sequoiadendron giganteum"
+title: "Secuoya roja"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Sequoiaroja.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Sequoiadendron giganteum*
 
 
-![Sabina](../fotos/Sequoiaroja.jpg)
+**Familia:** Cupressaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Continente:** América del Norte
 
 
-**Familia:**
-Cupressaceae
+---
 
+[« Volver a las especies](../especies.qmd)
 
-**Origen:**
-E.E.U.U
-
-
-## Historia
-
-Árbol considerado fósil viviente...

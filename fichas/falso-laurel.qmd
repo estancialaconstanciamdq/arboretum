@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB007).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Falso laurel"
+format: html
+---
+
+**Nombre científico:** *Nerium oleander L.*
+
+
+**Familia:** Apocynaceae
+
+
+**Origen:** Europa-Asia
+
+
+**Continente:** Europa (Mediterráneo) / Asia
+
+
+## Ubicación
+
+Coordenadas: -38.056372, -57.681121
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

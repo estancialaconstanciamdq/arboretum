@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB027).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Pino mexicano amarillo"
+format: html
+---
+
+**Nombre científico:** *Pinus patula Schltdl. & Cham.*
+
+
+**Familia:** Pinaceae
+
+
+**Origen:** México
+
+
+**Continente:** Europa (Mediterráneo) / África del Norte
+
+
+## Ubicación
+
+Coordenadas: -38.056056, -57.679651
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

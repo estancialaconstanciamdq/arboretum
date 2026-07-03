@@ -1,26 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB014).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Abeto"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Abeto.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Pinaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** E.E.U.U
 
 
-**Familia:**
-Cupressaceae
+**Continente:** América (del Norte y del Sur)
 
 
-**Origen:**
-E.E.U.U
+## Ubicación
 
+Coordenadas: -38.056551, -57.679765
 
-## Historia
+[Ver en el mapa »](../mapa.qmd)
 
-Árbol considerado fósil viviente...
+---
+
+[« Volver a las especies](../especies.qmd)
+

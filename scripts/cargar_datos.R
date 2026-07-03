@@ -1,32 +1,73 @@
-library(readxl)
-library(dplyr)
+# ---------------------------------------------------------------------------
+# cargar_datos.R
+# Single source of truth for reading the master workbook.
+# Sourced by: mapa.qmd, especies.qmd, scripts/generar_fichas.R
+# Working directory is always the project root (Quarto renders from there).
+# ---------------------------------------------------------------------------
+
+suppressMessages({
+  library(readxl)
+  library(dplyr)
+})
 
 archivo <- "data/Arboretum_Master.xlsx"
 
-arboles <- read_excel(
-  archivo,
-  sheet = "Árboles"
-)
+# --- Helpers ---------------------------------------------------------------
 
-aves <- read_excel(
-  archivo,
-  sheet = "Aves"
-)
+# TRUE when a value carries real information (not NA / blank / placeholder)
+tiene_valor <- function(x) {
+  !is.na(x) & !(trimws(as.character(x)) %in% c("", "-", "...", "NA"))
+}
 
-puntos <- read_excel(
-  archivo,
-  sheet = "Puntos de interés"
-)
+# Turn a label into a safe, accent-free URL slug: "Cedro del Himalaya" -> "cedro-del-himalaya"
+slugify <- function(x) {
+  x <- as.character(x)
+  x <- iconv(x, to = "ASCII//TRANSLIT")   # strip accents
+  x <- tolower(x)
+  x <- gsub("[^a-z0-9]+", "-", x)          # non-alphanumeric -> hyphen
+  x <- gsub("(^-+|-+$)", "", x)            # trim leading/trailing hyphens
+  x
+}
 
-# eliminar puntos sin coordenadas
+# --- Read sheets -----------------------------------------------------------
 
+# Resolve sheet names by a distinctive ASCII fragment, so accents / file
+# encoding never break the match across operating systems.
+.hojas <- excel_sheets(archivo)
+.hoja <- function(patron) {
+  h <- .hojas[grepl(patron, .hojas, ignore.case = TRUE)][1]
+  if (is.na(h)) stop("No se encontró la hoja que coincide con: ", patron)
+  h
+}
+
+arboles <- read_excel(archivo, sheet = .hoja("rbol"))    # Árboles
+aves    <- read_excel(archivo, sheet = .hoja("^aves"))   # Aves
+puntos  <- read_excel(archivo, sheet = .hoja("inter"))   # Puntos de interés
+
+# Remove points without coordinates
 puntos <- puntos %>%
-  filter(
-    latitud != "...",
-    longitud != "..."
-  ) %>%
+  filter(latitud != "...", longitud != "...") %>%
   mutate(
-    latitud = as.numeric(latitud),
+    latitud  = as.numeric(latitud),
     longitud = as.numeric(longitud)
   )
 
+# --- Assign a stable, unique slug to every tree ----------------------------
+# Preference order: hand-set `ficha` slug -> slug from common name -> tree ID.
+# Any slug that would collide is disambiguated with the ID, so the filename
+# is ALWAYS unique even when two specimens share a name (e.g. two araucarias).
+
+arboles <- arboles %>%
+  mutate(
+    .base = dplyr::case_when(
+      tiene_valor(ficha)        ~ slugify(ficha),
+      tiene_valor(nombre_comun) ~ slugify(nombre_comun),
+      TRUE                      ~ tolower(ID)
+    )
+  ) %>%
+  group_by(.base) %>%
+  mutate(
+    slug = if (n() > 1) paste0(.base, "-", tolower(ID)) else .base
+  ) %>%
+  ungroup() %>%
+  select(-.base)

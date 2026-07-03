@@ -1,0 +1,22 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB040).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Carex"
+format: html
+---
+
+**Nombre científico:** *Celtis tala*
+
+
+**Familia:** Cannabaceae
+
+
+**Continente:** Global / Cosmopolita
+
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB074).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Criptomeria"
+format: html
+---
+
+**Nombre científico:** *Cryptomeria japónica*
+
+
+**Familia:** Cupressaceae
+
+
+**Origen:** Asia
+
+
+**Continente:** Asia (Japón)
+
+
+## Ubicación
+
+Coordenadas: -38.05566, -57.681065
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

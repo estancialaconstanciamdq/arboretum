@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB088).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Cedro del Atlas"
+format: html
+---
+
+**Nombre científico:** *Cedrus atlantica (Endl.) Manetti ex Carrière*
+
+
+**Familia:** Pinaceae
+
+
+**Origen:** África-Europa
+
+
+**Continente:** África (Norte)
+
+
+## Ubicación
+
+Coordenadas: -38.05528, -57.681835
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

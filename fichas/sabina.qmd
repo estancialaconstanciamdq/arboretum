@@ -1,26 +1,36 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB001).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
 title: "Sabina de Virginia"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Sabina.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Sabina virginiana (L.) Antoine*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Cupressaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** E.E.U.U
 
 
-**Familia:**
-Cupressaceae
+**Continente:** América del Norte
 
 
-**Origen:**
-E.E.U.U
+**Año de plantación:** 2004
 
 
-## Historia
+## Ubicación
 
-Árbol considerado fósil viviente...
+Coordenadas: -38.056791, -57.680154
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB073).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Roble pellín"
+format: html
+---
+
+**Nombre científico:** *Nothofagus obliqua 2*
+
+
+**Familia:** Nothofagaceae
+
+
+**Origen:** Sudamérica
+
+
+**Continente:** América del Sur (Patagonia)
+
+
+## Ubicación
+
+Coordenadas: -38.05553, -57.680985
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

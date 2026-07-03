@@ -4,3 +4,6 @@
 .Ruserdata
 
 /.quarto/
+
+# Archivos temporales de Excel (lock files)
+~$*.xlsx

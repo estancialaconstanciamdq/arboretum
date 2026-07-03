@@ -1,0 +1,116 @@
+---
+title: "Estadísticas"
+subtitle: "Resumen del arboretum, generado desde la base de datos"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+source("scripts/cargar_datos.R")
+suppressMessages(library(ggplot2))
+library(dplyr)
+
+# --- KPIs ---
+n_arboles   <- nrow(arboles)
+n_especies  <- dplyr::n_distinct(arboles$nombre_cientifico[tiene_valor(arboles$nombre_cientifico)])
+n_familias  <- dplyr::n_distinct(arboles$familia[tiene_valor(arboles$familia)])
+generos     <- sub(" .*", "", arboles$nombre_cientifico); generos <- generos[tiene_valor(generos)]
+n_generos   <- dplyr::n_distinct(generos)
+n_destacados<- sum(arboles$destacado == 1, na.rm = TRUE)
+anios       <- as.numeric(arboles$año_plantacion[tiene_valor(arboles$año_plantacion)])
+anio_prom   <- if (length(anios)) round(mean(anios)) else NA
+
+col_ori <- if ("continente_norm" %in% names(arboles)) "continente_norm" else "continente"
+
+# --- Estilo de gráficos (una sola tinta verde institucional) ---
+verde <- "#1E4A38"
+tema <- theme_minimal(base_size = 12) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_line(color = "#e8e8e8"),
+        axis.title = element_blank(),
+        plot.margin = margin(6, 18, 6, 6))
+
+barra <- function(d, cat, top = 20) {
+  d %>% count(g = .data[[cat]], name = "n") %>%
+    arrange(desc(n)) %>% head(top) %>%
+    mutate(g = factor(g, levels = rev(g))) %>%
+    ggplot(aes(n, g)) +
+    geom_col(fill = verde, width = 0.7) +
+    geom_text(aes(label = n), hjust = -0.3, size = 3.6, color = "#333333") +
+    scale_x_continuous(expand = expansion(mult = c(0, 0.10))) +
+    tema
+}
+
+tabla_conteo <- function(d, cat, etiqueta) {
+  d %>% filter(tiene_valor(.data[[cat]])) %>%
+    count(!!etiqueta := .data[[cat]], name = "Ejemplares") %>%
+    arrange(desc(Ejemplares), .data[[etiqueta]])
+}
+```
+
+```{r results='asis'}
+tarjeta <- function(v, e) paste0(
+  "::: {.g-col-4 .card .p-3 .text-center .shadow-sm .m-1}\n",
+  "<div style='font-size:2.2rem; font-weight:700; color:#1E4A38;'>", v, "</div>\n",
+  "<div>", e, "</div>\n:::\n\n")
+cat("::: {.grid}\n\n")
+cat(tarjeta(n_arboles,  "Ejemplares"))
+cat(tarjeta(n_especies, "Especies"))
+cat(tarjeta(n_generos,  "Géneros"))
+cat(tarjeta(n_familias, "Familias"))
+cat(tarjeta(n_destacados, "Destacados"))
+cat(tarjeta(ifelse(is.na(anio_prom), "—", anio_prom), "Año medio de plantación"))
+cat(":::\n\n")
+```
+
+## Ejemplares por familia
+
+```{r}
+#| fig-width: 7
+#| fig-height: 5
+#| fig-alt: "Gráfico de barras de la cantidad de ejemplares por familia botánica, ordenado de mayor a menor."
+barra(filter(arboles, tiene_valor(familia)), "familia", top = 20)
+```
+
+::: {.callout-note collapse="true"}
+## Ver tabla
+```{r}
+knitr::kable(tabla_conteo(arboles, "familia", "Familia"))
+```
+:::
+
+## Ejemplares por origen
+
+```{r}
+#| fig-width: 7
+#| fig-height: 4
+#| fig-alt: "Gráfico de barras de ejemplares por continente de origen (categorías normalizadas)."
+barra(filter(arboles, tiene_valor(.data[[col_ori]])), col_ori, top = 20)
+```
+
+::: {.callout-note collapse="true"}
+## Ver tabla
+```{r}
+knitr::kable(tabla_conteo(arboles, col_ori, "Origen"))
+```
+:::
+
+## Ejemplares por grupo
+
+```{r}
+#| fig-width: 7
+#| fig-height: 2.4
+#| fig-alt: "Gráfico de barras de ejemplares por grupo: coníferas, palmeras y sin clasificar."
+arboles %>%
+  mutate(grupo2 = ifelse(tiene_valor(grupo), grupo, "Sin clasificar")) %>%
+  barra("grupo2", top = 10)
+```
+
+---
+
+*Todas las cifras y gráficos se calculan automáticamente a partir de `data/Arboretum_Master.xlsx` en cada render.*

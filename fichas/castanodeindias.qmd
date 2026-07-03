@@ -1,26 +1,33 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB030).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Sabina de Virginia"
+title: "Castaño de Indias"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Castanodeindias.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Aesculus hippocastanum L.*
 
 
-![Sabina](../fotos/Sabina.jpg)
+**Familia:** Sapindaceae
 
 
-**Nombre científico:**
-*Sabina virginiana (L.) Antoine.*
+**Origen:** Europa
 
 
-**Familia:**
-Cupressaceae
+**Continente:** Europa (Balcanes)
 
 
-**Origen:**
-E.E.U.U
+## Ubicación
 
+Coordenadas: -38.056127, -57.679297
 
-## Historia
+[Ver en el mapa »](../mapa.qmd)
 
-Árbol considerado fósil viviente...
+---
+
+[« Volver a las especies](../especies.qmd)
+

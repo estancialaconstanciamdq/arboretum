@@ -1,0 +1,25 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB057).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Boj"
+format: html
+---
+
+**Nombre científico:** *Revisar*
+
+
+**Continente:** Europa / Asia / África
+
+
+## Ubicación
+
+Coordenadas: -38.05578, -57.68175
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+

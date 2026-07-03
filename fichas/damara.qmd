@@ -1,26 +1,24 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB041).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
 ---
-title: "Cedro de Cristal"
+title: "Damara"
 format: html
 ---
 
-<!-- # 🌳 Sabina de Virginia -->
+![](../fotos/Cedrodecristal.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** *Agathis dammara*
 
 
-![Sabina](../fotos/Cedrodecristal.jpg)
+**Familia:** Araucariaceae
 
 
-**Nombre científico:**
-*Agathis dammara*
+**Continente:** Asia (Sudeste Asiático)
 
 
-**Familia:**
-Cupressaceae
+---
 
+[« Volver a las especies](../especies.qmd)
 
-**Origen:**
-E.E.U.U
-
-
-## Historia
-
-Árbol considerado fósil viviente...

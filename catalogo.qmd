@@ -1,0 +1,114 @@
+---
+title: "Catálogo de especies"
+subtitle: "Todos los árboles relevados en el arboretum"
+format: html
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+source("scripts/cargar_datos.R")
+
+col_ori <- if ("continente_norm" %in% names(arboles)) "continente_norm" else "continente"
+
+df <- arboles %>%
+  mutate(
+    nombre_mostrar = dplyr::case_when(
+      tiene_valor(nombre_comun)      ~ nombre_comun,
+      tiene_valor(nombre_cientifico) ~ nombre_cientifico,
+      TRUE                           ~ ID
+    ),
+    sci = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, ""),
+    fam = ifelse(tiene_valor(familia), familia, "—"),
+    grp = ifelse(tiene_valor(grupo), grupo, "Sin clasificar"),
+    ori = ifelse(tiene_valor(.data[[col_ori]]), .data[[col_ori]], "Sin dato"),
+    clave = gsub("^[^A-Za-z0-9]+", "", toupper(iconv(nombre_mostrar, to = "ASCII//TRANSLIT")))
+  ) %>%
+  arrange(clave)
+
+esc <- function(x) {
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  gsub('"', "&quot;", x, fixed = TRUE)
+}
+opciones <- function(vals) paste0(
+  "<option value=\"\">Todos</option>",
+  paste0("<option value=\"", esc(vals), "\">", esc(vals), "</option>", collapse = "")
+)
+```
+
+Explorá los `r nrow(df)` ejemplares. Escribí en el buscador o combiná los filtros; cada nombre abre su ficha.
+
+```{r results='asis', echo=FALSE}
+cat(sprintf('
+<style>
+  .cat-controles { display:flex; flex-wrap:wrap; gap:.6rem; align-items:end; margin:1rem 0; }
+  .cat-controles label { font-size:.8rem; color:#555; display:block; }
+  .cat-controles input, .cat-controles select { padding:.4rem .5rem; border:1px solid #ccc; border-radius:6px; }
+  #cat-q { min-width:220px; }
+  #cat-tabla { width:100%%; border-collapse:collapse; }
+  #cat-tabla th, #cat-tabla td { text-align:left; padding:.45rem .6rem; border-bottom:1px solid #eee; vertical-align:top; }
+  #cat-tabla thead th { border-bottom:2px solid #1E4A38; color:#1E4A38; }
+  #cat-tabla tr:hover td { background:#f4f8f5; }
+  #cat-conteo { color:#666; font-size:.85rem; margin:.3rem 0 1rem; }
+</style>
+
+<div class="cat-controles">
+  <div><label>Buscar</label><input type="text" id="cat-q" placeholder="nombre o especie..."></div>
+  <div><label>Familia</label><select id="cat-fam">%s</select></div>
+  <div><label>Grupo</label><select id="cat-grp">%s</select></div>
+  <div><label>Origen</label><select id="cat-ori">%s</select></div>
+</div>
+<div id="cat-conteo"></div>
+
+<table id="cat-tabla">
+<thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Grupo</th><th>Origen</th></tr></thead>
+<tbody>',
+  opciones(sort(unique(df$fam[df$fam != "—"]))),
+  opciones(sort(unique(df$grp))),
+  opciones(sort(unique(df$ori)))
+))
+
+for (i in seq_len(nrow(df))) {
+  r <- df[i, ]
+  buscar <- tolower(iconv(paste(r$nombre_mostrar, r$sci), to = "ASCII//TRANSLIT"))
+  cat(sprintf(
+    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
+<td><a href="fichas/%s.html">%s</a></td><td><em>%s</em></td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
+    esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
+    esc(r$slug), esc(r$nombre_mostrar), esc(r$sci), esc(r$fam), esc(r$grp), esc(r$ori)
+  ))
+}
+
+cat('</tbody></table>
+
+<script>
+(function(){
+  var q=document.getElementById("cat-q"),
+      ff=document.getElementById("cat-fam"),
+      fg=document.getElementById("cat-grp"),
+      fo=document.getElementById("cat-ori"),
+      filas=document.querySelectorAll("#cat-tabla tbody tr"),
+      conteo=document.getElementById("cat-conteo");
+  function norm(s){return (s||"").toLowerCase();}
+  function aplica(){
+    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, n=0;
+    filas.forEach(function(tr){
+      var ok = tr.dataset.buscar.indexOf(qs)>=0 &&
+               (!vf || tr.dataset.fam===vf) &&
+               (!vg || tr.dataset.grp===vg) &&
+               (!vo || tr.dataset.ori===vo);
+      tr.style.display = ok ? "" : "none";
+      if(ok) n++;
+    });
+    conteo.textContent = n + " de " + filas.length + " ejemplares";
+  }
+  [q,ff,fg,fo].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
+  aplica();
+})();
+</script>')
+```

@@ -1,0 +1,31 @@
+<!-- ARCHIVO GENERADO AUTOMÁTICAMENTE — NO EDITAR A MANO.
+     Fuente: data/Arboretum_Master.xlsx (fila ARB025).
+     Para cambiar esta página, editá el Excel y volvé a renderizar. -->
+
+---
+title: "Casuarina"
+format: html
+---
+
+**Nombre científico:** *Casuarina equisetifolia L.*
+
+
+**Familia:** Casuarinaceae
+
+
+**Origen:** Australia
+
+
+**Continente:** Hemisferio Norte / Variable
+
+
+## Ubicación
+
+Coordenadas: -38.056656, -57.68126
+
+[Ver en el mapa »](../mapa.qmd)
+
+---
+
+[« Volver a las especies](../especies.qmd)
+
