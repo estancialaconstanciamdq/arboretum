@@ -65,6 +65,7 @@ cat(sprintf('
 </div>
 <div id="cat-conteo"></div>
 
+<div class="tabla-scroll">
 <table id="cat-tabla">
 <thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Grupo</th><th>Origen</th></tr></thead>
 <tbody>',
@@ -85,6 +86,7 @@ for (i in seq_len(nrow(df))) {
 }
 
 cat('</tbody></table>
+</div>
 
 <script>
 (function(){

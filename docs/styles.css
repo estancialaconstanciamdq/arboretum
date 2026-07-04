@@ -19,3 +19,26 @@
   max-height: 40px;
   width: auto;
 }
+
+/* ---- Responsive / móvil ---- */
+
+/* En teléfonos y tablets en vertical, las tarjetas en grilla se apilan
+   (por defecto Quarto las mantiene lado a lado y quedan muy angostas). */
+@media (max-width: 767.98px) {
+  .grid > [class*="g-col-"] {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Las tablas anchas (catálogo, banco de semillas) se desplazan
+   horizontalmente en lugar de romper el diseño. */
+.tabla-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Evitar que cualquier imagen se desborde del ancho de pantalla. */
+img {
+  max-width: 100%;
+  height: auto;
+}

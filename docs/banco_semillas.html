@@ -95,34 +95,59 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./mapa.html"> 
-<span class="menu-text">Mapa</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mapa" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mapa</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mapa">    
+        <li>
+    <a class="dropdown-item" href="./mapa.html">
+ <span class="dropdown-text">Mapa interactivo</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./catalogo.html"> 
-<span class="menu-text">Catálogo</span></a>
+        <li>
+    <a class="dropdown-item" href="./plano.html">
+ <span class="dropdown-text">Plano ilustrado</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./especies.html"> 
-<span class="menu-text">Destacadas</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-colección" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Colección</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-colección">    
+        <li>
+    <a class="dropdown-item" href="./catalogo.html">
+ <span class="dropdown-text">Catálogo</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./especies.html">
+ <span class="dropdown-text">Especies destacadas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./banco_semillas.html">
+ <span class="dropdown-text">Banco de semillas</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./aves.html"> 
 <span class="menu-text">Aves</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./estadisticas.html"> 
-<span class="menu-text">Estadísticas</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciencia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ciencia</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciencia">    
+        <li>
+    <a class="dropdown-item" href="./estadisticas.html">
+ <span class="dropdown-text">Estadísticas</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./biodiversidad.html"> 
-<span class="menu-text">Biodiversidad</span></a>
+        <li>
+    <a class="dropdown-item" href="./biodiversidad.html">
+ <span class="dropdown-text">Biodiversidad</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./banco_semillas.html" aria-current="page"> 
-<span class="menu-text">Banco de semillas</span></a>
-  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./apadrina.html"> 
 <span class="menu-text">🌳 Apadriná un árbol</span></a>
@@ -184,6 +209,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="bs-conteo">
 
 </div>
+<div class="tabla-scroll">
 <table id="bs-tabla">
 <thead>
 <tr>
@@ -970,6 +996,7 @@ Haya común
 </tr>
 </tbody>
 </table>
+</div>
 <script>
 (function(){
   var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),

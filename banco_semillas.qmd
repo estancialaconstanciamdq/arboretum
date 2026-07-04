@@ -47,6 +47,7 @@ cat(sprintf('
   <div><label>Familia</label><select id="bs-fam">%s</select></div>
 </div>
 <div id="bs-conteo"></div>
+<div class="tabla-scroll">
 <table id="bs-tabla"><thead><tr><th>Id</th><th>Familia</th><th>Nombre científico</th><th>Nombre común</th></tr></thead><tbody>',
   opciones(sort(unique(bs$familia[bs$familia != "—"])))))
 
@@ -58,6 +59,7 @@ for (i in seq_len(nrow(bs))) {
 }
 
 cat('</tbody></table>
+</div>
 <script>
 (function(){
   var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
