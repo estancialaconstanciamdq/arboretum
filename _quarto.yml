@@ -18,7 +18,11 @@ website:
       - text: "Inicio"
         href: index.qmd
       - text: "Mapa"
-        href: mapa.qmd
+        menu:
+          - text: "Mapa interactivo"
+            href: mapa.qmd
+          - text: "Plano ilustrado"
+            href: plano.qmd
       - text: "Colección"
         menu:
           - text: "Catálogo"

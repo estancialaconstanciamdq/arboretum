@@ -1,0 +1,19 @@
+---
+title: "Plano de los jardines"
+subtitle: "Mapa ilustrado del arboretum"
+format: html
+page-layout: full
+---
+
+Recorré el arboretum con este plano ilustrado, que muestra la distribución de las
+principales colecciones y los senderos del predio. La referencia de especies está
+a la derecha del plano.
+
+<div style="text-align:center; margin:1.5rem 0;">
+  <img src="fotos/mapa_jardines.jpg"
+       style="width:100%; max-width:1100px; height:auto; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.12);"
+       alt="Plano ilustrado de los jardines de Estancia La Constancia">
+</div>
+
+¿Preferís explorar ejemplar por ejemplar, con fotos y fichas? Visitá el
+[mapa interactivo »](mapa.qmd).
