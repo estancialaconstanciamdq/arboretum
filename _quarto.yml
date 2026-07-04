@@ -19,18 +19,22 @@ website:
         href: index.qmd
       - text: "Mapa"
         href: mapa.qmd
-      - text: "Catálogo"
-        href: catalogo.qmd
-      - text: "Destacadas"
-        href: especies.qmd
+      - text: "Colección"
+        menu:
+          - text: "Catálogo"
+            href: catalogo.qmd
+          - text: "Especies destacadas"
+            href: especies.qmd
+          - text: "Banco de semillas"
+            href: banco_semillas.qmd
       - text: "Aves"
         href: aves.qmd
-      - text: "Estadísticas"
-        href: estadisticas.qmd
-      - text: "Biodiversidad"
-        href: biodiversidad.qmd
-      - text: "Banco de semillas"
-        href: banco_semillas.qmd
+      - text: "Ciencia"
+        menu:
+          - text: "Estadísticas"
+            href: estadisticas.qmd
+          - text: "Biodiversidad"
+            href: biodiversidad.qmd
       - text: "🌳 Apadriná un árbol"
         href: apadrina.qmd
 
