@@ -27,6 +27,10 @@ website:
         href: aves.qmd
       - text: "Estadísticas"
         href: estadisticas.qmd
+      - text: "Biodiversidad"
+        href: biodiversidad.qmd
+      - text: "Banco de semillas"
+        href: banco_semillas.qmd
       - text: "🌳 Apadriná un árbol"
         href: apadrina.qmd
 

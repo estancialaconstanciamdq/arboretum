@@ -1,0 +1,82 @@
+---
+title: "Banco de semillas"
+subtitle: "Semillas y esquejes de la colección"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(readxl)
+library(dplyr)
+
+tiene_valor <- function(x) !is.na(x) & !(trimws(as.character(x)) %in% c("", "-", "...", "NA"))
+
+bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
+  mutate(
+    familia = ifelse(tiene_valor(familia), familia, "—"),
+    nombre_comun = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
+    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
+  )
+
+esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);x<-gsub(">","&gt;",x,fixed=TRUE);gsub('"',"&quot;",x,fixed=TRUE)}
+opciones <- function(v) paste0("<option value=\"\">Todas</option>", paste0("<option value=\"",esc(v),"\">",esc(v),"</option>",collapse=""))
+```
+
+El arboretum conserva **`r nrow(bs)` accesiones** de semillas y esquejes, base para
+la propagación, la restauración y las actividades educativas. Buscá por nombre o
+filtrá por familia.
+
+```{r results='asis'}
+cat(sprintf('
+<style>
+  .bs-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
+  .bs-controles label{font-size:.8rem;color:#555;display:block;}
+  .bs-controles input,.bs-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #bs-tabla{width:100%%;border-collapse:collapse;}
+  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;}
+  #bs-tabla thead th{border-bottom:2px solid #1E4A38;color:#1E4A38;}
+  #bs-tabla tr:hover td{background:#f4f8f5;}
+  #bs-conteo{color:#666;font-size:.85rem;margin:.3rem 0 1rem;}
+</style>
+<div class="bs-controles">
+  <div><label>Buscar</label><input type="text" id="bs-q" placeholder="nombre o especie..."></div>
+  <div><label>Familia</label><select id="bs-fam">%s</select></div>
+</div>
+<div id="bs-conteo"></div>
+<table id="bs-tabla"><thead><tr><th>Id</th><th>Familia</th><th>Nombre científico</th><th>Nombre común</th></tr></thead><tbody>',
+  opciones(sort(unique(bs$familia[bs$familia != "—"])))))
+
+for (i in seq_len(nrow(bs))) {
+  r <- bs[i, ]
+  buscar <- tolower(iconv(paste(r$nombre_comun, r$nombre_cientifico, r$id), to = "ASCII//TRANSLIT"))
+  cat(sprintf('<tr data-fam="%s" data-buscar="%s"><td>%s</td><td>%s</td><td><em>%s</em></td><td>%s</td></tr>',
+    esc(r$familia), esc(buscar), esc(r$id), esc(r$familia), esc(r$nombre_cientifico), esc(r$nombre_comun)))
+}
+
+cat('</tbody></table>
+<script>
+(function(){
+  var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
+      filas=document.querySelectorAll("#bs-tabla tbody tr"), conteo=document.getElementById("bs-conteo");
+  function aplica(){
+    var qs=(q.value||"").toLowerCase(), vf=ff.value, n=0;
+    filas.forEach(function(tr){
+      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf);
+      tr.style.display=ok?"":"none"; if(ok)n++;
+    });
+    conteo.textContent=n+" de "+filas.length+" accesiones";
+  }
+  [q,ff].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  aplica();
+})();
+</script>')
+```
+
+---
+
+*Fuente: listado de semillas y esquejes de Estancia La Constancia. Se actualiza
+editando `data/banco_semillas.xlsx`.*

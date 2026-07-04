@@ -71,3 +71,29 @@ arboles <- arboles %>%
   ) %>%
   ungroup() %>%
   select(-.base)
+
+# --- Estimación de carbono ------------------------------------------------
+# Se completa automáticamente a medida que se cargan diámetros (diametro_cm,
+# medido como DAP: diámetro a la altura del pecho) y, si está, la altura_m.
+# Es una ESTIMACIÓN educativa, no un inventario de carbono certificado.
+#
+#  Biomasa aérea (AGB), Chave et al. (2014):
+#    AGB = 0.0673 * (rho * D^2 * H)^0.976
+#  Si no hay altura medida, se estima con H ≈ 1.6 * sqrt(D) (relación genérica).
+#  Carbono = AGB * 0.47 (fracción IPCC).   CO2 = Carbono * 3.667.
+
+DENSIDAD_MADERA <- 0.60   # g/cm3, valor medio genérico (ajustable)
+
+estimar_agb_kg <- function(diametro_cm, altura_m, rho = DENSIDAD_MADERA) {
+  d <- suppressWarnings(as.numeric(diametro_cm))
+  h <- suppressWarnings(as.numeric(altura_m))
+  h_use <- ifelse(!is.na(h) & h > 0, h, 1.6 * sqrt(d))   # altura medida o estimada
+  agb <- rep(NA_real_, length(d))
+  ok  <- !is.na(d) & d > 0
+  agb[ok] <- 0.0673 * (rho * d[ok]^2 * h_use[ok])^0.976
+  agb
+}
+
+arboles$agb_kg     <- estimar_agb_kg(arboles$diametro_cm, arboles$altura_m)
+arboles$carbono_kg <- arboles$agb_kg * 0.47
+arboles$co2_kg     <- arboles$carbono_kg * 3.667

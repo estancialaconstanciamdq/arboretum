@@ -80,6 +80,14 @@ construir_ficha <- function(t) {
     add(sprintf("## Observaciones\n\n%s\n", trimws(t$observaciones)))
   }
 
+  # Captura de carbono (aparece cuando hay diámetro cargado)
+  if ("co2_kg" %in% names(t) && !is.na(t$co2_kg)) {
+    add(sprintf(
+      "## Captura de carbono\n\nEste ejemplar almacena aproximadamente **%s kg de CO₂** (estimación).\n",
+      format(round(t$co2_kg), big.mark = ".", decimal.mark = ",")
+    ))
+  }
+
   # Location
   if (tiene_valor(t$latitud) && tiene_valor(t$longitud)) {
     add(sprintf(
