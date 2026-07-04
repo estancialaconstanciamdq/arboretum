@@ -316,5 +316,11 @@
   },
   "plano.qmd": {
     "plano.html": "94d2bc5e"
+  },
+  "material_educativo.qmd": {
+    "material_educativo.html": "1a98a28f"
+  },
+  "quiz.qmd": {
+    "quiz.html": "b135e56d"
   }
 }

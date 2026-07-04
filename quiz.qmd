@@ -1,0 +1,113 @@
+---
+title: "¿Cuánto sabés?"
+subtitle: "Poné a prueba tus conocimientos sobre árboles, aves y biodiversidad"
+format: html
+---
+
+Respondé las preguntas y descubrí cuánto sabés sobre la naturaleza del arboretum.
+Al elegir una opción vas a ver si acertaste y una breve explicación.
+
+```{=html}
+<style>
+  .quiz-card{border:1px solid #e6e6e6;border-radius:12px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  .quiz-card h3{font-size:1.05rem;margin:.2rem 0 .8rem;}
+  .quiz-op{display:block;width:100%;text-align:left;padding:.6rem .8rem;margin:.35rem 0;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;font-size:.95rem;}
+  .quiz-op:hover{background:#f4f8f5;}
+  .quiz-op:disabled{cursor:default;}
+  .quiz-op.ok{background:#e3f3e9;border-color:#1E4A38;color:#14432f;font-weight:600;}
+  .quiz-op.mal{background:#fdecec;border-color:#c0392b;color:#7d241b;}
+  .quiz-exp{margin-top:.6rem;font-size:.88rem;color:#444;background:#f7f7f5;border-left:3px solid #1E4A38;padding:.5rem .7rem;border-radius:4px;display:none;}
+  #quiz-barra{position:sticky;top:0;background:#1E4A38;color:#fff;padding:.6rem 1rem;border-radius:8px;font-weight:600;z-index:5;}
+  #quiz-final{display:none;text-align:center;padding:1.5rem;border-radius:12px;background:#e3f3e9;margin-top:1rem;}
+  #quiz-final .puntaje{font-size:2.4rem;font-weight:700;color:#1E4A38;}
+  #quiz-reset{margin-top:.6rem;padding:.5rem 1rem;border:none;border-radius:8px;background:#1E4A38;color:#fff;cursor:pointer;}
+</style>
+
+<div id="quiz-barra">Puntaje: <span id="quiz-score">0</span> / <span id="quiz-total">0</span></div>
+<div id="quiz-cont"></div>
+<div id="quiz-final">
+  <div>Tu resultado</div>
+  <div class="puntaje"><span id="quiz-fscore">0</span>/<span id="quiz-ftotal">0</span></div>
+  <div id="quiz-msg"></div>
+  <button id="quiz-reset">Volver a intentar</button>
+</div>
+
+<script>
+(function(){
+  const PREGUNTAS = [
+    {p:"¿A qué familia botánica pertenece el Ginkgo (<em>Ginkgo biloba</em>)?",
+     o:["Pinaceae","Ginkgoaceae","Fagaceae","Cupressaceae"], c:1,
+     e:"El ginkgo es la única especie viva de la familia Ginkgoaceae."},
+    {p:"El ginkgo es considerado un “fósil viviente”.",
+     o:["Verdadero","Falso"], c:0,
+     e:"Su linaje tiene más de 200 millones de años y casi no cambió."},
+    {p:"¿Cuál de estos árboles es una <strong>conífera</strong>?",
+     o:["Roble común","Tilo","Cedro del Himalaya","Magnolia"], c:2,
+     e:"Los cedros (familia Pinaceae) son coníferas; producen conos, no flores."},
+    {p:"¿De qué continente es originario el Roble común (<em>Quercus robur</em>)?",
+     o:["América del Norte","Europa","Oceanía","África"], c:1,
+     e:"El roble común es una especie europea, muy longeva."},
+    {p:"Para estimar cuánto carbono almacena un árbol, la medida más importante es…",
+     o:["el color de las hojas","el diámetro del tronco","la cantidad de ramas","el tipo de fruto"], c:1,
+     e:"El diámetro del tronco (DAP), junto con la altura, permite estimar la biomasa y el carbono."},
+    {p:"¿Cuál es el nombre científico del Benteveo?",
+     o:["Turdus rufiventris","Pitangus sulphuratus","Furnarius rufus","Zenaida auriculata"], c:1,
+     e:"El benteveo es <em>Pitangus sulphuratus</em>, un ave muy común y ruidosa."},
+    {p:"El Hornero construye su característico nido con…",
+     o:["ramitas y hojas","barro","plumas","telarañas"], c:1,
+     e:"El hornero arma su nido con barro, que endurece como un pequeño horno."},
+    {p:"La <strong>biodiversidad</strong> se refiere a…",
+     o:["la cantidad de árboles altos","la variedad de seres vivos de un lugar","el tamaño del parque","la cantidad de agua"], c:1,
+     e:"Es la variedad de especies (y de genes y ecosistemas) presentes en un área."},
+    {p:"El índice de Shannon se usa para medir…",
+     o:["la altura promedio","la diversidad de especies","la edad de los árboles","la temperatura"], c:1,
+     e:"Combina cuántas especies hay y qué tan parejas son sus abundancias."},
+    {p:"Un árbol de hoja <strong>caduca</strong> es aquel que…",
+     o:["nunca pierde las hojas","pierde las hojas en otoño/invierno","no tiene hojas","sólo tiene flores"], c:1,
+     e:"Las especies caducas pierden su follaje en la estación fría; las perennes lo conservan."}
+  ];
+
+  const cont=document.getElementById("quiz-cont");
+  const scoreEl=document.getElementById("quiz-score"), totalEl=document.getElementById("quiz-total");
+  const finalBox=document.getElementById("quiz-final");
+  let score=0, respondidas=0;
+  totalEl.textContent=PREGUNTAS.length;
+  document.getElementById("quiz-ftotal").textContent=PREGUNTAS.length;
+
+  function construir(){
+    cont.innerHTML=""; score=0; respondidas=0; scoreEl.textContent=0; finalBox.style.display="none";
+    PREGUNTAS.forEach(function(q,i){
+      const card=document.createElement("div"); card.className="quiz-card";
+      const h=document.createElement("h3"); h.innerHTML=(i+1)+". "+q.p; card.appendChild(h);
+      const exp=document.createElement("div"); exp.className="quiz-exp"; exp.innerHTML=q.e;
+      q.o.forEach(function(op,j){
+        const b=document.createElement("button"); b.className="quiz-op"; b.innerHTML=op;
+        b.onclick=function(){
+          Array.prototype.forEach.call(card.querySelectorAll(".quiz-op"),function(x){x.disabled=true;});
+          if(j===q.c){ b.classList.add("ok"); score++; scoreEl.textContent=score; }
+          else{ b.classList.add("mal"); card.querySelectorAll(".quiz-op")[q.c].classList.add("ok"); }
+          exp.style.display="block";
+          respondidas++;
+          if(respondidas===PREGUNTAS.length) terminar();
+        };
+        card.appendChild(b);
+      });
+      card.appendChild(exp);
+      cont.appendChild(card);
+    });
+  }
+  function terminar(){
+    document.getElementById("quiz-fscore").textContent=score;
+    var pct=score/PREGUNTAS.length;
+    var msg = pct===1 ? "¡Excelente! Sabés mucho sobre la naturaleza 🌳" :
+              pct>=0.6 ? "¡Muy bien! Seguí explorando el arboretum." :
+              "¡Buen intento! Recorré las fichas y volvé a probar.";
+    document.getElementById("quiz-msg").textContent=msg;
+    finalBox.style.display="block";
+    finalBox.scrollIntoView({behavior:"smooth"});
+  }
+  document.getElementById("quiz-reset").onclick=construir;
+  construir();
+})();
+</script>
+```

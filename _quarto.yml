@@ -6,6 +6,7 @@ project:
 resources:
    - fotos/**
    - qr/**
+   - recursos/**
   
 
 website:
@@ -39,6 +40,12 @@ website:
             href: estadisticas.qmd
           - text: "Biodiversidad"
             href: biodiversidad.qmd
+      - text: "Educación"
+        menu:
+          - text: "¿Cuánto sabés?"
+            href: quiz.qmd
+          - text: "Material educativo"
+            href: material_educativo.qmd
       - text: "🌳 Apadriná un árbol"
         href: apadrina.qmd
 

@@ -1,0 +1,8 @@
+Carpeta para material educativo descargable (PDF).
+
+Guardá aquí las fichas de identificación en PDF, por ejemplo:
+  - identificacion_aves.pdf
+  - identificacion_arboles.pdf
+
+Una vez que estén acá, se agregan como descargas en la página
+"Material educativo" del sitio (menú Educación).

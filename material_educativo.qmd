@@ -1,0 +1,33 @@
+---
+title: "Material educativo"
+subtitle: "Fichas de identificación para visitas y aula"
+format: html
+---
+
+Material pensado para las **visitas educativas** de escuelas al arboretum. Son
+fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido.
+Descargalas, imprimilas y usalas en el campo.
+
+::: grid
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+### 🐦 Identificación de aves
+Ficha para reconocer las aves más comunes del establecimiento.
+
+[⬇ Descargar PDF](recursos/identificacion_aves.pdf){.btn .btn-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+### 🌳 Identificación de árboles
+Ficha para reconocer los árboles del arboretum por sus rasgos.
+
+[⬇ Descargar PDF](recursos/identificacion_arboles.pdf){.btn .btn-success role="button"}
+:::
+
+:::
+
+::: {.callout-tip}
+¿Sos docente y organizás una visita? Estas fichas se combinan muy bien con el
+[mapa interactivo](mapa.qmd), el [catálogo de especies](catalogo.qmd) y el
+[cuestionario “¿Cuánto sabés?”](quiz.qmd).
+:::
