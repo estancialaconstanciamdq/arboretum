@@ -14,9 +14,11 @@ import os, re
 import openpyxl
 
 ARCHIVO = "data/Arboretum_Master.xlsx"
-SALIDA  = "fichas_identificacion.tex"
+SALIDA_AVES = "identificacion_aves.tex"
+SALIDA_ARB  = "identificacion_arboles.tex"
 DIR_FOTOS = "fotos"          # fotos del sitio (columna 'foto')
 DIR_IDENT = "identificacion" # fotos propias de la ficha (columna 'foto_ident')
+LOGO = "fotos/logo_lc.jpg"   # logo del encabezado (si existe)
 POR_FILA  = 5
 FILAS_PAG = 2                # 2 filas de 5 = 10 por página
 ALTURA_IMG = "3cm"           # altura uniforme de cada foto
@@ -71,8 +73,10 @@ def bloque(titulo, items, agradecimiento):
     partes = []
     n = POR_FILA * FILAS_PAG
     paginas = [items[i:i+n] for i in range(0, len(items), n)] or [[]]
+    logo = (f"\\includegraphics[width=4cm]{{{LOGO}}}\\\\[0.4em]\n"
+            if os.path.exists(LOGO) else "")
     for pi, pag in enumerate(paginas):
-        partes.append("\\begin{center}\n{\\LARGE \\textbf{" + titulo + "}}\n\\end{center}")
+        partes.append("\\begin{center}\n" + logo + "{\\LARGE \\textbf{" + titulo + "}}\n\\end{center}")
         partes.append("\\vspace{0.2em}\n{\\large Marcá con un tick ($\\checkmark$) las especies que logres identificar.}\n\\vspace{0.8em}")
         filas = [pag[i:i+POR_FILA] for i in range(0, len(pag), POR_FILA)]
         for fi, fila in enumerate(filas):
@@ -94,7 +98,7 @@ def main():
     agr_arb  = ("Agradecemos al equipo de guías por las fotografías e información utilizadas "
                 "en este material didáctico. Estancia La Constancia, Argentina.")
 
-    doc = r"""\documentclass[11pt]{article}
+    PREAMBULO = r"""\documentclass[11pt]{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -105,16 +109,19 @@ def main():
 \geometry{a4paper, landscape, margin=1.2cm}
 \pagestyle{empty}
 \begin{document}
-""" + bloque("FICHA DE OBSERVACIÓN DE AVES", aves, agr_aves) + "\n" \
-        + bloque("FICHA DE OBSERVACIÓN DE PLANTAS", arboles, agr_arb) + "\n\\end{document}\n"
+"""
+    def documento(titulo, items, agr):
+        cuerpo = bloque(titulo, items, agr)
+        doc = PREAMBULO + cuerpo + "\n\\end{document}\n"
+        return doc.replace("\\newpage\n\\end{document}", "\\end{document}")
 
-    # quitar el último \newpage sobrante antes de end
-    doc = doc.replace("\\newpage\n\\end{document}", "\\end{document}")
+    with open(SALIDA_AVES, "w", encoding="utf-8") as f:
+        f.write(documento("FICHA DE OBSERVACIÓN DE AVES", aves, agr_aves))
+    with open(SALIDA_ARB, "w", encoding="utf-8") as f:
+        f.write(documento("FICHA DE OBSERVACIÓN DE PLANTAS", arboles, agr_arb))
 
-    with open(SALIDA, "w", encoding="utf-8") as f:
-        f.write(doc)
-    print(f"generar_fichas_identificacion.py: {SALIDA} generado "
-          f"({len(aves)} aves, {len(arboles)} árboles con foto).")
+    print(f"generar_fichas_identificacion.py: generados {SALIDA_AVES} "
+          f"({len(aves)} aves) y {SALIDA_ARB} ({len(arboles)} árboles).")
 
 if __name__ == "__main__":
     main()

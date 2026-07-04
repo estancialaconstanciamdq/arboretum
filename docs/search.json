@@ -28,6 +28,13 @@
     "text": "El flujo instala en la nube los paquetes de R necesarios (readxl, dplyr, ggplot2, leaflet, …), así que la publicación no depende de lo que tengas instalado en tu computadora.\nUna vez que gh-pages publique bien, la carpeta docs/ deja de ser necesaria en el repositorio; podés dejar de versionarla más adelante si querés (opcional)."
   },
   {
+    "objectID": "plano.html",
+    "href": "plano.html",
+    "title": "Plano de los jardines",
+    "section": "",
+    "text": "Recorré el arboretum con este plano ilustrado, que muestra la distribución de las principales colecciones y los senderos del predio. La referencia de especies está a la derecha del plano.\n\n\n\n¿Preferís explorar ejemplar por ejemplar, con fotos y fichas? Visitá el mapa interactivo »."
+  },
+  {
     "objectID": "mapa.html",
     "href": "mapa.html",
     "title": "Mapa Interactivo",
@@ -2107,10 +2114,17 @@
     "text": "Créditos\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento."
   },
   {
-    "objectID": "plano.html",
-    "href": "plano.html",
-    "title": "Plano de los jardines",
+    "objectID": "material_educativo.html",
+    "href": "material_educativo.html",
+    "title": "Material educativo",
     "section": "",
-    "text": "Recorré el arboretum con este plano ilustrado, que muestra la distribución de las principales colecciones y los senderos del predio. La referencia de especies está a la derecha del plano.\n\n\n\n¿Preferís explorar ejemplar por ejemplar, con fotos y fichas? Visitá el mapa interactivo »."
+    "text": "Material pensado para las visitas educativas de escuelas al arboretum. Son fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido. Descargalas, imprimilas y usalas en el campo.\n\n\n🐦 Identificación de aves\nFicha para reconocer las aves más comunes del establecimiento.\n⬇ Descargar PDF\n\n\n🌳 Identificación de árboles\nFicha para reconocer los árboles del arboretum por sus rasgos.\n⬇ Descargar PDF\n\n\n\n\n\n\n\n\nTip\n\n\n\n¿Sos docente y organizás una visita? Estas fichas se combinan muy bien con el mapa interactivo, el catálogo de especies y el cuestionario “¿Cuánto sabés?”."
+  },
+  {
+    "objectID": "quiz.html",
+    "href": "quiz.html",
+    "title": "¿Cuánto sabés?",
+    "section": "",
+    "text": "Respondé las preguntas y descubrí cuánto sabés sobre la naturaleza del arboretum. Al elegir una opción vas a ver si acertaste y una breve explicación.\n\n\nPuntaje: 0 / 0\n\n\n  Tu resultado\n  0/0\n  \n  Volver a intentar"
   }
 ]
