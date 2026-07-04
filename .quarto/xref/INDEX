@@ -292,5 +292,20 @@
   },
   "estadisticas.qmd": {
     "estadisticas.html": "c7cc773c"
+  },
+  "datos.qmd": {
+    "datos.html": "c649052d"
+  },
+  "etiquetas.qmd": {
+    "etiquetas.html": "cd597cad"
+  },
+  "SETUP_GITHUB.md": {
+    "SETUP_GITHUB.html": "d82e62ae"
+  },
+  "apadrina.qmd": {
+    "apadrina.html": "acba83c1"
+  },
+  "el-sistema.qmd": {
+    "el-sistema.html": "e5810f15"
   }
 }

@@ -16,6 +16,12 @@ format: html
 **Continente:** Europa / África del Norte / Asia
 
 
+## Código QR
+
+![Código QR de la ficha](../qr/tejo-comun.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

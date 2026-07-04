@@ -1,0 +1,8 @@
+"id","nombre","tipo","longitud","latitud","foto","descripcion"
+"P001","Estacionamiento","Entrada",-57.683935,-38.056014,"Estacionamiento.jpg","Acceso principal"
+"P002","Fuente","jardin",-57.67995,-38.056937,"Fuente.JPG","Excelente para observar aves"
+"P003","Araucaria Australiana","Arbol",-57.680886,-38.056911,"Araucaria.jpg","Uno de los ejemplares más destacados"
+"P004","Cedro de Cristal","Arbol",-57.680563,-38.056685,"Cedrodecristal.jpg","Uno de los pocos ejemplares relevados en el pais."
+"P005","Descanso","jardin",-57.680034,-38.056985,"Descanso.jpg",
+"P006","Bosque de Eucaliptos","Arbol",-57.683434,-38.055429,"Bosquedeeucaliptus2.jpg",
+"P007","Visita Botanicas","Visitas",-57.679726,-38.055993,"Visitasbotanicas.jpg","Una de las principales actividades abiertas a la comunidad."

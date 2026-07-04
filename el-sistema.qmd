@@ -1,0 +1,77 @@
+---
+title: "El sistema detrás del atlas"
+subtitle: "Un atlas digital para tu colección botánica"
+format: html
+---
+
+Este sitio no es solo una página web: es la **interfaz pública de una base de
+datos científica**. Detrás funciona un sistema simple y potente —
+*se mantiene la información una sola vez y todo lo demás se genera solo*.
+
+Desarrollamos y aplicamos este sistema en el Arboretum de Estancia La Constancia,
+y puede replicarse para **otras colecciones botánicas**.
+
+## Qué resuelve
+
+Muchos jardines, viveros y reservas tienen su información dispersa en planillas,
+carpetas y fotos. Este sistema la unifica en una sola base y, a partir de ella,
+genera automáticamente:
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🗺️ Mapa interactivo
+Ubicación de cada ejemplar, senderos y sectores.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🌳 Fichas por especie
+Una página por ejemplar, sin escribir código.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 📖 Catálogo con filtros
+Búsqueda por familia, origen y grupo.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 📊 Estadísticas
+Se recalculan solas con cada actualización.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🔗 Etiquetas QR
+Un código por árbol que abre su ficha.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🔄 Publicación automática
+Actualizás la base y el sitio se reconstruye solo.
+:::
+
+:::
+
+## Para quién es
+
+Jardines botánicos, arboretos, viveros, municipios, reservas naturales,
+universidades y **estancias** que quieran documentar y mostrar su patrimonio
+natural de forma profesional y sostenible en el tiempo.
+
+## Por qué funciona a largo plazo
+
+- **Bajo mantenimiento:** una sola planilla alimenta todo el sitio.
+- **Sin dependencia técnica diaria:** no hace falta un programador para cargar datos.
+- **Escalable:** sirve igual para 50 o para 5.000 ejemplares.
+- **Valor científico y educativo:** la base sostiene investigación, conservación y divulgación.
+
+## Hablemos
+
+¿Tenés una colección que te gustaría llevar a un atlas digital como este?
+Escribinos y coordinamos una demostración:
+
+- ✉️ Correo: «correo de contacto»
+- 📱 WhatsApp: «número»
+
+---
+
+*Ver un ejemplo real en funcionamiento: recorré el [Arboretum de La Constancia](index.qmd).*

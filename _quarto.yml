@@ -27,8 +27,8 @@ website:
         href: aves.qmd
       - text: "Estadísticas"
         href: estadisticas.qmd
-      - text: "Etiquetas"
-        href: etiquetas.qmd
+      - text: "🌳 Apadriná un árbol"
+        href: apadrina.qmd
 
 format:
   html:

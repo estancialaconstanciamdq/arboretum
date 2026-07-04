@@ -24,6 +24,12 @@ Coordenadas: -38.056569, -57.680685
 
 [Ver en el mapa »](../mapa.qmd)
 
+## Código QR
+
+![Código QR de la ficha](../qr/falso-muerdago.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

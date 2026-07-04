@@ -25,6 +25,12 @@ Coordenadas: -38.05564, -57.682655
 
 [Ver en el mapa »](../mapa.qmd)
 
+## Código QR
+
+![Código QR de la ficha](../qr/corona-de-novia-arb047.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

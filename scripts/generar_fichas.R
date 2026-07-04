@@ -97,6 +97,14 @@ construir_ficha <- function(t) {
     ))
   }
 
+  # Padrinazgo (si existe la columna 'padrino' y tiene valor)
+  if ("padrino" %in% names(t) && tiene_valor(t$padrino)) {
+    add(sprintf(
+      "## Padrino / Madrina\n\n> 🌳 Este ejemplar fue apadrinado por **%s**.\n> ¡Gracias por apoyar la conservación del arboretum!\n\n[¿Querés apadrinar un árbol? »](../apadrina.qmd)\n",
+      trimws(t$padrino)
+    ))
+  }
+
   # Footer
   add("---\n\n[« Volver a las especies](../especies.qmd)\n")
 

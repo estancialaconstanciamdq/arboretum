@@ -19,6 +19,12 @@ Coordenadas: -38.056644, -57.679769
 
 [Ver en el mapa »](../mapa.qmd)
 
+## Código QR
+
+![Código QR de la ficha](../qr/arb015.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

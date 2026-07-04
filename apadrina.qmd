@@ -1,0 +1,102 @@
+---
+title: "Apadriná un árbol"
+subtitle: "Sumate a la conservación del Arboretum de La Constancia"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+source("scripts/cargar_datos.R")
+n_arb <- nrow(arboles)
+```
+
+Cada árbol del arboretum tiene una historia. **Apadrinando un ejemplar ayudás a
+cuidarlo, estudiarlo y darlo a conocer** — y dejás tu huella en un ser vivo que
+puede acompañar a varias generaciones.
+
+Es una forma hermosa de celebrar una fecha, homenajear a alguien o simplemente
+ser parte de un proyecto de conservación.
+
+## Cómo funciona
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 1. Elegí tu árbol
+Recorré el [catálogo de especies](catalogo.qmd) o el [mapa](mapa.qmd) y elegí el
+ejemplar que más te guste, entre `r n_arb` árboles relevados.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 2. Apadrinalo
+Escribinos y coordinamos el padrinazgo. Podés hacerlo a tu nombre, como **regalo**
+o en **homenaje** a alguien.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 3. Dejá tu huella
+Tu nombre (o el de la persona homenajeada) aparece en la **ficha del árbol** y
+podés visitarlo cuando quieras.
+:::
+
+:::
+
+## Niveles de padrinazgo
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+### 🌱 Amigo del Arboretum
+Aporte anual «monto»
+
+- Tu nombre en la ficha del árbol
+- Certificado digital de padrinazgo
+- Novedades del arboretum
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm style="border-top:3px solid #1E4A38;"}
+### 🌳 Padrino / Madrina
+Aporte anual «monto»
+
+- Todo lo anterior
+- Tu nombre también en la **etiqueta física** junto al árbol
+- Una visita guiada para «2» personas
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+### 🌲 Benefactor
+Aporte anual «monto»
+
+- Todo lo anterior
+- Reconocimiento destacado en el sitio
+- Ideal para **empresas** o instituciones
+:::
+
+:::
+
+::: {.callout-note}
+Los montos y beneficios son un punto de partida para ajustar según el proyecto.
+:::
+
+## Un regalo con raíces
+
+¿Buscás un regalo distinto? Apadrinar un árbol es un obsequio original y con
+sentido para cumpleaños, casamientos, nacimientos o para recordar a un ser querido.
+Entregamos un **certificado personalizado** con el nombre del árbol y su ubicación.
+
+## Quiero apadrinar un árbol
+
+Escribinos y te contamos los pasos:
+
+- ✉️ Correo: «correo de contacto»
+- 📱 WhatsApp: «número»
+
+[Ver los árboles disponibles →](catalogo.qmd){.btn .btn-success role="button"}
+
+---
+
+*Tu aporte se destina al cuidado, estudio y difusión del patrimonio natural de
+Estancia La Constancia.*

@@ -16,6 +16,12 @@ format: html
 **Continente:** América del Norte (México)
 
 
+## Código QR
+
+![Código QR de la ficha](../qr/ahuehuete-arb035.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

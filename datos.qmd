@@ -1,0 +1,55 @@
+---
+title: "Datos abiertos"
+subtitle: "Descargá la base del arboretum para investigación y educación"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+source("scripts/cargar_datos.R")
+n_arb <- nrow(arboles)
+n_ave <- sum(tiene_valor(aves$especie))
+n_pto <- nrow(puntos)
+```
+
+Toda la información del sitio proviene de una única base maestra. Aquí podés
+descargar esa base en formato abierto (**CSV, UTF-8**) para reutilizarla en
+investigación, educación o análisis. Los archivos se regeneran automáticamente
+en cada actualización, así que siempre reflejan la versión más reciente.
+
+## Descargas
+
+| Conjunto | Registros | Descarga |
+|---|---:|---|
+| Árboles (inventario completo) | `r n_arb` | [arboles.csv](datos/arboles.csv) |
+| Aves registradas | `r n_ave` | [aves.csv](datos/aves.csv) |
+| Puntos de interés | `r n_pto` | [puntos_de_interes.csv](datos/puntos_de_interes.csv) |
+
+Las capas geográficas (límite, senderos, sectores, lagunas) estarán disponibles
+en formato **GeoJSON** a medida que se incorporen al sistema.
+
+## Contenido de los archivos
+
+El archivo de árboles incluye, entre otros campos: identificador (`ID`), nombres
+común y científico, familia, coordenadas, origen (con la categoría normalizada
+`continente_norm`), grupo morfológico (`grupo`) y el enlace estable a la ficha
+(`slug`). La descripción completa de cada campo está en la hoja **Diccionario**
+del libro maestro.
+
+## Cómo citar
+
+> *Arboretum Data Lab — Estancia La Constancia.* Base de datos del arboretum.
+> Disponible en: https://estancialaconstanciamdq.github.io/arboretumdatalab/
+
+## Licencia y uso
+
+Los datos se comparten con fines de investigación, conservación y educación. Al
+reutilizarlos, se agradece citar la fuente. Para usos comerciales o publicaciones,
+por favor contactá al equipo del establecimiento.
+
+---
+
+*Los archivos se generan automáticamente desde `data/Arboretum_Master.xlsx` en cada render.*

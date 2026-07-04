@@ -22,6 +22,12 @@ Coordenadas: -38.056472, -57.680521
 
 [Ver en el mapa »](../mapa.qmd)
 
+## Código QR
+
+![Código QR de la ficha](../qr/pino.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)

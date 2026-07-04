@@ -27,6 +27,12 @@ Coordenadas: -38.056541, -57.680555
 
 [Ver en el mapa »](../mapa.qmd)
 
+## Código QR
+
+![Código QR de la ficha](../qr/roblecomun.png){width=130}
+
+Escaneá para abrir esta ficha en el celular.
+
 ---
 
 [« Volver a las especies](../especies.qmd)
