@@ -26,16 +26,16 @@ website:
             href: mapa.qmd
           - text: "Plano ilustrado"
             href: plano.qmd
-      - text: "Colección"
+      - text: "Explorar"
         menu:
           - text: "Catálogo"
             href: catalogo.qmd
           - text: "Especies destacadas"
             href: especies.qmd
+          - text: "Aves"
+            href: aves.qmd
           - text: "Banco de semillas"
             href: banco_semillas.qmd
-      - text: "Aves"
-        href: aves.qmd
       - text: "Ciencia"
         menu:
           - text: "Estadísticas"
@@ -48,11 +48,13 @@ website:
             href: quiz.qmd
           - text: "Material educativo"
             href: material_educativo.qmd
+    right:
       - text: "🌳 Apadriná un árbol"
         href: apadrina.qmd
-    right:
       - text: "Empresas"
         href: empresas.qmd
+      - text: "Contacto"
+        href: contacto.qmd
 
 format:
   html:

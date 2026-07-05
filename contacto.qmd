@@ -1,0 +1,33 @@
+---
+title: "Contacto"
+subtitle: "Estamos para ayudarte"
+format: html
+---
+
+¿Querés visitar el arboretum, apadrinar un árbol, coordinar una visita educativa o
+explorar una alianza con tu empresa? Escribinos, te respondemos a la brevedad.
+
+::: grid
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 📩 Correo
+[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+
+### 📱 WhatsApp
+[+54 9 11 5736 0940](https://wa.me/5491157360940)
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 📍 Ubicación
+Estancia La Constancia<br>Mar del Plata · Buenos Aires · Argentina
+
+### 📸 Instagram
+[@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
+:::
+
+:::
+
+::: {.callout-tip}
+Contanos qué te interesa —una visita, el apadrinazgo de un árbol, una propuesta para
+tu empresa o una consulta general— y con gusto te orientamos.
+:::
