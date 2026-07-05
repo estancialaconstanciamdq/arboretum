@@ -1,0 +1,8 @@
+Carpeta para los programas educativos (PDF) usados como referencia.
+
+Guardá aquí los cronogramas / programas de visitas escolares, por ejemplo:
+  - programa_primaria.pdf
+  - programa_secundaria.pdf
+
+Sirven para alinear el material educativo (búsquedas, bingo, cartas, guía docente)
+con los objetivos de cada nivel. No se publican en el sitio (son de referencia).

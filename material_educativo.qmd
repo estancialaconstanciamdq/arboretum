@@ -8,6 +8,14 @@ Material pensado para las **visitas educativas** de escuelas al arboretum. Son
 fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido.
 Descargalas, imprimilas y usalas en el campo.
 
+::: {.callout-note}
+### 📘 Guía del docente
+Objetivos, cronograma por nivel, vínculos curriculares y actividades para antes,
+durante y después de la visita.
+
+[⬇ Descargar Guía del docente (PDF)](recursos/guia_docente.pdf){.btn .btn-success role="button"}
+:::
+
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
@@ -30,6 +38,58 @@ Ficha para reconocer los árboles del arboretum por sus rasgos.
 ¿Sos docente y organizás una visita? Estas fichas se combinan muy bien con el
 [mapa interactivo](mapa.qmd), el [catálogo de especies](catalogo.qmd) y el
 [cuestionario “¿Cuánto sabés?”](quiz.qmd).
+:::
+
+## Actividades para la visita
+
+Fichas de trabajo y consignas para el recorrido, alineadas con los programas y
+organizadas por nivel.
+
+### Nivel Inicial y Primaria
+
+::: grid
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+#### 🔎 Búsqueda del tesoro
+Consignas simples de observación (encontrá una conífera, un ave, un fruto…).
+
+[⬇ Descargar PDF](recursos/busqueda_primaria.pdf){.btn .btn-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+#### 🍃 Detectives de la Naturaleza
+Observar una parte de un árbol con todos los sentidos y describirla.
+
+[⬇ Descargar PDF](recursos/detectives_hojas.pdf){.btn .btn-success role="button"}
+:::
+
+:::
+
+### Nivel Secundaria
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+#### 🔬 Búsqueda del tesoro
+Consignas con enfoque científico (familias, origen, clasificación, QR).
+
+[⬇ PDF](recursos/busqueda_secundaria.pdf){.btn .btn-success .btn-sm role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+#### 🌿 Misión Botánica
+Observar y **clasificar** cinco plantas por sus características.
+
+[⬇ PDF](recursos/mision_botanica.pdf){.btn .btn-success .btn-sm role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+#### 🐦 Aves por grupos
+Checklist de aves por grupo ecológico (visto / escuchado).
+
+[⬇ PDF](recursos/aves_grupos.pdf){.btn .btn-success .btn-sm role="button"}
+:::
+
 :::
 
 ## Visitas educativas
