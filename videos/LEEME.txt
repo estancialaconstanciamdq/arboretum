@@ -1,0 +1,11 @@
+Carpeta para videos del sitio (formato .mp4 recomendado).
+
+Guardá aquí clips cortos del arboretum (aves, follaje, visitas, etc.),
+por ejemplo:
+  - aves_canto.mp4
+  - otono_arboretum.mp4
+  - visita_escolar.mp4
+
+Ideal: .mp4 (H.264), horizontal o cuadrado, pocos MB cada uno.
+Una vez que estén acá, se muestran en la web donde definamos
+(galería de videos, portada, o secciones específicas).

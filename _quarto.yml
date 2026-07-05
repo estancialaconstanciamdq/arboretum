@@ -48,6 +48,9 @@ website:
             href: material_educativo.qmd
       - text: "🌳 Apadriná un árbol"
         href: apadrina.qmd
+    right:
+      - text: "Empresas"
+        href: empresas.qmd
 
 format:
   html:
