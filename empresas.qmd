@@ -10,6 +10,20 @@ de naturaleza, acá **cada árbol es trazable**: tiene su ficha, su ubicación y
 código QR, y la información es abierta. Eso convierte tu inversión en un **impacto
 medible y verificable** — sin greenwashing.
 
+## Conocé al equipo
+
+```{=html}
+<div style="max-width:340px; margin:1.2rem auto;">
+  <div style="position:relative; padding-bottom:177.78%; height:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,.12);">
+    <iframe src="https://www.youtube.com/embed/L8beVeOx_PE"
+      title="Somos Equipo — La Constancia"
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</div>
+```
+
 ## Qué ofrecemos
 
 ::: grid

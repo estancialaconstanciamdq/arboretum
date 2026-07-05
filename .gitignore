@@ -7,3 +7,9 @@
 
 # Archivos temporales de Excel (lock files)
 ~$*.xlsx
+
+# Videos originales pesados: NO subir al repo (GitHub limita a 100 MB por archivo).
+# Usar las versiones .mp4 comprimidas, o embeber desde YouTube/Vimeo.
+videos/*.mov
+videos/Spot-Institucional*
+videos/visitas_educativas_maria.mp4

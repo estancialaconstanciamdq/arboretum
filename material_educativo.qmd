@@ -31,3 +31,16 @@ Ficha para reconocer los árboles del arboretum por sus rasgos.
 [mapa interactivo](mapa.qmd), el [catálogo de especies](catalogo.qmd) y el
 [cuestionario “¿Cuánto sabés?”](quiz.qmd).
 :::
+
+## Visitas educativas
+
+<div style="text-align:center; margin:1rem 0;">
+  <video controls preload="none" playsinline
+         poster="videos/visitas_educativas_poster.jpg"
+         style="width:100%; max-width:360px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.12);">
+    <source src="videos/visitas_educativas.mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+  </video>
+</div>
+
+Grupos escolares recorriendo el arboretum durante una visita educativa.

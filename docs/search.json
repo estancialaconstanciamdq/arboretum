@@ -1036,6 +1036,13 @@
     "text": "En La Constancia cuidamos un arboretum vivo con más de 300 especies de árboles y arbustos, en Mar del Plata, Argentina. A diferencia de la mayoría de los proyectos de naturaleza, acá cada árbol es trazable: tiene su ficha, su ubicación y su código QR, y la información es abierta. Eso convierte tu inversión en un impacto medible y verificable — sin greenwashing."
   },
   {
+    "objectID": "empresas.html#conocé-al-equipo",
+    "href": "empresas.html#conocé-al-equipo",
+    "title": "Para empresas",
+    "section": "Conocé al equipo",
+    "text": "Conocé al equipo"
+  },
+  {
     "objectID": "empresas.html#qué-ofrecemos",
     "href": "empresas.html#qué-ofrecemos",
     "title": "Para empresas",
@@ -2160,7 +2167,14 @@
     "href": "material_educativo.html",
     "title": "Material educativo",
     "section": "",
-    "text": "Material pensado para las visitas educativas de escuelas al arboretum. Son fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido. Descargalas, imprimilas y usalas en el campo.\n\n\n🐦 Identificación de aves\nFicha para reconocer las aves más comunes del establecimiento.\n⬇ Descargar PDF\n\n\n🌳 Identificación de árboles\nFicha para reconocer los árboles del arboretum por sus rasgos.\n⬇ Descargar PDF\n\n\n\n\n\n\n\n\nTip\n\n\n\n¿Sos docente y organizás una visita? Estas fichas se combinan muy bien con el mapa interactivo, el catálogo de especies y el cuestionario “¿Cuánto sabés?”."
+    "text": "Material pensado para las visitas educativas de escuelas al arboretum. Son fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido. Descargalas, imprimilas y usalas en el campo."
+  },
+  {
+    "objectID": "material_educativo.html#visitas-educativas",
+    "href": "material_educativo.html#visitas-educativas",
+    "title": "Material educativo",
+    "section": "Visitas educativas",
+    "text": "Visitas educativas\n\n  Tu navegador no puede reproducir este video. \n\nGrupos escolares recorriendo el arboretum durante una visita educativa."
   },
   {
     "objectID": "quiz.html",
@@ -2168,5 +2182,12 @@
     "title": "¿Cuánto sabés?",
     "section": "",
     "text": "Respondé las preguntas y descubrí cuánto sabés sobre la naturaleza del arboretum. Al elegir una opción vas a ver si acertaste y una breve explicación.\n\n\nPuntaje: 0 / 0\n\n\n  Tu resultado\n  0/0\n  \n  Volver a intentar"
+  },
+  {
+    "objectID": "index.html#conocé-la-constancia",
+    "href": "index.html#conocé-la-constancia",
+    "title": "Laboratorio del Arboretum",
+    "section": "Conocé La Constancia",
+    "text": "Conocé La Constancia"
   }
 ]
