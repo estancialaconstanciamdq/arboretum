@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42">
+  <defs><filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-color="#000" flood-opacity="0.35"/></filter></defs>
+  <path filter="url(#s)" d="M15 1C7.8 1 2 6.8 2 14c0 9.4 13 26 13 26s13-16.6 13-26C28 6.8 22.2 1 15 1z" fill="#C62828"/>
+  <circle cx="15" cy="14" r="9.2" fill="#FFFFFF"/>
+  <path fill="#C62828" d="M15,8.2 L16.26,11.76 L20.04,11.86 L17.05,14.16 L18.12,17.79 L15,15.65 L11.88,17.79 L12.95,14.16 L9.96,11.86 L13.74,11.76 Z"/>
+</svg>

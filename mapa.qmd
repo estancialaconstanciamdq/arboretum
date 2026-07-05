@@ -17,18 +17,19 @@ source("scripts/cargar_datos.R")
 library(leaflet)
 library(htmltools)
 
-icono_arbol <- awesomeIcons(icon = "tree",  library = "fa", markerColor = "green",     iconColor = "white")
-icono_conif <- awesomeIcons(icon = "tree",  library = "fa", markerColor = "darkgreen", iconColor = "white")
-icono_poi   <- awesomeIcons(icon = "star",  library = "fa", markerColor = "red",       iconColor = "white")
+# Marcadores SVG propios (pin + silueta), incrustados como data-URI para que se
+# muestren siempre. Para cambiar color o forma, editá los .svg en fotos/.
+marcador_svg <- function(archivo) {
+  svg <- paste(readLines(file.path("fotos", archivo), warn = FALSE), collapse = "")
+  uri <- paste0("data:image/svg+xml,", utils::URLencode(svg, reserved = TRUE))
+  makeIcon(iconUrl = uri, iconWidth = 30, iconHeight = 42,
+           iconAnchorX = 15, iconAnchorY = 42, popupAnchorX = 0, popupAnchorY = -38)
+}
 
-# Marcador de aves: ícono SVG propio (Font Awesome 4.7 no incluye "dove").
-# Se lee el archivo y se incrusta como data-URI para que se muestre siempre.
-svg_ave <- paste(readLines("fotos/marcador_ave.svg", warn = FALSE), collapse = "")
-uri_ave <- paste0("data:image/svg+xml,", utils::URLencode(svg_ave, reserved = TRUE))
-icono_ave <- makeIcon(
-  iconUrl = uri_ave, iconWidth = 30, iconHeight = 42,
-  iconAnchorX = 15, iconAnchorY = 42, popupAnchorX = 0, popupAnchorY = -38
-)
+icono_arbol <- marcador_svg("marcador_arbol.svg")
+icono_conif <- marcador_svg("marcador_conifera.svg")
+icono_ave   <- marcador_svg("marcador_ave.svg")
+icono_poi   <- marcador_svg("marcador_poi.svg")
 
 con_coord <- function(df) dplyr::filter(df, !is.na(latitud), !is.na(longitud))
 
@@ -58,13 +59,13 @@ pts  <- con_coord(puntos)
 m <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldImagery, group = "Satélite") %>%
 
-  addAwesomeMarkers(
+  addMarkers(
     data = arb, lng = ~longitud, lat = ~latitud,
     icon = icono_arbol, group = "Árboles",
     popup = popup_arbol(arb)
   ) %>%
 
-  addAwesomeMarkers(
+  addMarkers(
     data = coni, lng = ~longitud, lat = ~latitud,
     icon = icono_conif, group = "Coníferas",
     popup = popup_arbol(coni)
@@ -82,7 +83,7 @@ m <- leaflet() %>%
     )
   ) %>%
 
-  addAwesomeMarkers(
+  addMarkers(
     data = pts, lng = ~longitud, lat = ~latitud,
     icon = icono_poi, group = "Puntos de interés",
     popup = ~paste0(
