@@ -8,14 +8,6 @@ Material pensado para las **visitas educativas** de escuelas al arboretum. Son
 fichas de identificación que ayudan a reconocer aves y árboles durante el recorrido.
 Descargalas, imprimilas y usalas en el campo.
 
-::: {.callout-note}
-### 📘 Guía del docente
-Objetivos, cronograma por nivel, vínculos curriculares y actividades para antes,
-durante y después de la visita.
-
-[⬇ Descargar Guía del docente (PDF)](recursos/guia_docente.pdf){.btn .btn-success role="button"}
-:::
-
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
@@ -90,6 +82,14 @@ Checklist de aves por grupo ecológico (visto / escuchado).
 [⬇ PDF](recursos/aves_grupos.pdf){.btn .btn-success .btn-sm role="button"}
 :::
 
+:::
+
+::: {.callout-note}
+### 📘 Guía del docente
+Objetivos, cronograma por nivel, vínculos curriculares y actividades para antes,
+durante y después de la visita.
+
+[⬇ Descargar Guía del docente (PDF)](recursos/guia_docente.pdf){.btn .btn-success role="button"}
 :::
 
 ## Visitas educativas

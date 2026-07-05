@@ -19,8 +19,16 @@ library(htmltools)
 
 icono_arbol <- awesomeIcons(icon = "tree",  library = "fa", markerColor = "green",     iconColor = "white")
 icono_conif <- awesomeIcons(icon = "tree",  library = "fa", markerColor = "darkgreen", iconColor = "white")
-icono_ave   <- awesomeIcons(icon = "dove",  library = "fa", markerColor = "blue",      iconColor = "white")
 icono_poi   <- awesomeIcons(icon = "star",  library = "fa", markerColor = "red",       iconColor = "white")
+
+# Marcador de aves: ícono SVG propio (Font Awesome 4.7 no incluye "dove").
+# Se lee el archivo y se incrusta como data-URI para que se muestre siempre.
+svg_ave <- paste(readLines("fotos/marcador_ave.svg", warn = FALSE), collapse = "")
+uri_ave <- paste0("data:image/svg+xml,", utils::URLencode(svg_ave, reserved = TRUE))
+icono_ave <- makeIcon(
+  iconUrl = uri_ave, iconWidth = 30, iconHeight = 42,
+  iconAnchorX = 15, iconAnchorY = 42, popupAnchorX = 0, popupAnchorY = -38
+)
 
 con_coord <- function(df) dplyr::filter(df, !is.na(latitud), !is.na(longitud))
 
@@ -62,7 +70,7 @@ m <- leaflet() %>%
     popup = popup_arbol(coni)
   ) %>%
 
-  addAwesomeMarkers(
+  addMarkers(
     data = avs, lng = ~longitud, lat = ~latitud,
     icon = icono_ave, group = "Aves",
     popup = ~paste0(
