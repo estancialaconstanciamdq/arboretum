@@ -134,10 +134,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciencia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Ciencia</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-investigación" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Investigación</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciencia">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-investigación">    
         <li>
     <a class="dropdown-item" href="./estadisticas.html">
  <span class="dropdown-text">Estadísticas</span></a>
@@ -149,10 +149,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-educación" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Educación</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visitas-educativas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Visitas Educativas</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-educación">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-visitas-educativas">    
         <li>
     <a class="dropdown-item" href="./quiz.html">
  <span class="dropdown-text">¿Cuánto sabés?</span></a>
@@ -226,6 +226,15 @@ ul.task-list li input[type="checkbox"] {
   #quiz-final{display:none;text-align:center;padding:1.5rem;border-radius:12px;background:#e3f3e9;margin-top:1rem;}
   #quiz-final .puntaje{font-size:2.4rem;font-weight:700;color:#1E4A38;}
   #quiz-reset{margin-top:.6rem;padding:.5rem 1rem;border:none;border-radius:8px;background:#1E4A38;color:#fff;cursor:pointer;}
+  #quiz-contacto{margin-top:1.1rem;text-align:left;}
+  #quiz-contacto .cta{font-weight:600;color:#1E4A38;margin-bottom:.2rem;}
+  #quiz-contacto .sub{font-size:.85rem;color:#555;margin-bottom:.6rem;}
+  #quiz-contacto input[type=text],#quiz-contacto input[type=email]{width:100%;padding:.55rem .7rem;margin:.3rem 0;border:1px solid #ccc;border-radius:8px;font-size:.9rem;box-sizing:border-box;}
+  #quiz-contacto label.consent{display:flex;gap:.45rem;align-items:flex-start;font-size:.8rem;color:#555;margin:.5rem 0;}
+  #c-enviar{margin-top:.3rem;padding:.55rem 1.1rem;border:none;border-radius:8px;background:#1E4A38;color:#fff;cursor:pointer;font-weight:600;}
+  #c-enviar:disabled{opacity:.6;cursor:default;}
+  #quiz-stats{display:none;justify-content:center;gap:.7rem;flex-wrap:wrap;align-items:center;margin:1.2rem 0;padding:.7rem 1rem;background:#f4f8f5;border:1px solid #dbe7df;border-radius:10px;color:#1E4A38;font-size:.95rem;}
+  #quiz-stats b{font-size:1.2rem;}
 </style>
 
 <div id="quiz-barra">Puntaje: <span id="quiz-score">0</span> / <span id="quiz-total">0</span></div>
@@ -235,10 +244,92 @@ ul.task-list li input[type="checkbox"] {
   <div class="puntaje"><span id="quiz-fscore">0</span>/<span id="quiz-ftotal">0</span></div>
   <div id="quiz-msg"></div>
   <button id="quiz-reset">Volver a intentar</button>
+
+  <div id="quiz-contacto">
+    <hr style="margin:1.1rem 0;opacity:.25;">
+    <div class="cta">¿Querés recibir más información?</div>
+    <div class="sub">Dejanos tus datos y te contamos sobre visitas educativas, actividades y novedades del arboretum.</div>
+    <input id="c-nombre" type="text" placeholder="Nombre" autocomplete="name">
+    <input id="c-email" type="email" placeholder="Email" autocomplete="email">
+    <input id="c-inst" type="text" placeholder="Escuela o institución (opcional)">
+    <label class="consent"><input id="c-consent" type="checkbox"> <span>Acepto que me contacten por email con información del arboretum.</span></label>
+    <button id="c-enviar">Enviar</button>
+    <div id="c-msg" style="font-size:.85rem;margin-top:.5rem;"></div>
+  </div>
+</div>
+
+<div id="quiz-stats">
+  <span>👥 <b id="st-n">0</b>&nbsp;personas ya participaron</span>
+  <span aria-hidden="true">·</span>
+  <span>Promedio: <b id="st-avg">0</b>/<span id="st-tot">10</span></span>
 </div>
 
 <script>
 (function(){
+  // ─────────────────────────────────────────────────────────────────────────
+  // CONFIGURACIÓN (opcional). Sin completar, el formulario de contacto usa el
+  // correo (mailto) y no se muestran las estadísticas.
+  //   • formAction  : URL del formulario de Google que termina en /formResponse
+  //   • campos      : IDs "entry.XXXX" de cada pregunta del formulario
+  //   • csvUrl      : URL del CSV publicado de la hoja de respuestas
+  // Ver la guía de configuración que acompaña este archivo.
+  // ─────────────────────────────────────────────────────────────────────────
+  const CONFIG = {
+    formAction: "",
+    campos: { puntaje:"", total:"", tipo:"", nombre:"", email:"", institucion:"" },
+    csvUrl: "",
+    emailContacto: "laconstanciaargentina@gmail.com"
+  };
+
+  let yaEnviado = false;
+
+  function enviarForm(d){
+    if(!CONFIG.formAction) return Promise.resolve(false);
+    const b=new URLSearchParams(), c=CONFIG.campos;
+    if(c.puntaje) b.append(c.puntaje, d.puntaje);
+    if(c.total)   b.append(c.total,   d.total);
+    if(c.tipo)    b.append(c.tipo,    d.tipo||"");
+    if(c.nombre && d.nombre)           b.append(c.nombre, d.nombre);
+    if(c.email && d.email)             b.append(c.email, d.email);
+    if(c.institucion && d.institucion) b.append(c.institucion, d.institucion);
+    return fetch(CONFIG.formAction,{method:"POST",mode:"no-cors",body:b})
+             .then(function(){return true;}).catch(function(){return false;});
+  }
+
+  function parseCSV(txt){
+    const rows=[]; let row=[],val="",q=false;
+    for(let i=0;i<txt.length;i++){ const ch=txt[i];
+      if(q){ if(ch=='"'){ if(txt[i+1]=='"'){val+='"';i++;} else q=false; } else val+=ch; }
+      else { if(ch=='"')q=true; else if(ch==','){row.push(val);val="";}
+             else if(ch=='\n'){row.push(val);rows.push(row);row=[];val="";}
+             else if(ch!='\r'){val+=ch;} }
+    }
+    if(val!==""||row.length){row.push(val);rows.push(row);}
+    return rows;
+  }
+
+  function cargarStats(){
+    if(!CONFIG.csvUrl) return;
+    fetch(CONFIG.csvUrl).then(function(r){return r.text();}).then(function(txt){
+      const rows=parseCSV(txt); if(rows.length<2) return;
+      const head=rows[0].map(function(h){return (h||"").toLowerCase();});
+      const iP=head.findIndex(function(h){return h.indexOf("puntaje")>=0;});
+      const iT=head.findIndex(function(h){return h.indexOf("tipo")>=0;});
+      let n=0,sum=0;
+      for(let k=1;k<rows.length;k++){ const r=rows[k];
+        if(!r.length||(r.length==1&&r[0]==="")) continue;
+        if(iT>=0 && (r[iT]||"").toLowerCase().indexOf("quiz")<0) continue;
+        const p=parseFloat(iP>=0?r[iP]:NaN);
+        if(!isNaN(p)){ n++; sum+=p; }
+      }
+      if(n>0){
+        document.getElementById("st-n").textContent=n;
+        document.getElementById("st-avg").textContent=(sum/n).toFixed(1);
+        document.getElementById("quiz-stats").style.display="flex";
+      }
+    }).catch(function(){});
+  }
+
   const PREGUNTAS = [
     {p:"¿A qué familia botánica pertenece el Ginkgo (<em>Ginkgo biloba</em>)?",
      o:["Pinaceae","Ginkgoaceae","Fagaceae","Cupressaceae"], c:1,
@@ -308,11 +399,40 @@ ul.task-list li input[type="checkbox"] {
               pct>=0.6 ? "¡Muy bien! Seguí explorando el arboretum." :
               "¡Buen intento! Recorré las fichas y volvé a probar.";
     document.getElementById("quiz-msg").textContent=msg;
+    if(CONFIG.formAction && !yaEnviado){ yaEnviado=true; enviarForm({puntaje:score, total:PREGUNTAS.length, tipo:"quiz"}); }
     finalBox.style.display="block";
     finalBox.scrollIntoView({behavior:"smooth"});
   }
-  document.getElementById("quiz-reset").onclick=construir;
+  document.getElementById("st-tot").textContent=PREGUNTAS.length;
+
+  document.getElementById("c-enviar").onclick=function(){
+    const nombre=(document.getElementById("c-nombre").value||"").trim();
+    const email =(document.getElementById("c-email").value||"").trim();
+    const inst  =(document.getElementById("c-inst").value||"").trim();
+    const consent=document.getElementById("c-consent").checked;
+    const msg=document.getElementById("c-msg");
+    if(!email || email.indexOf("@")<1){ msg.style.color="#c0392b"; msg.textContent="Ingresá un email válido."; return; }
+    if(!consent){ msg.style.color="#c0392b"; msg.textContent="Marcá la casilla de consentimiento para continuar."; return; }
+    const btn=this; btn.disabled=true;
+    if(CONFIG.formAction){
+      enviarForm({puntaje:score, total:PREGUNTAS.length, tipo:"contacto", nombre:nombre, email:email, institucion:inst})
+        .then(function(){ msg.style.color="#1E4A38"; msg.textContent="¡Gracias! Te vamos a contactar pronto. 🌳"; });
+    } else {
+      const asunto=encodeURIComponent("Quiero recibir información del arboretum");
+      const cuerpo=encodeURIComponent("Nombre: "+nombre+"\nInstitución: "+inst+"\nEmail: "+email+"\n\nMe gustaría recibir información sobre el arboretum.");
+      window.location.href="mailto:"+CONFIG.emailContacto+"?subject="+asunto+"&body="+cuerpo;
+      msg.style.color="#1E4A38"; msg.textContent="Se abrió tu correo para enviar el mensaje.";
+    }
+  };
+
+  document.getElementById("quiz-reset").onclick=function(){
+    construir();
+    const m=document.getElementById("c-msg"); if(m) m.textContent="";
+    const b=document.getElementById("c-enviar"); if(b) b.disabled=false;
+  };
+
   construir();
+  cargarStats();
 })();
 </script>
 
