@@ -18,8 +18,6 @@ website:
     logo: fotos/logo_la_constancia.svg
     title: "Arboretum"
     left:
-      - text: "Inicio"
-        href: index.qmd
       - text: "Mapa"
         menu:
           - text: "Mapa interactivo"
