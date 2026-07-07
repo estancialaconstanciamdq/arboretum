@@ -81,3 +81,7 @@ El Arboretum integra los relevamientos biológicos desarrollados en Estancia La 
 Las fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento.
 :::
 :::
+
+<div style="text-align:center; margin-top:3rem;">
+  <img src="fotos/LogoARBN.jpg" alt="Estancia La Constancia" style="width:180px; max-width:45%; opacity:.95;">
+</div>

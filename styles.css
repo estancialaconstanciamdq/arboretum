@@ -42,3 +42,25 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* ---- Footer institucional: mismo verde que la barra ---- */
+.nav-footer {
+  background-color: #1E4A38 !important;
+  color: #ffffff !important;
+  border-top: none !important;
+  font-size: 0.9rem;
+}
+.nav-footer a {
+  color: #cfe8dd !important;
+  text-decoration: none;
+}
+.nav-footer a:hover,
+.nav-footer a:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+/* Separadores entre los enlaces del centro del footer */
+.nav-footer .nav-footer-center .toc-actions,
+.nav-footer .nav-footer-center {
+  gap: 0.4rem 1.1rem;
+}
