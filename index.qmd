@@ -1,6 +1,6 @@
 ---
-title: "Laboratorio del Arboretum"
-subtitle: "Estancia La Constancia • Data Lab"
+title: "Arboretum"
+subtitle: "Estancia La Constancia"
 page-layout: full
 execute:
   echo: false
@@ -17,16 +17,16 @@ destacados <- arboles %>%
   dplyr::arrange(nombre_comun)
 ```
 
-<!-- # 🌿 Laboratorio del Arboretum -->
+<!-- # 🌿 Arboretum -->
 
-Bienvenidos al Laboratorio del Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**.
+Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**.
 
 Este espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.
 
 <p style="color:#1E4A38; font-weight:600;">📍 Mar del Plata · Buenos Aires · Argentina</p>
 
 <div style="text-align: center; margin-bottom: 2rem;">
-  <img src="fotos/portada2.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Panel del Arboretum Data Lab">
+  <img src="fotos/portada2.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Arboretum de Estancia La Constancia">
 </div>
 
 ## Ejemplares destacados
@@ -72,8 +72,8 @@ Recorra virtualmente los senderos, sectores y puntos de interés en tiempo real.
 
 ::: grid
 ::: g-col-7
-## Acerca del Laboratorio
-El Laboratorio del Arboretum integra los relevamientos biológicos desarrollados en Estancia La Constancia para promover la conservación, investigación y educación ambiental de la biodiversidad local.
+## Acerca del Arboretum
+El Arboretum integra los relevamientos biológicos desarrollados en Estancia La Constancia para promover la conservación, investigación y educación ambiental de la biodiversidad local.
 :::
 
 ::: g-col-5

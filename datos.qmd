@@ -41,7 +41,7 @@ del libro maestro.
 
 ## Cómo citar
 
-> *Arboretum Data Lab — Estancia La Constancia.* Base de datos del arboretum.
+> *Arboretum de Estancia La Constancia.* Base de datos del arboretum.
 > Disponible en: https://estancialaconstanciamdq.github.io/arboretumdatalab/
 
 ## Licencia y uso

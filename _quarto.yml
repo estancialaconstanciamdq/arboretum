@@ -12,11 +12,11 @@ resources:
   
 
 website:
-  title: "Lab del Arboretum"
+  title: "Arboretum"
   navbar:
     background: dark        # navbar oscuro (el verde exacto se aplica en styles.css)
     logo: fotos/logo_la_constancia.svg
-    title: "Lab del Arboretum"
+    title: "Arboretum"
     left:
       - text: "Inicio"
         href: index.qmd
@@ -44,6 +44,8 @@ website:
             href: biodiversidad.qmd
       - text: "Visitas Educativas"
         menu:
+          - text: "Visitas escolares"
+            href: visitas_escolares.qmd
           - text: "¿Cuánto sabés?"
             href: quiz.qmd
           - text: "Material educativo"
