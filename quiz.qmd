@@ -2,7 +2,46 @@
 title: "¿Cuánto sabés?"
 subtitle: "Poné a prueba tus conocimientos sobre árboles, aves y biodiversidad"
 format: html
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+Poné a prueba lo que sabés sobre la naturaleza del arboretum con estos juegos.
+Elegí una pestaña y a jugar.
+
+```{r}
+#| output: asis
+# Datos para los juegos (foto + nombre), generados desde el mismo Excel.
+source("scripts/cargar_datos.R")
+
+esc_js <- function(x) { x <- as.character(x); x <- gsub("\\\\", "\\\\\\\\", x); gsub('"', '\\\\"', x) }
+
+tr <- arboles %>%
+  dplyr::filter(tiene_valor(foto), tiene_valor(nombre_comun)) %>%
+  dplyr::distinct(nombre_comun, .keep_all = TRUE) %>%
+  dplyr::transmute(n = nombre_comun, f = foto, t = "árbol")
+
+avs <- aves %>%
+  dplyr::filter(tiene_valor(foto), tiene_valor(especie)) %>%
+  dplyr::distinct(especie, .keep_all = TRUE) %>%
+  dplyr::transmute(n = especie, f = foto, t = "ave")
+
+items <- rbind(tr, avs)
+
+cat('<script>\nwindow.JUEGO_ESPECIES=[\n')
+for (i in seq_len(nrow(items))) {
+  cat(sprintf('{"n":"%s","f":"fotos/%s","t":"%s"}%s\n',
+      esc_js(items$n[i]), esc_js(items$f[i]), items$t[i],
+      if (i < nrow(items)) "," else ""))
+}
+cat('];\n</script>\n')
+```
+
+::: {.panel-tabset}
+
+## 🧠 Quiz
 
 Respondé las preguntas y descubrí cuánto sabés sobre la naturaleza del arboretum.
 Al elegir una opción vas a ver si acertaste y una breve explicación.
@@ -61,14 +100,6 @@ Al elegir una opción vas a ver si acertaste y una breve explicación.
 
 <script>
 (function(){
-  // ─────────────────────────────────────────────────────────────────────────
-  // CONFIGURACIÓN (opcional). Sin completar, el formulario de contacto usa el
-  // correo (mailto) y no se muestran las estadísticas.
-  //   • formAction  : URL del formulario de Google que termina en /formResponse
-  //   • campos      : IDs "entry.XXXX" de cada pregunta del formulario
-  //   • csvUrl      : URL del CSV publicado de la hoja de respuestas
-  // Ver la guía de configuración que acompaña este archivo.
-  // ─────────────────────────────────────────────────────────────────────────
   const CONFIG = {
     formAction: "",
     campos: { puntaje:"", total:"", tipo:"", nombre:"", email:"", institucion:"" },
@@ -231,3 +262,199 @@ Al elegir una opción vas a ver si acertaste y una breve explicación.
 })();
 </script>
 ```
+
+## 📷 ¿Qué especie es?
+
+Mirá la foto y elegí el nombre correcto entre las cuatro opciones.
+
+```{=html}
+<style>
+  #qe-app{max-width:520px;margin:0 auto;text-align:center;}
+  #qe-barra{background:#1E4A38;color:#fff;padding:.5rem 1rem;border-radius:8px;font-weight:600;margin-bottom:1rem;}
+  #qe-foto img{width:100%;max-width:440px;height:290px;object-fit:cover;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  #qe-ops{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1rem 0;}
+  .qe-op{padding:.7rem .6rem;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;font-size:.95rem;}
+  .qe-op:hover{background:#f4f8f5;}
+  .qe-op:disabled{cursor:default;}
+  .qe-op.ok{background:#e3f3e9;border-color:#1E4A38;color:#14432f;font-weight:600;}
+  .qe-op.mal{background:#fdecec;border-color:#c0392b;color:#7d241b;}
+  #qe-fb{min-height:1.4rem;font-weight:600;margin:.3rem 0;}
+  #qe-next,#qe-restart{margin-top:.4rem;padding:.55rem 1.2rem;border:none;border-radius:8px;background:#1E4A38;color:#fff;cursor:pointer;font-weight:600;}
+  #qe-final{display:none;padding:1.3rem;border-radius:12px;background:#e3f3e9;}
+  #qe-final .p{font-size:2.2rem;font-weight:700;color:#1E4A38;}
+</style>
+
+<div id="qe-app">
+  <div id="qe-barra">Puntaje: <span id="qe-score">0</span> / <span id="qe-tot">0</span></div>
+  <div id="qe-juego">
+    <div id="qe-foto"></div>
+    <div id="qe-ops"></div>
+    <div id="qe-fb"></div>
+    <button id="qe-next" style="display:none;">Siguiente →</button>
+  </div>
+  <div id="qe-final">
+    <div>Tu resultado</div>
+    <div class="p"><span id="qe-fscore">0</span>/<span id="qe-ftot">0</span></div>
+    <div id="qe-msg"></div>
+    <button id="qe-restart">Jugar de nuevo</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var POOL=(window.JUEGO_ESPECIES||[]).slice();
+  var app=document.getElementById("qe-app");
+  if(POOL.length<4){ app.innerHTML="<p>No hay suficientes fotos para este juego.</p>"; return; }
+  var RONDAS=Math.min(10, POOL.length);
+  var foto=document.getElementById("qe-foto"), ops=document.getElementById("qe-ops"),
+      fb=document.getElementById("qe-fb"), next=document.getElementById("qe-next"),
+      juego=document.getElementById("qe-juego"), fin=document.getElementById("qe-final"),
+      scoreEl=document.getElementById("qe-score"), totEl=document.getElementById("qe-tot");
+  var orden=[], idx=0, score=0;
+
+  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+  function iniciar(){
+    orden=shuffle(POOL.slice()).slice(0,RONDAS);
+    idx=0; score=0; scoreEl.textContent=0; totEl.textContent=RONDAS;
+    fin.style.display="none"; juego.style.display="";
+    ronda();
+  }
+
+  function ronda(){
+    fb.textContent=""; next.style.display="none";
+    var target=orden[idx];
+    foto.innerHTML='<img src="'+target.f+'" alt="Adiviná la especie de la foto">';
+    var mismos=POOL.filter(function(x){return x.t===target.t && x.n!==target.n;});
+    var otros=POOL.filter(function(x){return x.n!==target.n;});
+    var fuente=mismos.length>=3?mismos:otros;
+    var distr=shuffle(fuente.slice()).slice(0,3);
+    var opciones=shuffle([target].concat(distr));
+    ops.innerHTML="";
+    opciones.forEach(function(op){
+      var b=document.createElement("button"); b.className="qe-op"; b.textContent=op.n;
+      b.onclick=function(){
+        Array.prototype.forEach.call(ops.querySelectorAll(".qe-op"),function(x){x.disabled=true;});
+        if(op.n===target.n){ b.classList.add("ok"); score++; scoreEl.textContent=score; fb.style.color="#1E4A38"; fb.textContent="¡Correcto! 🌿"; }
+        else{
+          b.classList.add("mal"); fb.style.color="#c0392b"; fb.textContent="Era: "+target.n;
+          Array.prototype.forEach.call(ops.querySelectorAll(".qe-op"),function(x){ if(x.textContent===target.n) x.classList.add("ok"); });
+        }
+        next.style.display="inline-block";
+      };
+      ops.appendChild(b);
+    });
+  }
+
+  next.onclick=function(){ idx++; if(idx<orden.length) ronda(); else terminar(); };
+
+  function terminar(){
+    juego.style.display="none"; fin.style.display="block";
+    document.getElementById("qe-fscore").textContent=score;
+    document.getElementById("qe-ftot").textContent=RONDAS;
+    var pct=score/RONDAS;
+    document.getElementById("qe-msg").textContent =
+      pct===1?"¡Perfecto! Conocés muy bien las especies 🌳":
+      pct>=0.6?"¡Muy bien! Seguí explorando el catálogo.":
+      "¡Buen intento! Mirá las fichas y volvé a probar.";
+  }
+
+  document.getElementById("qe-restart").onclick=iniciar;
+  iniciar();
+})();
+</script>
+```
+
+## 🃏 Memoria
+
+Encontrá cada par: la **foto** y el **nombre** de la misma especie. Girá las cartas
+de a dos.
+
+```{=html}
+<style>
+  #mem-app{max-width:640px;margin:0 auto;text-align:center;}
+  #mem-info{background:#1E4A38;color:#fff;padding:.5rem 1rem;border-radius:8px;font-weight:600;margin-bottom:1rem;}
+  #mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;}
+  .mem-card{position:relative;aspect-ratio:3/4;cursor:pointer;}
+  .mem-inner{position:absolute;inset:0;transition:transform .35s;transform-style:preserve-3d;}
+  .mem-card.flip .mem-inner,.mem-card.match .mem-inner{transform:rotateY(180deg);}
+  .mem-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.12);}
+  .mem-back{background:#1E4A38;color:#cfe8dd;font-size:1.6rem;}
+  .mem-front{transform:rotateY(180deg);background:#fff;border:1px solid #dbe7df;}
+  .mem-front img{width:100%;height:100%;object-fit:cover;}
+  .mem-front .nm{padding:.3rem;font-size:.82rem;font-weight:600;color:#14432f;line-height:1.15;}
+  .mem-card.match{cursor:default;opacity:.7;}
+  #mem-final{display:none;margin-top:1rem;padding:1.2rem;border-radius:12px;background:#e3f3e9;color:#1E4A38;font-weight:600;}
+  #mem-reset{margin-top:.8rem;padding:.55rem 1.2rem;border:none;border-radius:8px;background:#1E4A38;color:#fff;cursor:pointer;font-weight:600;}
+  @media (max-width:520px){ #mem-grid{grid-template-columns:repeat(3,1fr);} .mem-back{font-size:1.2rem;} }
+</style>
+
+<div id="mem-app">
+  <div id="mem-info">Pares: <span id="mem-pares">0</span>/<span id="mem-totpares">0</span> · Intentos: <span id="mem-int">0</span></div>
+  <div id="mem-grid"></div>
+  <div id="mem-final"></div>
+  <button id="mem-reset">Reiniciar</button>
+</div>
+
+<script>
+(function(){
+  var POOL=(window.JUEGO_ESPECIES||[]).slice();
+  var grid=document.getElementById("mem-grid");
+  if(POOL.length<6){ grid.innerHTML="<p>No hay suficientes fotos para este juego.</p>"; return; }
+  var PARES=6;
+  var paresEl=document.getElementById("mem-pares"), totEl=document.getElementById("mem-totpares"),
+      intEl=document.getElementById("mem-int"), fin=document.getElementById("mem-final");
+  var primera=null, bloqueo=false, hechos=0, intentos=0;
+
+  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+  function iniciar(){
+    grid.innerHTML=""; fin.style.display="none"; primera=null; bloqueo=false; hechos=0; intentos=0;
+    paresEl.textContent=0; intEl.textContent=0; totEl.textContent=PARES;
+    var elegidas=shuffle(POOL.slice()).slice(0,PARES);
+    var cartas=[];
+    elegidas.forEach(function(e,i){
+      cartas.push({id:i, tipo:"foto", e:e});
+      cartas.push({id:i, tipo:"nombre", e:e});
+    });
+    shuffle(cartas);
+    cartas.forEach(function(c){
+      var card=document.createElement("div"); card.className="mem-card"; card.dataset.id=c.id;
+      var frente = c.tipo==="foto"
+        ? '<div class="mem-face mem-front"><img src="'+c.e.f+'" alt=""></div>'
+        : '<div class="mem-face mem-front"><span class="nm">'+esc(c.e.n)+'</span></div>';
+      card.innerHTML='<div class="mem-inner"><div class="mem-face mem-back">🌿</div>'+frente+'</div>';
+      card.onclick=function(){ voltear(card); };
+      grid.appendChild(card);
+    });
+  }
+
+  function voltear(card){
+    if(bloqueo || card.classList.contains("flip") || card.classList.contains("match")) return;
+    card.classList.add("flip");
+    if(!primera){ primera=card; return; }
+    intentos++; intEl.textContent=intentos;
+    if(primera.dataset.id===card.dataset.id && primera!==card){
+      primera.classList.add("match"); card.classList.add("match");
+      primera=null; hechos++; paresEl.textContent=hechos;
+      if(hechos===PARES) ganar();
+    } else {
+      bloqueo=true;
+      var a=primera, b=card; primera=null;
+      setTimeout(function(){ a.classList.remove("flip"); b.classList.remove("flip"); bloqueo=false; }, 850);
+    }
+  }
+
+  function ganar(){
+    fin.style.display="block";
+    fin.textContent="¡Completaste el juego en "+intentos+" intentos! 🌳";
+  }
+
+  document.getElementById("mem-reset").onclick=iniciar;
+  iniciar();
+})();
+</script>
+```
+
+:::

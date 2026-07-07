@@ -62,10 +62,6 @@ website:
     center:
       - text: "Contacto"
         href: contacto.qmd
-      - text: "Datos abiertos"
-        href: datos.qmd
-      - text: "Etiquetas QR"
-        href: etiquetas.qmd
     right:
       - text: "✉️ Correo"
         href: "mailto:laconstanciaargentina@gmail.com"
