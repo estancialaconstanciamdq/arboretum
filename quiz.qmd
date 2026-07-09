@@ -101,9 +101,9 @@ Al elegir una opción vas a ver si acertaste y una breve explicación.
 <script>
 (function(){
   const CONFIG = {
-    formAction: "",
-    campos: { puntaje:"", total:"", tipo:"", nombre:"", email:"", institucion:"" },
-    csvUrl: "",
+    formAction: "https://docs.google.com/forms/d/e/1FAIpQLSeKQL5isad2vRBIikouP0W9QzOROgmrGDU4ouoIR0QVOokbHg/formResponse",
+    campos: { puntaje:"entry.637590973", total:"entry.134997296", tipo:"entry.1913599354", nombre:"entry.984001672", email:"entry.395018166", institucion:"entry.1517361413" },
+    csvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vScr6YbIUu-CYoyXH10qvHZAH1-J2MQzbzQ6yYs8K_dPmXReQwpdgpvcEgeIftauzS7l5WTSnLZxDc-/pub?gid=502591783&single=true&output=csv",
     emailContacto: "laconstanciaargentina@gmail.com"
   };
 
