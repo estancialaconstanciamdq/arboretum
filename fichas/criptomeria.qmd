@@ -7,10 +7,13 @@ title: "Criptomeria"
 format: html
 ---
 
-**Nombre científico:** <i>Cryptomeria</i> <i>japónica</i>
+**Nombre científico:** <i>Cryptomeria</i> <i>japonica</i> (Thunb. ex L. f.) D. Don
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Origen:** Asia

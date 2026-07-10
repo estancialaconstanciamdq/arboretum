@@ -7,10 +7,13 @@ title: "Macasar"
 format: html
 ---
 
-**Nombre científico:** <i>Chamaecyparis</i> <i>lawsoniana</i>
+**Nombre científico:** <i>Chamaecyparis</i> <i>lawsoniana</i> (A.Murray bis) Parl.
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Origen:** Norte América

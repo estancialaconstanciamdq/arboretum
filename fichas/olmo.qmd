@@ -10,6 +10,9 @@ format: html
 **Nombre científico:** <i>Quercus</i> sp.
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Continente:** Hemisferio Norte
 
 

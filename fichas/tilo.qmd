@@ -15,6 +15,9 @@ format: html
 **Familia:** Malvaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Continente:** Hemisferio Norte / Variable
 
 

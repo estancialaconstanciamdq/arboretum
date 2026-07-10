@@ -7,10 +7,13 @@ title: "Abeto de Douglas"
 format: html
 ---
 
-**Nombre científico:** <i>Ceanothus</i> <i>thyrsiflorus</i>
+**Nombre científico:** <i>Ceanothus</i> <i>thyrsiflorus</i> Eschsch.
 
 
 **Familia:** Rhamnaceae
+
+
+**Tipo:** Arbusto
 
 
 **Continente:** América del Norte

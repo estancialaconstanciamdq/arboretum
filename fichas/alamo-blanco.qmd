@@ -7,10 +7,13 @@ title: "Álamo blanco"
 format: html
 ---
 
-**Nombre científico:** <i>Populu</i> <i>alba</i> L.
+**Nombre científico:** <i>Populus</i> <i>alba</i> L.
 
 
 **Familia:** Salicaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Europa-Asia

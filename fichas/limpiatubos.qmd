@@ -15,6 +15,9 @@ format: html
 **Familia:** Myrtaceae
 
 
+**Tipo:** Arbusto
+
+
 **Origen:** Australia
 
 

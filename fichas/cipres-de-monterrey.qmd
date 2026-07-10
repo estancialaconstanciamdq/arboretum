@@ -7,10 +7,13 @@ title: "Ciprés de Monterrey"
 format: html
 ---
 
-**Nombre científico:** <i>Cupressus</i> <i>macrocarpa</i> var. <i>lutea</i> topacio
+**Nombre científico:** <i>Cupressus</i> <i>macrocarpa</i> var. <i>lutea</i> Hartw. ex Gordon
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Origen:** E.E.U.U

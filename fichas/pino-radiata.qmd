@@ -7,10 +7,13 @@ title: "Pino radiata"
 format: html
 ---
 
-**Nombre científico:** <i>Pinus</i> <i>radiata</i>
+**Nombre científico:** <i>Pinus</i> <i>radiata</i> D.Don
 
 
 **Familia:** Pinaceae
+
+
+**Tipo:** Conífera
 
 
 **Origen:** Norte América

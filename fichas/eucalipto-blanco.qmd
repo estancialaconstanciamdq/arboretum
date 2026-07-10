@@ -13,6 +13,9 @@ format: html
 **Familia:** Myrtaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Origen:** Australia
 
 

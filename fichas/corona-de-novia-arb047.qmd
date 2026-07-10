@@ -7,10 +7,13 @@ title: "Corona de novia"
 format: html
 ---
 
-**Nombre científico:** <i>Spiraea</i> <i>cantoniensis</i>
+**Nombre científico:** <i>Spiraea</i> <i>cantoniensis</i> Lour.
 
 
 **Familia:** Rosaceae
+
+
+**Tipo:** Arbusto
 
 
 **Origen:** Asia

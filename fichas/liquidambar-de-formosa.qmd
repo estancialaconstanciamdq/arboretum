@@ -9,10 +9,13 @@ format: html
 
 ![](../fotos/Liquidambar.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Liquidambar</i> <i>formosana</i>
+**Nombre científico:** <i>Liquidambar</i> <i>formosana</i> Hance
 
 
 **Familia:** Altingiaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Asia

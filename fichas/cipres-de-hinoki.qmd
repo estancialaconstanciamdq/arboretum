@@ -7,10 +7,13 @@ title: "Ciprés de Hinoki"
 format: html
 ---
 
-**Nombre científico:** <i>Chamaecyparis</i> <i>obtusa</i>
+**Nombre científico:** <i>Chamaecyparis</i> <i>obtusa</i> (Siebold &amp; Zucc.) Endl.
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Origen:** Norte América

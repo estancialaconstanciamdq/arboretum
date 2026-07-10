@@ -7,10 +7,13 @@ title: "Roble pellín"
 format: html
 ---
 
-**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i> 2
+**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i> (Mirb.) Oerst.
 
 
 **Familia:** Nothofagaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Sudamérica

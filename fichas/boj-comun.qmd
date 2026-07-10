@@ -7,10 +7,13 @@ title: "Boj común"
 format: html
 ---
 
-**Nombre científico:** <i>Fraxinus</i> <i>angustifolia</i>
+**Nombre científico:** <i>Fraxinus</i> <i>angustifolia</i> Vahl
 
 
 **Familia:** Oleaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Europa

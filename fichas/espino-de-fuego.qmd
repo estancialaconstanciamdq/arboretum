@@ -7,10 +7,13 @@ title: "Espino de fuego"
 format: html
 ---
 
-**Nombre científico:** <i>Pyracantha</i> <i>coccinea</i>
+**Nombre científico:** <i>Pyracantha</i> <i>coccinea</i> M.Roem.
 
 
 **Familia:** Rosaceae
+
+
+**Tipo:** Arbusto
 
 
 **Origen:** Europa, Asia

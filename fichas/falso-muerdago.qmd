@@ -12,6 +12,9 @@ format: html
 **Nombre científico:** <i>Ilex</i> <i>aquifolium</i> L.
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Origen:** Europa
 
 

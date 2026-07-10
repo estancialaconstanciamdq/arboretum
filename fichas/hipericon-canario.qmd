@@ -7,10 +7,13 @@ title: "Hipericón canario"
 format: html
 ---
 
-**Nombre científico:** <i>Hypericum</i> x <i>moserianum</i>
+**Nombre científico:** <i>Hypericum</i> <i>×moserianum</i> André
 
 
 **Familia:** Hypericaceae
+
+
+**Tipo:** Arbusto
 
 
 **Continente:** África (Islas Canarias)

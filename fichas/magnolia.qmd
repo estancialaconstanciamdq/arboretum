@@ -15,6 +15,9 @@ format: html
 **Familia:** Magnoliaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Origen:** E.E.U.U
 
 

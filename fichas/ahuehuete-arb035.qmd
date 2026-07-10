@@ -7,10 +7,13 @@ title: "Ahuehuete"
 format: html
 ---
 
-**Nombre científico:** <i>Taxodium</i> <i>mucronatum</i>
+**Nombre científico:** <i>Taxodium</i> <i>mucronatum</i> Ten.
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** América del Norte (México)

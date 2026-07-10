@@ -7,10 +7,13 @@ title: "Dodonea"
 format: html
 ---
 
-**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i>
+**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i> Jacq.
 
 
 **Familia:** Sapindaceae
+
+
+**Tipo:** Arbusto
 
 
 **Origen:** Australia

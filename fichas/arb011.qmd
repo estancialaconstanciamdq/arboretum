@@ -3,7 +3,7 @@
      Para cambiar esta página, editá el Excel y volvé a renderizar. -->
 
 ---
-title: "Eucalyptus globulus Labill."
+title: "Eucalyptus globulus"
 format: html
 ---
 
@@ -13,6 +13,9 @@ format: html
 
 
 **Familia:** Myrtaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Australia

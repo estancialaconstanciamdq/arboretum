@@ -21,8 +21,9 @@ df <- arboles %>%
       TRUE                           ~ ID
     ),
     sci = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, ""),
+    aut = ifelse(tiene_valor(autor), autor, ""),
     fam = ifelse(tiene_valor(familia), familia, "—"),
-    grp = ifelse(tiene_valor(grupo), grupo, "Sin clasificar"),
+    grp = ifelse(tiene_valor(forma_vida), forma_vida, "Sin clasificar"),
     ori = ifelse(tiene_valor(.data[[col_ori]]), .data[[col_ori]], "Sin dato"),
     clave = gsub("^[^A-Za-z0-9]+", "", toupper(iconv(nombre_mostrar, to = "ASCII//TRANSLIT")))
   ) %>%
@@ -60,14 +61,14 @@ cat(sprintf('
 <div class="cat-controles">
   <div><label>Buscar</label><input type="text" id="cat-q" placeholder="nombre o especie..."></div>
   <div><label>Familia</label><select id="cat-fam">%s</select></div>
-  <div><label>Grupo</label><select id="cat-grp">%s</select></div>
+  <div><label>Tipo</label><select id="cat-grp">%s</select></div>
   <div><label>Origen</label><select id="cat-ori">%s</select></div>
 </div>
 <div id="cat-conteo"></div>
 
 <div class="tabla-scroll">
 <table id="cat-tabla">
-<thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Grupo</th><th>Origen</th></tr></thead>
+<thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Tipo</th><th>Origen</th></tr></thead>
 <tbody>',
   opciones(sort(unique(df$fam[df$fam != "—"]))),
   opciones(sort(unique(df$grp))),
@@ -81,7 +82,7 @@ for (i in seq_len(nrow(df))) {
     '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
 <td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
     esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
-    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci), esc(r$fam), esc(r$grp), esc(r$ori)
+    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori)
   ))
 }
 

@@ -7,10 +7,13 @@ title: "Haya común"
 format: html
 ---
 
-**Nombre científico:** <i>Fagus</i> <i>sylvatica</i>
+**Nombre científico:** <i>Fagus</i> <i>sylvatica</i> L.
 
 
 **Familia:** Fagaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Europa

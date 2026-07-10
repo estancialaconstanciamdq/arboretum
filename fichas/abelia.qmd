@@ -7,10 +7,13 @@ title: "Abelia"
 format: html
 ---
 
-**Nombre científico:** <i>Abelia</i> x <i>grandiflora</i> L.
+**Nombre científico:** <i>Abelia</i> <i>×grandiflora</i> (André) Rehder
 
 
 **Familia:** Caprifoliaceae
+
+
+**Tipo:** Arbusto
 
 
 **Continente:** Asia (Origen hortícola/Híbrido)

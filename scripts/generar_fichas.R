@@ -57,8 +57,9 @@ construir_ficha <- function(t) {
   }
 
   # Identity / taxonomy
-  add(campo("Nombre científico", sci_html(t$nombre_cientifico), italic = FALSE))
+  add(campo("Nombre científico", sci_html(t$nombre_cientifico, t$autor), italic = FALSE))
   add(campo("Familia",           t$familia))
+  add(campo("Tipo",              t$forma_vida))
 
   # Origin
   add(campo("Origen",     t$origen))

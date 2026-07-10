@@ -15,6 +15,9 @@ format: html
 **Familia:** Araucariaceae
 
 
+**Tipo:** Conífera
+
+
 **Origen:** Australia
 
 

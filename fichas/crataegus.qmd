@@ -15,6 +15,9 @@ format: html
 **Familia:** Rosaceae
 
 
+**Tipo:** Arbusto
+
+
 **Continente:** Hemisferio Norte / Variable
 
 

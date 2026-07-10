@@ -7,10 +7,13 @@ title: "Eucalipto medicinal"
 format: html
 ---
 
-**Nombre científico:** <i>Eucalyptus</i> <i>cinerea</i>
+**Nombre científico:** <i>Eucalyptus</i> <i>cinerea</i> F.Muell. ex Benth.
 
 
 **Familia:** Myrtaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Australia

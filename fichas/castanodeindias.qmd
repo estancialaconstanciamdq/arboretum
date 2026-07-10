@@ -15,6 +15,9 @@ format: html
 **Familia:** Sapindaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Origen:** Europa
 
 

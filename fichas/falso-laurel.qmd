@@ -13,6 +13,9 @@ format: html
 **Familia:** Apocynaceae
 
 
+**Tipo:** Arbusto
+
+
 **Origen:** Europa-Asia
 
 

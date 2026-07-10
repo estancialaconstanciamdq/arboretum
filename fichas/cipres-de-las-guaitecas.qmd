@@ -7,10 +7,13 @@ title: "Ciprés de las Guaitecas"
 format: html
 ---
 
-**Nombre científico:** <i>Austrocedrus</i> <i>chilensis</i>
+**Nombre científico:** <i>Austrocedrus</i> <i>chilensis</i> (D.Don) Pic.Serm. &amp; Bizzarri
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** América del Sur (Andes)

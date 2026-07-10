@@ -7,10 +7,13 @@ title: "Secuoya"
 format: html
 ---
 
-**Nombre científico:** <i>Sequoia</i> <i>semprevirens</i>
+**Nombre científico:** <i>Sequoia</i> <i>sempervirens</i> (D.Don) Endl.
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** América del Norte

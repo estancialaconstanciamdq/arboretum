@@ -10,6 +10,9 @@ format: html
 **Nombre científico:** <i>Eucalyptus</i> sp.
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Continente:** Hemisferio Norte
 
 

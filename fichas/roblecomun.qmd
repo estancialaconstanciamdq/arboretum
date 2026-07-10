@@ -15,6 +15,9 @@ format: html
 **Familia:** Fagaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Origen:** Europa
 
 

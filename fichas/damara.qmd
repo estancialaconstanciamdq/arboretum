@@ -9,10 +9,13 @@ format: html
 
 ![](../fotos/Cedrodecristal.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Agathis</i> <i>dammara</i>
+**Nombre científico:** <i>Agathis</i> <i>dammara</i> (Lamb.) Rich. &amp; A.Rich.
 
 
 **Familia:** Araucariaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** Asia (Sudeste Asiático)

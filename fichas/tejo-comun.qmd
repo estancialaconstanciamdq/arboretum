@@ -7,10 +7,13 @@ title: "Tejo común"
 format: html
 ---
 
-**Nombre científico:** <i>Larix</i> <i>decidua</i>
+**Nombre científico:** <i>Larix</i> <i>decidua</i> Mill.
 
 
 **Familia:** Pinaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** Europa / África del Norte / Asia

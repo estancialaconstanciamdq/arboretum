@@ -9,10 +9,13 @@ format: html
 
 ![](../fotos/Sequoiaroja.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Sequoiadendron</i> <i>giganteum</i>
+**Nombre científico:** <i>Sequoiadendron</i> <i>giganteum</i> (Lindl.) J.Buchholz
 
 
 **Familia:** Cupressaceae
+
+
+**Tipo:** Conífera
 
 
 **Continente:** América del Norte

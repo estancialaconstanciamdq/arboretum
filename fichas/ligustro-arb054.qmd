@@ -7,10 +7,13 @@ title: "Ligustro"
 format: html
 ---
 
-**Nombre científico:** <i>Ligustrum</i> <i>lucidum</i>
+**Nombre científico:** <i>Ligustrum</i> <i>lucidum</i> W.T.Aiton
 
 
 **Familia:** Olives
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Asia

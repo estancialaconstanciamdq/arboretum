@@ -7,10 +7,13 @@ title: "Damasco"
 format: html
 ---
 
-**Nombre científico:** <i>Brahea</i> <i>Armata</i> Palmatum
+**Nombre científico:** <i>Brahea</i> <i>armata</i> S.Watson
 
 
 **Familia:** Arecaceae
+
+
+**Tipo:** Palmera
 
 
 **Origen:** Norte América

@@ -13,6 +13,9 @@ format: html
 **Familia:** Altingiaceae
 
 
+**Tipo:** Árbol latifoliado
+
+
 **Continente:** América del Norte / Asia
 
 

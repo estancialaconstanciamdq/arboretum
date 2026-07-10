@@ -10,6 +10,9 @@ format: html
 **Nombre científico:** <i>Revisar</i>
 
 
+**Tipo:** Otro
+
+
 **Continente:** Europa / Asia / África
 
 

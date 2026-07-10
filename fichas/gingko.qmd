@@ -7,10 +7,13 @@ title: "Ginkgo"
 format: html
 ---
 
-**Nombre científico:** <i>Acer</i> <i>palmatum</i>
+**Nombre científico:** <i>Acer</i> <i>palmatum</i> Thunb.
 
 
 **Familia:** Sapindaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Asia

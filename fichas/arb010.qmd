@@ -10,6 +10,9 @@ format: html
 **Familia:** Myrtaceae
 
 
+**Tipo:** Otro
+
+
 ## Ubicación
 
 Coordenadas: -38.056054, -57.680894

@@ -7,10 +7,13 @@ title: "Árbol de los tulipanes"
 format: html
 ---
 
-**Nombre científico:** <i>Liriodendron</i> <i>tulipifera</i>
+**Nombre científico:** <i>Liriodendron</i> <i>tulipifera</i> L.
 
 
 **Familia:** Magnoliaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Continente:** América del Norte

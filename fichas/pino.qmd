@@ -13,6 +13,9 @@ format: html
 **Familia:** Pinaceae
 
 
+**Tipo:** Conífera
+
+
 **Continente:** Hemisferio Norte / Variable
 
 

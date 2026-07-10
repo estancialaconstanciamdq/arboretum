@@ -10,6 +10,9 @@ format: html
 **Nombre científico:** <i>Cedrus</i> sp.
 
 
+**Tipo:** Conífera
+
+
 **Continente:** África / Asia / Europa
 
 

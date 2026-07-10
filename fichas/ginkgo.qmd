@@ -7,10 +7,13 @@ title: "Ginkgo"
 format: html
 ---
 
-**Nombre científico:** <i>Ginkgo</i> <i>biloba</i>
+**Nombre científico:** <i>Ginkgo</i> <i>biloba</i> L.
 
 
 **Familia:** Ginkgoaceae
+
+
+**Tipo:** Otro
 
 
 **Origen:** Asia

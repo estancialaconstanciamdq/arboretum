@@ -9,10 +9,13 @@ format: html
 
 ![](../fotos/Platanus.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Platanus</i> x <i>hispanica</i>
+**Nombre científico:** <i>Platanus</i> <i>×hispanica</i> Mill. ex Münchh.
 
 
 **Familia:** Platanaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Europa

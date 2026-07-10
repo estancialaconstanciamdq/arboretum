@@ -15,6 +15,9 @@ format: html
 **Familia:** Pinaceae
 
 
+**Tipo:** Conífera
+
+
 **Origen:** África-Europa
 
 

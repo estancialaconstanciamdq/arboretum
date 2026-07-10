@@ -7,10 +7,13 @@ title: "Carex"
 format: html
 ---
 
-**Nombre científico:** <i>Celtis</i> <i>tala</i>
+**Nombre científico:** <i>Celtis</i> <i>tala</i> Gillies ex Planch.
 
 
 **Familia:** Cannabaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Continente:** Global / Cosmopolita

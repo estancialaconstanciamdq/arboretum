@@ -7,10 +7,13 @@ title: "Coihue"
 format: html
 ---
 
-**Nombre científico:** <i>Nothofagus</i> <i>dombeyi</i>
+**Nombre científico:** <i>Nothofagus</i> <i>dombeyi</i> (Mirb.) Oerst.
 
 
 **Familia:** Nothofagaceae
+
+
+**Tipo:** Árbol latifoliado
 
 
 **Origen:** Sudamérica
