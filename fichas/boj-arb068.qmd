@@ -7,7 +7,7 @@ title: "Boj"
 format: html
 ---
 
-**Nombre científico:** *Revisar*
+**Nombre científico:** <i>Revisar</i>
 
 
 **Continente:** Europa / Asia / África

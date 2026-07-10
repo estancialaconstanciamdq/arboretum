@@ -7,7 +7,7 @@ title: "Pino"
 format: html
 ---
 
-**Nombre científico:** *Pinus sp.*
+**Nombre científico:** <i>Pinus</i> sp.
 
 
 **Familia:** Pinaceae

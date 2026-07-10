@@ -7,7 +7,7 @@ title: "Liquidambar"
 format: html
 ---
 
-**Nombre científico:** *Liquidambar sp.*
+**Nombre científico:** <i>Liquidambar</i> sp.
 
 
 **Familia:** Altingiaceae

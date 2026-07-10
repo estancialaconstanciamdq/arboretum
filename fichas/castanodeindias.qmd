@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Castanodeindias.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Aesculus hippocastanum L.*
+**Nombre científico:** <i>Aesculus</i> <i>hippocastanum</i> L.
 
 
 **Familia:** Sapindaceae

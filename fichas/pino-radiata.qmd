@@ -7,7 +7,7 @@ title: "Pino radiata"
 format: html
 ---
 
-**Nombre científico:** *Pinus radiata*
+**Nombre científico:** <i>Pinus</i> <i>radiata</i>
 
 
 **Familia:** Pinaceae

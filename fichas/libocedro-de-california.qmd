@@ -7,7 +7,7 @@ title: "Libocedro de California"
 format: html
 ---
 
-**Nombre científico:** *Calocedrus decurrens (Torr.) Florin*
+**Nombre científico:** <i>Calocedrus</i> <i>decurrens</i> (Torr.) Florin
 
 
 **Familia:** Cupressaceae

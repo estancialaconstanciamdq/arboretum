@@ -7,7 +7,7 @@ title: "Ginkgo"
 format: html
 ---
 
-**Nombre científico:** *Ginkgo biloba*
+**Nombre científico:** <i>Ginkgo</i> <i>biloba</i>
 
 
 **Familia:** Ginkgoaceae

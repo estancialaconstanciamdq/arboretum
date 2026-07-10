@@ -39,7 +39,7 @@ popup_arbol <- function(df) {
              ifelse(tiene_valor(df$nombre_cientifico), df$nombre_cientifico, df$ID))
   paste0(
     "<h3>", titulo, "</h3>",
-    ifelse(tiene_valor(df$nombre_cientifico), paste0("<i>", df$nombre_cientifico, "</i><br><br>"), "<br>"),
+    ifelse(tiene_valor(df$nombre_cientifico), paste0(sci_html(df$nombre_cientifico), "<br><br>"), "<br>"),
     ifelse(tiene_valor(df$foto), paste0("<img src='fotos/", df$foto,
            "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), ""),
     ifelse(tiene_valor(df$familia),   paste0("<b>Familia:</b> ", df$familia, "<br>"), ""),
@@ -76,7 +76,7 @@ m <- leaflet() %>%
     icon = icono_ave, group = "Aves",
     popup = ~paste0(
       "<h3>", ifelse(tiene_valor(especie), especie, "Ave"), "</h3>",
-      ifelse(tiene_valor(nombre_cientifico), paste0("<i>", nombre_cientifico, "</i><br><br>"), "<br>"),
+      ifelse(tiene_valor(nombre_cientifico), paste0(sci_html(nombre_cientifico), "<br><br>"), "<br>"),
       ifelse(tiene_valor(foto), paste0("<img src='fotos/", foto,
              "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), ""),
       ifelse(tiene_valor(observacion), paste0("<b>Época de Observación:</b> ", observacion), "")

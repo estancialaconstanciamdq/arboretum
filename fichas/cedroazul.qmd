@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Cedroazul.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Cedrus atlantica (Endl.) Manetti ex Carrière*
+**Nombre científico:** <i>Cedrus</i> <i>atlantica</i> (Endl.) Manetti ex Carrière
 
 
 **Familia:** Pinaceae

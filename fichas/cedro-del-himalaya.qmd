@@ -7,7 +7,7 @@ title: "Cedro del Himalaya"
 format: html
 ---
 
-**Nombre científico:** *Dodonaea viscosa*
+**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i>
 
 
 **Familia:** Sapindaceae

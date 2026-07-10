@@ -7,7 +7,7 @@ title: "Carex"
 format: html
 ---
 
-**Nombre científico:** *Celtis tala*
+**Nombre científico:** <i>Celtis</i> <i>tala</i>
 
 
 **Familia:** Cannabaceae

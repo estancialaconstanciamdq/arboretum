@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Abeto.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.*
+**Nombre científico:** <i>Abies</i> <i>concolor</i> (Gordon &amp; Glend.) Lindl. ex Hildebr.
 
 
 **Familia:** Pinaceae

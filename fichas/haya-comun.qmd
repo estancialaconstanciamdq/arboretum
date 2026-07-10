@@ -7,7 +7,7 @@ title: "Haya común"
 format: html
 ---
 
-**Nombre científico:** *Fagus sylvatica*
+**Nombre científico:** <i>Fagus</i> <i>sylvatica</i>
 
 
 **Familia:** Fagaceae

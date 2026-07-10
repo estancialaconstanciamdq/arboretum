@@ -7,7 +7,7 @@ title: "Acacia mimosa"
 format: html
 ---
 
-**Nombre científico:** *Acacia dealbata*
+**Nombre científico:** <i>Acacia</i> <i>dealbata</i>
 
 
 **Familia:** Fabaceae

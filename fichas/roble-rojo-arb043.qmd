@@ -7,7 +7,7 @@ title: "Roble rojo"
 format: html
 ---
 
-**Nombre científico:** *Quercus rubra L.*
+**Nombre científico:** <i>Quercus</i> <i>rubra</i> L.
 
 
 **Familia:** Fagaceae

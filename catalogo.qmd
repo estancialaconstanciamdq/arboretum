@@ -79,9 +79,9 @@ for (i in seq_len(nrow(df))) {
   buscar <- tolower(iconv(paste(r$nombre_mostrar, r$sci), to = "ASCII//TRANSLIT"))
   cat(sprintf(
     '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
-<td><a href="fichas/%s.html">%s</a></td><td><em>%s</em></td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
+<td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
     esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
-    esc(r$slug), esc(r$nombre_mostrar), esc(r$sci), esc(r$fam), esc(r$grp), esc(r$ori)
+    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci), esc(r$fam), esc(r$grp), esc(r$ori)
   ))
 }
 

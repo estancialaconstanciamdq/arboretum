@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Sabina.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Sabina virginiana (L.) Antoine*
+**Nombre científico:** <i>Sabina</i> <i>virginiana</i> (L.) Antoine
 
 
 **Familia:** Cupressaceae

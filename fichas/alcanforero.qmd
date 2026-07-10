@@ -7,7 +7,7 @@ title: "?Alcanforero"
 format: html
 ---
 
-**Nombre científico:** *?Cinnamomum camphora*
+**Nombre científico:** <i>?Cinnamomum</i> <i>camphora</i>
 
 
 **Familia:** Lauraceae

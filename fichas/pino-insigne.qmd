@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Pinoinsignia.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Pinus radiata*
+**Nombre científico:** <i>Pinus</i> <i>radiata</i>
 
 
 **Familia:** Pinaceae

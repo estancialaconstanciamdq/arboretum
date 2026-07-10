@@ -7,7 +7,7 @@ title: "Cedro del Atlas"
 format: html
 ---
 
-**Nombre científico:** *Cedrus atlantica (Endl.) Manetti ex Carrière*
+**Nombre científico:** <i>Cedrus</i> <i>atlantica</i> (Endl.) Manetti ex Carrière
 
 
 **Familia:** Pinaceae

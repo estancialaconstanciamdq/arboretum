@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Sequoiaroja.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Sequoiadendron giganteum*
+**Nombre científico:** <i>Sequoiadendron</i> <i>giganteum</i>
 
 
 **Familia:** Cupressaceae

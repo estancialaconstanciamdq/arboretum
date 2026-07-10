@@ -7,7 +7,7 @@ title: "Duraznero"
 format: html
 ---
 
-**Nombre científico:** *Fraxinus exelsior*
+**Nombre científico:** <i>Fraxinus</i> <i>exelsior</i>
 
 
 **Familia:** Oleaceae

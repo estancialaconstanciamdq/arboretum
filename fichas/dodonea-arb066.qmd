@@ -7,7 +7,7 @@ title: "Dodonea"
 format: html
 ---
 
-**Nombre científico:** *Dodonaea viscosa*
+**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i>
 
 
 **Familia:** Sapindaceae

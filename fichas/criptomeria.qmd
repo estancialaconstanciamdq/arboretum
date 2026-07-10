@@ -7,7 +7,7 @@ title: "Criptomeria"
 format: html
 ---
 
-**Nombre científico:** *Cryptomeria japónica*
+**Nombre científico:** <i>Cryptomeria</i> <i>japónica</i>
 
 
 **Familia:** Cupressaceae

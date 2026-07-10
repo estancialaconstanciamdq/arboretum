@@ -7,7 +7,7 @@ title: "Casuarina"
 format: html
 ---
 
-**Nombre científico:** *Casuarina equisetifolia L.*
+**Nombre científico:** <i>Casuarina</i> <i>equisetifolia</i> L.
 
 
 **Familia:** Casuarinaceae

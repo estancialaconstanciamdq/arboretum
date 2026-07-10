@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Tilo.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Tilia sp.*
+**Nombre científico:** <i>Tilia</i> sp.
 
 
 **Familia:** Malvaceae

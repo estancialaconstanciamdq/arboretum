@@ -7,7 +7,7 @@ title: "Eucalipto medicinal"
 format: html
 ---
 
-**Nombre científico:** *Eucalyptus cinerea*
+**Nombre científico:** <i>Eucalyptus</i> <i>cinerea</i>
 
 
 **Familia:** Myrtaceae

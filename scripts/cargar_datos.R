@@ -29,6 +29,43 @@ slugify <- function(x) {
   x
 }
 
+# Nombre científico con cursiva correcta: solo el binomio (género + epíteto)
+# va en cursiva; el autor va en redonda. Maneja "sp."/"spp.", híbridos (×) y
+# rangos infraespecíficos (subsp., var., f., …). `autor` opcional (redonda).
+sci_html <- function(nombre, autor = NA) {
+  n <- length(nombre)
+  if (length(autor) == 1L) autor <- rep(autor, n)
+  esc1 <- function(t) { t <- gsub("&", "&amp;", t, fixed = TRUE)
+                        t <- gsub("<", "&lt;",  t, fixed = TRUE)
+                        gsub(">", "&gt;", t, fixed = TRUE) }
+  ital <- function(t) paste0("<i>", esc1(t), "</i>")
+  ranks  <- c("subsp.","ssp.","var.","f.","fma.","cv.","forma","nothosubsp.","nothovar.")
+  sinesp <- c("sp.","spp.","sp")
+  vapply(seq_len(n), function(k) {
+    x <- nombre[k]
+    if (!tiene_valor(x)) return("")
+    toks <- strsplit(trimws(as.character(x)), "\\s+")[[1]]
+    m <- length(toks); if (m == 0) return("")
+    out <- ital(toks[1]); i <- 2
+    if (i <= m) {
+      t2 <- toks[i]
+      if (t2 %in% sinesp) { out <- c(out, esc1(t2)); i <- i + 1 }
+      else if (tolower(t2) %in% c("cf.","aff.","x","×") && i + 1 <= m) {
+        out <- c(out, esc1(t2), ital(toks[i + 1])); i <- i + 2
+      } else { out <- c(out, ital(t2)); i <- i + 1 }
+    }
+    while (i <= m) {
+      t <- toks[i]
+      if (tolower(t) %in% ranks && i + 1 <= m) { out <- c(out, esc1(t), ital(toks[i + 1])); i <- i + 2 }
+      else { out <- c(out, esc1(t)); i <- i + 1 }
+    }
+    res <- paste(out, collapse = " ")
+    a <- autor[k]
+    if (!is.na(a) && tiene_valor(a)) res <- paste0(res, " ", esc1(trimws(as.character(a))))
+    res
+  }, character(1))
+}
+
 # --- Read sheets -----------------------------------------------------------
 
 # Resolve sheet names by a distinctive ASCII fragment, so accents / file

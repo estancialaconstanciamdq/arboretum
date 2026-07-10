@@ -7,7 +7,7 @@ title: "Espino de fuego"
 format: html
 ---
 
-**Nombre científico:** *Pyracantha coccinea*
+**Nombre científico:** <i>Pyracantha</i> <i>coccinea</i>
 
 
 **Familia:** Rosaceae

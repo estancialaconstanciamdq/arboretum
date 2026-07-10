@@ -7,7 +7,7 @@ title: "Picea sp."
 format: html
 ---
 
-**Nombre científico:** *Picea sp.*
+**Nombre científico:** <i>Picea</i> sp.
 
 
 **Familia:** Pinaceae

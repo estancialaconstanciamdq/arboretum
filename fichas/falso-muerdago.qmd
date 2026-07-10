@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Falsomuerdago.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Ilex aquifolium L.*
+**Nombre científico:** <i>Ilex</i> <i>aquifolium</i> L.
 
 
 **Origen:** Europa

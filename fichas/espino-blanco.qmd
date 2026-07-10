@@ -7,7 +7,7 @@ title: "Espino blanco"
 format: html
 ---
 
-**Nombre científico:** *Crataegus sp.*
+**Nombre científico:** <i>Crataegus</i> sp.
 
 
 **Familia:** Rosaceae

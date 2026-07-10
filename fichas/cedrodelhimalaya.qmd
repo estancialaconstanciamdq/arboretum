@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Cedroverdedeodara.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Cedrus deodara (Roxb. ex D. Don) G. Don*
+**Nombre científico:** <i>Cedrus</i> <i>deodara</i> (Roxb. ex D. Don) G. Don
 
 
 **Familia:** Pinaceae

@@ -7,7 +7,7 @@ title: "Falso laurel"
 format: html
 ---
 
-**Nombre científico:** *Nerium oleander L.*
+**Nombre científico:** <i>Nerium</i> <i>oleander</i> L.
 
 
 **Familia:** Apocynaceae

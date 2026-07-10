@@ -7,7 +7,7 @@ title: "Abelia"
 format: html
 ---
 
-**Nombre científico:** *Abelia x grandiflora L.*
+**Nombre científico:** <i>Abelia</i> x <i>grandiflora</i> L.
 
 
 **Familia:** Caprifoliaceae

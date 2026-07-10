@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Roblerojoamericano.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Quercus rubra L.*
+**Nombre científico:** <i>Quercus</i> <i>rubra</i> L.
 
 
 **Familia:** Fagaceae

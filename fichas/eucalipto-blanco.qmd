@@ -7,7 +7,7 @@ title: "Eucalipto blanco"
 format: html
 ---
 
-**Nombre científico:** *Eucalyptus globulus Labill.*
+**Nombre científico:** <i>Eucalyptus</i> <i>globulus</i> Labill.
 
 
 **Familia:** Myrtaceae

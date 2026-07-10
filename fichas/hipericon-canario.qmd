@@ -7,7 +7,7 @@ title: "Hipericón canario"
 format: html
 ---
 
-**Nombre científico:** *Hypericum x moserianum*
+**Nombre científico:** <i>Hypericum</i> x <i>moserianum</i>
 
 
 **Familia:** Hypericaceae

@@ -7,7 +7,7 @@ title: "Ciprés de las Guaitecas"
 format: html
 ---
 
-**Nombre científico:** *Austrocedrus chilensis*
+**Nombre científico:** <i>Austrocedrus</i> <i>chilensis</i>
 
 
 **Familia:** Cupressaceae

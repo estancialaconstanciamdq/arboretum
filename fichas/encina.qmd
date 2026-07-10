@@ -7,7 +7,7 @@ title: "Encina"
 format: html
 ---
 
-**Nombre científico:** *Quercus baloot Griff.*
+**Nombre científico:** <i>Quercus</i> <i>baloot</i> Griff.
 
 
 **Familia:** Fagaceae

@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Eucaliptoaustraliano.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Eucalyptus globulus Labill.*
+**Nombre científico:** <i>Eucalyptus</i> <i>globulus</i> Labill.
 
 
 **Familia:** Myrtaceae

@@ -7,7 +7,7 @@ title: "Macasar"
 format: html
 ---
 
-**Nombre científico:** *Chamaecyparis lawsoniana*
+**Nombre científico:** <i>Chamaecyparis</i> <i>lawsoniana</i>
 
 
 **Familia:** Cupressaceae

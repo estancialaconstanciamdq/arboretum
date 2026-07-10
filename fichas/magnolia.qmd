@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Magnolia.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Magnolia grandiflora L.*
+**Nombre científico:** <i>Magnolia</i> <i>grandiflora</i> L.
 
 
 **Familia:** Magnoliaceae

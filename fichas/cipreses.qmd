@@ -7,7 +7,7 @@ title: "Cipreses"
 format: html
 ---
 
-**Nombre científico:** *Cupressus sp.*
+**Nombre científico:** <i>Cupressus</i> sp.
 
 
 **Familia:** Cupressaceae

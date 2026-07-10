@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Crataegus.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Crataegus sp.*
+**Nombre científico:** <i>Crataegus</i> sp.
 
 
 **Familia:** Rosaceae

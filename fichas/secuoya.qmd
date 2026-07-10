@@ -7,7 +7,7 @@ title: "Secuoya"
 format: html
 ---
 
-**Nombre científico:** *Sequoia semprevirens*
+**Nombre científico:** <i>Sequoia</i> <i>semprevirens</i>
 
 
 **Familia:** Cupressaceae

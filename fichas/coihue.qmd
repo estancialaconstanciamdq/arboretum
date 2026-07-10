@@ -7,7 +7,7 @@ title: "Coihue"
 format: html
 ---
 
-**Nombre científico:** *Nothofagus dombeyi*
+**Nombre científico:** <i>Nothofagus</i> <i>dombeyi</i>
 
 
 **Familia:** Nothofagaceae

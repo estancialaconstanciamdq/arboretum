@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Platanus.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Platanus x hispanica*
+**Nombre científico:** <i>Platanus</i> x <i>hispanica</i>
 
 
 **Familia:** Platanaceae

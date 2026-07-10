@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Limpiatubos.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Callistemon imperialis*
+**Nombre científico:** <i>Callistemon</i> <i>imperialis</i>
 
 
 **Familia:** Myrtaceae

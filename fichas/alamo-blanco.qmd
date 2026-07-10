@@ -7,7 +7,7 @@ title: "Álamo blanco"
 format: html
 ---
 
-**Nombre científico:** *Populu alba L.*
+**Nombre científico:** <i>Populu</i> <i>alba</i> L.
 
 
 **Familia:** Salicaceae

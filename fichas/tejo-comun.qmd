@@ -7,7 +7,7 @@ title: "Tejo común"
 format: html
 ---
 
-**Nombre científico:** *Larix decidua*
+**Nombre científico:** <i>Larix</i> <i>decidua</i>
 
 
 **Familia:** Pinaceae

@@ -7,7 +7,7 @@ title: "Olmo"
 format: html
 ---
 
-**Nombre científico:** *Quercus sp.*
+**Nombre científico:** <i>Quercus</i> sp.
 
 
 **Continente:** Hemisferio Norte

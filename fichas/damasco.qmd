@@ -7,7 +7,7 @@ title: "Damasco"
 format: html
 ---
 
-**Nombre científico:** *Brahea Armata Palmatum*
+**Nombre científico:** <i>Brahea</i> <i>Armata</i> Palmatum
 
 
 **Familia:** Arecaceae

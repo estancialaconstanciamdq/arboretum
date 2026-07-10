@@ -7,7 +7,7 @@ title: "Aliso andino"
 format: html
 ---
 
-**Nombre científico:** *Abies concolor (Gordon & Glend.) Lindl. ex Hildebr.*
+**Nombre científico:** <i>Abies</i> <i>concolor</i> (Gordon &amp; Glend.) Lindl. ex Hildebr.
 
 
 **Familia:** Pinaceae

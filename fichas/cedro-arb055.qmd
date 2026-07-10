@@ -7,7 +7,7 @@ title: "Cedro"
 format: html
 ---
 
-**Nombre científico:** *Cedrus sp.`*
+**Nombre científico:** <i>Cedrus</i> <i>sp.`</i>
 
 
 **Continente:** África / Asia / Europa

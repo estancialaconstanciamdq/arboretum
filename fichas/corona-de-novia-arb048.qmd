@@ -7,7 +7,7 @@ title: "Corona de novia"
 format: html
 ---
 
-**Nombre científico:** *Spiraea cantoniensis*
+**Nombre científico:** <i>Spiraea</i> <i>cantoniensis</i>
 
 
 **Familia:** Rosaceae

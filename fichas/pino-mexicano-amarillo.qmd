@@ -7,7 +7,7 @@ title: "Pino mexicano amarillo"
 format: html
 ---
 
-**Nombre científico:** *Pinus patula Schltdl. & Cham.*
+**Nombre científico:** <i>Pinus</i> <i>patula</i> Schltdl. &amp; Cham.
 
 
 **Familia:** Pinaceae

@@ -7,7 +7,7 @@ title: "Espino"
 format: html
 ---
 
-**Nombre científico:** *Eucalyptus sp.*
+**Nombre científico:** <i>Eucalyptus</i> sp.
 
 
 **Continente:** Hemisferio Norte

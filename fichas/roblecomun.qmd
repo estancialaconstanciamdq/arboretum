@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Quercusrobur.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Quercus robur L.*
+**Nombre científico:** <i>Quercus</i> <i>robur</i> L.
 
 
 **Familia:** Fagaceae

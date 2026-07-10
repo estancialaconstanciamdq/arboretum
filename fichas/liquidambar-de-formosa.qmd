@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Liquidambar.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Liquidambar formosana*
+**Nombre científico:** <i>Liquidambar</i> <i>formosana</i>
 
 
 **Familia:** Altingiaceae

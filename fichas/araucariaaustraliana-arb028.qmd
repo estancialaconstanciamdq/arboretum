@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Araucaria.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** *Araucaria bidwillii Hook.*
+**Nombre científico:** <i>Araucaria</i> <i>bidwillii</i> Hook.
 
 
 **Familia:** Araucariaceae

@@ -7,7 +7,7 @@ title: "Ligustro"
 format: html
 ---
 
-**Nombre científico:** *Ligustrum lucidum*
+**Nombre científico:** <i>Ligustrum</i> <i>lucidum</i>
 
 
 **Familia:** Olives
