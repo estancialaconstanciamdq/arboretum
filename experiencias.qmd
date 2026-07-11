@@ -27,12 +27,12 @@ naturales, biología y educación ambiental.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🌿 Visitas botánicas por grupos
-Recorridos temáticos por las colecciones del arboretum —coníferas, árboles
-latifoliados, arbustos y palmeras— para clubes, viveros, jardineros y curiosos de
-la botánica.
+### 🌿 Visitas guiadas y botánicas por grupos
+Recorridos guiados por las colecciones del arboretum —coníferas, árboles
+latifoliados, arbustos y palmeras— para público general, clubes, viveros,
+jardineros y curiosos de la botánica.
 
-[Consultar →](contacto.qmd){.btn .btn-outline-success role="button"}
+[Reservar / consultar →](visitas_guiadas.qmd){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}

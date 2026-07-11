@@ -206,11 +206,19 @@ Inscribir a tu grupo escolar es muy sencillo. Solo debés seguir estos pasos:
 
 ¡Disfruten de la visita! El día del evento, tu grupo vivirá la experiencia guiada en la naturaleza.
 
-::: {.cta-container}
-<a href="https://forms.gle/a7vfNhF14bQMZkiw5" target="_blank" class="btn btn-success btn-lg" role="button">
-Solicitar Visita Educativa
-</a>
-:::
+### Solicitá tu visita educativa
+
+Completá el formulario y nuestro equipo se pondrá en contacto para coordinar
+objetivos, fecha y detalles.
+
+```{=html}
+<div style="max-width:760px; margin:1.5rem auto;">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSd1-Oi-DCJGZEpt_HwZ_fHCrvYpAXkwree5-bHszaBJ84eKLg/viewform?embedded=true"
+    width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0"
+    style="border:0;">Cargando el formulario…</iframe>
+</div>
+```
 
 ---
 
