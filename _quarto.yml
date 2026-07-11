@@ -48,7 +48,11 @@ website:
             href: estadisticas.qmd
           - text: "Biodiversidad"
             href: biodiversidad.qmd
+      - text: "Bienestar"
+        href: bienestar.qmd
     right:
+      - text: "Reservar visita"
+        href: experiencias.qmd
       - text: "Empresas"
         href: empresas.qmd
       - text: "🌳 Apadriná un árbol"

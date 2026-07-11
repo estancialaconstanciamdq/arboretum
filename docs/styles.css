@@ -43,6 +43,21 @@ img {
   height: auto;
 }
 
+/* ---- CTA "Reservar visita" en la barra: pastilla ámbar destacada ---- */
+.navbar .nav-link[href$="experiencias.html"] {
+  background-color: #E0A82E;
+  color: #1E3A2E !important;
+  border-radius: 999px;
+  padding: 0.3rem 0.95rem !important;
+  margin: 0.1rem 0.25rem;
+  font-weight: 700;
+}
+.navbar .nav-link[href$="experiencias.html"]:hover,
+.navbar .nav-link[href$="experiencias.html"]:focus {
+  background-color: #c9931f;
+  color: #14281f !important;
+}
+
 /* ---- Footer institucional: mismo verde que la barra ---- */
 .nav-footer {
   background-color: #1E4A38 !important;

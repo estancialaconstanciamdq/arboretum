@@ -87,6 +87,10 @@ El Arboretum de Estancia La Constancia abre sus puertas a instituciones educativ
 
 A través de recorridos guiados, actividades prácticas y observación ecológica, promovemos una comprensión viva de la biodiversidad y los ecosistemas locales.
 
+::: {.callout-note}
+**Escuelas que ya vivieron la experiencia:** Colegio Newton · Colegio Naciones Unidas · Colegio San José de Balcarce.
+:::
+
 ---
 
 ## Experiencias Educativas

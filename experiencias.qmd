@@ -1,0 +1,75 @@
+---
+title: "Experiencias"
+subtitle: "Actividades para vivir el arboretum: naturaleza, educación y bienestar"
+format: html
+---
+
+El Arboretum de Estancia La Constancia está abierto a experiencias que combinan
+**conservación, educación ambiental y bienestar**. Elegí la que más te interese y
+coordinamos una fecha.
+
+::: {.callout-tip}
+¿Querés reservar o hacer una consulta? Escribinos desde la página de
+[**Contacto**](contacto.qmd) y te respondemos a la brevedad.
+:::
+
+## Nuestras experiencias
+
+::: grid
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🌳 Visitas guiadas y educativas
+Recorridos acompañados por profesionales para **familias, escuelas y grupos**,
+adaptados por nivel y objetivo. Ideal para complementar contenidos de ciencias
+naturales, biología y educación ambiental.
+
+[Ver visitas educativas →](visitas_escolares.qmd){.btn .btn-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🌿 Visitas botánicas por grupos
+Recorridos temáticos por las colecciones del arboretum —coníferas, árboles
+latifoliados, arbustos y palmeras— para clubes, viveros, jardineros y curiosos de
+la botánica.
+
+[Consultar →](contacto.qmd){.btn .btn-outline-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🐦 Avistaje de aves
+Salidas de observación y fotografía para **observadores y fotógrafos**, con el
+registro estacional de especies del establecimiento como guía.
+
+[Ver aves del arboretum →](aves.qmd){.btn .btn-outline-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🧘 Bienestar y baños de bosque
+Experiencias guiadas de conexión con la naturaleza (*shinrin-yoku*), con respaldo
+científico, para personas y equipos que buscan bajar el estrés y reconectar.
+
+[Conocer más →](bienestar.qmd){.btn .btn-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🤝 Programas para empresas
+Alianzas de impacto, jornadas de bienestar, voluntariado corporativo y patrocinio
+de proyectos del arboretum, con impacto trazable y verificable.
+
+[Ver propuesta para empresas →](empresas.qmd){.btn .btn-outline-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🌱 Apadriná un árbol
+Sumate a la conservación apadrinando un ejemplar, a tu nombre, como regalo o en
+homenaje a alguien.
+
+[Apadriná un árbol →](apadrina.qmd){.btn .btn-outline-success role="button"}
+:::
+
+:::
+
+---
+
+Todas las experiencias se realizan **con reserva previa**, para garantizar una
+buena organización y la mejor experiencia para cada grupo.

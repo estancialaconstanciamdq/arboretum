@@ -13,3 +13,5 @@
 videos/*.mov
 videos/Spot-Institucional*
 videos/visitas_educativas_maria.mp4
+
+**/*.quarto_ipynb

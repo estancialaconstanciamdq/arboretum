@@ -1,0 +1,53 @@
+---
+title: "Bienestar"
+subtitle: "La naturaleza que educa, inspira y sana"
+format: html
+---
+
+Además de conservar y educar, el arboretum es un espacio para **estar mejor**.
+Entre sus senderos y colecciones ofrecemos experiencias de bienestar guiadas,
+pensadas para bajar el ritmo, reconectar con el entorno y cuidar la salud
+emocional.
+
+## Baños de bosque (*shinrin-yoku*)
+
+El *shinrin-yoku* —literalmente "baño de bosque"— es una práctica nacida en Japón
+que consiste en pasar tiempo, de forma consciente y sin apuro, entre los árboles:
+observar, respirar, escuchar y percibir el entorno con todos los sentidos. No es
+una caminata deportiva ni una excursión; es una invitación a **detenerse y
+percibir**.
+
+### Qué dice la ciencia
+
+La investigación sobre baños de bosque, desarrollada especialmente en Japón y
+Corea, asocia esta práctica con beneficios para la salud, entre ellos:
+
+- Reducción de los niveles de **estrés** (menor cortisol) y de la **presión arterial**.
+- Mejoras en el **estado de ánimo** y la sensación de calma.
+- Estímulo del **sistema inmune** (mayor actividad de las células "natural killer").
+
+::: {.callout-note}
+Las experiencias de bienestar son un **complemento** para el cuidado de la salud y
+el descanso; no reemplazan un tratamiento médico ni psicológico.
+:::
+
+## Guiado por una instructora certificada
+
+Nuestras experiencias de baños de bosque están guiadas por **Magdalena Zurita**,
+instructora de baños de bosque formada en el marco de la **Association of Nature
+and Forest Therapy (ANFT)** de Estados Unidos. Es una propuesta todavía poco
+frecuente en el país, y por eso un valor agregado del arboretum.
+
+<!-- Cuando esté confirmado el permiso, se puede sumar acá el logo de ANFT
+     (fotos/logo_anft.png) junto a esta mención. -->
+
+## Cómo es una experiencia
+
+Un encuentro combina caminata lenta, ejercicios de atención y respiración, pausas
+de observación y un cierre compartido. Se puede adaptar a **personas, familias o
+equipos de trabajo** (jornadas de bienestar corporativo).
+
+::: {.callout-tip}
+¿Querés coordinar una experiencia de bienestar, en forma individual o para tu
+equipo? Escribinos desde la página de [**Contacto**](contacto.qmd).
+:::
