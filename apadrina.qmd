@@ -27,7 +27,7 @@ ser parte de un proyecto de conservación.
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
 ### 1. Elegí tu árbol
 Recorré el [catálogo de especies](catalogo.qmd) o el [mapa](mapa.qmd) y elegí el
-ejemplar que más te guste, entre `r n_arb` árboles relevados.
+ejemplar que más te guste.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}

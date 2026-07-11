@@ -18,14 +18,12 @@ website:
     logo: fotos/logo_la_constancia.svg
     title: "Arboretum"
     left:
-      - text: "Mapa"
+      - text: "Explorar"
         menu:
           - text: "Mapa interactivo"
             href: mapa.qmd
           - text: "Plano ilustrado"
             href: plano.qmd
-      - text: "Explorar"
-        menu:
           - text: "Catálogo"
             href: catalogo.qmd
           - text: "Especies destacadas"
@@ -55,7 +53,7 @@ website:
         href: experiencias.qmd
       - text: "Empresas"
         href: empresas.qmd
-      - text: "🌳 Apadriná un árbol"
+      - text: "Apadriná"
         href: apadrina.qmd
       - text: "Contacto"
         href: contacto.qmd

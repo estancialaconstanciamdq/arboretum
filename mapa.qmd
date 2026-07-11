@@ -144,20 +144,7 @@ for (capa in capas_gis) {
   }
 }
 
-leyenda <- paste0(
-  "<div style='background:rgba(255,255,255,.92);padding:.5rem .7rem;border-radius:8px;",
-  "box-shadow:0 1px 4px rgba(0,0,0,.2);font-size:.8rem;line-height:1.5;'>",
-  "<b>Vegetación</b><br>",
-  "<span style='color:#14532D;font-size:1.15em;'>&#9679;</span> Coníferas<br>",
-  "<span style='color:#2E7D32;font-size:1.15em;'>&#9679;</span> Árboles latifoliados<br>",
-  "<span style='color:#6E8B3D;font-size:1.15em;'>&#9679;</span> Arbustos<br>",
-  "<span style='color:#2E8B57;font-size:1.15em;'>&#9679;</span> Palmeras<br>",
-  "<span style='color:#0E7C86;font-size:1.15em;'>&#9679;</span> Aves &nbsp;&nbsp;",
-  "<span style='color:#C62828;font-size:1.15em;'>&#9679;</span> Puntos</div>"
-)
-
 m <- m %>%
-  addControl(html = leyenda, position = "bottomright") %>%
   addLayersControl(
     overlayGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
                       "Otras especies", "Aves", "Puntos de interés", grupos_gis),
