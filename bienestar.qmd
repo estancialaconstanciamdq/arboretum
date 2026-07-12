@@ -31,15 +31,17 @@ Las experiencias de bienestar son un **complemento** para el cuidado de la salud
 el descanso; no reemplazan un tratamiento médico ni psicológico.
 :::
 
-## Guiado por una instructora certificada
+## A cargo de una guía certificada
 
 Nuestras experiencias de baños de bosque están guiadas por **Magdalena Zurita**,
-instructora de baños de bosque formada en el marco de la **Association of Nature
-and Forest Therapy (ANFT)** de Estados Unidos. Es una propuesta todavía poco
-frecuente en el país, y por eso un valor agregado del arboretum.
+**guía certificada** de baños de bosque por la **Association of Nature and Forest
+Therapy (ANFT)** de Estados Unidos. Es una propuesta todavía poco frecuente en el
+país, y por eso un valor agregado del arboretum.
 
-<!-- Cuando esté confirmado el permiso, se puede sumar acá el logo de ANFT
-     (fotos/logo_anft.png) junto a esta mención. -->
+<div style="text-align:center; margin:1.2rem 0;">
+  <img src="fotos/ANFT_Logo.png" alt="ANFT — Association of Nature &amp; Forest Therapy — Certified Guide"
+       style="max-width:170px; height:auto;">
+</div>
 
 ## Cómo es una experiencia
 
