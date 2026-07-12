@@ -1,16 +1,16 @@
 ---
-title: "Para empresas"
-subtitle: "Sumá tu empresa a un proyecto de naturaleza con impacto verificable"
+title: "Red de Empresas del Arboretum"
+subtitle: "Organizaciones que generan impacto real en naturaleza, comunidad y bienestar"
 format: html
 ---
 
-En La Constancia cuidamos un arboretum vivo con **más de 300 especies** de árboles
-y arbustos, en Mar del Plata, Argentina. A diferencia de la mayoría de los proyectos
-de naturaleza, acá **cada árbol es trazable**: tiene su ficha, su ubicación y su
-código QR, y la información es abierta. Eso convierte tu inversión en un **impacto
-medible y verificable** — sin greenwashing.
-
-## Conocé al equipo
+La **Red de Empresas del Arboretum** invita a organizaciones a formar parte de un
+proyecto que integra **naturaleza, bienestar, educación y comunidad**. En La
+Constancia cuidamos un arboretum vivo con **más de 300 especies** de árboles y
+arbustos, en Mar del Plata. A diferencia de la mayoría de los proyectos de
+naturaleza, acá **cada árbol es trazable** —tiene su ficha, su ubicación y su código
+QR—, y la información es abierta. Eso convierte tu aporte en un **impacto medible y
+verificable, sin greenwashing**.
 
 ```{=html}
 <div style="max-width:340px; margin:1.2rem auto;">
@@ -23,6 +23,62 @@ medible y verificable** — sin greenwashing.
   </div>
 </div>
 ```
+
+## Sumate a la Red
+
+::: {.panel-tabset}
+
+### 🌿 ¿Por qué sumarte?
+
+- Formar parte del primer jardín botánico de Mar del Plata, un espacio donde naturaleza, comunidad y empresas generan impacto real.
+- Asociar tu organización a valores de sostenibilidad, innovación y futuro.
+- Integrarte a una red empresarial con propósito, con impacto **trazable y verificable**.
+
+### 📊 Beneficios
+
+- Presencia en redes sociales y materiales institucionales.
+- Networking empresarial.
+- Encuentros sobre sostenibilidad y triple impacto.
+- Actividades de bienestar en la naturaleza.
+- Jornadas de voluntariado corporativo.
+
+### 🤝 Cómo participar
+
+- Sponsoreo de proyectos del arboretum.
+- Aportes en especie o colaboración institucional.
+- Alianzas de impacto (ESG) con reporte anual de biodiversidad y carbono.
+
+:::
+
+## Proyectos que podés apoyar
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🪧 **Señalética educativa**
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🥾 **Senderos interpretativos**
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🪑 **Bancos y espacios de descanso**
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🌳 **Identificación de especies**
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🚻 **Baños ecológicos e inclusivos**
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm}
+🌱 **Reforestación y nuevas colecciones**
+:::
+
+:::
 
 ## Qué ofrecemos
 
@@ -37,8 +93,8 @@ de sustentabilidad.
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
 ### 🤝 Experiencias corporativas
-Jornadas de *team-building*, inmersión en la naturaleza, observación de aves y
-eventos en un entorno único.
+Jornadas de *team-building*, inmersión en la naturaleza, **bienestar y baños de
+bosque**, observación de aves y eventos en un entorno único.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
@@ -99,6 +155,38 @@ social concreta y con alcance local.
 
 :::
 
+## Coordinación de la Red
+
+::: grid
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+![](fotos/magda.jpg){.admin-photo}
+
+### Magdalena Zurita
+Coordinación institucional, programas educativos y conservación.
+
+[🔗 LinkedIn](https://www.linkedin.com/in/magdalenazurita/){target="_blank"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
+![](fotos/juan.jpg){.admin-photo}
+
+### Juan Ignacio Zurita
+Desarrollo estratégico, vinculación con empresas y comunicación institucional.
+
+[🔗 LinkedIn](https://www.linkedin.com/in/juan-ignacio-z-4b345425/){target="_blank"}
+:::
+
+:::
+
+## Empresas fundadoras de la Red
+
+<div style="text-align:center; margin:1.2rem 0;">
+  <img src="fotos/somos.jpg" alt="SOMOS Recursos Humanos" style="max-width:200px; height:auto;">
+</div>
+
+*Las empresas fundadoras acompañan a la Red desde sus inicios. ¿Querés sumar la tuya?*
+
 ## Hacia dónde vamos
 
 Estamos construyendo capacidades de datos de alto valor para partners de
@@ -107,13 +195,24 @@ fenología** con sensores, un **gemelo digital** del arboretum y **conjuntos de 
 listos para inteligencia artificial**. Si tu empresa mira al futuro de la naturaleza
 y los datos, hablemos.
 
-## Trabajemos juntos
+## Sumate a la Red
 
 ::: {.callout-tip}
-### Solicitá una propuesta
-Contanos qué busca tu empresa y armamos una propuesta a medida.
+### Expresá tu interés
+Contanos qué busca tu organización y armamos una propuesta a medida.
+
+[Quiero sumar mi empresa](contacto.qmd){.btn .btn-success .btn-lg role="button"}
 
 ✉️ **[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)**
 
 📄 [Descargar dossier corporativo (PDF)](recursos/dossier_empresas.pdf)
 :::
+
+## Contacto y ubicación
+
+**Correo:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+**Ubicación:** Arboretum de Estancia La Constancia, Camino 515, Mar del Plata, Argentina
+
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" class="btn btn-outline-success" role="button">
+📍 Abrir en Google Maps
+</a>

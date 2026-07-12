@@ -30,8 +30,12 @@ icono_arbol   <- marcador_svg("marcador_arbol.svg")
 icono_conif   <- marcador_svg("marcador_conifera.svg")
 icono_arbusto <- marcador_svg("marcador_arbusto.svg")
 icono_palmera <- marcador_svg("marcador_palmera.svg")
-icono_ave     <- marcador_svg("marcador_ave.svg")
-icono_poi     <- marcador_svg("marcador_poi.svg")
+icono_ave       <- marcador_svg("marcador_ave.svg")
+icono_poi       <- marcador_svg("marcador_poi.svg")
+icono_apadrinado <- marcador_svg("marcador_apadrinado.svg")
+
+# Compatibilidad: si el Excel todavía no tiene la columna 'padrino', se crea vacía.
+if (!"padrino" %in% names(arboles)) arboles$padrino <- NA
 
 con_coord <- function(df) dplyr::filter(df, !is.na(latitud), !is.na(longitud))
 
@@ -47,18 +51,25 @@ popup_arbol <- function(df) {
     ifelse(tiene_valor(df$familia),    paste0("<b>Familia:</b> ", df$familia, "<br>"), ""),
     ifelse(tiene_valor(df$forma_vida), paste0("<b>Tipo:</b> ", df$forma_vida, "<br>"), ""),
     ifelse(tiene_valor(df$continente),paste0("<b>Origen:</b> ", df$continente, "<br>"), ""),
-    ifelse(tiene_valor(df$año_plantacion), paste0("<b>Plantado:</b> ", df$año_plantacion), "")
+    ifelse(tiene_valor(df$año_plantacion), paste0("<b>Plantado:</b> ", df$año_plantacion, "<br>"), ""),
+    ifelse(tiene_valor(df$padrino), paste0("<b>🌳 Apadrinado por:</b> ", df$padrino, "<br>"), ""),
+    "<div style='margin-top:.5rem;font-size:.8rem;'><a href='apadrina.html'>🌳 Apadriná un ejemplar como este →</a></div>"
   )
 }
 
-# Subconjuntos por forma de vida (columna verificada por botánico/a)
-fv <- function(patron) con_coord(dplyr::filter(arboles,
+# Árboles apadrinados: se muestran aparte, con su propio marcador.
+apad <- con_coord(dplyr::filter(arboles, tiene_valor(padrino)))
+
+# Subconjuntos por forma de vida (columna verificada por botánico/a),
+# excluyendo los apadrinados para que no se dupliquen los marcadores.
+base_np <- dplyr::filter(arboles, !tiene_valor(padrino))
+fv <- function(patron) con_coord(dplyr::filter(base_np,
         tiene_valor(forma_vida), grepl(patron, forma_vida, ignore.case = TRUE)))
 coni <- fv("con[ií]fera")
 lati <- fv("latifoliad")
 arbu <- fv("arbusto")
 palm <- fv("palmera")
-otro <- con_coord(dplyr::filter(arboles,
+otro <- con_coord(dplyr::filter(base_np,
           !tiene_valor(forma_vida) |
           !grepl("con[ií]fera|latifoliad|arbusto|palmera", forma_vida, ignore.case = TRUE)))
 avs  <- con_coord(aves)
@@ -91,6 +102,12 @@ m <- leaflet() %>%
     data = palm, lng = ~longitud, lat = ~latitud,
     icon = icono_palmera, group = "Palmeras",
     popup = popup_arbol(palm)
+  ) %>%
+
+  addMarkers(
+    data = apad, lng = ~longitud, lat = ~latitud,
+    icon = icono_apadrinado, group = "Árboles apadrinados",
+    popup = popup_arbol(apad)
   ) %>%
 
   addMarkers(
@@ -147,7 +164,7 @@ for (capa in capas_gis) {
 m <- m %>%
   addLayersControl(
     overlayGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
-                      "Otras especies", "Aves", "Puntos de interés", grupos_gis),
+                      "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés", grupos_gis),
     options = layersControlOptions(collapsed = FALSE)
   )
 

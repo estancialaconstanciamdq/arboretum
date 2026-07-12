@@ -43,6 +43,17 @@ img {
   height: auto;
 }
 
+/* ---- Fotos de coordinación (redondas) ---- */
+.admin-photo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 0.6rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* ---- CTA "Reservar visita" en la barra: pastilla ámbar destacada ---- */
 .navbar .nav-link[href$="experiencias.html"] {
   background-color: #E0A82E;
