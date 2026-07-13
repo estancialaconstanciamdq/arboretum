@@ -21,7 +21,7 @@ destacados <- arboles %>%
 
 Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un espacio de **conservación, educación ambiental y bienestar**.
 
-<div style="margin:1rem 0 1.5rem;">
+<div style="text-align:center; margin:1rem 0 1.5rem;">
 [Ver experiencias](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
 &nbsp;
 [🌳 Apadriná un árbol](apadrina.qmd){.btn .btn-outline-success .btn-lg role="button"}

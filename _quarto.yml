@@ -40,14 +40,14 @@ website:
             href: quiz.qmd
           - text: "Material educativo"
             href: material_educativo.qmd
+      - text: "Bienestar"
+        href: bienestar.qmd
       - text: "Investigación"
         menu:
           - text: "Estadísticas"
             href: estadisticas.qmd
           - text: "Biodiversidad"
             href: biodiversidad.qmd
-      - text: "Bienestar"
-        href: bienestar.qmd
     right:
       - text: "Reservar visita"
         href: experiencias.qmd
