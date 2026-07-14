@@ -9,6 +9,9 @@ resources:
    - recursos/**
    - videos/*.mp4
    - videos/*.jpg
+   - programas/programa_inicial.pdf
+   - programas/programa_primaria.pdf
+   - programas/programa_secundaria.pdf
   
 
 website:
