@@ -8,7 +8,7 @@ execute:
 ---
 
 ::: {.lead}
-Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Usá el **buscador 🔍** (arriba a la izquierda del mapa) para encontrar una especie por su nombre, el panel de **capas** para filtrar por tipo, y **seleccioná cada punto** para ver sus detalles.
+Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. **Seleccioná cada punto en el mapa para descubrir más detalles.**
 :::
 
 ```{r}
@@ -16,22 +16,6 @@ source("scripts/cargar_datos.R")
 
 library(leaflet)
 library(htmltools)
-
-# El buscador usa leaflet.extras; si no está instalado (o está roto), el mapa
-# igual se renderiza. El tryCatch evita que un problema del paquete corte el sitio.
-tiene_extras <- isTRUE(tryCatch(
-  requireNamespace("leaflet.extras", quietly = TRUE),
-  error = function(e) FALSE
-))
-
-# Etiqueta para el buscador y el tooltip: "nombre común — nombre científico"
-etq <- function(df) {
-  nc  <- ifelse(tiene_valor(df$nombre_comun), as.character(df$nombre_comun), "")
-  ns  <- ifelse(tiene_valor(df$nombre_cientifico), as.character(df$nombre_cientifico), "")
-  lab <- trimws(paste0(nc, ifelse(ns != "", paste0(" — ", ns), "")))
-  lab[lab == ""] <- "Ejemplar"
-  lab
-}
 
 # Marcadores SVG propios (pin + silueta), incrustados como data-URI para que se
 # muestren siempre. Para cambiar color o forma, editá los .svg en fotos/.
@@ -99,50 +83,42 @@ m <- leaflet() %>%
   addMarkers(
     data = coni, lng = ~longitud, lat = ~latitud,
     icon = icono_conif, group = "Coníferas",
-    label = etq(coni),
     popup = popup_arbol(coni)
   ) %>%
 
   addMarkers(
     data = lati, lng = ~longitud, lat = ~latitud,
     icon = icono_arbol, group = "Árboles latifoliados",
-    label = etq(lati),
     popup = popup_arbol(lati)
   ) %>%
 
   addMarkers(
     data = arbu, lng = ~longitud, lat = ~latitud,
     icon = icono_arbusto, group = "Arbustos",
-    label = etq(arbu),
     popup = popup_arbol(arbu)
   ) %>%
 
   addMarkers(
     data = palm, lng = ~longitud, lat = ~latitud,
     icon = icono_palmera, group = "Palmeras",
-    label = etq(palm),
     popup = popup_arbol(palm)
   ) %>%
 
   addMarkers(
     data = apad, lng = ~longitud, lat = ~latitud,
     icon = icono_apadrinado, group = "Árboles apadrinados",
-    label = etq(apad),
     popup = popup_arbol(apad)
   ) %>%
 
   addMarkers(
     data = otro, lng = ~longitud, lat = ~latitud,
     icon = icono_arbol, group = "Otras especies",
-    label = etq(otro),
     popup = popup_arbol(otro)
   ) %>%
 
   addMarkers(
     data = avs, lng = ~longitud, lat = ~latitud,
     icon = icono_ave, group = "Aves",
-    label = ~ifelse(tiene_valor(especie), especie,
-             ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "Ave")),
     popup = ~paste0(
       "<h3>", ifelse(tiene_valor(especie), especie, "Ave"), "</h3>",
       ifelse(tiene_valor(nombre_cientifico), paste0(sci_html(nombre_cientifico), "<br><br>"), "<br>"),
@@ -191,24 +167,6 @@ m <- m %>%
                       "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés", grupos_gis),
     options = layersControlOptions(collapsed = FALSE)
   )
-
-# Buscador por nombre (común o científico): sobrevuela y abre el popup del ejemplar.
-# Todo dentro de tryCatch: ante CUALQUIER problema del buscador, el mapa se
-# renderiza igual (sin buscador) y el resto del sitio no se ve afectado.
-if (tiene_extras) {
-  m <- tryCatch(
-    leaflet.extras::addSearchFeatures(
-      m,
-      targetGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
-                       "Árboles apadrinados", "Otras especies", "Aves"),
-      options = leaflet.extras::searchFeaturesOptions(
-        zoom = 19, openPopup = TRUE, hideMarkerOnCollapse = TRUE,
-        textPlaceholder = "Buscar especie por nombre…"
-      )
-    ),
-    error = function(e) { message("mapa.qmd: buscador omitido (", conditionMessage(e), ")"); m }
-  )
-}
 
 m
 ```
