@@ -1,6 +1,5 @@
 ---
-title: "Arboretum"
-subtitle: "Un espacio donde la naturaleza educa, inspira y sana"
+title: ""
 page-layout: full
 execute:
   echo: false
@@ -17,23 +16,39 @@ destacados <- arboles %>%
   dplyr::arrange(nombre_comun)
 ```
 
-<!-- # 🌿 Arboretum -->
+```{=html}
+<style>
+.home-hero{
+  position:relative; width:100%; min-height:72vh; margin:0 0 2rem 0;
+  background-image:linear-gradient(rgba(30,74,56,.14),rgba(30,74,56,.26)), url('fotos/Descanso.jpg');
+  background-size:cover; background-position:center; border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+}
+.home-hero-inner{ text-align:center; color:#fff; padding:3rem 1.5rem; max-width:760px; }
+.home-hero-mark{ font-size:1rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; opacity:.95; margin-bottom:1.1rem; text-shadow:0 2px 12px rgba(0,0,0,.7); }
+.home-hero-title{ color:#fff; font-size:clamp(2.6rem,6vw,4.4rem); font-weight:800; margin:.1rem 0; line-height:1.05; text-shadow:0 2px 20px rgba(0,0,0,.75); }
+.home-hero-lema{ font-size:clamp(1.1rem,2.4vw,1.6rem); margin:.5rem auto 1rem; max-width:620px; text-shadow:0 2px 14px rgba(0,0,0,.85); }
+.home-hero-loc{ font-size:.95rem; opacity:.95; margin-bottom:1.6rem; text-shadow:0 1px 10px rgba(0,0,0,.85); }
+.home-hero-btns{ display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; }
+.home-hero-ghost{ background:rgba(255,255,255,.14); color:#fff !important; border:2px solid #fff; }
+.home-hero-ghost:hover{ background:rgba(255,255,255,.28); color:#fff !important; }
+@media(max-width:768px){ .home-hero{ min-height:58vh; } }
+</style>
+<section class="home-hero">
+  <div class="home-hero-inner">
+    <div class="home-hero-mark">🌳 Arboretum</div>
+    <h1 class="home-hero-title">Arboretum</h1>
+    <p class="home-hero-lema">Un espacio donde la naturaleza educa, inspira y sana</p>
+    <p class="home-hero-loc">📍 Mar del Plata · Buenos Aires · Argentina</p>
+    <div class="home-hero-btns">
+      <a href="experiencias.html" class="btn btn-success btn-lg" role="button">Ver experiencias</a>
+      <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button">🌳 Apadriná un árbol</a>
+    </div>
+  </div>
+</section>
+```
 
-Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un jardín botánico vivo donde la naturaleza **educa, inspira y sana**.
-
-<div style="text-align:center; margin:1rem 0 1.5rem;">
-[Ver experiencias](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
-&nbsp;
-[🌳 Apadriná un árbol](apadrina.qmd){.btn .btn-outline-success .btn-lg role="button"}
-</div>
-
-Un espacio para **recorrer, aprender y reconectar**: explorá sus especies y aves, visitalo con tu escuela, viví una experiencia de bienestar entre los árboles o sumá a tu organización a la conservación.
-
-<p style="color:#1E4A38; font-weight:600;">📍 Mar del Plata · Buenos Aires · Argentina</p>
-
-<div style="text-align: center; margin-bottom: 2rem;">
-  <img src="fotos/portada2.jpg" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="Arboretum de Estancia La Constancia">
-</div>
+Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un jardín botánico vivo de 33 hectáreas para **recorrer, aprender y reconectar**. Explorá sus especies y aves, visitalo con tu escuela, viví una experiencia de bienestar entre los árboles o sumá a tu organización a la conservación.
 
 ## Ejemplares destacados
 

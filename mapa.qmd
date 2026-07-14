@@ -8,8 +8,19 @@ execute:
 ---
 
 ::: {.lead}
-Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. **Seleccioná cada punto en el mapa para descubrir más detalles.**
+Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Usá el **buscador** (arriba a la izquierda) para ir directo a una especie por su nombre, el panel de **capas** para filtrar por tipo, y **seleccioná cada punto** para ver sus detalles.
 :::
+
+```{=html}
+<style>
+.arb-buscador{background:#fff;padding:4px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.3);}
+.arb-input{border:1px solid #bbb;border-radius:6px;padding:.35rem .5rem;width:210px;font-size:.9rem;outline:none;}
+.arb-resultados{background:#fff;margin-top:4px;max-height:240px;overflow:auto;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.2);}
+.arb-item{padding:.35rem .55rem;cursor:pointer;font-size:.85rem;border-bottom:1px solid #f0f0f0;}
+.arb-item:hover{background:#eef4f0;}
+.arb-item em{color:#666;}
+</style>
+```
 
 ```{r}
 source("scripts/cargar_datos.R")
@@ -167,6 +178,83 @@ m <- m %>%
                       "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés", grupos_gis),
     options = layersControlOptions(collapsed = FALSE)
   )
+
+# --- Buscador en el mapa (JavaScript puro; NO usa paquetes externos) --------
+# Todo dentro de tryCatch: ante CUALQUIER problema, el mapa se muestra igual y
+# el resto del sitio no se ve afectado. El buscador es 100% del lado del
+# navegador, así que nunca puede cortar el render.
+m <- tryCatch({
+  ab  <- con_coord(arboles)
+  av2 <- con_coord(aves)
+  b1 <- data.frame(
+    nombre = ifelse(tiene_valor(ab$nombre_comun), as.character(ab$nombre_comun),
+             ifelse(tiene_valor(ab$nombre_cientifico), as.character(ab$nombre_cientifico), as.character(ab$ID))),
+    cientifico = ifelse(tiene_valor(ab$nombre_cientifico), as.character(ab$nombre_cientifico), ""),
+    lat = as.numeric(ab$latitud), lng = as.numeric(ab$longitud),
+    stringsAsFactors = FALSE)
+  b2 <- data.frame(
+    nombre = ifelse(tiene_valor(av2$especie), as.character(av2$especie),
+             ifelse(tiene_valor(av2$nombre_cientifico), as.character(av2$nombre_cientifico), "Ave")),
+    cientifico = ifelse(tiene_valor(av2$nombre_cientifico), as.character(av2$nombre_cientifico), ""),
+    lat = as.numeric(av2$latitud), lng = as.numeric(av2$longitud),
+    stringsAsFactors = FALSE)
+  buscables <- rbind(b1, b2)
+  buscables <- buscables[!is.na(buscables$lat) & !is.na(buscables$lng) & buscables$nombre != "", ]
+  datos_json <- jsonlite::toJSON(buscables, dataframe = "rows", auto_unbox = TRUE)
+
+  js <- paste0(
+"function(el, x) {
+  var map = this;
+  var pts = ", datos_json, ";
+  function norm(s){ return (s==null?'':String(s)).toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }
+  var Ctrl = L.Control.extend({
+    options: { position: 'topleft' },
+    onAdd: function(){
+      var box = L.DomUtil.create('div','arb-buscador');
+      var input = L.DomUtil.create('input','arb-input', box);
+      input.type = 'text';
+      input.placeholder = 'Buscar especie...';
+      input.setAttribute('aria-label','Buscar especie');
+      var out = L.DomUtil.create('div','arb-resultados', box);
+      out.style.display = 'none';
+      L.DomEvent.disableClickPropagation(box);
+      L.DomEvent.disableScrollPropagation(box);
+      function cerrar(){ out.style.display='none'; while(out.firstChild) out.removeChild(out.firstChild); }
+      function ir(p){
+        map.setView([p.lat, p.lng], 19);
+        var html = '<b>'+(p.nombre||'')+'</b>' + (p.cientifico ? '<br><i>'+p.cientifico+'</i>' : '');
+        L.popup().setLatLng([p.lat, p.lng]).setContent(html).openOn(map);
+        input.value = p.nombre; cerrar();
+      }
+      function buscar(){
+        var q = norm(input.value); cerrar();
+        if(q.length < 2) return;
+        var n = 0;
+        for(var i=0; i<pts.length && n<8; i++){
+          var p = pts[i];
+          if(norm(p.nombre).indexOf(q)>=0 || norm(p.cientifico).indexOf(q)>=0){
+            var it = L.DomUtil.create('div','arb-item', out);
+            var s = L.DomUtil.create('span','', it); s.textContent = p.nombre;
+            if(p.cientifico){ var em = L.DomUtil.create('em','', it); em.textContent = ' '+p.cientifico; }
+            (function(pp){ it.addEventListener('click', function(){ ir(pp); }); })(p);
+            n++;
+          }
+        }
+        out.style.display = n ? 'block' : 'none';
+      }
+      L.DomEvent.on(input,'input',buscar);
+      L.DomEvent.on(input,'focus',buscar);
+      L.DomEvent.on(input,'keydown',function(e){
+        if(e.keyCode===13){ var f=out.querySelector('.arb-item'); if(f) f.click(); }
+        else if(e.keyCode===27){ cerrar(); }
+      });
+      return box;
+    }
+  });
+  map.addControl(new Ctrl());
+}")
+  htmlwidgets::onRender(m, js)
+}, error = function(e) { message('mapa.qmd: buscador omitido (', conditionMessage(e), ')'); m })
 
 m
 ```
