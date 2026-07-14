@@ -139,18 +139,23 @@ cat(sprintf("generar_fichas.R: %d fichas generadas en '%s/'.\n", n, dir_fichas))
 dir_rec <- "recursos"
 if (!dir.exists(dir_rec)) dir.create(dir_rec, recursive = TRUE)
 
-cols_csv <- c("ID", "nombre_comun", "nombre_cientifico", "autor", "familia",
-              "forma_vida", "origen", "continente", "año_plantacion", "sector",
-              "altura_m", "diametro_cm", "latitud", "longitud")
-catalogo_csv <- dplyr::select(arboles, dplyr::any_of(cols_csv))
+tryCatch({
+  cols_csv <- c("ID", "nombre_comun", "nombre_cientifico", "autor", "familia",
+                "forma_vida", "origen", "continente", "año_plantacion", "sector",
+                "altura_m", "diametro_cm", "latitud", "longitud")
+  catalogo_csv <- dplyr::select(arboles, dplyr::any_of(cols_csv))
 
-csv_path <- file.path(dir_rec, "catalogo_arboretum.csv")
-tmp_csv  <- tempfile(fileext = ".csv")
-utils::write.csv(catalogo_csv, tmp_csv, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-cuerpo <- readBin(tmp_csv, "raw", n = file.info(tmp_csv)$size)
-con <- file(csv_path, open = "wb")
-writeBin(c(as.raw(c(0xEF, 0xBB, 0xBF)), cuerpo), con)   # BOM UTF-8 + contenido
-close(con)
+  csv_path <- file.path(dir_rec, "catalogo_arboretum.csv")
+  tmp_csv  <- tempfile(fileext = ".csv")
+  utils::write.csv(catalogo_csv, tmp_csv, row.names = FALSE, na = "", fileEncoding = "UTF-8")
+  cuerpo <- readBin(tmp_csv, "raw", n = file.info(tmp_csv)$size)
+  con <- file(csv_path, open = "wb")
+  writeBin(c(as.raw(c(0xEF, 0xBB, 0xBF)), cuerpo), con)   # BOM UTF-8 + contenido
+  close(con)
 
-cat(sprintf("generar_fichas.R: catálogo CSV exportado (%d filas, %d columnas).\n",
-            nrow(catalogo_csv), ncol(catalogo_csv)))
+  cat(sprintf("generar_fichas.R: catálogo CSV exportado (%d filas, %d columnas).\n",
+              nrow(catalogo_csv), ncol(catalogo_csv)))
+}, error = function(e) {
+  cat(sprintf("generar_fichas.R: aviso — no se pudo exportar el CSV (%s). Continúo.\n",
+              conditionMessage(e)))
+})

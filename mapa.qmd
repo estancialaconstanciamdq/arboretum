@@ -17,8 +17,12 @@ source("scripts/cargar_datos.R")
 library(leaflet)
 library(htmltools)
 
-# El buscador usa leaflet.extras; si no está instalado, el mapa igual se renderiza.
-tiene_extras <- requireNamespace("leaflet.extras", quietly = TRUE)
+# El buscador usa leaflet.extras; si no está instalado (o está roto), el mapa
+# igual se renderiza. El tryCatch evita que un problema del paquete corte el sitio.
+tiene_extras <- isTRUE(tryCatch(
+  requireNamespace("leaflet.extras", quietly = TRUE),
+  error = function(e) FALSE
+))
 
 # Etiqueta para el buscador y el tooltip: "nombre común — nombre científico"
 etq <- function(df) {
@@ -189,16 +193,20 @@ m <- m %>%
   )
 
 # Buscador por nombre (común o científico): sobrevuela y abre el popup del ejemplar.
+# Todo dentro de tryCatch: ante CUALQUIER problema del buscador, el mapa se
+# renderiza igual (sin buscador) y el resto del sitio no se ve afectado.
 if (tiene_extras) {
-  m <- leaflet.extras::addSearchFeatures(
-    m,
-    targetGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
-                     "Árboles apadrinados", "Otras especies", "Aves"),
-    options = leaflet.extras::searchFeaturesOptions(
-      zoom = 19, openPopup = TRUE, firstTipSubmit = TRUE,
-      autoCollapse = TRUE, hideMarkerOnCollapse = TRUE,
-      textPlaceholder = "Buscar especie por nombre…"
-    )
+  m <- tryCatch(
+    leaflet.extras::addSearchFeatures(
+      m,
+      targetGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
+                       "Árboles apadrinados", "Otras especies", "Aves"),
+      options = leaflet.extras::searchFeaturesOptions(
+        zoom = 19, openPopup = TRUE, hideMarkerOnCollapse = TRUE,
+        textPlaceholder = "Buscar especie por nombre…"
+      )
+    ),
+    error = function(e) { message("mapa.qmd: buscador omitido (", conditionMessage(e), ")"); m }
   )
 }
 
