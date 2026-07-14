@@ -19,7 +19,7 @@ destacados <- arboles %>%
 
 <!-- # 🌿 Arboretum -->
 
-Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un espacio de **conservación, educación ambiental y bienestar**.
+Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un jardín botánico vivo donde la naturaleza **educa, inspira y sana**.
 
 <div style="text-align:center; margin:1rem 0 1.5rem;">
 [Ver experiencias](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
@@ -27,7 +27,7 @@ Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentin
 [🌳 Apadriná un árbol](apadrina.qmd){.btn .btn-outline-success .btn-lg role="button"}
 </div>
 
-Este espacio reúne información sobre las especies vegetales, aves y principales puntos de interés relevados en el establecimiento. El objetivo es documentar y difundir el patrimonio natural del arboretum mediante herramientas de observación, monitoreo y divulgación científica.
+Un espacio para **recorrer, aprender y reconectar**: explorá sus especies y aves, visitalo con tu escuela, viví una experiencia de bienestar entre los árboles o sumá a tu organización a la conservación.
 
 <p style="color:#1E4A38; font-weight:600;">📍 Mar del Plata · Buenos Aires · Argentina</p>
 
@@ -47,7 +47,7 @@ for (i in seq_len(min(4, nrow(destacados)))) {
 cat('</div>')
 ```
 
-## Explorar
+## Explorá
 
 ::: grid
 
@@ -70,6 +70,44 @@ Galería fotográfica y registro de estacionalidad de las aves observadas en el 
 Recorra virtualmente los senderos, sectores y puntos de interés en tiempo real.
 
 [Ver Mapa →](mapa.qmd){.btn .btn-success .btn-sm .mt-auto role="button"}
+:::
+
+:::
+
+## Viví el arboretum
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🎒 Visitas Educativas
+Recorridos y actividades para escuelas y grupos, diseñados por nivel educativo.
+
+[Ver visitas →](visitas_escolares.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🧘 Bienestar
+Baños de bosque y experiencias de bienestar guiadas entre los árboles.
+
+[Descubrir bienestar →](bienestar.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center style="border-top: 3px solid #1E4A38;"}
+### 🌳 Apadriná un árbol
+Sumate a la conservación apadrinando un ejemplar y seguí su historia.
+
+[Apadriná →](apadrina.qmd){.btn .btn-success .btn-sm .mt-auto role="button"}
+:::
+
+:::
+
+::: grid
+
+::: {.g-col-12 .card .p-4 .shadow-sm .text-center}
+### 🤝 Empresas con propósito
+Sumá a tu organización a la conservación del arboretum, con impacto **trazable y verificable**.
+
+[Conocé la propuesta para empresas →](empresas.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 :::
