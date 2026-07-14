@@ -131,3 +131,26 @@ for (i in seq_len(nrow(arboles))) {
 }
 
 cat(sprintf("generar_fichas.R: %d fichas generadas en '%s/'.\n", n, dir_fichas))
+
+# --- Exportar catálogo público en CSV (datos abiertos) ---------------------
+# Se regenera en cada render. Incluye únicamente las columnas presentes en el
+# Excel (any_of), así nunca falla si cambia el esquema. Escrito en UTF-8 con BOM
+# para que Excel muestre los acentos correctamente.
+dir_rec <- "recursos"
+if (!dir.exists(dir_rec)) dir.create(dir_rec, recursive = TRUE)
+
+cols_csv <- c("ID", "nombre_comun", "nombre_cientifico", "autor", "familia",
+              "forma_vida", "origen", "continente", "año_plantacion", "sector",
+              "altura_m", "diametro_cm", "latitud", "longitud")
+catalogo_csv <- dplyr::select(arboles, dplyr::any_of(cols_csv))
+
+csv_path <- file.path(dir_rec, "catalogo_arboretum.csv")
+tmp_csv  <- tempfile(fileext = ".csv")
+utils::write.csv(catalogo_csv, tmp_csv, row.names = FALSE, na = "", fileEncoding = "UTF-8")
+cuerpo <- readBin(tmp_csv, "raw", n = file.info(tmp_csv)$size)
+con <- file(csv_path, open = "wb")
+writeBin(c(as.raw(c(0xEF, 0xBB, 0xBF)), cuerpo), con)   # BOM UTF-8 + contenido
+close(con)
+
+cat(sprintf("generar_fichas.R: catálogo CSV exportado (%d filas, %d columnas).\n",
+            nrow(catalogo_csv), ncol(catalogo_csv)))

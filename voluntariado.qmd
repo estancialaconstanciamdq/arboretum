@@ -1,0 +1,132 @@
+---
+title: "Voluntariado"
+subtitle: "Sumá tus manos a un jardín botánico vivo"
+format: html
+---
+
+<!-- =========================================================================
+  NOTA: el programa de voluntariado está EN FORMACIÓN. Revisá antes de publicar
+  los datos marcados con "COMPLETAR" (edad mínima, frecuencia, cobertura/seguro,
+  si existe un formulario propio). Redactado de forma neutra para no comprometer
+  condiciones que todavía no están definidas.
+========================================================================= -->
+
+En los grandes arboretums del mundo, las personas voluntarias son el **corazón del
+proyecto**: guían visitas, cuidan las colecciones, registran datos, reproducen
+especies en el vivero y dan vida a los eventos. En el Arboretum de Estancia La
+Constancia estamos **formando nuestro programa de voluntariado**, y te invitamos a
+ser parte desde el comienzo.
+
+::: {.callout-tip}
+**El programa está dando sus primeros pasos.** Si te interesa, dejanos tus datos y
+te contactamos para conocerte, contarte las tareas disponibles y encontrar juntos
+la mejor forma de aportar.
+:::
+
+<div style="text-align:center; margin:1.5rem 0 2rem;">
+[🙋 Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
+</div>
+
+## En qué podés ayudar
+
+Inspirados en los programas de voluntariado de arboretums de referencia, estas son
+las áreas que estamos abriendo. No hace falta experiencia previa en la mayoría: te
+acompañamos y capacitamos.
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 🌿 Guías y anfitriones
+Recibir grupos, acompañar recorridos y compartir la historia del arboretum.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📋 Relevamiento y datos
+Mapear ejemplares, cargar fichas, medir árboles y registrar fenología (floración,
+fructificación).
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 🐦 Observación de aves
+Monitoreo de aves residentes y migratorias, y carga de observaciones en plataformas
+de ciencia ciudadana.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 🌱 Vivero y plantación
+Reproducción de especies, siembra, plantación y cuidado de las nuevas colecciones.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 🎓 Apoyo educativo
+Asistir en visitas escolares, talleres y actividades para todas las edades.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📣 Eventos y difusión
+Colaborar en jornadas, redes sociales, fotografía y comunicación del proyecto.
+:::
+
+:::
+
+## ¿Quién puede sumarse?
+
+El voluntariado está **abierto a todas las edades y trayectorias**: estudiantes que
+quieren experiencia de campo, personas jubiladas con tiempo y ganas, amantes de la
+naturaleza, docentes, fotógrafos, aficionados a las aves… Para muchas tareas **no se
+requiere conocimiento previo**; lo importante es el compromiso y las ganas de
+aprender.
+
+## Qué vas a llevarte
+
+- 🌳 **Aprendizaje real** en botánica, ecología, aves y conservación, de la mano de profesionales.
+- 🤝 **Comunidad**: formar parte de un equipo con propósito.
+- 🌤️ **Naturaleza y bienestar**: tiempo de calidad al aire libre.
+- 📜 **Certificado de participación** que reconoce tu aporte.
+- 💚 **Impacto concreto**: tu trabajo ayuda a conservar y difundir el patrimonio natural.
+
+## Preguntas frecuentes
+
+::: {.callout-note collapse="true" title="¿Necesito experiencia o formación previa?"}
+Para la mayoría de las tareas, no. Te acompañamos y capacitamos según el área que
+elijas. Si ya tenés experiencia (en botánica, aves, educación, comunicación),
+¡mejor todavía!
+:::
+
+::: {.callout-note collapse="true" title="¿Cuánto tiempo tengo que dedicar?"}
+Lo coordinamos según tu disponibilidad. Puede ser una jornada puntual, una
+colaboración en un evento o una participación más regular. Hablamos y encontramos
+el formato que te quede cómodo.
+:::
+
+<!-- COMPLETAR edad mínima / participación de menores -->
+::: {.callout-note collapse="true" title="¿Hay edad mínima?"}
+El voluntariado está abierto a distintas edades. Si sos menor de edad o querés sumar
+a un grupo de jóvenes, escribinos y coordinamos las condiciones de participación.
+:::
+
+::: {.callout-note collapse="true" title="¿Tiene algún costo?"}
+No. El voluntariado es una **colaboración**: vos aportás tu tiempo y nosotros te
+recibimos, capacitamos y acompañamos.
+:::
+
+## Sumate
+
+Contanos quién sos, qué te gustaría hacer y tu disponibilidad. Te respondemos a la
+brevedad para dar el primer paso juntos.
+
+<!-- ====================================================================
+  FORMULARIO DE INSCRIPCIÓN (Google Form)
+  Cuando tengas la URL del formulario, reemplazá `contacto.qmd` por esa URL
+  en LOS DOS botones "Quiero ser voluntario/a" (este y el de arriba). Ejemplo:
+
+  [🙋 Inscribite como voluntario/a](https://docs.google.com/forms/d/e/XXXXXXXX/viewform){.btn .btn-success .btn-lg role="button"}
+
+  (Guía para crear el formulario: recursos/formulario_voluntariado_google_forms.md)
+==================================================================== -->
+::: {.cta-container style="text-align:center; margin:1.5rem 0;"}
+[🙋 Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
+:::
+
+**Correo:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+**WhatsApp:** [+54 9 11 5736 0940](https://wa.me/5491157360940)

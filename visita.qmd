@@ -1,0 +1,158 @@
+---
+title: "Visitá el Arboretum"
+subtitle: "Todo lo que necesitás saber para planificar tu visita"
+format: html
+---
+
+<!-- =========================================================================
+  NOTA: revisá los datos marcados con "COMPLETAR" antes de publicar
+  (horarios exactos, precios, estacionamiento, baños, accesibilidad, mascotas).
+  Están redactados de forma neutra para no afirmar algo incorrecto.
+========================================================================= -->
+
+El Arboretum de Estancia La Constancia es un jardín botánico vivo de **33 hectáreas**
+con más de **30.000 plantas** y **300 especies**, en Mar del Plata. Recibimos
+visitas **con reserva previa**, para que cada grupo viva una experiencia
+personalizada, segura y de alto valor educativo.
+
+<div style="text-align:center; margin:1.5rem 0 2rem;">
+[📅 Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
+&nbsp;
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg" role="button">📍 Cómo llegar</a>
+</div>
+
+## Cómo visitarnos
+
+Las visitas se coordinan **con reserva previa**. Nos escribís, definimos juntos el
+tipo de recorrido, la fecha y los detalles, y te confirmamos todo antes del día.
+Al tratarse de actividades al aire libre, al reservar acordamos una **fecha
+principal y una alternativa** por si el clima no acompaña.
+
+::: grid
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### 🎒 Escuelas
+Recorridos educativos por nivel.
+
+[Visitas educativas →](visitas_escolares.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### 🌿 Grupos
+Visitas guiadas y experiencias.
+
+[Ver experiencias →](experiencias.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### 🧘 Bienestar
+Baños de bosque guiados.
+
+[Descubrir bienestar →](bienestar.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### 🤝 Empresas
+Eventos e impacto corporativo.
+
+[Propuesta empresas →](empresas.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+:::
+
+## Cómo llegar
+
+**Arboretum de Estancia La Constancia**<br>
+Camino 515, Mar del Plata · Buenos Aires · Argentina
+
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">
+📍 Abrir en Google Maps
+</a>
+
+## Antes de venir
+
+Para disfrutar al máximo el recorrido al aire libre, te recomendamos:
+
+- 👟 **Calzado cómodo** y cerrado, apto para caminar por senderos naturales.
+- 🧢 **Protección solar**: gorra, protector y anteojos de sol.
+- 💧 **Agua** para hidratarte durante la caminata.
+- 🧥 **Abrigo o rompevientos** según la época del año.
+- 📷 **Cámara o binoculares** si te gusta la observación de aves.
+
+## Preguntas frecuentes
+
+::: {.callout-note collapse="true" title="¿Necesito reservar? ¿Cómo lo hago?"}
+Sí, todas las visitas son con reserva previa. Podés reservar desde la página de
+[experiencias](experiencias.qmd), completar el formulario de
+[visitas educativas](visitas_escolares.qmd) o escribirnos directamente por
+correo o WhatsApp (ver más abajo).
+:::
+
+::: {.callout-note collapse="true" title="¿Cuánto dura la visita?"}
+Depende de la propuesta: las visitas suelen durar **entre 2 y 4 horas**. Al
+coordinar la reserva definimos la duración según el grupo y los objetivos.
+:::
+
+::: {.callout-note collapse="true" title="¿Qué pasa si llueve?"}
+Al reservar acordamos una **fecha principal y una alternativa**. Si el día
+principal el clima no acompaña, pasamos a la fecha de resguardo sin costo
+adicional.
+:::
+
+<!-- COMPLETAR precio: ajustá o confirmá este texto -->
+::: {.callout-note collapse="true" title="¿Cuánto cuesta?"}
+El valor depende del **tipo de visita** y del **tamaño del grupo**. Escribinos y
+te enviamos una propuesta a medida.
+:::
+
+<!-- COMPLETAR estacionamiento: confirmá disponibilidad y reemplazá si corresponde -->
+::: {.callout-note collapse="true" title="¿Hay dónde estacionar?"}
+Sí, coordinamos el acceso y el estacionamiento al confirmar tu reserva. Si venís
+en micro o combi, avisanos con anticipación para organizar el ingreso.
+:::
+
+<!-- COMPLETAR accesibilidad: confirmá qué partes del recorrido son accesibles -->
+::: {.callout-note collapse="true" title="¿El recorrido es accesible?"}
+El arboretum es un entorno natural con senderos de tierra y pasto. Si en tu grupo
+hay personas con movilidad reducida, contanos al reservar y adaptamos el recorrido
+en lo posible.
+:::
+
+<!-- COMPLETAR mascotas: confirmá la política real -->
+::: {.callout-note collapse="true" title="¿Puedo ir con mi mascota?"}
+Por tratarse de un espacio de conservación con fauna nativa, consultanos antes de
+tu visita para conocer las condiciones.
+:::
+
+::: {.callout-note collapse="true" title="¿Se puede ir con chicos?"}
+¡Por supuesto! Diseñamos experiencias para todas las edades, desde nivel inicial
+hasta adultos. Contanos las edades del grupo y adaptamos la propuesta.
+:::
+
+## Contacto
+
+¿Lista o listo para coordinar tu visita? Escribinos:
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📩 Correo
+[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+
+### 📱 WhatsApp
+[+54 9 11 5736 0940](https://wa.me/5491157360940)
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📸 Instagram
+[@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
+
+### 📍 Ubicación
+Camino 515, Mar del Plata · Buenos Aires · Argentina
+:::
+
+:::
+
+::: {.cta-container style="text-align:center; margin:2rem 0 1rem;"}
+[📅 Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
+:::

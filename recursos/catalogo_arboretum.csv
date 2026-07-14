@@ -1,0 +1,92 @@
+﻿"ID","nombre_comun","nombre_cientifico","autor","familia","forma_vida","origen","continente","año_plantacion","sector","altura_m","diametro_cm","latitud","longitud"
+"ARB001","Sabina de Virginia","Sabina virginiana","(L.) Antoine","Cupressaceae","Conífera","E.E.U.U","América del Norte",2004,,,,-38.056791,-57.680154
+"ARB002","Pino","Pinus sp.",,"Pinaceae","Conífera","-","Hemisferio Norte / Variable",,,,,-38.056472,-57.680521
+"ARB003","Roble común","Quercus robur","L.","Fagaceae","Árbol latifoliado","Europa","Europa / Asia Occidental",,,,,-38.056541,-57.680555
+"ARB004","Falso muérdago","Ilex aquifolium","L.",,"Árbol latifoliado","Europa","Europa / África del Norte / Asia",,,,,-38.056569,-57.680685
+"ARB005","Cedro del Himalaya","Cedrus deodara","(Roxb. ex D. Don) G. Don","Pinaceae","Conífera","Asia","Asia",,,,,-38.056549,-57.680737
+"ARB006","Casuarina","Casuarina equisetifolia","L.","Casuarinaceae","Árbol latifoliado","Australia","Hemisferio Norte / Variable",,,,,-38.056437,-57.680856
+"ARB007","Falso laurel","Nerium oleander","L.","Apocynaceae","Arbusto","Europa-Asia","Europa (Mediterráneo) / Asia",,,,,-38.056372,-57.681121
+"ARB008","Libocedro de California","Calocedrus decurrens","(Torr.) Florin","Cupressaceae","Conífera","E.E.U.U","América del Norte",,,,,-38.056239,-57.68099
+"ARB009","Cedro azul","Cedrus atlantica","(Endl.) Manetti ex Carrière","Pinaceae","Conífera","África-Europa","África (Norte)",,,,,-38.056201,-57.680907
+"ARB010","-","-",,"Myrtaceae","Otro","-","-",,,,,-38.056054,-57.680894
+"ARB011",,"Eucalyptus globulus","Labill.","Myrtaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.056331,-57.680572
+"ARB012","Cipres","Cupressus sp.",,"Cupressaceae","Conífera","-","Hemisferio Norte / Variable",,,,,-38.056329,-57.68043
+"ARB013","Roble rojo americano","Quercus rubra","L.","Fagaceae","Árbol latifoliado","Europa","América del Norte",,,,,-38.056373,-57.679866
+"ARB014","Abeto","Abies concolor","(Gordon & Glend.) Lindl. ex Hildebr.","Pinaceae","Conífera","E.E.U.U","América (del Norte y del Sur)",,,,,-38.056551,-57.679765
+"ARB015",,"Picea sp.",,"Pinaceae","Conífera","-","-",,,,,-38.056644,-57.679769
+"ARB016","Limpiatubos","Callistemon imperialis",,"Myrtaceae","Arbusto","Australia","América del Sur",1988,,,,-38.056727,-57.679967
+"ARB017","Abelia","Abelia ×grandiflora","(André) Rehder","Caprifoliaceae","Arbusto","-","Asia (Origen hortícola/Híbrido)",,,,,-38.056678,-57.6801
+"ARB018","Crataegus","Crataegus sp.",,"Rosaceae","Arbusto","-","Hemisferio Norte / Variable",,,,,-38.056844,-57.680508
+"ARB019","Magnolia","Magnolia grandiflora","L.","Magnoliaceae","Árbol latifoliado","E.E.U.U","América del Norte",,,,,-38.057062,-57.680232
+"ARB020","Plátano","Platanus ×hispanica","Mill. ex Münchh.","Platanaceae","Árbol latifoliado","Europa","Europa / Origen Híbrido",,,,,-38.057076,-57.680527
+"ARB021","Tilo","Tilia sp.",,"Malvaceae","Árbol latifoliado","-","Hemisferio Norte / Variable",1990,,,,-38.057192,-57.680583
+"ARB022","Araucaria Australiana","Araucaria bidwillii","Hook.","Araucariaceae","Conífera","Australia","Oceanía (Australia)",,,,,-38.056909,-57.680885
+"ARB023","Ciprés de Monterrey","Cupressus macrocarpa var. lutea","Hartw. ex Gordon","Cupressaceae","Conífera","E.E.U.U","América del Norte",,,,,-38.05684,-57.681064
+"ARB024","Cipreses","Cupressus sp.",,"Cupressaceae","Conífera","-","Hemisferio Norte / Variable",,,,,-38.056934,-57.681113
+"ARB025","Casuarina","Casuarina equisetifolia","L.","Casuarinaceae","Árbol latifoliado","Australia","Hemisferio Norte / Variable",,,,,-38.056656,-57.68126
+"ARB026","Encina","Quercus baloot","Griff.","Fagaceae","Árbol latifoliado","Europa","Europa (Mediterráneo) / África del Norte",,,,,-38.055929,-57.680409
+"ARB027","Pino mexicano amarillo","Pinus patula","Schltdl. & Cham.","Pinaceae","Conífera","México","Europa (Mediterráneo) / África del Norte",,,,,-38.056056,-57.679651
+"ARB028","Araucaria Australiana","Araucaria bidwillii","Hook.","Araucariaceae","Conífera","Australia","Oceanía (Australia)",,,,,-38.056057,-57.679449
+"ARB029","Álamo blanco","Populus alba","L.","Salicaceae","Árbol latifoliado","Europa-Asia","América del Norte",,,,,-38.056168,-57.679357
+"ARB030","Castaño de Indias","Aesculus hippocastanum","L.","Sapindaceae","Árbol latifoliado","Europa","Europa (Balcanes)",,,,,-38.056127,-57.679297
+"ARB031","?Alcanforero","Cinnamomum camphora","(L.) J.Presl","Lauraceae","Árbol latifoliado","Asia","Asia / Europa",,,,,-38.056093,-57.679557
+"ARB032","Cedro japonés","Cryptomeria japonica","(Thunb. ex L. f.) D. Don","Cupressaceae","Conífera","Asia","Asia (Japón)",,,,,-38.056374,-57.679314
+"ARB033","Liquidambar","Liquidambar sp.",,"Altingiaceae","Árbol latifoliado","-","América del Norte / Asia",,,,,-38.056545,-57.679395
+"ARB034","Secuoya roja","Sequoiadendron giganteum","(Lindl.) J.Buchholz","Cupressaceae","Conífera",,"América del Norte",,,,,,
+"ARB035","Ahuehuete","Taxodium mucronatum","Ten.","Cupressaceae","Conífera",,"América del Norte (México)",,,,,,
+"ARB036","Ciprés de las Guaitecas","Austrocedrus chilensis","(D.Don) Pic.Serm. & Bizzarri","Cupressaceae","Conífera",,"América del Sur (Andes)",,,,,,
+"ARB037","Tejo común","Larix decidua","Mill.","Pinaceae","Conífera",,"Europa / África del Norte / Asia",,,,,,
+"ARB038","Abeto de Douglas","Ceanothus thyrsiflorus","Eschsch.","Rhamnaceae","Arbusto",,"América del Norte",,,,,,
+"ARB039","Hipericón canario","Hypericum ×moserianum","André","Hypericaceae","Arbusto",,"África (Islas Canarias)",,,,,,
+"ARB040","Carex","Celtis tala","Gillies ex Planch.","Cannabaceae","Árbol latifoliado",,"Global / Cosmopolita",,,,,,
+"ARB041","Damara","Agathis dammara","(Lamb.) Rich. & A.Rich.","Araucariaceae","Conífera",,"Asia (Sudeste Asiático)",,,,,,
+"ARB042","Árbol de los tulipanes","Liriodendron tulipifera","L.","Magnoliaceae","Árbol latifoliado",,"América del Norte",,,,,,
+"ARB043","Roble rojo","Quercus rubra","L.","Fagaceae","Árbol latifoliado","Europa","América del Norte",,,,,-38.0558,-57.682849
+"ARB044","Aliso andino","Abies concolor","(Gordon & Glend.) Lindl. ex Hildebr.","Pinaceae","Conífera","América","América (del Norte y del Sur)",,,,,-38.05574,-57.682864
+"ARB045","Macasar","Chamaecyparis lawsoniana","(A.Murray bis) Parl.","Cupressaceae","Conífera","Norte América","Asia (China)",,,,,-38.05573,-57.682739
+"ARB046","Ciprés de Hinoki","Chamaecyparis obtusa","(Siebold & Zucc.) Endl.","Cupressaceae","Conífera","Norte América","Asia (Japón)",,,,,-38.05576,-57.682726
+"ARB047","Corona de novia","Spiraea cantoniensis","Lour.","Rosaceae","Arbusto","Asia","Asia (China)",,,,,-38.05564,-57.682655
+"ARB048","Corona de novia","Spiraea cantoniensis","Lour.","Rosaceae","Arbusto","Asia","Asia (China)",,,,,-38.05563,-57.682537
+"ARB049","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.05561,-57.682472
+"ARB050","Ginkgo","Acer palmatum","Thunb.","Sapindaceae","Árbol latifoliado","Asia","Asia (China)",2002,,,,-38.05576,-57.682429
+"ARB051","Espino blanco","Crataegus sp.",,"Rosaceae","Arbusto","Europa, Asia, Norte América","Hemisferio Norte",,,,,-38.05573,-57.682438
+"ARB052","Dodonea","Dodonaea viscosa","Jacq.","Sapindaceae","Arbusto","Australia","Oceanía / América / África (Cosmopolita tropical)",,,,,-38.05572,-57.682395
+"ARB053","Macasar","Chamaecyparis lawsoniana","(A.Murray bis) Parl.","Cupressaceae","Conífera","Norte América","Asia (China)",,,,,-38.05574,-57.68213
+"ARB054","Ligustro","Ligustrum lucidum","W.T.Aiton","Olives","Árbol latifoliado","Asia","Asia (China)",,,,,-38.05569,-57.68208
+"ARB055","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.05572,-57.68198
+"ARB056","Canforero","Cinnamomum camphora","(L.) J.Presl","Lauraceae","Árbol latifoliado","Asia","Asia (China / Japón)",,,,,-38.05585,-57.681933
+"ARB057","Boj","Revisar",,,"Otro",,"Europa / Asia / África",,,,,-38.05578,-57.68175
+"ARB058","Acacia mimosa","Acacia dealbata","Link","Fabaceae","Árbol latifoliado","Acacia dealbata","Oceanía (Australia)",,,,,-38.0559,-57.681743
+"ARB059","Roble rojo","Quercus rubra","L.","Fagaceae","Árbol latifoliado","Europa","América del Norte",,,,,-38.05577,-57.681628
+"ARB060","Cedro del Himalaya","Dodonaea viscosa","Jacq.","Sapindaceae","Arbusto","Australia","Asia",,,,,-38.05564,-57.681649
+"ARB061","Acacia mimosa","Acacia dealbata","Link","Fabaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.05567,-57.681577
+"ARB062","Liquidámbar de Formosa","Liquidambar formosana","Hance","Altingiaceae","Árbol latifoliado","Asia","Asia (China / Taiwán)",,,,,-38.05553,-57.681601
+"ARB063","Corona de novia","Spiraea cantoniensis","Lour.","Rosaceae","Arbusto","Asia","Asia (China)",,,,,-38.05554,-57.681418
+"ARB064","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.0555,-57.681415
+"ARB065","Espino de fuego","Pyracantha coccinea","M.Roem.","Rosaceae","Arbusto","Europa, Asia","Europa / Asia",,,,,-38.0556,-57.681349
+"ARB066","Dodonea","Dodonaea viscosa","Jacq.","Sapindaceae","Arbusto","Australia","Oceanía / América / África",,,,,-38.05523,-57.681177
+"ARB067","Ligustro","Ligustrum lucidum","W.T.Aiton","Olives","Árbol latifoliado","Asia","Asia (China)",,,,,-38.05521,-57.681096
+"ARB068","Boj","Revisar",,,"Otro",,"Europa / Asia / África",,,,,-38.05508,-57.680938
+"ARB069","Eucalipto medicinal","Eucalyptus cinerea","F.Muell. ex Benth.","Myrtaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.05502,-57.680618
+"ARB070","Secuoya","Sequoia sempervirens","(D.Don) Endl.","Cupressaceae","Conífera",,"América del Norte",,,,,-38.05503,-57.680501
+"ARB071","Pino insigne","Pinus radiata","D.Don","Pinaceae","Conífera","Norte América","América del Norte",,,,,-38.05532,-57.680429
+"ARB072","Coihue","Nothofagus dombeyi","(Mirb.) Oerst.","Nothofagaceae","Árbol latifoliado","Sudamérica","América del Sur (Patagonia)",,,,,-38.05529,-57.680601
+"ARB073","Roble pellín","Nothofagus obliqua","(Mirb.) Oerst.","Nothofagaceae","Árbol latifoliado","Sudamérica","América del Sur (Patagonia)",,,,,-38.05553,-57.680985
+"ARB074","Criptomeria","Cryptomeria japonica","(Thunb. ex L. f.) D. Don","Cupressaceae","Conífera","Asia","Asia (Japón)",,,,,-38.05566,-57.681065
+"ARB075","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.05593,-57.681297
+"ARB076","Ginkgo","Ginkgo biloba","L.","Ginkgoaceae","Otro","Asia","Asia (China)",,,,,-38.056,-57.681529
+"ARB077","Eucalipto blanco","Eucalyptus globulus","Labill.","Myrtaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.05622,-57.681656
+"ARB078","Ahuehuete","Taxodium mucronatum","Ten.","Cupressaceae","Conífera","América Central","América del Norte (México)",,,,,-38.05649,-57.682174
+"ARB079","Boj común","Fraxinus angustifolia","Vahl","Oleaceae","Árbol latifoliado","Europa","Europa / Asia Occidental / África del Norte",,,,,-38.05608,-57.682552
+"ARB080","Duraznero","Fraxinus excelsior","L.","Oleaceae","Árbol latifoliado","Europa","Asia (China)",,,,,-38.0561,-57.682554
+"ARB081","Pino radiata","Pinus radiata","D.Don","Pinaceae","Conífera","Norte América","América del Norte",,,,,-38.05547,-57.682776
+"ARB082","Espino","Eucalyptus sp.",,,"Árbol latifoliado",,"Hemisferio Norte",,,,,-38.05527,-57.68253
+"ARB083","Carex","Celtis tala","Gillies ex Planch.","Cannabaceae","Árbol latifoliado","Sudamérica","Global",,,,,-38.05461,-57.681095
+"ARB084","Damasco","Brahea armata","S.Watson","Arecaceae","Palmera","Norte América","Asia (Central)",,,,,-38.05491,-57.681428
+"ARB085","Carex","Celtis tala","Gillies ex Planch.","Cannabaceae","Árbol latifoliado","Sudamérica","Global",,,,,-38.05494,-57.681583
+"ARB086","Carex","Celtis tala","Gillies ex Planch.","Cannabaceae","Árbol latifoliado","Sudamérica","Global",,,,,-38.05503,-57.681492
+"ARB087","Cedro del Atlas","Cedrus atlantica","(Endl.) Manetti ex Carrière","Pinaceae","Conífera","África-Europa","África (Norte)",,,,,-38.05506,-57.681479
+"ARB088","Cedro del Atlas","Cedrus atlantica","(Endl.) Manetti ex Carrière","Pinaceae","Conífera","África-Europa","África (Norte)",,,,,-38.05528,-57.681835
+"ARB089","Ahuehuete","Taxodium mucronatum","Ten.","Cupressaceae","Conífera","América Central","América del Norte",,,,,-38.05525,-57.681941
+"ARB090","Haya común","Fagus sylvatica","L.","Fagaceae","Árbol latifoliado","Europa","Europa",,,,,-38.05504,-57.680912
+"ARB091","Olmo","Quercus sp.",,,"Árbol latifoliado",,"Hemisferio Norte",,,,,-38.0551,-57.680595

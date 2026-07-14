@@ -21,6 +21,8 @@ website:
     logo: fotos/logo_la_constancia.svg
     title: "Arboretum"
     left:
+      - text: "Visitá"
+        href: visita.qmd
       - text: "Explorar"
         menu:
           - text: "Mapa interactivo"
@@ -65,6 +67,8 @@ website:
     left: |
       © 2026 Arboretum de Estancia La Constancia · Mar del Plata, Argentina
     center:
+      - text: "Voluntariado"
+        href: voluntariado.qmd
       - text: "Contacto"
         href: contacto.qmd
     right:

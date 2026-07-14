@@ -103,11 +103,18 @@ Sumate a la conservación apadrinando un ejemplar y seguí su historia.
 
 ::: grid
 
-::: {.g-col-12 .card .p-4 .shadow-sm .text-center}
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm .text-center}
 ### 🤝 Empresas con propósito
 Sumá a tu organización a la conservación del arboretum, con impacto **trazable y verificable**.
 
 [Conocé la propuesta para empresas →](empresas.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm .text-center}
+### 🙋 Voluntariado
+Sumá tus manos a un jardín botánico vivo. Estamos formando el equipo: ¡vení desde el comienzo!
+
+[Ser voluntario/a →](voluntariado.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 :::

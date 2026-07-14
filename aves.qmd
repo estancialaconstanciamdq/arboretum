@@ -23,6 +23,16 @@ av <- aves %>%
       TRUE                     ~ res
     ),
     obs  = ifelse(tiene_valor(observacion), observacion, ""),
+    obs_norm = tolower(iconv(obs, to = "ASCII//TRANSLIT")),
+    est = vapply(obs_norm, function(o) {
+      if (grepl("todo el ano", o, fixed = TRUE)) return("Primavera Verano Otoño Invierno")
+      t <- character(0)
+      if (grepl("primavera", o)) t <- c(t, "Primavera")
+      if (grepl("verano",    o)) t <- c(t, "Verano")
+      if (grepl("otono",     o)) t <- c(t, "Otoño")
+      if (grepl("invierno",  o)) t <- c(t, "Invierno")
+      paste(t, collapse = " ")
+    }, character(1), USE.NAMES = FALSE),
     sci  = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
   ) %>%
   arrange(especie)
@@ -54,10 +64,12 @@ cat(sprintf('
 <div class="ave-controles">
   <div><label>Buscar</label><input type="text" id="ave-q" placeholder="nombre o especie..."></div>
   <div><label>Residencia</label><select id="ave-res">%s</select></div>
+  <div><label>Estación</label><select id="ave-est">%s</select></div>
 </div>
 <div id="ave-conteo"></div>
 <div class="ave-grid" id="ave-grid">',
-opciones(sort(unique(av$res_norm)))))
+opciones(sort(unique(av$res_norm))),
+opciones(c("Primavera","Verano","Otoño","Invierno"))))
 
 for (i in seq_len(nrow(av))) {
   a <- av[i, ]
@@ -66,8 +78,8 @@ for (i in seq_len(nrow(av))) {
     sprintf('<img src="fotos/%s" alt="%s">', esc(a$foto), esc(a$especie))
   else '<span class="ph">🕊️</span>'
   cat(sprintf(
-'<div class="ave-card" data-res="%s" data-buscar="%s"><div class="ave-foto">%s</div><div class="ave-info"><h4>%s</h4><div class="sci">%s</div><span class="ave-badge">%s</span>%s</div></div>\n',
-    esc(a$res_norm), esc(buscar), foto,
+'<div class="ave-card" data-res="%s" data-est="%s" data-buscar="%s"><div class="ave-foto">%s</div><div class="ave-info"><h4>%s</h4><div class="sci">%s</div><span class="ave-badge">%s</span>%s</div></div>\n',
+    esc(a$res_norm), esc(a$est), esc(buscar), foto,
     esc(a$especie),
     ifelse(nzchar(a$sci), esc(a$sci), "&nbsp;"),
     esc(a$res),
@@ -79,16 +91,18 @@ cat('</div>
 <script>
 (function(){
   var q=document.getElementById("ave-q"), fr=document.getElementById("ave-res"),
+      fe=document.getElementById("ave-est"),
       cards=document.querySelectorAll("#ave-grid .ave-card"), conteo=document.getElementById("ave-conteo");
   function aplica(){
-    var qs=(q.value||"").toLowerCase(), vr=fr.value, n=0;
+    var qs=(q.value||"").toLowerCase(), vr=fr.value, ve=fe.value, n=0;
     cards.forEach(function(c){
-      var ok=c.dataset.buscar.indexOf(qs)>=0 && (!vr || c.dataset.res===vr);
+      var ok=c.dataset.buscar.indexOf(qs)>=0 && (!vr || c.dataset.res===vr)
+             && (!ve || (c.dataset.est||"").split(" ").indexOf(ve)>=0);
       c.style.display=ok?"":"none"; if(ok)n++;
     });
     conteo.textContent=n+" de "+cards.length+" especies";
   }
-  [q,fr].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  [q,fr,fe].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
   aplica();
 })();
 </script>')
