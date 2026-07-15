@@ -50,7 +50,6 @@ podés visitarlo cuando quieras.
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
 ### 🌱 Amigo del Arboretum
-Aporte anual «monto»
 
 - Tu nombre en la ficha del árbol
 - Certificado digital de padrinazgo
@@ -59,7 +58,6 @@ Aporte anual «monto»
 
 ::: {.g-col-4 .card .p-3 .shadow-sm style="border-top:3px solid #1E4A38;"}
 ### 🌳 Padrino / Madrina
-Aporte anual «monto»
 
 - Todo lo anterior
 - Tu nombre también en la **etiqueta física** junto al árbol
@@ -68,7 +66,6 @@ Aporte anual «monto»
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
 ### 🌲 Benefactor
-Aporte anual «monto»
 
 - Todo lo anterior
 - Reconocimiento destacado en el sitio

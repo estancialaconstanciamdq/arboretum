@@ -60,6 +60,14 @@ de proyectos del arboretum, con impacto trazable y verificable.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
+### 🎉 Eventos de empresa
+Integración y team-building, offsites, celebraciones y producciones en un jardín
+botánico de 33 hectáreas, a minutos de Mar del Plata.
+
+[Ver eventos de empresa →](eventos.qmd){.btn .btn-success role="button"}
+:::
+
+::: {.g-col-6 .card .p-4 .shadow-sm}
 ### 🌱 Apadriná un árbol
 Sumate a la conservación apadrinando un ejemplar, a tu nombre, como regalo o en
 homenaje a alguien.

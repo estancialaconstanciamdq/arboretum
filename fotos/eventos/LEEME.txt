@@ -1,0 +1,12 @@
+CARPETA DE FOTOS PARA LA PÁGINA "EVENTOS DE EMPRESA"
+====================================================
+
+Poné acá las fotos de eventos, del parque y de las instalaciones al aire libre.
+
+Recomendaciones:
+- Nombres simples, SIN espacios ni acentos.
+  Ejemplos: evento_empresa_1.jpg, parque_1.jpg, actividad_1.jpg
+- Formato .jpg o .png, horizontales (apaisadas) si es posible.
+
+Cuando las subas, avisá a Claude cuántas cargaste y él las coloca en el
+banner y la galería de la página de Eventos (eventos.qmd).

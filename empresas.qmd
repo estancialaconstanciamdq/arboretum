@@ -23,7 +23,7 @@ programa. Elegí la que mejor se adapte a tu organización.
 Jornadas de *team-building*, **bienestar y baños de bosque**, retiros, observación
 de aves y eventos en un entorno único. No hace falta ser miembro de la Red.
 
-[Consultar →](contacto.qmd){.btn .btn-outline-success .btn-sm role="button"}
+[Ver eventos de empresa →](eventos.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
