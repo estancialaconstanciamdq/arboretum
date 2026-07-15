@@ -1,0 +1,17 @@
+CARPETA PARA CONSOLIDAR LA BASE DEL NEWSLETTER
+==============================================
+
+Poné acá TODOS los Excel (o CSV) con contactos/emails que quieras unificar.
+
+No hace falta que los ordenes ni los limpies: Claude se encarga de
+estandarizar columnas, normalizar y validar emails, eliminar duplicados
+y etiquetar cada contacto según de qué archivo/fuente viene.
+
+Recomendaciones (opcionales):
+- Nombres de archivo simples, sin espacios (ej.: escuelas.xlsx, empresas.xlsx,
+  apadrinantes.xlsx). Ayuda a identificar la "fuente" de cada contacto.
+- No borres columnas: cuanta más info (nombre, apellido, telefono, fecha), mejor.
+
+Cuando termines de subirlos, avisá a Claude cuántos archivos cargaste y él
+devuelve UNA lista única, limpia y lista para importar, más un resumen
+(contactos únicos, duplicados quitados, emails inválidos, desglose por fuente).
