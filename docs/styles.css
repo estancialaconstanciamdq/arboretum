@@ -1,3 +1,42 @@
+/* =====================================================
+   Tipografía — Opción B: Fraunces (títulos) + Inter (cuerpo)
+   Reversible: borrando este bloque se vuelve al tema Cosmo.
+===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+h1, h2, h3 { color: #1E4A38; }
+
+/* Subtítulo de página en serif itálica */
+.quarto-title-block .subtitle, .subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #3f5a4e;
+}
+
+/* Wordmark de la barra en serif; los ítems del menú y botones quedan en Inter */
+.navbar-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
+.navbar .nav-link, .btn { font-family: 'Inter', sans-serif; }
+
+/* Hero del home: título serif más refinado + lema en itálica */
+.home-hero-title { font-weight: 600 !important; letter-spacing: 0 !important; }
+.home-hero-lema { font-family: 'Fraunces', Georgia, serif; font-style: italic; }
+
+/* Tarjetas con sombra más suave y elegante */
+.card { box-shadow: 0 4px 18px rgba(0,0,0,0.06) !important; }
+
 /* ---- Navbar institucional: verde oscuro La Constancia ---- */
 .navbar {
   background-color: #1E4A38 !important;
