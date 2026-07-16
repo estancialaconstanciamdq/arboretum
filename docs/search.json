@@ -119,6 +119,20 @@
     "text": "Poné a prueba lo que sabés sobre la naturaleza del arboretum con estos juegos. Elegí una pestaña y a jugar.\n\n\n🧠 Quiz📷 ¿Qué especie es?🃏 Memoria\n\n\nRespondé las preguntas y descubrí cuánto sabés sobre la naturaleza del arboretum. Al elegir una opción vas a ver si acertaste y una breve explicación.\n\n\nPuntaje: 0 / 0\n\n\n  Tu resultado\n  0/0\n  \n  Volver a intentar\n\n  \n    \n    ¿Querés recibir más información?\n    Dejanos tus datos y te contamos sobre visitas educativas, actividades y novedades del arboretum.\n    \n    \n    \n     Acepto que me contacten por email con información del arboretum.\n    Enviar\n    \n  \n\n\n\n  👥 0 personas ya participaron\n  ·\n  Promedio: 0/10\n\n\n\n\n\nMirá la foto y elegí el nombre correcto entre las cuatro opciones.\n\n\n\n  Puntaje: 0 / 0\n  \n    \n    \n    \n    Siguiente →\n  \n  \n    Tu resultado\n    0/0\n    \n    Jugar de nuevo\n  \n\n\n\n\n\nEncontrá cada par: la foto y el nombre de la misma especie. Girá las cartas de a dos.\n\n\n\n  Pares: 0/0 · Intentos: 0\n  \n  \n  Reiniciar"
   },
   {
+    "objectID": "plano.html",
+    "href": "plano.html",
+    "title": "Plano de los jardines",
+    "section": "",
+    "text": "Recorré el arboretum con este plano ilustrado, que muestra la distribución de las principales colecciones y los senderos del predio. La referencia de especies está a la derecha del plano.\n¿Preferís explorar ejemplar por ejemplar, con fotos y fichas? Visitá el mapa interactivo »."
+  },
+  {
+    "objectID": "plano.html#los-planos-originales-del-fundador",
+    "href": "plano.html#los-planos-originales-del-fundador",
+    "title": "Plano de los jardines",
+    "section": "Los planos originales del fundador",
+    "text": "Los planos originales del fundador\nAntes de que existiera este atlas digital, el arboretum nació del lápiz y la tinta de su fundador, que dibujó a mano los primeros planos de cada sector del parque: dónde iría cada grupo de árboles, cómo se trazarían los senderos y con qué medidas. Estos son aquellos bocetos originales, conservados como parte de la historia del lugar.\n\n\n\n\n\n\nTip\n\n\n\nHacé clic en cada plano para verlo en grande y leer las anotaciones del fundador.\n\n\n\n\n\n  \n    \n    Parque 1 — El esquema de plantación: los grupos de especies anotados a mano (pinos, cedros deodara, cipreses y más).\n  \n  \n    \n    Parque 2 — El trazado de senderos y su conexión con los parques 1 y 3 (304 × 190 m).\n  \n  \n    \n    Parque 3 — El diseño geométrico del sector, con sus medidas al detalle sobre papel cuadriculado.\n  \n\n\n\n  ×\n  \n  \n\n\n\nDel plano al jardín de hoy. Aquellos trazos a mano se convirtieron en el arboretum que hoy podés recorrer: mirá cómo quedó en el plano ilustrado de arriba y explorá cada ejemplar, con fotos y fichas, en el mapa interactivo »."
+  },
+  {
     "objectID": "material_educativo.html",
     "href": "material_educativo.html",
     "title": "Material educativo",
@@ -180,6 +194,13 @@
     "title": "Arboretum",
     "section": "Créditos",
     "text": "Créditos\nLas fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento."
+  },
+  {
+    "objectID": "index.html#sumate-a-las-novedades-del-arboretum",
+    "href": "index.html#sumate-a-las-novedades-del-arboretum",
+    "title": "Arboretum",
+    "section": "Sumate a las novedades del Arboretum",
+    "text": "Sumate a las novedades del Arboretum\nFloraciones, aves de temporada, visitas, talleres y eventos. Un correo cada tanto, sin spam."
   },
   {
     "objectID": "fichas/tejo-comun.html",
@@ -1138,7 +1159,14 @@
     "href": "contacto.html",
     "title": "Contacto",
     "section": "",
-    "text": "¿Querés visitar el arboretum, apadrinar un árbol, coordinar una visita educativa o explorar una alianza con tu empresa? Escribinos, te respondemos a la brevedad.\n\n\n\n📩 Correo\nlaconstanciaargentina@gmail.com\n\n\n📱 WhatsApp\n+54 9 11 5736 0940\n\n\n\n\n📍 Ubicación\nArboretum de Estancia La ConstanciaCamino 515, Mar del Plata · Buenos Aires · Argentina\n📍 Abrir en Google Maps\n\n\n📸 Instagram\n@laconstanciadebiocca\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nContanos qué te interesa —una visita, el apadrinazgo de un árbol, una propuesta para tu empresa o una consulta general— y con gusto te orientamos."
+    "text": "¿Querés visitar el arboretum, apadrinar un árbol, coordinar una visita educativa o explorar una alianza con tu empresa? Escribinos, te respondemos a la brevedad."
+  },
+  {
+    "objectID": "contacto.html#sumate-a-las-novedades",
+    "href": "contacto.html#sumate-a-las-novedades",
+    "title": "Contacto",
+    "section": "Sumate a las novedades",
+    "text": "Sumate a las novedades\nFloraciones, aves de temporada, visitas, talleres y eventos. Un correo cada tanto, sin spam."
   },
   {
     "objectID": "biodiversidad.html",
@@ -2415,18 +2443,88 @@
     "text": "Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Usá el buscador (arriba a la izquierda) para ir directo a una especie por su nombre, el panel de capas para filtrar por tipo, y seleccioná cada punto para ver sus detalles."
   },
   {
-    "objectID": "plano.html",
-    "href": "plano.html",
-    "title": "Plano de los jardines",
+    "objectID": "mejoras_roadmap.html",
+    "href": "mejoras_roadmap.html",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
     "section": "",
-    "text": "Recorré el arboretum con este plano ilustrado, que muestra la distribución de las principales colecciones y los senderos del predio. La referencia de especies está a la derecha del plano.\n¿Preferís explorar ejemplar por ejemplar, con fotos y fichas? Visitá el mapa interactivo »."
+    "text": "Estado actualizado del listado original (Canberra, Arnold/Harvard, Morton, Chicago, Brooklyn). Marca qué ya está hecho, qué está en curso y qué queda.\n\n\n\n\nPágina “Visitá el arboretum” — planificación de visita (cómo llegar, reserva, qué llevar, FAQs).\nBuscador + filtros en el Mapa — buscar especie por nombre (JavaScript puro, sin dependencias) + filtro por tipo con las capas.\nDescarga del catálogo en CSV — datos abiertos, se regenera solo en cada render.\nCalendario natural de aves — filtro por estación (primavera/verano/otoño/invierno) a partir de los datos existentes.\nSección Voluntariado — programa en formación + diseño del formulario de inscripción.\nHero del home — foto real inmersiva con título y lema en vivo (reemplazó la imagen vieja “Data Lab”).\nPágina de Eventos de Empresa — foco corporativo, con fotos reales (aéreas, etc.) y el diferencial “evento con propósito”.\nÍconos del mapa — marcadores propios (árboles, coníferas, aves, puntos, apadrinados).\n\n\n\n\n\nNewsletter — base ya consolidada (86 contactos). Falta: crear cuenta Brevo, importar el CSV y que arme el formulario de captura en el sitio.\nInstagram — hay botón “Seguir” en Eventos. Falta (si querés) el feed embebido en vivo en home/contacto (necesita un widget o URLs de posteos).\nTestimonios — vos los buscás y los maqueto como bloque de citas.\nEventos: completar datos — capacidad al aire libre, gastronomía/catering, servicios; y sumar una foto de “gente en evento” si aparece.\n\n\n\n\n\nBotón de donación — un “Donar” visible (necesito un link de Mercado Pago).\nFranja de prensa / reconocimientos / aliados — logos o menciones que refuercen credibilidad.\n“Qué ver esta temporada” — recuadro rotativo; semi-automatizable con las columnas floración/fructificación del Excel.\nCompletar la página Visitá — llenar horarios, precios, estacionamiento, accesibilidad, mascotas (placeholders ya marcados).\nRecorridos autoguiados en PDF — uno o dos folletos descargables (nativas, aves, sensorial).\nUsar las fotos macro (picaflor, coníferas) vinculadas a sus especies en Aves/Flora.\n\n\n\n\n\n“Amigos del Arboretum” (membresía) — ingreso recurrente; página tipo Voluntariado.\nApadriná como producto con pago online — hoy dice “escribinos”; sumar pago por nivel (Mercado Pago) baja la fricción.\nClaridad de reserva + precios — que “Reservar visita” sea un embudo claro con qué incluye y desde cuánto.\nNovedades / blog (SEO) — notas cortas de temporada; posicionan en Google y traen visitas nuevas.\n\n\n\n\n\nCiencia ciudadana — integración con iNaturalist / eBird para observaciones de visitantes.\nMapa en el lugar — optimización mobile + geolocalización “estás acá” + recorrido con audio.\nAccesibilidad — info física + revisión de accesibilidad web + versión en inglés (home / plan your visit).\nDatos citables — publicar la colección como dataset con DOI; a futuro, red de fenología con sensores.\n\n\n\n\n\n\nCerrar Newsletter (formulario de captura, apenas tengas Brevo).\nAmigos del Arboretum + botón de donación (comercial, fácil).\nTestimonios (cuando los tengas) + franja de aliados/prensa.\nCompletar Eventos y Visitá con los datos reales.\n“Qué ver esta temporada” aprovechando los datos de floración."
   },
   {
-    "objectID": "plano.html#los-planos-originales-del-fundador",
-    "href": "plano.html#los-planos-originales-del-fundador",
-    "title": "Plano de los jardines",
-    "section": "Los planos originales del fundador",
-    "text": "Los planos originales del fundador\nAntes de que existiera este atlas digital, el arboretum nació del lápiz y la tinta de su fundador, que dibujó a mano los primeros planos de cada sector del parque: dónde iría cada grupo de árboles, cómo se trazarían los senderos y con qué medidas. Estos son aquellos bocetos originales, conservados como parte de la historia del lugar.\n\n\n\n\n\n\nTip\n\n\n\nHacé clic en cada plano para verlo en grande y leer las anotaciones del fundador.\n\n\n\n\n\n  \n    \n    Parque 1 — El esquema de plantación: los grupos de especies anotados a mano (pinos, cedros deodara, cipreses y más).\n  \n  \n    \n    Parque 2 — El trazado de senderos y su conexión con los parques 1 y 3 (304 × 190 m).\n  \n  \n    \n    Parque 3 — El diseño geométrico del sector, con sus medidas al detalle sobre papel cuadriculado.\n  \n\n\n\n  ×\n  \n  \n\n\n\nDel plano al jardín de hoy. Aquellos trazos a mano se convirtieron en el arboretum que hoy podés recorrer: mirá cómo quedó en el plano ilustrado de arriba y explorá cada ejemplar, con fotos y fichas, en el mapa interactivo »."
+    "objectID": "mejoras_roadmap.html#ya-implementado",
+    "href": "mejoras_roadmap.html#ya-implementado",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "Página “Visitá el arboretum” — planificación de visita (cómo llegar, reserva, qué llevar, FAQs).\nBuscador + filtros en el Mapa — buscar especie por nombre (JavaScript puro, sin dependencias) + filtro por tipo con las capas.\nDescarga del catálogo en CSV — datos abiertos, se regenera solo en cada render.\nCalendario natural de aves — filtro por estación (primavera/verano/otoño/invierno) a partir de los datos existentes.\nSección Voluntariado — programa en formación + diseño del formulario de inscripción.\nHero del home — foto real inmersiva con título y lema en vivo (reemplazó la imagen vieja “Data Lab”).\nPágina de Eventos de Empresa — foco corporativo, con fotos reales (aéreas, etc.) y el diferencial “evento con propósito”.\nÍconos del mapa — marcadores propios (árboles, coníferas, aves, puntos, apadrinados)."
+  },
+  {
+    "objectID": "mejoras_roadmap.html#en-curso-esperando-algo-tuyo",
+    "href": "mejoras_roadmap.html#en-curso-esperando-algo-tuyo",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "Newsletter — base ya consolidada (86 contactos). Falta: crear cuenta Brevo, importar el CSV y que arme el formulario de captura en el sitio.\nInstagram — hay botón “Seguir” en Eventos. Falta (si querés) el feed embebido en vivo en home/contacto (necesita un widget o URLs de posteos).\nTestimonios — vos los buscás y los maqueto como bloque de citas.\nEventos: completar datos — capacidad al aire libre, gastronomía/catering, servicios; y sumar una foto de “gente en evento” si aparece."
+  },
+  {
+    "objectID": "mejoras_roadmap.html#pendientes-fáciles-bajo-esfuerzo",
+    "href": "mejoras_roadmap.html#pendientes-fáciles-bajo-esfuerzo",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "Botón de donación — un “Donar” visible (necesito un link de Mercado Pago).\nFranja de prensa / reconocimientos / aliados — logos o menciones que refuercen credibilidad.\n“Qué ver esta temporada” — recuadro rotativo; semi-automatizable con las columnas floración/fructificación del Excel.\nCompletar la página Visitá — llenar horarios, precios, estacionamiento, accesibilidad, mascotas (placeholders ya marcados).\nRecorridos autoguiados en PDF — uno o dos folletos descargables (nativas, aves, sensorial).\nUsar las fotos macro (picaflor, coníferas) vinculadas a sus especies en Aves/Flora."
+  },
+  {
+    "objectID": "mejoras_roadmap.html#pendientes-comerciales-alto-impacto",
+    "href": "mejoras_roadmap.html#pendientes-comerciales-alto-impacto",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "“Amigos del Arboretum” (membresía) — ingreso recurrente; página tipo Voluntariado.\nApadriná como producto con pago online — hoy dice “escribinos”; sumar pago por nivel (Mercado Pago) baja la fricción.\nClaridad de reserva + precios — que “Reservar visita” sea un embudo claro con qué incluye y desde cuánto.\nNovedades / blog (SEO) — notas cortas de temporada; posicionan en Google y traen visitas nuevas."
+  },
+  {
+    "objectID": "mejoras_roadmap.html#pendientes-ambiciosas-diferenciación",
+    "href": "mejoras_roadmap.html#pendientes-ambiciosas-diferenciación",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "Ciencia ciudadana — integración con iNaturalist / eBird para observaciones de visitantes.\nMapa en el lugar — optimización mobile + geolocalización “estás acá” + recorrido con audio.\nAccesibilidad — info física + revisión de accesibilidad web + versión en inglés (home / plan your visit).\nDatos citables — publicar la colección como dataset con DOI; a futuro, red de fenología con sensores."
+  },
+  {
+    "objectID": "mejoras_roadmap.html#sugerencia-de-orden-para-seguir",
+    "href": "mejoras_roadmap.html#sugerencia-de-orden-para-seguir",
+    "title": "Hoja de ruta de mejoras — Arboretum (basada en el benchmark de arboretums)",
+    "section": "",
+    "text": "Cerrar Newsletter (formulario de captura, apenas tengas Brevo).\nAmigos del Arboretum + botón de donación (comercial, fácil).\nTestimonios (cuando los tengas) + franja de aliados/prensa.\nCompletar Eventos y Visitá con los datos reales.\n“Qué ver esta temporada” aprovechando los datos de floración."
+  },
+  {
+    "objectID": "PUBLICAR.html",
+    "href": "PUBLICAR.html",
+    "title": "Cómo publicar el sitio (render + push a GitHub)",
+    "section": "",
+    "text": "Cada vez que edités los archivos .qmd o los datos, seguí estos pasos desde la carpeta del proyecto (ArboretumMap).\n\n\n(En RStudio: pestaña Terminal. O Git Bash / PowerShell en la carpeta del proyecto.)\nquarto render                       # 1. Genera/actualiza la carpeta docs/ con el sitio\ngit add -A                          # 2. Prepara todos los cambios\ngit commit -m \"Actualizo el sitio\"  # 3. Guarda el cambio (poné el mensaje que quieras)\ngit push                            # 4. Sube a GitHub (rama main)\nEn 1–2 minutos GitHub Pages publica la versión nueva.\n\n\n\n\nPestaña Build → Render Website (equivale a quarto render).\nPestaña Git → tildá los archivos cambiados → Commit → escribí el mensaje → Push.\n\n\n\n\n\nVerificá que el render termine SIN errores antes de pushear. Si se corta a la mitad (por ejemplo por un error en una página), quedan páginas sin generar y en el sitio dan 404.\nNunca edites la carpeta docs/ a mano: se regenera completa con cada render.\nLos archivos nuevos (imágenes, PDFs, páginas) entran igual con git add -A.\nSi en algún momento el sitio no toma un archivo, suele ser tema de mayúsculas/minúsculas en el nombre (GitHub distingue Foto.jpg de foto.jpg).\n\n\n\n\nEl proyecto incluye .github/workflows/publish.yml. Si está activo, al hacer push a main GitHub también renderiza el sitio en el servidor. Podés ver el progreso en la pestaña Actions del repositorio (tilde verde = publicado)."
+  },
+  {
+    "objectID": "PUBLICAR.html#opción-a-desde-la-terminal",
+    "href": "PUBLICAR.html#opción-a-desde-la-terminal",
+    "title": "Cómo publicar el sitio (render + push a GitHub)",
+    "section": "",
+    "text": "(En RStudio: pestaña Terminal. O Git Bash / PowerShell en la carpeta del proyecto.)\nquarto render                       # 1. Genera/actualiza la carpeta docs/ con el sitio\ngit add -A                          # 2. Prepara todos los cambios\ngit commit -m \"Actualizo el sitio\"  # 3. Guarda el cambio (poné el mensaje que quieras)\ngit push                            # 4. Sube a GitHub (rama main)\nEn 1–2 minutos GitHub Pages publica la versión nueva."
+  },
+  {
+    "objectID": "PUBLICAR.html#opción-b-desde-rstudio-sin-escribir-comandos",
+    "href": "PUBLICAR.html#opción-b-desde-rstudio-sin-escribir-comandos",
+    "title": "Cómo publicar el sitio (render + push a GitHub)",
+    "section": "",
+    "text": "Pestaña Build → Render Website (equivale a quarto render).\nPestaña Git → tildá los archivos cambiados → Commit → escribí el mensaje → Push."
+  },
+  {
+    "objectID": "PUBLICAR.html#recordatorios-importantes",
+    "href": "PUBLICAR.html#recordatorios-importantes",
+    "title": "Cómo publicar el sitio (render + push a GitHub)",
+    "section": "",
+    "text": "Verificá que el render termine SIN errores antes de pushear. Si se corta a la mitad (por ejemplo por un error en una página), quedan páginas sin generar y en el sitio dan 404.\nNunca edites la carpeta docs/ a mano: se regenera completa con cada render.\nLos archivos nuevos (imágenes, PDFs, páginas) entran igual con git add -A.\nSi en algún momento el sitio no toma un archivo, suele ser tema de mayúsculas/minúsculas en el nombre (GitHub distingue Foto.jpg de foto.jpg)."
+  },
+  {
+    "objectID": "PUBLICAR.html#nota-sobre-github-actions-opcional",
+    "href": "PUBLICAR.html#nota-sobre-github-actions-opcional",
+    "title": "Cómo publicar el sitio (render + push a GitHub)",
+    "section": "",
+    "text": "El proyecto incluye .github/workflows/publish.yml. Si está activo, al hacer push a main GitHub también renderiza el sitio en el servidor. Podés ver el progreso en la pestaña Actions del repositorio (tilde verde = publicado)."
   },
   {
     "objectID": "recursos/formulario_voluntariado_google_forms.html",

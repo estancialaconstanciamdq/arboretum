@@ -152,6 +152,18 @@ Las fotografías y relevamientos incluidos en este sitio fueron realizados por l
 :::
 :::
 
+---
+
+## Sumate a las novedades del Arboretum
+
+Floraciones, aves de temporada, visitas, talleres y eventos. Un correo cada tanto, sin spam.
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1rem 0 2.5rem;">
+<iframe width="540" height="305" src="https://ef69cda6.sibforms.com/v2/serve/MUIFAA4AeDcdli4EG1UJeRVFdsarWWmyMou5_uMjqpsj63tdwCB10iczbUgX4KJtUVtlnyuCKXYIM81DZn7JiUy8ntQC5F2a3ZoVlfeIlwzBio1VenKN55qRFzTsfPHWMP_4RQh1feRFZ7T1esm1tsrsjD7GjfcRaIbWEl20bP_ja9QMFJx1ta8nhH-KmHbkMUjV6-B90SjW8L1N3g==" frameborder="0" scrolling="auto" allowfullscreen style="display:block; max-width:100%;"></iframe>
+</div>
+```
+
 <div style="text-align:center; margin-top:3rem;">
   <img src="fotos/LogoARBN.jpg" alt="Estancia La Constancia" style="width:180px; max-width:45%; opacity:.95;">
 </div>

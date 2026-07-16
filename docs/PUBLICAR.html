@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Arboretum</title>
+<title>publicar – Arboretum</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -195,167 +230,50 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<style>
-.home-hero{
-  position:relative; width:100%; min-height:72vh; margin:0 0 2rem 0;
-  background-image:linear-gradient(rgba(30,74,56,.14),rgba(30,74,56,.26)), url('fotos/Descanso.jpg');
-  background-size:cover; background-position:center; border-radius:14px;
-  display:flex; align-items:center; justify-content:center;
-}
-.home-hero-inner{ text-align:center; color:#fff; padding:3rem 1.5rem; max-width:760px; }
-.home-hero-mark{ font-size:1rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; opacity:.95; margin-bottom:1.1rem; text-shadow:0 2px 12px rgba(0,0,0,.7); }
-.home-hero-title{ color:#fff; font-size:clamp(2.6rem,6vw,4.4rem); font-weight:800; margin:.1rem 0; line-height:1.05; text-shadow:0 2px 20px rgba(0,0,0,.75); }
-.home-hero-lema{ font-size:clamp(1.1rem,2.4vw,1.6rem); margin:.5rem auto 1rem; max-width:620px; text-shadow:0 2px 14px rgba(0,0,0,.85); }
-.home-hero-loc{ font-size:.95rem; opacity:.95; margin-bottom:1.6rem; text-shadow:0 1px 10px rgba(0,0,0,.85); }
-.home-hero-btns{ display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; }
-.home-hero-ghost{ background:rgba(255,255,255,.14); color:#fff !important; border:2px solid #fff; }
-.home-hero-ghost:hover{ background:rgba(255,255,255,.28); color:#fff !important; }
-@media(max-width:768px){ .home-hero{ min-height:58vh; } }
-</style>
-<section class="home-hero">
-  <div class="home-hero-inner">
-    <div class="home-hero-mark">🌳 Arboretum</div>
-    <h1 class="home-hero-title">Arboretum</h1>
-    <p class="home-hero-lema">Un espacio donde la naturaleza educa, inspira y sana</p>
-    <p class="home-hero-loc">📍 Mar del Plata · Buenos Aires · Argentina</p>
-    <div class="home-hero-btns">
-      <a href="experiencias.html" class="btn btn-success btn-lg" role="button">Ver experiencias</a>
-      <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button">🌳 Apadriná un árbol</a>
-    </div>
-  </div>
+<section id="cómo-publicar-el-sitio-render-push-a-github" class="level1">
+<h1>Cómo publicar el sitio (render + push a GitHub)</h1>
+<p>Cada vez que edités los archivos <code>.qmd</code> o los datos, seguí estos pasos desde la carpeta del proyecto (<code>ArboretumMap</code>).</p>
+<section id="opción-a-desde-la-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="opción-a-desde-la-terminal">Opción A — desde la Terminal</h2>
+<p>(En RStudio: pestaña <strong>Terminal</strong>. O Git Bash / PowerShell en la carpeta del proyecto.)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render                       <span class="co"># 1. Genera/actualiza la carpeta docs/ con el sitio</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span>                          <span class="co"># 2. Prepara todos los cambios</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Actualizo el sitio"</span>  <span class="co"># 3. Guarda el cambio (poné el mensaje que quieras)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push                            <span class="co"># 4. Sube a GitHub (rama main)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En 1–2 minutos GitHub Pages publica la versión nueva.</p>
 </section>
-<p>Bienvenidos al Arboretum de Estancia La Constancia, en <strong>Mar del Plata, Argentina</strong>: un jardín botánico vivo de 33 hectáreas para <strong>recorrer, aprender y reconectar</strong>. Explorá sus especies y aves, visitalo con tu escuela, viví una experiencia de bienestar entre los árboles o sumá a tu organización a la conservación.</p>
-<section id="ejemplares-destacados" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplares-destacados">Ejemplares destacados</h2>
-<div class="grid">
-<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
-<a href="fichas/abeto.html" style="text-decoration:none;color:inherit;"><img src="fotos/Abeto.jpg" style="width:100%;height:140px;object-fit:cover;">
-<div class="p-2">
-<b>Abeto</b>
-</div>
-</a>
-</div>
-<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
-<a href="fichas/araucariaaustraliana-arb022.html" style="text-decoration:none;color:inherit;"><img src="fotos/Araucaria.jpg" style="width:100%;height:140px;object-fit:cover;">
-<div class="p-2">
-<b>Araucaria Australiana</b>
-</div>
-</a>
-</div>
-<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
-<a href="fichas/castanodeindias.html" style="text-decoration:none;color:inherit;"><img src="fotos/Castanodeindias.jpg" style="width:100%;height:140px;object-fit:cover;">
-<div class="p-2">
-<b>Castaño de Indias</b>
-</div>
-</a>
-</div>
-<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;">
-<a href="fichas/cedroazul.html" style="text-decoration:none;color:inherit;"><img src="fotos/Cedroazul.jpg" style="width:100%;height:140px;object-fit:cover;">
-<div class="p-2">
-<b>Cedro azul</b>
-</div>
-</a>
-</div>
-</div>
+<section id="opción-b-desde-rstudio-sin-escribir-comandos" class="level2">
+<h2 class="anchored" data-anchor-id="opción-b-desde-rstudio-sin-escribir-comandos">Opción B — desde RStudio (sin escribir comandos)</h2>
+<ol type="1">
+<li>Pestaña <strong>Build</strong> → <strong>Render Website</strong> (equivale a <code>quarto render</code>).</li>
+<li>Pestaña <strong>Git</strong> → tildá los archivos cambiados → <strong>Commit</strong> → escribí el mensaje → <strong>Push</strong>.</li>
+</ol>
 </section>
-<section id="explorá" class="level2">
-<h2 class="anchored" data-anchor-id="explorá">Explorá</h2>
-<div class="grid">
-<section id="flora-destacada" class="level3 g-col-4 card p-3 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="flora-destacada">🌳 Flora Destacada</h3>
-<p>Conozca los ejemplares más representativos de la flora del arboretum, de gran interés botánico e histórico.</p>
-<p><a href="./especies.html" class="btn btn-outline-success btn-sm mt-auto" role="button">Explorar especies →</a></p>
+<section id="recordatorios-importantes" class="level2">
+<h2 class="anchored" data-anchor-id="recordatorios-importantes">Recordatorios importantes</h2>
+<ul>
+<li><strong>Verificá que el render termine SIN errores</strong> antes de pushear. Si se corta a la mitad (por ejemplo por un error en una página), quedan páginas sin generar y en el sitio dan 404.</li>
+<li><strong>Nunca edites la carpeta <code>docs/</code> a mano</strong>: se regenera completa con cada render.</li>
+<li>Los archivos nuevos (imágenes, PDFs, páginas) entran igual con <code>git add -A</code>.</li>
+<li>Si en algún momento el sitio no toma un archivo, suele ser tema de <strong>mayúsculas/minúsculas</strong> en el nombre (GitHub distingue <code>Foto.jpg</code> de <code>foto.jpg</code>).</li>
+</ul>
 </section>
-<section id="aves" class="level3 g-col-4 card p-3 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="aves">🐦 Aves</h3>
-<p>Galería fotográfica y registro de estacionalidad de las aves observadas en el establecimiento.</p>
-<p><a href="./aves.html" class="btn btn-outline-success btn-sm mt-auto" role="button">Explorar aves →</a></p>
-</section>
-<section id="mapa-interactivo" class="level3 g-col-4 card p-3 shadow-sm text-center" style="border-top: 3px solid #1E4A38;">
-<h3 class="anchored" data-anchor-id="mapa-interactivo">📍 Mapa Interactivo</h3>
-<p>Recorra virtualmente los senderos, sectores y puntos de interés en tiempo real.</p>
-<p><a href="./mapa.html" class="btn btn-success btn-sm mt-auto" role="button">Ver Mapa →</a></p>
-</section>
-</div>
-</section>
-<section id="viví-el-arboretum" class="level2">
-<h2 class="anchored" data-anchor-id="viví-el-arboretum">Viví el arboretum</h2>
-<div class="grid">
-<section id="visitas-educativas" class="level3 g-col-4 card p-3 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="visitas-educativas">🎒 Visitas Educativas</h3>
-<p>Recorridos y actividades para escuelas y grupos, diseñados por nivel educativo.</p>
-<p><a href="./visitas_escolares.html" class="btn btn-outline-success btn-sm mt-auto" role="button">Ver visitas →</a></p>
-</section>
-<section id="bienestar" class="level3 g-col-4 card p-3 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="bienestar">🧘 Bienestar</h3>
-<p>Baños de bosque y experiencias de bienestar guiadas entre los árboles.</p>
-<p><a href="./bienestar.html" class="btn btn-outline-success btn-sm mt-auto" role="button">Descubrir bienestar →</a></p>
-</section>
-<section id="apadriná-un-árbol" class="level3 g-col-4 card p-3 shadow-sm text-center" style="border-top: 3px solid #1E4A38;">
-<h3 class="anchored" data-anchor-id="apadriná-un-árbol">🌳 Apadriná un árbol</h3>
-<p>Sumate a la conservación apadrinando un ejemplar y seguí su historia.</p>
-<p><a href="./apadrina.html" class="btn btn-success btn-sm mt-auto" role="button">Apadriná →</a></p>
-</section>
-</div>
-<div class="grid">
-<section id="empresas-con-propósito" class="level3 g-col-12 g-col-md-6 card p-4 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="empresas-con-propósito">🤝 Empresas con propósito</h3>
-<p>Sumá a tu organización a la conservación del arboretum, con impacto <strong>trazable y verificable</strong>.</p>
-<p><a href="./empresas.html" class="btn btn-outline-success btn-sm" role="button">Conocé la propuesta para empresas →</a></p>
-</section>
-<section id="voluntariado" class="level3 g-col-12 g-col-md-6 card p-4 shadow-sm text-center">
-<h3 class="anchored" data-anchor-id="voluntariado">🙋 Voluntariado</h3>
-<p>Sumá tus manos a un jardín botánico vivo. Estamos formando el equipo: ¡vení desde el comienzo!</p>
-<p><a href="./voluntariado.html" class="btn btn-outline-success btn-sm" role="button">Ser voluntario/a →</a></p>
-</section>
-</div>
-<hr>
-<div class="callout callout-style-default callout-tip callout-titled" title="¿Qué es un arboretum?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>¿Qué es un arboretum?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, <strong>viva y documentada</strong>, cultivada con fines científicos, educativos y de conservación: en esencia, un <strong>“museo vivo” de árboles</strong>. <a href="https://es.wikipedia.org/wiki/Arboreto" target="_blank" rel="noopener">Más información »</a></p>
-</div>
-</div>
-</section>
-<div class="grid">
-<section id="acerca-del-arboretum" class="level2 g-col-7">
-<h2 class="anchored" data-anchor-id="acerca-del-arboretum">Acerca del Arboretum</h2>
-<p>El Arboretum integra los relevamientos biológicos desarrollados en Estancia La Constancia para promover la conservación, investigación y educación ambiental de la biodiversidad local.</p>
-</section>
-<section id="créditos" class="level2 g-col-5">
-<h2 class="anchored" data-anchor-id="créditos">Créditos</h2>
-<p>Las fotografías y relevamientos incluidos en este sitio fueron realizados por los equipos de biólogos y ecólogos que desarrollan actividades de monitoreo en el establecimiento.</p>
-</section>
-</div>
-<hr>
-<section id="sumate-a-las-novedades-del-arboretum" class="level2">
-<h2 class="anchored" data-anchor-id="sumate-a-las-novedades-del-arboretum">Sumate a las novedades del Arboretum</h2>
-<p>Floraciones, aves de temporada, visitas, talleres y eventos. Un correo cada tanto, sin spam.</p>
-<div style="display:flex; justify-content:center; margin:1rem 0 2.5rem;">
-<iframe width="540" height="305" src="https://ef69cda6.sibforms.com/v2/serve/MUIFAA4AeDcdli4EG1UJeRVFdsarWWmyMou5_uMjqpsj63tdwCB10iczbUgX4KJtUVtlnyuCKXYIM81DZn7JiUy8ntQC5F2a3ZoVlfeIlwzBio1VenKN55qRFzTsfPHWMP_4RQh1feRFZ7T1esm1tsrsjD7GjfcRaIbWEl20bP_ja9QMFJx1ta8nhH-KmHbkMUjV6-B90SjW8L1N3g==" frameborder="0" scrolling="auto" allowfullscreen="" style="display:block; max-width:100%;"></iframe>
-</div>
-<div style="text-align:center; margin-top:3rem;">
-<p><img src="fotos/LogoARBN.jpg" alt="Estancia La Constancia" style="width:180px; max-width:45%; opacity:.95;"></p>
-</div>
+<section id="nota-sobre-github-actions-opcional" class="level2">
+<h2 class="anchored" data-anchor-id="nota-sobre-github-actions-opcional">Nota sobre GitHub Actions (opcional)</h2>
+<p>El proyecto incluye <code>.github/workflows/publish.yml</code>. Si está activo, al hacer <code>push</code> a <code>main</code> GitHub también renderiza el sitio en el servidor. Podés ver el progreso en la pestaña <strong>Actions</strong> del repositorio (tilde verde = publicado).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
