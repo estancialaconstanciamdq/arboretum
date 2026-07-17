@@ -50,45 +50,6 @@ destacados <- arboles %>%
 
 Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentina**: un jardín botánico vivo de 33 hectáreas para **recorrer, aprender y reconectar**. Explorá sus especies y aves, visitalo con tu escuela, viví una experiencia de bienestar entre los árboles o sumá a tu organización a la conservación.
 
-## Ejemplares destacados
-
-```{r results='asis'}
-cat('<div class="grid">')
-for (i in seq_len(min(4, nrow(destacados)))) {
-  d <- destacados[i, ]
-  cat(sprintf('<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;"><a href="fichas/%s.html" style="text-decoration:none;color:inherit;"><img src="fotos/%s" style="width:100%%;height:140px;object-fit:cover;"><div class="p-2"><b>%s</b></div></a></div>',
-    d$slug, d$foto, d$nombre_comun))
-}
-cat('</div>')
-```
-
-## Explorá
-
-::: grid
-
-::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🌳 Flora Destacada
-Conozca los ejemplares más representativos de la flora del arboretum, de gran interés botánico e histórico.
-
-[Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
-
-::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🐦 Aves
-Galería fotográfica y registro de estacionalidad de las aves observadas en el establecimiento.
-
-[Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
-
-::: {.g-col-4 .card .p-3 .shadow-sm .text-center style="border-top: 3px solid #1E4A38;"}
-### 📍 Mapa Interactivo
-Recorra virtualmente los senderos, sectores y puntos de interés en tiempo real.
-
-[Ver Mapa →](mapa.qmd){.btn .btn-success .btn-sm .mt-auto role="button"}
-:::
-
-:::
-
 ## Viví el arboretum
 
 ::: grid
@@ -133,6 +94,47 @@ Sumá tus manos a un jardín botánico vivo. Estamos formando el equipo: ¡vení
 :::
 
 :::
+
+## Explorá
+
+El arboretum, documentado ejemplar por ejemplar: recorré el mapa, las especies y las aves de un sistema que está **vivo**.
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center style="border-top: 3px solid #1E4A38;"}
+### 📍 Mapa Interactivo
+Recorré los senderos, sectores y puntos de interés, y buscá cualquier especie por su nombre.
+
+[Ver Mapa →](mapa.qmd){.btn .btn-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🌳 Flora Destacada
+Conozca los ejemplares más representativos de la flora del arboretum, de gran interés botánico e histórico.
+
+[Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🐦 Aves
+Galería fotográfica y registro de estacionalidad de las aves observadas en el establecimiento.
+
+[Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+:::
+
+## Ejemplares destacados
+
+```{r results='asis'}
+cat('<div class="grid">')
+for (i in seq_len(min(4, nrow(destacados)))) {
+  d <- destacados[i, ]
+  cat(sprintf('<div class="g-col-3 card text-center shadow-sm m-1" style="overflow:hidden;"><a href="fichas/%s.html" style="text-decoration:none;color:inherit;"><img src="fotos/%s" style="width:100%%;height:140px;object-fit:cover;"><div class="p-2"><b>%s</b></div></a></div>',
+    d$slug, d$foto, d$nombre_comun))
+}
+cat('</div>')
+```
 
 ---
 

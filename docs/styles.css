@@ -108,6 +108,18 @@ img {
   color: #14281f !important;
 }
 
+/* ---- "Apadriná" en la barra: píldora sutil con borde (secundario al CTA ámbar) ---- */
+.navbar .nav-link[href$="apadrina.html"] {
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem !important;
+  margin: 0.1rem 0.25rem;
+}
+.navbar .nav-link[href$="apadrina.html"]:hover,
+.navbar .nav-link[href$="apadrina.html"]:focus {
+  background-color: rgba(255,255,255,0.16);
+}
+
 /* ---- Footer institucional: mismo verde que la barra ---- */
 .nav-footer {
   background-color: #1E4A38 !important;
