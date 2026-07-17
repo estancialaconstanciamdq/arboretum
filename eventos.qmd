@@ -149,15 +149,15 @@ Tu equipo vive una jornada distinta, en plena naturaleza.
 ::: grid
 
 ::: {.g-col-12 .g-col-md-4}
+![](fotos/eventos/gente_grupo.jpg){style="width:100%; height:220px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![](fotos/eventos/gente_guia.jpg){style="width:100%; height:220px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
 ![](fotos/eventos/aerea_2.jpg){style="width:100%; height:220px; object-fit:cover; border-radius:10px;"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](fotos/eventos/fuente_atardecer.jpg){style="width:100%; height:220px; object-fit:cover; border-radius:10px;"}
-:::
-
-::: {.g-col-12 .g-col-md-4}
-![](fotos/eventos/arbol_otono.jpg){style="width:100%; height:220px; object-fit:cover; border-radius:10px;"}
 :::
 
 :::

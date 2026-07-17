@@ -20,6 +20,22 @@ arboles_destacados <- arboles %>%
 
 Ejemplares seleccionados por su valor botánico, histórico o paisajístico.
 
+::: grid
+
+::: {.g-col-12 .g-col-md-4}
+![Liquidámbar en otoño](fotos/galeria/flora_liquidambar.jpg){style="width:100%; height:260px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Tulipanero en flor](fotos/galeria/flora_tulipanero.jpg){style="width:100%; height:260px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+![Árbol de humo (Cotinus)](fotos/galeria/flora_cotinus.jpg){style="width:100%; height:260px; object-fit:cover; border-radius:10px;"}
+:::
+
+:::
+
 ```{r results='asis', echo=FALSE}
 
 cat("::: {.grid}\n\n")

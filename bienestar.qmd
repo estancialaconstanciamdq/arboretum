@@ -9,6 +9,10 @@ Entre sus senderos y colecciones ofrecemos experiencias de bienestar guiadas,
 pensadas para bajar el ritmo, reconectar con el entorno y cuidar la salud
 emocional.
 
+<div style="text-align:center; margin:1.2rem 0 1.6rem;">
+  <img src="fotos/galeria/alameda_eucaliptos.jpg" alt="Sendero arbolado del arboretum" style="max-width:440px; width:100%; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.12);">
+</div>
+
 ## Baños de bosque (*shinrin-yoku*)
 
 El *shinrin-yoku* —literalmente "baño de bosque"— es una práctica nacida en Japón

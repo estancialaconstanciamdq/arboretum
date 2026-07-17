@@ -43,6 +43,30 @@ opciones <- function(v) paste0("<option value=\"\">Todas</option>", paste0("<opt
 
 Se registraron `r nrow(av)` especies de aves en el establecimiento. Buscá por nombre o filtrá por tipo de residencia.
 
+## Aves destacadas
+
+::: grid
+
+::: {.g-col-6 .g-col-md-3}
+![Lechucita vizcachera](fotos/galeria/ave_lechucita.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-6 .g-col-md-3}
+![Chingolo](fotos/galeria/ave_chingolo.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-6 .g-col-md-3}
+![Tijereta](fotos/galeria/ave_tijereta.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+:::
+
+::: {.g-col-6 .g-col-md-3}
+![Tordo renegrido](fotos/galeria/ave_tordo.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+:::
+
+:::
+
+## Todas las especies
+
 ```{r results='asis'}
 cat(sprintf('
 <style>
