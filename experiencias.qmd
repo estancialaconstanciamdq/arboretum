@@ -18,7 +18,7 @@ coordinamos una fecha.
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🌳 Visitas guiadas y educativas
+### <i class="bi bi-tree"></i> Visitas guiadas y educativas
 Recorridos acompañados por profesionales para **familias, escuelas y grupos**,
 adaptados por nivel y objetivo. Ideal para complementar contenidos de ciencias
 naturales, biología y educación ambiental.
@@ -27,7 +27,7 @@ naturales, biología y educación ambiental.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🌿 Visitas guiadas y botánicas por grupos
+### <i class="bi bi-flower2"></i> Visitas guiadas y botánicas por grupos
 Recorridos guiados por las colecciones del arboretum —coníferas, árboles
 latifoliados, arbustos y palmeras— para público general, clubes, viveros,
 jardineros y curiosos de la botánica.
@@ -36,7 +36,7 @@ jardineros y curiosos de la botánica.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🐦 Avistaje de aves
+### <i class="bi bi-binoculars"></i> Avistaje de aves
 Salidas de observación y fotografía para **observadores y fotógrafos**, con el
 registro estacional de especies del establecimiento como guía.
 
@@ -44,7 +44,7 @@ registro estacional de especies del establecimiento como guía.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🧘 Bienestar y baños de bosque
+### <i class="bi bi-flower1"></i> Bienestar y baños de bosque
 Experiencias guiadas de conexión con la naturaleza (*shinrin-yoku*), con respaldo
 científico, para personas y equipos que buscan bajar el estrés y reconectar.
 
@@ -52,7 +52,7 @@ científico, para personas y equipos que buscan bajar el estrés y reconectar.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🤝 Programas para empresas
+### <i class="bi bi-people"></i> Programas para empresas
 Alianzas de impacto, jornadas de bienestar, voluntariado corporativo y patrocinio
 de proyectos del arboretum, con impacto trazable y verificable.
 

@@ -39,10 +39,10 @@ destacados <- arboles %>%
     <div class="home-hero-mark">Estancia La Constancia</div>
     <h1 class="home-hero-title">Arboretum</h1>
     <p class="home-hero-lema">Un espacio donde la naturaleza educa, inspira y sana</p>
-    <p class="home-hero-loc">📍 Mar del Plata · Buenos Aires · Argentina</p>
+    <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
     <div class="home-hero-btns">
       <a href="experiencias.html" class="btn btn-success btn-lg" role="button">Ver experiencias</a>
-      <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button">🌳 Apadriná un árbol</a>
+      <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Apadriná un árbol</a>
     </div>
   </div>
 </section>
@@ -65,13 +65,13 @@ y explorá todo lo que podés vivir.
 
 ```{=html}
 <div style="display:flex; flex-wrap:wrap; gap:1rem 1.6rem; margin:1.3rem 0 1.5rem; font-size:1rem;">
-  <span>🌳 <b>+300 especies</b> documentadas</span>
-  <span>🗺️ <b>Mapa interactivo</b> del arboretum</span>
-  <span>🧘 <b>Experiencias</b> de bienestar</span>
+  <span><i class="bi bi-tree"></i> <b>+300 especies</b> documentadas</span>
+  <span><i class="bi bi-map"></i> <b>Mapa interactivo</b> del arboretum</span>
+  <span><i class="bi bi-flower1"></i> <b>Experiencias</b> de bienestar</span>
 </div>
 ```
 
-[Ver experiencias](experiencias.qmd){.btn .btn-success role="button"} &nbsp; [🌳 Apadriná](apadrina.qmd){.btn .btn-outline-success role="button"}
+[Ver experiencias](experiencias.qmd){.btn .btn-success role="button"} &nbsp; [<i class="bi bi-tree"></i> Apadriná](apadrina.qmd){.btn .btn-outline-success role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-5}
@@ -91,42 +91,42 @@ y explorá todo lo que podés vivir.
 ::: grid
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 🎒 Visitas Educativas
+### <i class="bi bi-mortarboard"></i> Visitas Educativas
 Recorridos y actividades para escuelas y grupos, diseñados por nivel educativo.
 
 [Ver visitas →](visitas_escolares.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 🧘 Bienestar
+### <i class="bi bi-flower1"></i> Bienestar
 Baños de bosque y experiencias de bienestar guiadas entre los árboles.
 
 [Descubrir bienestar →](bienestar.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 🌳 Apadriná un árbol
+### <i class="bi bi-tree"></i> Apadriná un árbol
 Sumate a la conservación apadrinando un ejemplar y seguí su historia.
 
 [Apadriná →](apadrina.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 🤝 Empresas con propósito
+### <i class="bi bi-people"></i> Empresas con propósito
 Sumá a tu organización a la conservación, con impacto **trazable y verificable**.
 
 [Ver propuesta →](empresas.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 🙋 Voluntariado
+### <i class="bi bi-hand-thumbs-up"></i> Voluntariado
 Sumá tus manos a un jardín botánico vivo. Estamos formando el equipo.
 
 [Ser voluntario/a →](voluntariado.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### 📅 Reservá tu visita
+### <i class="bi bi-calendar-check"></i> Reservá tu visita
 Visitas generales y experiencias para vivir el arboretum durante todo el año.
 
 [Ver experiencias →](experiencias.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
@@ -141,21 +141,21 @@ El arboretum, documentado ejemplar por ejemplar: recorré el mapa, las especies 
 ::: grid
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center style="border-top: 3px solid #1E4A38;"}
-### 📍 Mapa Interactivo
+### <i class="bi bi-geo-alt"></i> Mapa Interactivo
 Recorré los senderos, sectores y puntos de interés, y buscá cualquier especie por su nombre.
 
 [Abrir el mapa →](mapa.qmd){.btn .btn-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🌳 Flora Destacada
+### <i class="bi bi-tree"></i> Flora Destacada
 Conozca los ejemplares más representativos de la flora del arboretum, de gran interés botánico e histórico.
 
 [Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🐦 Aves
+### <i class="bi bi-binoculars"></i> Aves
 Galería fotográfica y registro de estacionalidad de las aves observadas en el establecimiento.
 
 [Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
@@ -189,17 +189,17 @@ Las fotografías y relevamientos incluidos en este sitio fueron realizados por l
 :::
 :::
 
----
-
+::: {.cta-band}
 ## Sumate a nuestra bitácora del arboretum
 
 Floraciones, aves de temporada, visitas, talleres y eventos. Un correo cada tanto, sin spam.
 
 ```{=html}
-<div style="display:flex; justify-content:center; margin:1rem 0 2.5rem;">
+<div style="display:flex; justify-content:center; margin:1rem 0 .5rem;">
 <iframe width="540" height="520" src="https://ef69cda6.sibforms.com/v2/serve/MUIFAA4AeDcdli4EG1UJeRVFdsarWWmyMou5_uMjqpsj63tdwCB10iczbUgX4KJtUVtlnyuCKXYIM81DZn7JiUy8ntQC5F2a3ZoVlfeIlwzBio1VenKN55qRFzTsfPHWMP_4RQh1feRFZ7T1esm1tsrsjD7GjfcRaIbWEl20bP_ja9QMFJx1ta8nhH-KmHbkMUjV6-B90SjW8L1N3g==" frameborder="0" scrolling="auto" allowfullscreen style="display:block; max-width:100%; min-height:520px;"></iframe>
 </div>
 ```
+:::
 
 <div style="text-align:center; margin-top:3rem;">
   <img src="fotos/LogoARBN.jpg" alt="Estancia La Constancia" style="width:180px; max-width:45%; opacity:.95;">

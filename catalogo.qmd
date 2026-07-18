@@ -45,7 +45,7 @@ opciones <- function(vals) paste0(
 Explorá los `r nrow(df)` ejemplares. Escribí en el buscador o combiná los filtros; cada nombre abre su ficha.
 
 <p style="margin:.6rem 0 0;">
-  <a href="recursos/catalogo_arboretum.csv" download class="btn btn-outline-success btn-sm" role="button">⬇️ Descargar catálogo (CSV)</a>
+  <a href="recursos/catalogo_arboretum.csv" download class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Descargar catálogo (CSV)</a>
   <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Datos abiertos · uso libre con atribución</span>
 </p>
 

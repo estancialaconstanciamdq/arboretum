@@ -11,17 +11,17 @@ Descargalas, imprimilas y usalas en el campo.
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
-### 🐦 Identificación de aves
+### <i class="bi bi-binoculars"></i> Identificación de aves
 Ficha para reconocer las aves más comunes del establecimiento.
 
-[⬇ Descargar PDF](recursos/identificacion_aves.pdf){.btn .btn-success role="button"}
+[<i class="bi bi-download"></i> Descargar PDF](recursos/identificacion_aves.pdf){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
-### 🌳 Identificación de árboles
+### <i class="bi bi-tree"></i> Identificación de árboles
 Ficha para reconocer los árboles del arboretum por sus rasgos.
 
-[⬇ Descargar PDF](recursos/identificacion_arboles.pdf){.btn .btn-success role="button"}
+[<i class="bi bi-download"></i> Descargar PDF](recursos/identificacion_arboles.pdf){.btn .btn-success role="button"}
 :::
 
 :::
@@ -42,17 +42,17 @@ organizadas por nivel.
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
-#### 🔎 Búsqueda del tesoro
+#### <i class="bi bi-search"></i> Búsqueda del tesoro
 Consignas simples de observación (encontrá una conífera, un ave, un fruto…).
 
-[⬇ Descargar PDF](recursos/busqueda_primaria.pdf){.btn .btn-success role="button"}
+[<i class="bi bi-download"></i> Descargar PDF](recursos/busqueda_primaria.pdf){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm .text-center}
 #### 🍃 Detectives de la Naturaleza
 Observar una parte de un árbol con todos los sentidos y describirla.
 
-[⬇ Descargar PDF](recursos/detectives_hojas.pdf){.btn .btn-success role="button"}
+[<i class="bi bi-download"></i> Descargar PDF](recursos/detectives_hojas.pdf){.btn .btn-success role="button"}
 :::
 
 :::
@@ -65,21 +65,21 @@ Observar una parte de un árbol con todos los sentidos y describirla.
 #### 🔬 Búsqueda del tesoro
 Consignas con enfoque científico (familias, origen, clasificación, QR).
 
-[⬇ PDF](recursos/busqueda_secundaria.pdf){.btn .btn-success .btn-sm role="button"}
+[<i class="bi bi-download"></i> PDF](recursos/busqueda_secundaria.pdf){.btn .btn-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-#### 🌿 Misión Botánica
+#### <i class="bi bi-flower2"></i> Misión Botánica
 Observar y **clasificar** cinco plantas por sus características.
 
-[⬇ PDF](recursos/mision_botanica.pdf){.btn .btn-success .btn-sm role="button"}
+[<i class="bi bi-download"></i> PDF](recursos/mision_botanica.pdf){.btn .btn-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-#### 🐦 Aves por grupos
+#### <i class="bi bi-binoculars"></i> Aves por grupos
 Checklist de aves por grupo ecológico (visto / escuchado).
 
-[⬇ PDF](recursos/aves_grupos.pdf){.btn .btn-success .btn-sm role="button"}
+[<i class="bi bi-download"></i> PDF](recursos/aves_grupos.pdf){.btn .btn-success .btn-sm role="button"}
 :::
 
 :::
@@ -89,7 +89,7 @@ Checklist de aves por grupo ecológico (visto / escuchado).
 Objetivos, cronograma por nivel, vínculos curriculares y actividades para antes,
 durante y después de la visita.
 
-[⬇ Descargar Guía del docente (PDF)](recursos/guia_docente.pdf){.btn .btn-success role="button"}
+[<i class="bi bi-download"></i> Descargar Guía del docente (PDF)](recursos/guia_docente.pdf){.btn .btn-success role="button"}
 :::
 
 ## Visitas educativas

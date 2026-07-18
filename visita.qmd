@@ -16,9 +16,9 @@ visitas **con reserva previa**, para que cada grupo viva una experiencia
 personalizada, segura y de alto valor educativo.
 
 <div style="text-align:center; margin:1.5rem 0 2rem;">
-[📅 Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-calendar-check"></i> Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
 &nbsp;
-<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg" role="button">📍 Cómo llegar</a>
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg" role="button"><i class="bi bi-geo-alt"></i> Cómo llegar</a>
 </div>
 
 ## Cómo visitarnos
@@ -31,28 +31,28 @@ principal y una alternativa** por si el clima no acompaña.
 ::: grid
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
-### 🎒 Escuelas
+### <i class="bi bi-mortarboard"></i> Escuelas
 Recorridos educativos por nivel.
 
 [Visitas educativas →](visitas_escolares.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
-### 🌿 Grupos
+### <i class="bi bi-flower2"></i> Grupos
 Visitas guiadas y experiencias.
 
 [Ver experiencias →](experiencias.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
-### 🧘 Bienestar
+### <i class="bi bi-flower1"></i> Bienestar
 Baños de bosque guiados.
 
 [Descubrir bienestar →](bienestar.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
-### 🤝 Empresas
+### <i class="bi bi-people"></i> Empresas
 Eventos e impacto corporativo.
 
 [Propuesta empresas →](empresas.qmd){.btn .btn-outline-success .btn-sm role="button"}
@@ -66,7 +66,7 @@ Eventos e impacto corporativo.
 Camino 515, Mar del Plata · Buenos Aires · Argentina
 
 <a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">
-📍 Abrir en Google Maps
+<i class="bi bi-geo-alt"></i> Abrir en Google Maps
 </a>
 
 ## Antes de venir
@@ -77,7 +77,7 @@ Para disfrutar al máximo el recorrido al aire libre, te recomendamos:
 - 🧢 **Protección solar**: gorra, protector y anteojos de sol.
 - 💧 **Agua** para hidratarte durante la caminata.
 - 🧥 **Abrigo o rompevientos** según la época del año.
-- 📷 **Cámara o binoculares** si te gusta la observación de aves.
+- <i class="bi bi-camera"></i> **Cámara o binoculares** si te gusta la observación de aves.
 
 ## Preguntas frecuentes
 
@@ -144,15 +144,15 @@ hasta adultos. Contanos las edades del grupo y adaptamos la propuesta.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 📸 Instagram
+### <i class="bi bi-instagram"></i> Instagram
 [@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
 
-### 📍 Ubicación
+### <i class="bi bi-geo-alt"></i> Ubicación
 Camino 515, Mar del Plata · Buenos Aires · Argentina
 :::
 
 :::
 
 ::: {.cta-container style="text-align:center; margin:2rem 0 1rem;"}
-[📅 Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-calendar-check"></i> Reservar una visita](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
 :::

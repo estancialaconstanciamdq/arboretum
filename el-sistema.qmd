@@ -20,12 +20,12 @@ genera automáticamente:
 ::: grid
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🗺️ Mapa interactivo
+### <i class="bi bi-map"></i> Mapa interactivo
 Ubicación de cada ejemplar, senderos y sectores.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 🌳 Fichas por especie
+### <i class="bi bi-tree"></i> Fichas por especie
 Una página por ejemplar, sin escribir código.
 :::
 
@@ -35,7 +35,7 @@ Búsqueda por familia, origen y grupo.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
-### 📊 Estadísticas
+### <i class="bi bi-bar-chart"></i> Estadísticas
 Se recalculan solas con cada actualización.
 :::
 
@@ -69,7 +69,7 @@ natural de forma profesional y sostenible en el tiempo.
 ¿Tenés una colección que te gustaría llevar a un atlas digital como este?
 Escribinos y coordinamos una demostración:
 
-- ✉️ Correo: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+- <i class="bi bi-envelope"></i> Correo: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
 - 📱 WhatsApp: [+54 9 11 5736 0940](https://wa.me/5491157360940)
 
 ---

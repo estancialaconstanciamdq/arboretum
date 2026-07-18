@@ -18,12 +18,12 @@ explorar una alianza con tu empresa? Escribinos, te respondemos a la brevedad.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 📍 Ubicación
+### <i class="bi bi-geo-alt"></i> Ubicación
 Arboretum de Estancia La Constancia<br>Camino 515, Mar del Plata · Buenos Aires · Argentina
 
-<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-sm" role="button">📍 Abrir en Google Maps</a>
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-geo-alt"></i> Abrir en Google Maps</a>
 
-### 📸 Instagram
+### <i class="bi bi-instagram"></i> Instagram
 [@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
 :::
 

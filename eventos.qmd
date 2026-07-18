@@ -22,9 +22,9 @@ eventos de empresa que se recuerdan. Un espacio **exclusivo, al aire libre y con
 propósito**: cada encuentro puede, además, sumar un impacto ambiental real.
 
 <div style="text-align:center; margin:1.5rem 0 2rem;">
-[✉️ Solicitar una propuesta](contacto.qmd){.btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-envelope"></i> Solicitar una propuesta](contacto.qmd){.btn .btn-success .btn-lg role="button"}
 &nbsp;
-[📄 Descargar dossier corporativo](recursos/dossier_empresas.pdf){.btn .btn-outline-success .btn-lg role="button"}
+[<i class="bi bi-file-earmark-text"></i> Descargar dossier corporativo](recursos/dossier_empresas.pdf){.btn .btn-outline-success .btn-lg role="button"}
 </div>
 
 ## Ideal para
@@ -32,36 +32,36 @@ propósito**: cada encuentro puede, además, sumar un impacto ambiental real.
 ::: grid
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🤝 Integración y team-building
+### <i class="bi bi-people"></i> Integración y team-building
 Jornadas al aire libre para fortalecer equipos, con dinámicas en contacto con la
 naturaleza.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🧭 Offsites, retiros y reuniones
+### <i class="bi bi-compass"></i> Offsites, retiros y reuniones
 Encuentros estratégicos, planificación y capacitaciones fuera de la oficina, en un
 entorno que inspira.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🧘 Bienestar corporativo
+### <i class="bi bi-flower1"></i> Bienestar corporativo
 Baños de bosque y actividades de bienestar guiadas para equipos que buscan bajar el
 estrés y reconectar.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🥂 Celebraciones y brindis
+### <i class="bi bi-cup-straw"></i> Celebraciones y brindis
 Fin de año, aniversarios, lanzamientos y festejos de empresa en un marco natural
 distinto.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🎓 Capacitaciones y workshops
+### <i class="bi bi-mortarboard"></i> Capacitaciones y workshops
 Talleres y actividades formativas al aire libre, entre árboles y jardines.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 📷 Producciones de foto y video
+### <i class="bi bi-camera"></i> Producciones de foto y video
 Locación natural para contenidos institucionales, campañas y sesiones de marca.
 :::
 
@@ -113,10 +113,10 @@ Por tratarse de una actividad al aire libre, al coordinar el evento definimos un
 
 <!-- COMPLETAR según lo que ofrezcan realmente -->
 
-- 🗂️ **Coordinación del evento** y armado a medida.
-- 🍽️ **Gastronomía / catering** a convenir. <!-- COMPLETAR: propio, exclusivo, o libre elección -->
-- 🌿 **Actividades guiadas opcionales**: recorridos botánicos, avistaje de aves, baños de bosque, plantación.
-- 🚗 **Estacionamiento** en el predio. <!-- COMPLETAR / confirmar -->
+- <i class="bi bi-clipboard-check"></i> **Coordinación del evento** y armado a medida.
+- <i class="bi bi-cup-hot"></i> **Gastronomía / catering** a convenir. <!-- COMPLETAR: propio, exclusivo, o libre elección -->
+- <i class="bi bi-flower2"></i> **Actividades guiadas opcionales**: recorridos botánicos, avistaje de aves, baños de bosque, plantación.
+- <i class="bi bi-car-front"></i> **Estacionamiento** en el predio. <!-- COMPLETAR / confirmar -->
 
 ## Cómo lo organizamos
 
@@ -168,7 +168,7 @@ Tu equipo vive una jornada distinta, en plena naturaleza.
 
 Mirá el día a día del arboretum y la estancia en Instagram:
 
-<a href="https://instagram.com/laconstanciadebiocca" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">📸 @laconstanciadebiocca</a>
+<a href="https://instagram.com/laconstanciadebiocca" target="_blank" rel="noopener" class="btn btn-outline-success" role="button"><i class="bi bi-instagram"></i> @laconstanciadebiocca</a>
 
 ## Solicitá una propuesta
 
@@ -187,5 +187,5 @@ Contanos qué tenés en mente y armamos una propuesta a tu medida.
 Camino 515, Mar del Plata · Buenos Aires · Argentina
 
 <a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">
-📍 Abrir en Google Maps
+<i class="bi bi-geo-alt"></i> Abrir en Google Maps
 </a>

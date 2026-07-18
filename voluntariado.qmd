@@ -24,7 +24,7 @@ la mejor forma de aportar.
 :::
 
 <div style="text-align:center; margin:1.5rem 0 2rem;">
-[🙋 Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-hand-thumbs-up"></i> Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
 </div>
 
 ## En qué podés ayudar
@@ -36,7 +36,7 @@ acompañamos y capacitamos.
 ::: grid
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🌿 Guías y anfitriones
+### <i class="bi bi-flower2"></i> Guías y anfitriones
 Recibir grupos, acompañar recorridos y compartir la historia del arboretum.
 :::
 
@@ -47,7 +47,7 @@ fructificación).
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🐦 Observación de aves
+### <i class="bi bi-binoculars"></i> Observación de aves
 Monitoreo de aves residentes y migratorias, y carga de observaciones en plataformas
 de ciencia ciudadana.
 :::
@@ -58,7 +58,7 @@ Reproducción de especies, siembra, plantación y cuidado de las nuevas coleccio
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
-### 🎓 Apoyo educativo
+### <i class="bi bi-mortarboard"></i> Apoyo educativo
 Asistir en visitas escolares, talleres y actividades para todas las edades.
 :::
 
@@ -79,9 +79,9 @@ aprender.
 
 ## Qué vas a llevarte
 
-- 🌳 **Aprendizaje real** en botánica, ecología, aves y conservación, de la mano de profesionales.
-- 🤝 **Comunidad**: formar parte de un equipo con propósito.
-- 🌤️ **Naturaleza y bienestar**: tiempo de calidad al aire libre.
+- <i class="bi bi-tree"></i> **Aprendizaje real** en botánica, ecología, aves y conservación, de la mano de profesionales.
+- <i class="bi bi-people"></i> **Comunidad**: formar parte de un equipo con propósito.
+- <i class="bi bi-sun"></i> **Naturaleza y bienestar**: tiempo de calidad al aire libre.
 - 📜 **Certificado de participación** que reconoce tu aporte.
 - 💚 **Impacto concreto**: tu trabajo ayuda a conservar y difundir el patrimonio natural.
 
@@ -120,12 +120,12 @@ brevedad para dar el primer paso juntos.
   Cuando tengas la URL del formulario, reemplazá `contacto.qmd` por esa URL
   en LOS DOS botones "Quiero ser voluntario/a" (este y el de arriba). Ejemplo:
 
-  [🙋 Inscribite como voluntario/a](https://docs.google.com/forms/d/e/XXXXXXXX/viewform){.btn .btn-success .btn-lg role="button"}
+  [<i class="bi bi-hand-thumbs-up"></i> Inscribite como voluntario/a](https://docs.google.com/forms/d/e/XXXXXXXX/viewform){.btn .btn-success .btn-lg role="button"}
 
   (Guía para crear el formulario: recursos/formulario_voluntariado_google_forms.md)
 ==================================================================== -->
 ::: {.cta-container style="text-align:center; margin:1.5rem 0;"}
-[🙋 Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-hand-thumbs-up"></i> Quiero ser voluntario/a](contacto.qmd){.btn .btn-success .btn-lg role="button"}
 :::
 
 **Correo:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)

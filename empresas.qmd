@@ -19,7 +19,7 @@ programa. Elegí la que mejor se adapte a tu organización.
 ::: grid
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🤝 Experiencias y eventos corporativos
+### <i class="bi bi-people"></i> Experiencias y eventos corporativos
 Jornadas de *team-building*, **bienestar y baños de bosque**, retiros, observación
 de aves y eventos en un entorno único. No hace falta ser miembro de la Red.
 
@@ -36,7 +36,7 @@ sustentabilidad.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🎓 Educación patrocinada (RSE)
+### <i class="bi bi-mortarboard"></i> Educación patrocinada (RSE)
 Financiá visitas de escuelas y material educativo. Una historia de responsabilidad
 social concreta y con alcance local.
 
@@ -44,14 +44,14 @@ social concreta y con alcance local.
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🗺️ La plataforma
+### <i class="bi bi-map"></i> La plataforma
 ¿Tenés un espacio verde o colección? Llevalo a un **atlas digital** como este.
 
 [Conocé el sistema →](el-sistema.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
-### 🌳 Red de Empresas
+### <i class="bi bi-tree"></i> Red de Empresas
 Sumate a una **red de empresas con propósito**, con beneficios continuos, networking
 e impacto compartido.
 
@@ -88,7 +88,7 @@ e impacto compartido.
 :::
 
 ::: {.g-col-3 .card .p-3 .text-center .shadow-sm .m-1}
-<div style="font-size:2rem;font-weight:700;color:#1E4A38;">🌳</div>
+<div style="font-size:2rem;font-weight:700;color:#1E4A38;"><i class="bi bi-tree"></i></div>
 <div>Biodiversidad monitoreada</div>
 :::
 
@@ -112,13 +112,13 @@ construir un legado que trasciende, con impacto **trazable y verificable**.
 
 ::: {.panel-tabset}
 
-### 🌿 ¿Por qué sumarte?
+### <i class="bi bi-flower2"></i> ¿Por qué sumarte?
 
 - Formar parte del primer jardín botánico de Mar del Plata, un espacio donde naturaleza, comunidad y empresas generan impacto real.
 - Asociar tu organización a valores de sostenibilidad, innovación y futuro.
 - Integrarte a una red empresarial con propósito.
 
-### 📊 Beneficios
+### <i class="bi bi-bar-chart"></i> Beneficios
 
 - Presencia en redes sociales y materiales institucionales.
 - Networking empresarial.
@@ -126,7 +126,7 @@ construir un legado que trasciende, con impacto **trazable y verificable**.
 - Actividades de bienestar en la naturaleza.
 - Jornadas de voluntariado corporativo.
 
-### 🤝 Cómo participar
+### <i class="bi bi-people"></i> Cómo participar
 
 - Sponsoreo de proyectos del arboretum.
 - Aportes en especie o colaboración institucional.
@@ -142,7 +142,7 @@ construir un legado que trasciende, con impacto **trazable y verificable**.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
-🥾 **Senderos interpretativos**
+<i class="bi bi-signpost-2"></i> **Senderos interpretativos**
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
@@ -150,7 +150,7 @@ construir un legado que trasciende, con impacto **trazable y verificable**.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
-🌳 **Identificación de especies**
+<i class="bi bi-tree"></i> **Identificación de especies**
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm}
@@ -210,9 +210,9 @@ Contanos qué busca tu organización y armamos una propuesta a medida.
 
 [Quiero trabajar con el arboretum](contacto.qmd){.btn .btn-success .btn-lg role="button"}
 
-✉️ **[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)**
+<i class="bi bi-envelope"></i> **[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)**
 
-📄 [Descargar dossier corporativo (PDF)](recursos/dossier_empresas.pdf)
+<i class="bi bi-file-earmark-text"></i> [Descargar dossier corporativo (PDF)](recursos/dossier_empresas.pdf)
 :::
 
 ## Contacto y ubicación
@@ -221,7 +221,7 @@ Contanos qué busca tu organización y armamos una propuesta a medida.
 **Ubicación:** Arboretum de Estancia La Constancia, Camino 515, Mar del Plata, Argentina
 
 <a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">
-📍 Abrir en Google Maps
+<i class="bi bi-geo-alt"></i> Abrir en Google Maps
 </a>
 
 ## Conocé el proyecto

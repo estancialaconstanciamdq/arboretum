@@ -57,7 +57,7 @@ podés visitarlo cuando quieras.
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm style="border-top:3px solid #1E4A38;"}
-### 🌳 Padrino / Madrina
+### <i class="bi bi-tree"></i> Padrino / Madrina
 
 - Todo lo anterior
 - Tu nombre también en la **etiqueta física** junto al árbol
@@ -88,9 +88,9 @@ Entregamos un **certificado personalizado** con el nombre del árbol y su ubicac
 
 Escribinos y te contamos los pasos:
 
-- ✉️ Correo: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+- <i class="bi bi-envelope"></i> Correo: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
 - 📱 WhatsApp: [+54 9 11 5736 0940](https://wa.me/5491157360940)
-- 📸 Instagram: [@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
+- <i class="bi bi-instagram"></i> Instagram: [@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
 
 [Ver los árboles disponibles →](catalogo.qmd){.btn .btn-success role="button"}
 

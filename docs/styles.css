@@ -141,3 +141,91 @@ img {
 .nav-footer .nav-footer-center {
   gap: 0.4rem 1.1rem;
 }
+
+/* =====================================================
+   Ganancias rápidas — pulido estético
+   (botones, tarjetas, ritmo de secciones, íconos, banda CTA)
+===================================================== */
+
+/* ---- Sistema de botones unificado ---- */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: .005em;
+  padding: .55rem 1.3rem;
+  transition: background-color .18s ease, color .18s ease,
+              transform .18s ease, box-shadow .18s ease;
+}
+.btn-lg { padding: .7rem 1.7rem; font-size: 1.02rem; }
+.btn-sm { padding: .38rem .95rem; }
+
+.btn-success {
+  background-color: #2f6b4f;
+  border-color: #2f6b4f;
+  color: #fff;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: #244f3b;
+  border-color: #244f3b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30,74,56,.22);
+}
+.btn-outline-success {
+  color: #2f6b4f;
+  border-color: #2f6b4f;
+}
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background-color: #2f6b4f;
+  border-color: #2f6b4f;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30,74,56,.18);
+}
+
+/* ---- Tarjetas: elevación uniforme al pasar el mouse ---- */
+.card {
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10) !important;
+}
+
+/* ---- Ritmo de secciones + acento editorial bajo cada título ---- */
+#quarto-document-content h2 {
+  margin-top: 3.4rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: .35rem;
+}
+#quarto-document-content h2::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: .55rem;
+  background: #8FA98F;
+  border-radius: 2px;
+}
+/* Los ## dentro de tarjetas o columnas de grilla no llevan el acento */
+#quarto-document-content .card h2::after,
+#quarto-document-content .grid h2::after { display: none; }
+#quarto-document-content .grid h2 { margin-top: .4rem; }
+
+/* ---- Íconos de línea (Bootstrap Icons) integrados al texto ---- */
+h1 .bi, h2 .bi, h3 .bi, h4 .bi { vertical-align: -0.08em; }
+.card h3 .bi, .card h4 .bi { color: #4a7c59; margin-right: .45rem; }
+.btn .bi { margin-right: .4rem; vertical-align: -0.08em; }
+
+/* ---- Banda tenue para bloques destacados (CTA / newsletter) ---- */
+.cta-band {
+  background: linear-gradient(135deg, #f5f8f3 0%, #e9f0e6 100%);
+  border-radius: 18px;
+  padding: 2.4rem 1.6rem 2.6rem;
+  margin: 3.2rem 0 2rem;
+  text-align: center;
+}
+.cta-band h2 { margin-top: .4rem; }
+.cta-band h2::after { margin-left: auto; margin-right: auto; }
