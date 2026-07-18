@@ -58,10 +58,18 @@ Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **vi
 
 ::: grid
 
-::: {.g-col-12 .g-col-md-7}
+::: {.g-col-12 .g-col-md-7 style="align-self:center;"}
 En **un minuto**, sentí el espíritu del arboretum: 33 hectáreas de naturaleza viva
 en Mar del Plata, un espacio para **recorrer, aprender y reconectar**. Mirá el spot
 y explorá todo lo que podés vivir.
+
+```{=html}
+<div style="display:flex; flex-wrap:wrap; gap:1rem 1.6rem; margin:1.3rem 0 1.5rem; font-size:1rem;">
+  <span>🌳 <b>+300 especies</b> documentadas</span>
+  <span>🗺️ <b>Mapa interactivo</b> del arboretum</span>
+  <span>🧘 <b>Experiencias</b> de bienestar</span>
+</div>
+```
 
 [Ver experiencias](experiencias.qmd){.btn .btn-success role="button"} &nbsp; [🌳 Apadriná](apadrina.qmd){.btn .btn-outline-success role="button"}
 :::
