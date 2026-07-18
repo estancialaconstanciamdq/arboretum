@@ -229,3 +229,165 @@ h1 .bi, h2 .bi, h3 .bi, h4 .bi { vertical-align: -0.08em; }
 }
 .cta-band h2 { margin-top: .4rem; }
 .cta-band h2::after { margin-left: auto; margin-right: auto; }
+
+/* =====================================================
+   Detalles finos — micro-pulido
+   (callouts, enlaces, lead, epígrafes, citas, fotos,
+    divisores, navbar activo)
+===================================================== */
+
+/* Desplazamiento suave al saltar a anclas internas */
+html { scroll-behavior: smooth; }
+
+/* ---- Callouts en la paleta verde de marca ---- */
+.callout.callout-style-default { border-radius: 12px; overflow: hidden; }
+.callout-tip { border-left-color: #2f6b4f !important; }
+.callout-tip.callout-titled .callout-header { background-color: #eef4ee !important; }
+.callout .callout-title-container {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  color: #1E4A38;
+}
+
+/* ---- Enlaces de contenido: subrayado sutil y hover de marca ---- */
+#quarto-document-content a:not(.btn):not(.nav-link) {
+  color: #2f6b4f;
+  text-decoration-color: rgba(47,107,79,.35);
+  text-underline-offset: 2px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+#quarto-document-content a:not(.btn):not(.nav-link):hover {
+  color: #1E4A38;
+  text-decoration-color: #1E4A38;
+}
+
+/* ---- Párrafo de entrada (lead) ---- */
+.lead-intro, .lead-intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #46564e;
+  font-weight: 400;
+}
+.lead-intro { max-width: 820px; margin-bottom: 1.4rem; }
+.lead-intro strong { color: #1E4A38; font-weight: 600; }
+
+/* ---- Epígrafes de figuras en itálica serif ---- */
+figure figcaption, .figure-caption, .quarto-figure figcaption {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: #6b7d73;
+  font-size: .9rem;
+  text-align: center;
+  margin-top: .45rem;
+}
+
+/* ---- Citas / testimonios ---- */
+#quarto-document-content blockquote {
+  border-left: 4px solid #8FA98F;
+  background: #f6f9f5;
+  padding: 1rem 1.3rem;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: #3f5a4e;
+}
+
+/* ---- Divisores sutiles con degradé ---- */
+#quarto-document-content hr {
+  border: 0;
+  height: 1px;
+  width: 60%;
+  margin: 3rem auto;
+  background: linear-gradient(90deg, transparent, rgba(30,74,56,.28), transparent);
+  opacity: 1;
+}
+
+/* ---- Fotos de galería: leve elevación al pasar el mouse ---- */
+#quarto-document-content .grid > [class*="g-col"]:not(.card) img {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+#quarto-document-content .grid > [class*="g-col"]:not(.card) img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.15);
+}
+
+/* ---- Fotos dentro de tarjetas (destacados): zoom contenido ---- */
+#quarto-document-content .card img { transition: transform .45s ease; }
+#quarto-document-content .card:hover img { transform: scale(1.06); }
+
+/* ---- Indicador de página activa en el navbar ---- */
+.navbar .nav-link.active {
+  font-weight: 700;
+  color: #ffffff !important;
+  box-shadow: inset 0 -2px 0 0 #E0A82E;
+}
+
+/* =====================================================
+   Paleta ampliada — verde + acento cálido (ocre/tierra)
+===================================================== */
+:root {
+  --arb-verde-osc: #1E4A38;
+  --arb-verde: #2f6b4f;
+  --arb-salvia: #8FA98F;
+  --arb-ocre: #C08A3E;
+  --arb-ocre-osc: #a5722d;
+  --arb-crema: #FAF7F0;
+}
+
+/* Selección de texto con tinte cálido */
+::selection { background: rgba(192,138,62,.22); }
+
+/* Callout "note" en tono cálido (diferenciado del tip, que es verde) */
+.callout-note { border-left-color: var(--arb-ocre) !important; }
+.callout-note.callout-titled .callout-header { background-color: #f8f1e4 !important; }
+
+/* Banda cálida crema — alterna el ritmo con la banda verde del CTA */
+.band-warm {
+  background: var(--arb-crema);
+  border: 1px solid rgba(192,138,62,.14);
+  border-radius: 18px;
+  padding: 2.2rem 1.8rem 2.6rem;
+  margin: 3.2rem 0;
+}
+.band-warm > h2:first-child { margin-top: .4rem; }
+
+/* =====================================================
+   Banners de título con foto (full-bleed)
+===================================================== */
+.quarto-title-banner {
+  position: relative;
+  background-size: cover !important;
+  background-position: center 35% !important;
+  padding-top: 3.4rem;
+  padding-bottom: 3.4rem;
+}
+.quarto-title-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(30,74,56,.34), rgba(30,74,56,.66));
+  pointer-events: none;
+}
+.quarto-title-banner .quarto-title,
+.quarto-title-banner .quarto-title-meta,
+.quarto-title-banner .subtitle,
+.quarto-title-banner > * {
+  position: relative;
+  z-index: 1;
+}
+.quarto-title-banner .title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+}
+.quarto-title-banner .subtitle {
+  color: #eaf3ee !important;
+  font-style: italic;
+  text-shadow: 0 1px 10px rgba(0,0,0,.4);
+}
+
+/* Galerías con proporción uniforme */
+.galeria img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}

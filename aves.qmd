@@ -1,6 +1,8 @@
 ---
 title: "Aves del Arboretum"
 subtitle: "Especies registradas en el predio"
+title-block-banner: fotos/galeria/ave_tijereta.jpg
+title-block-banner-color: white
 format: html
 execute:
   echo: false
@@ -48,19 +50,19 @@ Se registraron `r nrow(av)` especies de aves en el establecimiento. Buscá por n
 ::: grid
 
 ::: {.g-col-6 .g-col-md-3}
-![Lechucita vizcachera](fotos/galeria/ave_lechucita.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+![Lechucita vizcachera](fotos/galeria/ave_lechucita.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-![Chingolo](fotos/galeria/ave_chingolo.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+![Chingolo](fotos/galeria/ave_chingolo.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-![Tijereta](fotos/galeria/ave_tijereta.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+![Tijereta](fotos/galeria/ave_tijereta.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-![Tordo renegrido](fotos/galeria/ave_tordo.jpg){style="width:100%; height:200px; object-fit:cover; border-radius:10px;"}
+![Tordo renegrido](fotos/galeria/ave_tordo.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
 :::
 
 :::

@@ -1,6 +1,8 @@
 ---
 title: "Empresas"
 subtitle: "Impacto real y verificable para tu organización"
+title-block-banner: fotos/eventos/aerea_2.jpg
+title-block-banner-color: white
 format: html
 ---
 

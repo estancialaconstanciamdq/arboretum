@@ -1,6 +1,8 @@
 ---
 title: "Voluntariado"
 subtitle: "Sumá tus manos a un jardín botánico vivo"
+title-block-banner: fotos/eventos/gente_guia.jpg
+title-block-banner-color: white
 format: html
 ---
 

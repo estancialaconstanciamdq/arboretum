@@ -1,6 +1,8 @@
 ---
 title: "Bienestar"
 subtitle: "La naturaleza que educa, inspira y sana"
+title-block-banner: fotos/eventos/fuente_atardecer.jpg
+title-block-banner-color: white
 format: html
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Visitá el Arboretum"
 subtitle: "Todo lo que necesitás saber para planificar tu visita"
+title-block-banner: fotos/eventos/aerea_1.jpg
+title-block-banner-color: white
 format: html
 ---
 
