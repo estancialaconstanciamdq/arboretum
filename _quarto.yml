@@ -16,6 +16,11 @@ resources:
 
 website:
   title: "Arboretum"
+  description: "Jardín botánico vivo de 33 hectáreas en Mar del Plata: conservación, educación y bienestar, con más de 300 especies documentadas. Visitas, experiencias y apadrinazgo de árboles."
+  favicon: fotos/logo_la_constancia.svg
+  image: fotos/eventos/aerea_1.jpg
+  open-graph: true
+  twitter-card: true
   navbar:
     background: dark        # navbar oscuro (el verde exacto se aplica en styles.css)
     logo: fotos/logo_la_constancia.svg
@@ -72,11 +77,14 @@ website:
       - text: "Contacto"
         href: contacto.qmd
     right:
-      - text: "✉️ Correo"
+      - text: "Correo"
+        icon: envelope
         href: "mailto:laconstanciaargentina@gmail.com"
-      - text: "📱 WhatsApp"
+      - text: "WhatsApp"
+        icon: whatsapp
         href: "https://wa.me/5491157360940"
-      - text: "📸 Instagram"
+      - text: "Instagram"
+        icon: instagram
         href: "https://instagram.com/laconstanciadebiocca"
 
 format:
