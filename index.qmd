@@ -56,17 +56,27 @@ Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **vi
 
 ## Conocé el Arboretum
 
+::: grid
+
+::: {.g-col-12 .g-col-md-7}
+En **un minuto**, sentí el espíritu del arboretum: 33 hectáreas de naturaleza viva
+en Mar del Plata, un espacio para **recorrer, aprender y reconectar**. Mirá el spot
+y explorá todo lo que podés vivir.
+
+[Ver experiencias](experiencias.qmd){.btn .btn-success role="button"} &nbsp; [🌳 Apadriná](apadrina.qmd){.btn .btn-outline-success role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-5}
 ```{=html}
-<div style="max-width:320px; margin:1.2rem auto 1.5rem;">
+<div style="max-width:300px; margin:0 auto;">
   <div style="position:relative; padding-bottom:177.78%; height:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,.15);">
-    <iframe src="https://www.youtube.com/embed/IRtRx_GnYI8"
-      title="Spot institucional — Arboretum de Estancia La Constancia"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen loading="lazy"></iframe>
+    <iframe src="https://www.youtube.com/embed/IRtRx_GnYI8" title="Spot institucional — Arboretum de Estancia La Constancia" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
   </div>
 </div>
 ```
+:::
+
+:::
 
 ## Viví el arboretum
 
