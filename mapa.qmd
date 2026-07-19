@@ -8,7 +8,7 @@ execute:
 ---
 
 ::: {.lead}
-Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Usá el **buscador** (arriba a la izquierda) para ir directo a una especie por su nombre, el panel de **capas** para filtrar por tipo, y **seleccioná cada punto** para ver sus detalles.
+Este espacio reúne información sobre las especies vegetales, las aves y los principales puntos de interés relevados en el establecimiento. Usá el **buscador** (arriba a la izquierda) para ir directo a una especie por su nombre, el panel de **capas** para filtrar por tipo o activar los tres **recorridos** sugeridos (corto, medio y largo), y **seleccioná cada punto** para ver sus detalles.
 :::
 
 ```{=html}
@@ -156,10 +156,13 @@ m <- leaflet() %>%
 # --- Capas GIS: se cargan automáticamente si el archivo existe en gis/ ---
 # Para activarlas, exportá los .geojson desde QGIS con estos nombres.
 capas_gis <- list(
-  list(archivo = "gis/limite_arboretum.geojson", grupo = "Límite",   color = "#8B4513", relleno = FALSE),
-  list(archivo = "gis/senderos.geojson",         grupo = "Senderos", color = "#B8860B", relleno = FALSE),
-  list(archivo = "gis/sectores.geojson",         grupo = "Sectores", color = "#1E4A38", relleno = TRUE),
-  list(archivo = "gis/lagunas.geojson",          grupo = "Lagunas",  color = "#1f78b4", relleno = TRUE)
+  list(archivo = "gis/limite_arboretum.geojson", grupo = "Límite",   color = "#8B4513", relleno = FALSE, peso = 2),
+  list(archivo = "gis/senderos.geojson",         grupo = "Senderos", color = "#B8860B", relleno = FALSE, peso = 2),
+  list(archivo = "gis/sectores.geojson",         grupo = "Sectores", color = "#1E4A38", relleno = TRUE,  peso = 2),
+  list(archivo = "gis/lagunas.geojson",          grupo = "Lagunas",  color = "#1f78b4", relleno = TRUE,  peso = 2),
+  list(archivo = "gis/recorrido_largo.geojson",  grupo = "Recorrido largo", color = "#7A3CC8", relleno = FALSE, peso = 4),
+  list(archivo = "gis/recorrido_medio.geojson",  grupo = "Recorrido medio", color = "#D22828", relleno = FALSE, peso = 4),
+  list(archivo = "gis/recorrido_corto.geojson",  grupo = "Recorrido corto", color = "#111111", relleno = FALSE, peso = 4)
 )
 
 grupos_gis <- character(0)
@@ -168,7 +171,7 @@ for (capa in capas_gis) {
     gj <- paste(readLines(capa$archivo, warn = FALSE), collapse = "\n")
     m <- m %>% addGeoJSON(
       gj, group = capa$grupo,
-      color = capa$color, weight = 2, opacity = 0.9,
+      color = capa$color, weight = capa$peso, opacity = 0.95,
       fill = capa$relleno, fillColor = capa$color, fillOpacity = 0.2
     )
     grupos_gis <- c(grupos_gis, capa$grupo)
@@ -183,6 +186,9 @@ m <- m %>%
     options = layersControlOptions(collapsed = FALSE)
   )
 
+# Recorridos sugeridos: ocultos por defecto, se activan desde el panel de capas
+m <- m %>% hideGroup(c("Recorrido largo", "Recorrido medio", "Recorrido corto"))
+
 # --- Leyenda visual (usa los mismos marcadores del mapa) -------------------
 leyenda_items <- c(
   "marcador_conifera.svg"   = "Conífera",
@@ -194,10 +200,10 @@ leyenda_items <- c(
   "marcador_poi.svg"        = "Punto de interés"
 )
 leyenda_html <- paste0(
-  "<div style='background:#fff;padding:8px 11px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.25);font-size:.8rem;line-height:1.6;'>",
-  "<div style='font-weight:600;margin-bottom:3px;color:#1E4A38;'>Referencias</div>",
-  paste0("<div><img src='fotos/", names(leyenda_items),
-         "' style='height:18px;vertical-align:middle;margin-right:4px;'>", leyenda_items, "</div>",
+  "<div style='background:rgba(255,255,255,.92);padding:4px 9px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,.2);font-size:.72rem;display:flex;flex-wrap:wrap;gap:1px 10px;align-items:center;max-width:92vw;'>",
+  paste0("<span style='display:inline-flex;align-items:center;white-space:nowrap;'>",
+         "<img src='fotos/", names(leyenda_items),
+         "' style='height:15px;vertical-align:middle;margin-right:3px;'>", leyenda_items, "</span>",
          collapse = ""),
   "</div>"
 )
