@@ -364,7 +364,11 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(30,74,56,.34), rgba(30,74,56,.66));
+  /* Degradé reforzado del lado del texto (izquierda) + leve oscurecido general,
+     para legibilidad sobre fotos aéreas muy detalladas */
+  background:
+    linear-gradient(90deg, rgba(20,55,40,.68) 0%, rgba(20,55,40,.38) 48%, rgba(20,55,40,.20) 100%),
+    linear-gradient(rgba(20,55,40,.10), rgba(20,55,40,.44));
   pointer-events: none;
 }
 .quarto-title-banner .quarto-title,
@@ -378,10 +382,12 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
   color: #ffffff !important;
   text-shadow: 0 2px 14px rgba(0,0,0,.35);
 }
-.quarto-title-banner .subtitle {
-  color: #eaf3ee !important;
+.quarto-title-banner .subtitle,
+header#title-block-header:has(.quarto-title-banner) .subtitle {
+  color: #eef5f0 !important;
   font-style: italic;
-  text-shadow: 0 1px 10px rgba(0,0,0,.4);
+  opacity: .96;
+  text-shadow: 0 1px 12px rgba(0,0,0,.6);
 }
 
 /* Galerías con proporción uniforme */
