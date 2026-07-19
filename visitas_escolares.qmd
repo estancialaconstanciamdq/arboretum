@@ -1,60 +1,18 @@
 ---
-title: ""
-page-layout: full
+title: "Visitas Educativas"
+subtitle: "Aprender en contacto directo con la naturaleza"
+title-block-banner: fotos/fotobanner.jpg
+title-block-banner-color: white
+format: html
 ---
 
 ```{=html}
 <style>
-/* =====================================================
-   Estilos mínimos de esta página, alineados con el resto
-   del sitio (tema Cosmo, verde #1E4A38, tipografía estándar).
-   Solo se conserva el banner y algunos detalles de maquetación.
-===================================================== */
-
-.hero-banner {
-  position: relative;
-  width: 100%;
-  min-height: 58vh;
-  margin: 0 0 2.5rem 0;
-  background-image:
-    linear-gradient(rgba(30,74,56,0.45), rgba(30,74,56,0.65)),
-    url('fotos/fotobanner.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-}
-.hero-overlay {
-  width: 100%;
-  min-height: 58vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1rem;
-}
-.hero-content {
-  text-align: center;
-  color: #fff;
-  max-width: 900px;
-}
-.hero-content h1 {
-  color: #fff;
-  font-weight: 700;
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
-  margin: 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-}
-.hero-logo {
-  width: 170px;
-  max-width: 55%;
-  margin-bottom: 1.2rem;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
-}
-
+/* Utilidades de maquetación propias de esta página
+   (el banner ahora usa el mecanismo estándar title-block-banner) */
 .download-label { margin-top: 1.6rem; margin-bottom: 0.4rem; font-weight: 600; }
 .button-group { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; }
 .cta-container { text-align: center; margin: 2rem 0 3rem; }
-
 .footer-logo {
   text-align: center;
   margin-top: 3rem;
@@ -62,26 +20,8 @@ page-layout: full
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 .arboretum-footer-logo { width: 170px; max-width: 45%; opacity: 0.95; }
-
-@media (max-width: 768px) {
-  .hero-banner, .hero-overlay { min-height: 46vh; }
-}
 </style>
 ```
-
-::: {.hero-banner}
-::: {.hero-overlay}
-
-<div class="hero-content">
-
-<img src="fotos/logo_la_constancia.svg" class="hero-logo">
-
-# Visitas Educativas
-
-</div>
-
-:::
-:::
 
 El Arboretum de Estancia La Constancia abre sus puertas a instituciones educativas, docentes y grupos escolares interesados en aprender directamente en contacto con la naturaleza.
 
