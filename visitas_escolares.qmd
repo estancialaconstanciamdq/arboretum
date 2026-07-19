@@ -112,27 +112,27 @@ Cada recorrido se adapta al nivel educativo y a los objetivos pedagógicos de la
 
 * **Exploración sensorial de la naturaleza:** actividades para descubrir los sonidos, colores, formas y aromas del jardín mediante propuestas lúdicas y participativas.
 
-### 👩🏻‍🏫 Metodología
+### <i class="bi bi-clipboard-check"></i> Metodología
 
 Las visitas combinan caminatas guiadas, observación científica, juegos educativos, trabajo en equipo y espacios de reflexión, promoviendo la curiosidad, el pensamiento crítico y el vínculo con la naturaleza.
 
 <p class="download-label">Descargá el brochure completo:</p>
 <div class="button-group">
   <a href="https://drive.google.com/file/d/14D3vhpElerGzZ7zvj4Bl9eC0NmbUTvj6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
-    📂 Brochure Visitas Educativas
+    <i class="bi bi-file-earmark-text"></i> Brochure Visitas Educativas
   </a>
 </div>
 
 <p class="download-label">Descargá los programas tentativos:</p>
 <div class="button-group">
   <a href="programas/programa_inicial.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
-    🧸 Programa Inicial
+    <i class="bi bi-balloon"></i> Programa Inicial
   </a>
   <a href="programas/programa_primaria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
     <i class="bi bi-mortarboard"></i> Programa Primaria
   </a>
   <a href="programas/programa_secundaria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
-    🔬 Programa Secundaria
+    <i class="bi bi-book"></i> Programa Secundaria
   </a>
 </div>
 
@@ -144,7 +144,7 @@ Las visitas combinan caminatas guiadas, observación científica, juegos educati
 
 Ofrecemos un espacio vivo de aprendizaje diseñado para complementar la propuesta pedagógica de tu institución. Para garantizar una experiencia segura, organizada y de alto valor educativo, todas nuestras visitas se realizan únicamente con reserva previa.
 
-#### 📌 Condiciones Generales de Reserva
+#### <i class="bi bi-pin-angle"></i> Condiciones Generales de Reserva
 
 - Garantía por clima: al coordinar la visita, estableceremos dos fechas: una principal y una alternativa en caso de lluvia.
 

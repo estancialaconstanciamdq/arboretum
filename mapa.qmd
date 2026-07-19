@@ -63,8 +63,9 @@ popup_arbol <- function(df) {
     ifelse(tiene_valor(df$forma_vida), paste0("<b>Tipo:</b> ", df$forma_vida, "<br>"), ""),
     ifelse(tiene_valor(df$continente),paste0("<b>Origen:</b> ", df$continente, "<br>"), ""),
     ifelse(tiene_valor(df$año_plantacion), paste0("<b>Plantado:</b> ", df$año_plantacion, "<br>"), ""),
-    ifelse(tiene_valor(df$padrino), paste0("<b>🌳 Apadrinado por:</b> ", df$padrino, "<br>"), ""),
-    "<div style='margin-top:.5rem;font-size:.8rem;'><a href='apadrina.html'>🌳 Apadriná un ejemplar como este →</a></div>"
+    ifelse(tiene_valor(df$padrino), paste0("<b>Apadrinado por:</b> ", df$padrino, "<br>"), ""),
+    ifelse(tiene_valor(df$slug), paste0("<div style='margin-top:.55rem;'><a href='fichas/", df$slug, ".html'><b>Ver ficha completa →</b></a></div>"), ""),
+    "<div style='margin-top:.35rem;font-size:.8rem;'><a href='apadrina.html'><i class='bi bi-tree'></i> Apadriná un ejemplar como este →</a></div>"
   )
 }
 
@@ -90,6 +91,8 @@ pts  <- con_coord(puntos)
 ```{r}
 m <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldImagery, group = "Satélite") %>%
+  addProviderTiles(providers$CartoDB.Positron, group = "Mapa (calles)") %>%
+  addScaleBar(position = "bottomleft") %>%
 
   addMarkers(
     data = coni, lng = ~longitud, lat = ~latitud,
@@ -174,10 +177,42 @@ for (capa in capas_gis) {
 
 m <- m %>%
   addLayersControl(
+    baseGroups = c("Satélite", "Mapa (calles)"),
     overlayGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
                       "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés", grupos_gis),
     options = layersControlOptions(collapsed = FALSE)
   )
+
+# --- Leyenda visual (usa los mismos marcadores del mapa) -------------------
+leyenda_items <- c(
+  "marcador_conifera.svg"   = "Conífera",
+  "marcador_arbol.svg"      = "Latifoliada",
+  "marcador_arbusto.svg"    = "Arbusto",
+  "marcador_palmera.svg"    = "Palmera",
+  "marcador_apadrinado.svg" = "Apadrinado",
+  "marcador_ave.svg"        = "Ave",
+  "marcador_poi.svg"        = "Punto de interés"
+)
+leyenda_html <- paste0(
+  "<div style='background:#fff;padding:8px 11px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.25);font-size:.8rem;line-height:1.6;'>",
+  "<div style='font-weight:600;margin-bottom:3px;color:#1E4A38;'>Referencias</div>",
+  paste0("<div><img src='fotos/", names(leyenda_items),
+         "' style='height:18px;vertical-align:middle;margin-right:4px;'>", leyenda_items, "</div>",
+         collapse = ""),
+  "</div>"
+)
+m <- m %>% addControl(html = leyenda_html, position = "bottomright")
+
+# --- Encuadre automático a todos los puntos relevados ----------------------
+.bb <- rbind(
+  con_coord(arboles)[, c("longitud", "latitud")],
+  avs[, c("longitud", "latitud")],
+  pts[, c("longitud", "latitud")]
+)
+if (nrow(.bb) > 0) {
+  m <- m %>% fitBounds(min(.bb$longitud), min(.bb$latitud),
+                       max(.bb$longitud), max(.bb$latitud))
+}
 
 # --- Buscador en el mapa (JavaScript puro; NO usa paquetes externos) --------
 # Todo dentro de tryCatch: ante CUALQUIER problema, el mapa se muestra igual y
@@ -252,6 +287,33 @@ m <- tryCatch({
     }
   });
   map.addControl(new Ctrl());
+
+  // --- Botón 'Mi ubicación' (geolocalización nativa del navegador) ---
+  var LocateCtrl = L.Control.extend({
+    options: { position: 'topleft' },
+    onAdd: function(){
+      var b = L.DomUtil.create('div','leaflet-bar arb-locate');
+      var a = L.DomUtil.create('a','', b);
+      a.href = '#'; a.title = 'Mostrar mi ubicación';
+      a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>';
+      a.style.cssText = 'font-size:15px;line-height:26px;text-align:center;color:#1E4A38;';
+      L.DomEvent.disableClickPropagation(b);
+      L.DomEvent.on(a,'click',function(e){
+        L.DomEvent.stop(e);
+        if(!navigator.geolocation){ return; }
+        a.innerHTML = '…';
+        navigator.geolocation.getCurrentPosition(function(pos){
+          a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>';
+          var ll = [pos.coords.latitude, pos.coords.longitude];
+          map.setView(ll, 18);
+          L.circleMarker(ll, {radius:9, color:'#1E4A38', fillColor:'#2f6b4f', fillOpacity:.9, weight:2})
+            .addTo(map).bindPopup('Estás acá').openPopup();
+        }, function(){ a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>'; });
+      });
+      return b;
+    }
+  });
+  map.addControl(new LocateCtrl());
 }")
   htmlwidgets::onRender(m, js)
 }, error = function(e) { message('mapa.qmd: buscador omitido (', conditionMessage(e), ')'); m })
