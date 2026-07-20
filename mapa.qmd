@@ -156,13 +156,12 @@ m <- leaflet() %>%
 # --- Capas GIS: se cargan automáticamente si el archivo existe en gis/ ---
 # Para activarlas, exportá los .geojson desde QGIS con estos nombres.
 capas_gis <- list(
-  list(archivo = "gis/limite_arboretum.geojson", grupo = "Límite",   color = "#8B4513", relleno = FALSE, peso = 2),
   list(archivo = "gis/senderos.geojson",         grupo = "Senderos", color = "#B8860B", relleno = FALSE, peso = 2),
   list(archivo = "gis/sectores.geojson",         grupo = "Sectores", color = "#1E4A38", relleno = TRUE,  peso = 2),
   list(archivo = "gis/lagunas.geojson",          grupo = "Lagunas",  color = "#1f78b4", relleno = TRUE,  peso = 2),
   list(archivo = "gis/recorrido_largo.geojson",  grupo = "Recorrido largo", color = "#7A3CC8", relleno = FALSE, peso = 4),
   list(archivo = "gis/recorrido_medio.geojson",  grupo = "Recorrido medio", color = "#D22828", relleno = FALSE, peso = 4),
-  list(archivo = "gis/recorrido_corto.geojson",  grupo = "Recorrido corto", color = "#111111", relleno = FALSE, peso = 4)
+  list(archivo = "gis/recorrido_corto.geojson",  grupo = "Recorrido corto", color = "#FFD400", relleno = FALSE, peso = 4)
 )
 
 grupos_gis <- character(0)
