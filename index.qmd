@@ -56,6 +56,16 @@ Bienvenidos al Arboretum de Estancia La Constancia, en **Mar del Plata, Argentin
 Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **viva y documentada**, cultivada con fines científicos, educativos y de conservación: en esencia, un **"museo vivo" de árboles**. [Más información »](https://es.wikipedia.org/wiki/Arboreto){target="_blank" rel="noopener"}
 :::
 
+```{=html}
+<div class="stats-band">
+  <div class="stat"><div class="num">33</div><div class="lbl">hectáreas</div></div>
+  <div class="stat"><div class="num">+300</div><div class="lbl">especies vegetales</div></div>
+  <div class="stat"><div class="num">46</div><div class="lbl">especies de aves</div></div>
+  <div class="stat"><div class="num">91</div><div class="lbl">ejemplares mapeados</div></div>
+  <a class="stat cred" href="https://arbnet.org/morton-register/la-constancia-de-biocca/" target="_blank" rel="noopener"><div class="num">Nivel I</div><div class="lbl">Acreditación ArbNet</div></a>
+</div>
+```
+
 ## Conocé el Arboretum
 
 ::: grid
