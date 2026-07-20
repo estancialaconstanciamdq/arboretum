@@ -403,7 +403,7 @@ header#title-block-header:has(.quarto-title-banner) .subtitle {
 ===================================================== */
 .stats-band {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   margin: 2.4rem 0 2.8rem;
 }

@@ -72,7 +72,7 @@ website:
     border: true
     left: |
       © 2026 Arboretum de Estancia La Constancia · Mar del Plata, Argentina
-      Arboreto acreditado por [ArbNet](https://arbnet.org/morton-register/la-constancia-de-biocca/){target="_blank" rel="noopener"} (Nivel I) · con el apoyo de Rotary Mar del Plata Sud
+      Arboreto acreditado por [ArbNet](https://arbnet.org/morton-register/la-constancia-de-biocca/){target="_blank" rel="noopener"} (Nivel I) · registrado en [BGCI GardenSearch](https://gardensearch.bgci.org/garden/7214){target="_blank" rel="noopener"} · con el apoyo de Rotary Mar del Plata Sud
     center:
       - text: "Voluntariado"
         href: voluntariado.qmd

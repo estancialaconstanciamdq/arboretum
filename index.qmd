@@ -63,6 +63,7 @@ Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **vi
   <div class="stat"><div class="num">46</div><div class="lbl">especies de aves</div></div>
   <div class="stat"><div class="num">91</div><div class="lbl">ejemplares mapeados</div></div>
   <a class="stat cred" href="https://arbnet.org/morton-register/la-constancia-de-biocca/" target="_blank" rel="noopener"><div class="num">Nivel I</div><div class="lbl">Acreditación ArbNet</div></a>
+  <a class="stat cred" href="https://gardensearch.bgci.org/garden/7214" target="_blank" rel="noopener"><div class="num">BGCI</div><div class="lbl">Red mundial de jardines botánicos</div></a>
 </div>
 ```
 
