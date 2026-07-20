@@ -1,5 +1,8 @@
 ---
 title: "Visitas Educativas"
+toc: true
+toc-title: "En esta página"
+toc-location: right
 subtitle: "Aprender en contacto directo con la naturaleza"
 title-block-banner: fotos/fotobanner.jpg
 title-block-banner-color: white

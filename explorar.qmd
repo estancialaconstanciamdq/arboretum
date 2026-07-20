@@ -1,0 +1,57 @@
+---
+title: "Explorá la colección"
+subtitle: "Todas las formas de recorrer el arboretum, en un solo lugar"
+title-block-banner: fotos/eventos/arbol_otono.jpg
+title-block-banner-color: white
+format: html
+---
+
+::: {.lead-intro}
+El arboretum, documentado ejemplar por ejemplar. Elegí cómo querés recorrerlo: el mapa vivo, el catálogo completo, las especies y aves destacadas, el banco de semillas o el plano ilustrado de los jardines.
+:::
+
+::: grid
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-geo-alt"></i> Mapa interactivo
+Cada ejemplar geolocalizado sobre imagen satelital, con buscador, filtros por tipo y recorridos sugeridos.
+
+[Abrir el mapa →](mapa.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-list-ul"></i> Catálogo
+La lista completa de especies documentadas, con buscador y descarga en CSV.
+
+[Ver catálogo →](catalogo.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-tree"></i> Especies destacadas
+Los ejemplares más emblemáticos por su valor botánico, histórico y paisajístico.
+
+[Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-binoculars"></i> Aves
+Galería fotográfica y registro de estacionalidad de las aves del establecimiento.
+
+[Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-flower3"></i> Banco de semillas
+Conservación *ex-situ* de nuestra flora: la colección de semillas del arboretum.
+
+[Conocer el banco →](banco_semillas.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-map"></i> Plano ilustrado
+El plano dibujado de los jardines y la distribución de las principales colecciones.
+
+[Ver el plano →](plano.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+:::
+
+:::

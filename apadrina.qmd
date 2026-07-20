@@ -1,5 +1,8 @@
 ---
 title: "Apadriná un árbol"
+toc: true
+toc-title: "En esta página"
+toc-location: right
 subtitle: "Sumate a la conservación del Arboretum de La Constancia"
 format: html
 execute:

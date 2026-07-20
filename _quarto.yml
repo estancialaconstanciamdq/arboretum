@@ -31,6 +31,9 @@ website:
         href: visita.qmd
       - text: "Explorar"
         menu:
+          - text: "Explorá la colección"
+            href: explorar.qmd
+          - text: "---"
           - text: "Mapa interactivo"
             href: mapa.qmd
           - text: "Plano ilustrado"

@@ -1,5 +1,8 @@
 ---
 title: "Empresas"
+toc: true
+toc-title: "En esta página"
+toc-location: right
 subtitle: "Impacto real y verificable para tu organización"
 title-block-banner: fotos/eventos/aerea_2.jpg
 title-block-banner-color: white

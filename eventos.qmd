@@ -1,5 +1,8 @@
 ---
 title: "Eventos de Empresa"
+toc: true
+toc-title: "En esta página"
+toc-location: right
 subtitle: "Tu evento corporativo en un jardín botánico de 33 hectáreas"
 title-block-banner: fotos/galeria/alameda_eucaliptos.jpg
 title-block-banner-color: white

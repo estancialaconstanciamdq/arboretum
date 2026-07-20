@@ -1,5 +1,8 @@
 ---
 title: "Visitá el Arboretum"
+toc: true
+toc-title: "En esta página"
+toc-location: right
 subtitle: "Todo lo que necesitás saber para planificar tu visita"
 title-block-banner: fotos/eventos/aerea_1.jpg
 title-block-banner-color: white
