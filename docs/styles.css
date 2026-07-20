@@ -426,6 +426,72 @@ header#title-block-header:has(.quarto-title-banner) .subtitle {
 }
 
 /* =====================================================
+   Hub "Explorá la colección" — tarjetas con foto
+===================================================== */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 1.6rem 0 2.4rem;
+}
+.hub-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,.07);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+.hub-card .hub-ph {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+.hub-card .hub-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.hub-card h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: #1E4A38;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: .15rem 0 .5rem;
+}
+.hub-card p {
+  font-size: .92rem;
+  color: #4a5a52;
+  line-height: 1.5;
+  flex: 1;
+  margin: 0 0 1.1rem;
+}
+.hub-card .hub-cta {
+  align-self: center;
+  border: 1.5px solid #2f6b4f;
+  color: #2f6b4f;
+  border-radius: 8px;
+  padding: .45rem 1.1rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: background-color .18s ease, color .18s ease;
+}
+.hub-card:hover .hub-cta {
+  background: #2f6b4f;
+  color: #fff;
+}
+
+/* =====================================================
    Panel de estadísticas (stat tiles) — cifras de la colección
 ===================================================== */
 .stats-band {

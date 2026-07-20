@@ -10,48 +10,62 @@ format: html
 El arboretum, documentado ejemplar por ejemplar. Elegí cómo querés recorrerlo: el mapa vivo, el catálogo completo, las especies y aves destacadas, el banco de semillas o el plano ilustrado de los jardines.
 :::
 
-::: grid
+```{=html}
+<div class="hub-grid">
 
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-geo-alt"></i> Mapa interactivo
-Cada ejemplar geolocalizado sobre imagen satelital, con buscador, filtros por tipo y recorridos sugeridos.
+  <a class="hub-card" href="mapa.html">
+    <div class="hub-ph" style="background-image:url('fotos/eventos/aerea_1.jpg')"></div>
+    <div class="hub-body">
+      <h3>Mapa interactivo</h3>
+      <p>Cada ejemplar geolocalizado sobre imagen satelital, con buscador, filtros por tipo y recorridos sugeridos.</p>
+      <span class="hub-cta">Abrir el mapa →</span>
+    </div>
+  </a>
 
-[Abrir el mapa →](mapa.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
+  <a class="hub-card" href="catalogo.html">
+    <div class="hub-ph" style="background-image:url('fotos/galeria/flora_liquidambar.jpg')"></div>
+    <div class="hub-body">
+      <h3>Catálogo</h3>
+      <p>La lista completa de especies documentadas, con buscador y descarga en CSV.</p>
+      <span class="hub-cta">Ver catálogo →</span>
+    </div>
+  </a>
 
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-list-ul"></i> Catálogo
-La lista completa de especies documentadas, con buscador y descarga en CSV.
+  <a class="hub-card" href="especies.html">
+    <div class="hub-ph" style="background-image:url('fotos/Araucaria.jpg')"></div>
+    <div class="hub-body">
+      <h3>Especies destacadas</h3>
+      <p>Los ejemplares más emblemáticos por su valor botánico, histórico y paisajístico.</p>
+      <span class="hub-cta">Explorar especies →</span>
+    </div>
+  </a>
 
-[Ver catálogo →](catalogo.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
+  <a class="hub-card" href="aves.html">
+    <div class="hub-ph" style="background-image:url('fotos/galeria/ave_tijereta.jpg')"></div>
+    <div class="hub-body">
+      <h3>Aves</h3>
+      <p>Galería fotográfica y registro de estacionalidad de las aves del establecimiento.</p>
+      <span class="hub-cta">Explorar aves →</span>
+    </div>
+  </a>
 
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-tree"></i> Especies destacadas
-Los ejemplares más emblemáticos por su valor botánico, histórico y paisajístico.
+  <a class="hub-card" href="banco_semillas.html">
+    <div class="hub-ph" style="background-image:url('fotos/galeria/alameda_eucaliptos.jpg')"></div>
+    <div class="hub-body">
+      <h3>Banco de semillas</h3>
+      <p>Conservación <i>ex-situ</i> de nuestra flora: la colección de semillas del arboretum.</p>
+      <span class="hub-cta">Conocer el banco →</span>
+    </div>
+  </a>
 
-[Explorar especies →](especies.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
+  <a class="hub-card" href="plano.html">
+    <div class="hub-ph" style="background-image:url('fotos/mapa_jardines.jpg')"></div>
+    <div class="hub-body">
+      <h3>Plano ilustrado</h3>
+      <p>El plano dibujado de los jardines y la distribución de las principales colecciones.</p>
+      <span class="hub-cta">Ver el plano →</span>
+    </div>
+  </a>
 
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-binoculars"></i> Aves
-Galería fotográfica y registro de estacionalidad de las aves del establecimiento.
-
-[Explorar aves →](aves.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
-
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-flower3"></i> Banco de semillas
-Conservación *ex-situ* de nuestra flora: la colección de semillas del arboretum.
-
-[Conocer el banco →](banco_semillas.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
-
-::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
-### <i class="bi bi-map"></i> Plano ilustrado
-El plano dibujado de los jardines y la distribución de las principales colecciones.
-
-[Ver el plano →](plano.qmd){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
-:::
-
-:::
+</div>
+```
