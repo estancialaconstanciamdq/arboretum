@@ -19,7 +19,7 @@ website:
   site-url: "https://estancialaconstanciamdq.github.io/arboretum/"
   description: "Jardín botánico vivo de 33 hectáreas en Mar del Plata: conservación, educación y bienestar, con más de 300 especies documentadas. Visitas, experiencias y apadrinazgo de árboles."
   favicon: fotos/logo_la_constancia.svg
-  image: fotos/eventos/aerea_1.jpg
+  image: fotos/og_arboretum.jpg
   open-graph: true
   twitter-card: true
   navbar:
