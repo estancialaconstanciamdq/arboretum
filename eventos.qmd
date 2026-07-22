@@ -154,7 +154,7 @@ Tu equipo vive una jornada distinta, en plena naturaleza.
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-![](fotos/eventos/gente_guia.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
+![](fotos/eventos/fuente_atardecer.jpg){style="width:100%; height:240px; object-fit:cover; border-radius:12px;"}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
