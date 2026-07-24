@@ -268,7 +268,7 @@ html { scroll-behavior: smooth; }
   color: #46564e;
   font-weight: 400;
 }
-.lead-intro { max-width: 820px; margin-bottom: 1.4rem; }
+.lead-intro { max-width: 820px; margin: 0 auto 1.4rem; text-align: center; }
 .lead-intro strong { color: #1E4A38; font-weight: 600; }
 
 /* ---- Epígrafes de figuras en itálica serif ---- */

@@ -23,14 +23,24 @@ observar, respirar, escuchar y percibir el entorno con todos los sentidos. No es
 una caminata deportiva ni una excursión; es una invitación a **detenerse y
 percibir**.
 
+Nació en **Japón, en los años 80**, como respuesta al estrés urbano y como
+estrategia de salud pública, y hoy es una práctica extendida en el mundo, con
+decenas de senderos certificados. **No requiere experiencia previa** y es
+accesible para todas las personas.
+
 ### Qué dice la ciencia
 
 La investigación sobre baños de bosque, desarrollada especialmente en Japón y
 Corea, asocia esta práctica con beneficios para la salud, entre ellos:
 
-- Reducción de los niveles de **estrés** (menor cortisol) y de la **presión arterial**.
+- Regulación del **sistema nervioso** y estabilización de la **presión arterial**.
+- Reducción de los niveles de **estrés** (menor cortisol).
 - Mejoras en el **estado de ánimo** y la sensación de calma.
 - Estímulo del **sistema inmune** (mayor actividad de las células "natural killer").
+- Mejora de la **atención, la memoria y la creatividad**.
+
+En países como **Canadá**, profesionales de la salud la recomiendan como
+complemento terapéutico.
 
 ::: {.callout-note}
 Las experiencias de bienestar son un **complemento** para el cuidado de la salud y
@@ -51,9 +61,11 @@ país, y por eso un valor agregado del arboretum.
 
 ## Cómo es una experiencia
 
-Un encuentro combina caminata lenta, ejercicios de atención y respiración, pausas
-de observación y un cierre compartido. Se puede adaptar a **personas, familias o
-equipos de trabajo** (jornadas de bienestar corporativo).
+Cada encuentro dura **alrededor de tres horas**, con paradas e invitaciones a lo
+largo del recorrido, en **modalidad privada o grupal**. Combina caminata lenta,
+ejercicios de atención y respiración, pausas de observación y un cierre compartido.
+Se puede adaptar a **personas, familias o equipos de trabajo** (jornadas de
+bienestar corporativo).
 
 ```{=html}
 <div style="max-width:320px; margin:1.4rem auto;">
@@ -66,6 +78,12 @@ equipos de trabajo** (jornadas de bienestar corporativo).
   </div>
 </div>
 ```
+
+### En los medios
+
+- **Forbes** — [«Baño de bosque»: el método japonés respaldado por la ciencia para reducir el estrés](https://www.forbesargentina.com/liderazgo/bano-bosque-metodo-japones-respaldado-ciencia-reducir-estres-potenciar-productividad-n81343){target="_blank" rel="noopener"}
+
+> "El bosque es el terapeuta. El guía abre las puertas."
 
 ::: {.callout-tip}
 ¿Querés coordinar una experiencia de bienestar, en forma individual o para tu
