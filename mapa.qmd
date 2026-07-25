@@ -177,11 +177,45 @@ for (capa in capas_gis) {
   }
 }
 
+# --- Capa ilustrada de sectores (íconos de árbol, estilo plano) ------------
+# Dibuja las masas de la colección como "bosques" de íconos, agrupados por
+# sector. Los íconos son decorativos (no interactivos): los datos precisos
+# siguen en los marcadores individuales. Se genera desde gis/iconos_sectores.geojson.
+grupo_sectores <- character(0)
+if (file.exists("gis/iconos_sectores.geojson")) {
+  grupo_sectores <- tryCatch({
+    ic <- jsonlite::fromJSON("gis/iconos_sectores.geojson", simplifyVector = TRUE)
+    fr <- ic$features
+    coords <- do.call(rbind, fr$geometry$coordinates)
+    sec_df <- data.frame(
+      lng = as.numeric(coords[, 1]), lat = as.numeric(coords[, 2]),
+      icono = as.character(fr$properties$icono),
+      sector = as.character(fr$properties$sector),
+      stringsAsFactors = FALSE
+    )
+    uri_por_icono <- vapply(unique(sec_df$icono), function(a) {
+      svg <- paste(readLines(file.path("fotos", paste0(a, ".svg")), warn = FALSE), collapse = "")
+      paste0("data:image/svg+xml,", utils::URLencode(svg, reserved = TRUE))
+    }, character(1))
+    sec_icons <- icons(
+      iconUrl = unname(uri_por_icono[sec_df$icono]),
+      iconWidth = 22, iconHeight = 26, iconAnchorX = 11, iconAnchorY = 25
+    )
+    m <<- m %>% addMarkers(
+      data = sec_df, lng = ~lng, lat = ~lat,
+      icon = sec_icons, group = "Sectores (ilustrado)",
+      options = markerOptions(interactive = FALSE, keyboard = FALSE, zIndexOffset = -1000)
+    )
+    "Sectores (ilustrado)"
+  }, error = function(e) { message("mapa.qmd: capa de sectores omitida (", conditionMessage(e), ")"); character(0) })
+}
+
 m <- m %>%
   addLayersControl(
     baseGroups = c("Satélite", "Mapa (calles)"),
     overlayGroups = c("Coníferas", "Árboles latifoliados", "Arbustos", "Palmeras",
-                      "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés", grupos_gis),
+                      "Árboles apadrinados", "Otras especies", "Aves", "Puntos de interés",
+                      grupos_gis, grupo_sectores),
     options = layersControlOptions(collapsed = FALSE)
   )
 
@@ -207,6 +241,29 @@ leyenda_html <- paste0(
   "</div>"
 )
 m <- m %>% addControl(html = leyenda_html, position = "bottomright")
+
+# --- Leyenda de la capa de sectores (íconos de árbol) ----------------------
+if (length(grupo_sectores) > 0) {
+  sec_leg <- c(
+    "sector_pinar.svg"       = "Pinar",
+    "sector_eucaliptos.svg"  = "Bosque de eucaliptos",
+    "sector_cipres.svg"      = "Cortinas de ciprés",
+    "sector_robledal.svg"    = "Robledal",
+    "sector_cedros.svg"      = "Cedros",
+    "sector_sauces.svg"      = "Sauces y bajo"
+  )
+  sec_leg_html <- paste0(
+    "<div style='background:rgba(255,255,255,.92);padding:5px 9px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,.2);font-size:.72rem;max-width:92vw;'>",
+    "<b style='display:block;margin-bottom:2px;color:#1E4A38;'>Sectores</b>",
+    "<div style='display:flex;flex-wrap:wrap;gap:1px 10px;align-items:center;'>",
+    paste0("<span style='display:inline-flex;align-items:center;white-space:nowrap;'>",
+           "<img src='fotos/", names(sec_leg),
+           "' style='height:18px;vertical-align:middle;margin-right:3px;'>", sec_leg, "</span>",
+           collapse = ""),
+    "</div></div>"
+  )
+  m <- m %>% addControl(html = sec_leg_html, position = "bottomright")
+}
 
 # --- Encuadre automático a todos los puntos relevados ----------------------
 .bb <- rbind(
