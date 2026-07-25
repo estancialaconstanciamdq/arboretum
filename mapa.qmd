@@ -1,5 +1,6 @@
 ---
 title: "Mapa Interactivo"
+page-layout: full
 format: html
 execute:
   echo: false
@@ -19,6 +20,24 @@ Este espacio reúne información sobre las especies vegetales, las aves y los pr
 .arb-item{padding:.35rem .55rem;cursor:pointer;font-size:.85rem;border-bottom:1px solid #f0f0f0;}
 .arb-item:hover{background:#eef4f0;}
 .arb-item em{color:#666;}
+
+/* --- Mapa a pantalla ancha (solo esta página usa page-layout: full) ------
+   Ancho completo de la hoja y altura relativa al viewport, con un mínimo
+   para que NO colapse en mobile. En pantallas chicas se reduce un poco. */
+.leaflet.html-widget,
+.leaflet-container{
+  width:100% !important;
+  height:80vh !important;
+  min-height:480px;
+  border-radius:12px;
+}
+/* que el texto introductorio no se estire demasiado en pantallas anchas */
+.lead{max-width:900px;}
+@media (max-width:768px){
+  .leaflet.html-widget,
+  .leaflet-container{ height:72vh !important; min-height:400px; }
+  .arb-input{width:150px;}
+}
 </style>
 ```
 
@@ -303,6 +322,10 @@ m <- tryCatch({
 "function(el, x) {
   var map = this;
   var pts = ", datos_json, ";
+  // El mapa se agranda por CSS (page-layout full + altura vh): forzamos que
+  // Leaflet recalcule su tamaño para que los tiles llenen todo el contenedor.
+  setTimeout(function(){ map.invalidateSize(); }, 200);
+  window.addEventListener('resize', function(){ map.invalidateSize(); });
   function norm(s){ return (s==null?'':String(s)).toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }
   var Ctrl = L.Control.extend({
     options: { position: 'topleft' },
