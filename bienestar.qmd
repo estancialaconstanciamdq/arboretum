@@ -68,14 +68,15 @@ Se puede adaptar a **personas, familias o equipos de trabajo** (jornadas de
 bienestar corporativo).
 
 ```{=html}
-<div style="max-width:320px; margin:1.4rem auto;">
-  <div style="position:relative; padding-bottom:177.78%; height:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,.15);">
-    <iframe src="https://www.youtube.com/embed/QLwxqvgyWOE"
-      title="Terapia de bosque — Arboretum de Estancia La Constancia"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen loading="lazy"></iframe>
-  </div>
+<div class="galeria-dest" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+  <figure>
+    <img src="fotos/eventos/terapia_1.jpeg" alt="Grupo caminando en silencio entre los árboles del arboretum, en otoño" style="height:300px;">
+    <figcaption>Caminata lenta y consciente entre las colecciones, en otoño.</figcaption>
+  </figure>
+  <figure>
+    <img src="fotos/eventos/terapia_2.jpeg" alt="Encuentro de baño de bosque junto a una fuente, guiado por Magdalena Zurita" style="height:300px;">
+    <figcaption>Una pausa de observación junto a la fuente, con la guía.</figcaption>
+  </figure>
 </div>
 ```
 
