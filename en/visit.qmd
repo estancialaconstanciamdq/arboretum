@@ -1,0 +1,165 @@
+---
+title: "Visit the Arboretum"
+toc: true
+toc-title: "On this page"
+toc-location: right
+subtitle: "Everything you need to know to plan your visit"
+title-block-banner: ../fotos/eventos/aerea_1.jpg
+title-block-banner-color: white
+format: html
+---
+
+```{=html}
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="../mapa.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html" class="current">Visit</a>
+  <span class="spacer"></span>
+  <a href="../visita.html" class="lang">Español ▸</a>
+</div>
+```
+
+The Arboretum at Estancia La Constancia is a living, **33-hectare** botanical garden
+with more than **30,000 plants** and **300 species**, in Mar del Plata. We welcome
+visits **by advance booking**, so that each group enjoys a personalized, safe and
+highly educational experience.
+
+<div style="text-align:center; margin:1.5rem 0 2rem;">
+<a href="../experiencias.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
+&nbsp;
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg" role="button"><i class="bi bi-geo-alt"></i> How to get here</a>
+</div>
+
+## How to visit us
+
+Visits are arranged **by advance booking**. You write to us, together we define the
+type of tour, the date and the details, and we confirm everything before the day.
+Since these are outdoor activities, when booking we agree on a **main date and an
+alternative** in case the weather does not cooperate.
+
+::: grid
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-mortarboard"></i> Schools
+Educational tours by level.
+
+[Educational visits →](../visitas_escolares.html){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-flower2"></i> Groups
+Guided visits and experiences.
+
+[See experiences →](../experiencias.html){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-flower1"></i> Wellbeing
+Guided forest bathing.
+
+[Discover wellbeing →](wellbeing.html){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-people"></i> Companies
+Events and corporate impact.
+
+[Company proposal →](../empresas.html){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
+:::
+
+## How to get here
+
+**Arboretum at Estancia La Constancia**<br>
+Camino 515, Mar del Plata · Buenos Aires · Argentina
+
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success" role="button">
+<i class="bi bi-geo-alt"></i> Open in Google Maps
+</a>
+
+## Before you come
+
+To make the most of the outdoor tour, we recommend:
+
+- 👟 **Comfortable, closed shoes** suitable for walking on natural trails.
+- 🧢 **Sun protection**: cap, sunscreen and sunglasses.
+- 💧 **Water** to stay hydrated during the walk.
+- 🧥 **A jacket or windbreaker** depending on the season.
+- <i class="bi bi-camera"></i> **A camera or binoculars** if you enjoy birdwatching.
+
+## Frequently asked questions
+
+::: {.callout-note collapse="true" title="Do I need to book? How do I do it?"}
+Yes, all visits are by advance booking. You can book from the
+[experiences](../experiencias.html) page, complete the
+[educational visits](../visitas_escolares.html) form, or write to us directly by
+email or WhatsApp (see below).
+:::
+
+::: {.callout-note collapse="true" title="How long does the visit last?"}
+It depends on the proposal: visits usually last **between 2 and 4 hours**. When
+arranging the booking we define the duration according to the group and its goals.
+:::
+
+::: {.callout-note collapse="true" title="What happens if it rains?"}
+When booking we agree on a **main date and an alternative**. If the weather does not
+cooperate on the main day, we move to the backup date at no extra cost.
+:::
+
+::: {.callout-note collapse="true" title="How much does it cost?"}
+The price depends on the **type of visit** and the **group size**. Write to us and we
+will send you a tailored proposal.
+:::
+
+::: {.callout-note collapse="true" title="Is there parking?"}
+Yes, we coordinate access and parking when confirming your booking. If you are coming
+by bus or van, let us know in advance so we can organize entry.
+:::
+
+::: {.callout-note collapse="true" title="Is the tour accessible?"}
+The arboretum is a natural environment with dirt and grass trails. If your group
+includes people with reduced mobility, tell us when booking and we will adapt the
+route as much as possible.
+:::
+
+::: {.callout-note collapse="true" title="Can I bring my pet?"}
+As this is a conservation area with native wildlife, please check with us before your
+visit to learn the conditions.
+:::
+
+::: {.callout-note collapse="true" title="Can I come with children?"}
+Of course! We design experiences for all ages, from early years to adults. Tell us
+the ages in the group and we will adapt the proposal.
+:::
+
+## Contact
+
+Ready to arrange your visit? Write to us:
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📩 Email
+[laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+
+### 📱 WhatsApp
+[+54 9 11 5736 0940](https://wa.me/5491157360940)
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-instagram"></i> Instagram
+[@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)
+
+### <i class="bi bi-geo-alt"></i> Location
+Camino 515, Mar del Plata · Buenos Aires · Argentina
+:::
+
+:::
+
+::: {.cta-container style="text-align:center; margin:2rem 0 1rem;"}
+<a href="../experiencias.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
+:::

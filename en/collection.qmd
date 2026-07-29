@@ -1,0 +1,88 @@
+---
+title: "Explore the Collection"
+subtitle: "Every way to experience the arboretum, in one place"
+title-block-banner: ../fotos/eventos/arbol_otono.jpg
+title-block-banner-color: white
+format: html
+---
+
+```{=html}
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html" class="current">The Collection</a>
+  <a href="../mapa.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <span class="spacer"></span>
+  <a href="../explorar.html" class="lang">Español ▸</a>
+</div>
+```
+
+::: {.lead-intro}
+The arboretum, documented specimen by specimen. Choose how you want to explore it: the living map, the full catalogue, the featured trees and birds, the seed bank, or the illustrated plan of the gardens.
+:::
+
+```{=html}
+<div class="hub-grid">
+
+  <a class="hub-card" href="../mapa.html">
+    <div class="hub-ph" style="background-image:url('../fotos/eventos/aerea_1.jpg')"></div>
+    <div class="hub-body">
+      <h3>Interactive map</h3>
+      <p>Every specimen geolocated over satellite imagery, with a search box, filters by type and suggested routes.</p>
+      <span class="hub-cta">Open the map →</span>
+    </div>
+  </a>
+
+  <a class="hub-card" href="../catalogo.html">
+    <div class="hub-ph" style="background-image:url('../fotos/galeria/flora_liquidambar.jpg')"></div>
+    <div class="hub-body">
+      <h3>Catalogue</h3>
+      <p>The full list of documented species, with a search box and CSV download.</p>
+      <span class="hub-cta">See catalogue →</span>
+    </div>
+  </a>
+
+  <a class="hub-card" href="../especies.html">
+    <div class="hub-ph" style="background-image:url('../fotos/Araucaria.jpg')"></div>
+    <div class="hub-body">
+      <h3>Featured species</h3>
+      <p>The most emblematic specimens for their botanical, historical and scenic value.</p>
+      <span class="hub-cta">Explore species →</span>
+    </div>
+  </a>
+
+  <a class="hub-card" href="../aves.html">
+    <div class="hub-ph" style="background-image:url('../fotos/galeria/ave_tijereta.jpg')"></div>
+    <div class="hub-body">
+      <h3>Birds</h3>
+      <p>Photo gallery and seasonal record of the birds observed on the estate.</p>
+      <span class="hub-cta">Explore birds →</span>
+    </div>
+  </a>
+
+  <a class="hub-card" href="../banco_semillas.html">
+    <div class="hub-ph" style="background-image:url('../fotos/galeria/alameda_eucaliptos.jpg')"></div>
+    <div class="hub-body">
+      <h3>Seed bank</h3>
+      <p><i>Ex-situ</i> conservation of our flora: the arboretum's seed collection.</p>
+      <span class="hub-cta">See the seed bank →</span>
+    </div>
+  </a>
+
+  <a class="hub-card" href="../plano.html">
+    <div class="hub-ph" style="background-image:url('../fotos/mapa_jardines.jpg')"></div>
+    <div class="hub-body">
+      <h3>Illustrated plan</h3>
+      <p>The hand-drawn plan of the gardens and the layout of the main collections.</p>
+      <span class="hub-cta">See the plan →</span>
+    </div>
+  </a>
+
+</div>
+```
+
+::: {.callout-note}
+The map, catalogue and species pages are shared across both languages: plant data is largely language-neutral, and scientific names are universal.
+:::

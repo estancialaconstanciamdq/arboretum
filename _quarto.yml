@@ -63,6 +63,8 @@ website:
           - text: "Biodiversidad"
             href: biodiversidad.qmd
     right:
+      - text: "EN"
+        href: en/index.qmd
       - text: "Reservar visita"
         href: experiencias.qmd
       - text: "Empresas"
