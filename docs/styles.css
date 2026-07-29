@@ -548,3 +548,8 @@ a.stat { text-decoration: none; color: inherit; display: block; }
 .en-nav .spacer{ margin-left:auto; }
 .en-nav .lang{ background:rgba(255,255,255,.14); border-radius:16px; padding:.15rem .7rem; }
 .en-nav .lang:hover{ background:rgba(255,255,255,.28); text-decoration:none !important; }
+.en-nav .cta{ background:#e8b53c; color:#1E4A38 !important; border-radius:16px; padding:.15rem .8rem; font-weight:600; }
+.en-nav .cta:hover{ background:#f0c458; color:#1E4A38 !important; text-decoration:none !important; }
+.en-nav .sep{ opacity:.35; }
+/* La barra global en español se oculta desde cada página /en/ con un <style> propio,
+   para que la ocultación afecte SOLO a las páginas en inglés. */

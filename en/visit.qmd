@@ -10,6 +10,7 @@ format: html
 ---
 
 ```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
 <div class="en-nav">
   <span class="brand">Arboretum</span>
   <a href="index.html">Home</a>
@@ -17,7 +18,11 @@ format: html
   <a href="../mapa.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html" class="current">Visit</a>
+  <a href="../apadrina.html">Sponsor a tree</a>
+  <a href="../empresas.html">Companies</a>
+  <a href="../contacto.html">Contact</a>
   <span class="spacer"></span>
+  <a href="../experiencias.html" class="cta">Book a visit</a>
   <a href="../visita.html" class="lang">Español ▸</a>
 </div>
 ```
