@@ -3,7 +3,7 @@
      Para cambiar esta página, editá el Excel y volvé a renderizar. -->
 
 ---
-title: "Eucalyptus globulus"
+title: "Eucalyptus globulus Labill."
 format: html
 ---
 

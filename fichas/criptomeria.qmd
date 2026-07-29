@@ -7,7 +7,9 @@ title: "Criptomeria"
 format: html
 ---
 
-**Nombre científico:** <i>Cryptomeria</i> <i>japonica</i> (Thunb. ex L. f.) D. Don
+![](../fotos/Cedrojapones.jpg){style="max-width:320px; border-radius:10px;"}
+
+**Nombre científico:** <i>Cryptomeria</i> <i>japónica</i>
 
 
 **Familia:** Cupressaceae

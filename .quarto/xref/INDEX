@@ -361,5 +361,17 @@
   },
   "explorar.qmd": {
     "explorar.html": "63b2290d"
+  },
+  "en/collection.qmd": {
+    "collection.html": "8ebb5958"
+  },
+  "en/index.qmd": {
+    "index.html": "cee48ca9"
+  },
+  "en/visit.qmd": {
+    "visit.html": "39d59e5c"
+  },
+  "en/wellbeing.qmd": {
+    "wellbeing.html": "f9d5c052"
   }
 }

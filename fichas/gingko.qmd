@@ -7,7 +7,7 @@ title: "Ginkgo"
 format: html
 ---
 
-**Nombre científico:** <i>Acer</i> <i>palmatum</i> Thunb.
+**Nombre científico:** <i>Acer</i> <i>palmatum</i>
 
 
 **Familia:** Sapindaceae

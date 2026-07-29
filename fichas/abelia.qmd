@@ -7,7 +7,7 @@ title: "Abelia"
 format: html
 ---
 
-**Nombre científico:** <i>Abelia</i> <i>×grandiflora</i> (André) Rehder
+**Nombre científico:** <i>Abelia</i> x <i>grandiflora</i> L.
 
 
 **Familia:** Caprifoliaceae

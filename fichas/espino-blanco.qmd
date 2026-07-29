@@ -7,6 +7,8 @@ title: "Espino blanco"
 format: html
 ---
 
+![](../fotos/Crataegus.jpg){style="max-width:320px; border-radius:10px;"}
+
 **Nombre científico:** <i>Crataegus</i> sp.
 
 

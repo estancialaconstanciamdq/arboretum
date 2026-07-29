@@ -7,6 +7,8 @@ title: "Roble rojo"
 format: html
 ---
 
+![](../fotos/Roblerojoamericano.jpg){style="max-width:320px; border-radius:10px;"}
+
 **Nombre científico:** <i>Quercus</i> <i>rubra</i> L.
 
 

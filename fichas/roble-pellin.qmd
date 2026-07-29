@@ -7,7 +7,7 @@ title: "Roble pellín"
 format: html
 ---
 
-**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i> (Mirb.) Oerst.
+**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i> 2
 
 
 **Familia:** Nothofagaceae

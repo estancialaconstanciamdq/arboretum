@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Cedrodecristal.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Agathis</i> <i>dammara</i> (Lamb.) Rich. &amp; A.Rich.
+**Nombre científico:** <i>Agathis</i> <i>dammara</i>
 
 
 **Familia:** Araucariaceae

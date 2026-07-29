@@ -7,7 +7,7 @@ title: "Dodonea"
 format: html
 ---
 
-**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i> Jacq.
+**Nombre científico:** <i>Dodonaea</i> <i>viscosa</i>
 
 
 **Familia:** Sapindaceae

@@ -1,0 +1,10 @@
+Running script 'scripts/generar_fichas.R'
+Warning message:
+In dir.create(my_directory) :
+  cannot create dir 'M:\R\Win-Library\4.4', reason 'No such file or directory'
+Error in if (!is.na(a) && tiene_valor(a)) res <- paste0(res, " ", esc1(trimws(as.character(a)))) : 
+  missing value where TRUE/FALSE needed
+Calls: writeLines ... add -> campo -> tiene_valor -> sci_html -> vapply -> FUN
+In addition: Warning message:
+Unknown or uninitialised column: `autor`. 
+Execution halted
