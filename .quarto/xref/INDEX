@@ -400,5 +400,8 @@
   },
   "en/sponsor.qmd": {
     "sponsor.html": "3d27fd85"
+  },
+  "en/map.qmd": {
+    "map.html": "d65be57c"
   }
 }

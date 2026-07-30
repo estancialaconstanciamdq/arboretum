@@ -11,7 +11,7 @@ page-layout: full
   <span class="brand">Arboretum</span>
   <a href="index.html">Home</a>
   <a href="collection.html" class="current">The Collection</a>
-  <a href="../mapa.html">Map</a>
+  <a href="map.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>
@@ -33,7 +33,7 @@ collections and the trails of the estate. The species key is on the right of the
 </div>
 
 Would you rather explore specimen by specimen, with photos and profiles? Visit the
-[interactive map »](../mapa.html).
+[interactive map »](map.html).
 
 ## The founder's original plans
 
@@ -107,4 +107,4 @@ Click each plan to see it enlarged and read the founder's annotations.
 
 **From the plan to today's garden.** Those hand-drawn strokes became the arboretum
 you can walk through today: see how it turned out in the illustrated plan above, and
-explore each specimen, with photos and profiles, on the [interactive map »](../mapa.html).
+explore each specimen, with photos and profiles, on the [interactive map »](map.html).

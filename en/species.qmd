@@ -12,7 +12,7 @@ format: html
   <span class="brand">Arboretum</span>
   <a href="index.html">Home</a>
   <a href="collection.html" class="current">The Collection</a>
-  <a href="../mapa.html">Map</a>
+  <a href="map.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>

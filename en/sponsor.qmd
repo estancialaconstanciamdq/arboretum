@@ -13,7 +13,7 @@ format: html
   <span class="brand">Arboretum</span>
   <a href="index.html">Home</a>
   <a href="collection.html">The Collection</a>
-  <a href="../mapa.html">Map</a>
+  <a href="map.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html" class="current">Sponsor a tree</a>
@@ -38,7 +38,7 @@ conservation project.
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
 ### 1. Choose your tree
-Browse the [species catalogue](catalogue.html) or the [map](../mapa.html) and pick
+Browse the [species catalogue](catalogue.html) or the [map](map.html) and pick
 the specimen you like most.
 :::
 

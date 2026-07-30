@@ -9,7 +9,7 @@ page-layout: full
   <span class="brand">Arboretum</span>
   <a href="index.html" class="current">Home</a>
   <a href="collection.html">The Collection</a>
-  <a href="../mapa.html">Map</a>
+  <a href="map.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>
@@ -164,7 +164,7 @@ birds of a system that is truly **alive**.
 ### <i class="bi bi-geo-alt"></i> Interactive Map
 Walk the trails, sectors and points of interest, and search for any species by name.
 
-[Open the map →](../mapa.html){.btn .btn-success .btn-sm .mt-auto role="button"}
+[Open the map →](map.html){.btn .btn-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}

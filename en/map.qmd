@@ -1,0 +1,413 @@
+---
+title: "Interactive Map"
+page-layout: full
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html" class="current">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../mapa.html" class="lang">Español ▸</a>
+</div>
+```
+
+::: {.lead}
+This space brings together information about the plant species, the birds and the main points of interest surveyed on the estate. Use the **search box** (top left) to jump straight to a species by name, the **layers** panel to filter by type or turn on the three suggested **routes** (short, medium and long), and **select any point** to see its details.
+:::
+
+```{=html}
+<style>
+.arb-buscador{background:#fff;padding:4px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.3);}
+.arb-input{border:1px solid #bbb;border-radius:6px;padding:.35rem .5rem;width:210px;font-size:.9rem;outline:none;}
+.arb-resultados{background:#fff;margin-top:4px;max-height:240px;overflow:auto;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.2);}
+.arb-item{padding:.35rem .55rem;cursor:pointer;font-size:.85rem;border-bottom:1px solid #f0f0f0;}
+.arb-item:hover{background:#eef4f0;}
+.arb-item em{color:#666;}
+
+.leaflet.html-widget,
+.leaflet-container{
+  width:100% !important;
+  height:80vh !important;
+  min-height:480px;
+  border-radius:12px;
+}
+.lead{max-width:900px;}
+@media (max-width:768px){
+  .leaflet.html-widget,
+  .leaflet-container{ height:72vh !important; min-height:400px; }
+  .arb-input{width:150px;}
+}
+</style>
+```
+
+```{r}
+source("scripts/cargar_datos.R")
+
+library(leaflet)
+library(htmltools)
+
+# Own SVG markers (pin + silhouette), embedded as data-URI so they always show.
+marcador_svg <- function(archivo) {
+  svg <- paste(readLines(file.path("fotos", archivo), warn = FALSE), collapse = "")
+  uri <- paste0("data:image/svg+xml,", utils::URLencode(svg, reserved = TRUE))
+  makeIcon(iconUrl = uri, iconWidth = 30, iconHeight = 42,
+           iconAnchorX = 15, iconAnchorY = 42, popupAnchorX = 0, popupAnchorY = -38)
+}
+
+icono_arbol   <- marcador_svg("marcador_arbol.svg")
+icono_conif   <- marcador_svg("marcador_conifera.svg")
+icono_arbusto <- marcador_svg("marcador_arbusto.svg")
+icono_palmera <- marcador_svg("marcador_palmera.svg")
+icono_ave       <- marcador_svg("marcador_ave.svg")
+icono_poi       <- marcador_svg("marcador_poi.svg")
+icono_apadrinado <- marcador_svg("marcador_apadrinado.svg")
+
+if (!"padrino" %in% names(arboles)) arboles$padrino <- NA
+
+con_coord <- function(df) dplyr::filter(df, !is.na(latitud), !is.na(longitud))
+
+# English labels for life-form (data values are in Spanish)
+tr_forma <- c("Conífera"="Conifer", "Árbol latifoliado"="Broadleaf tree",
+              "Arbusto"="Shrub", "Palmera"="Palm", "Otro"="Other")
+forma_en <- function(x) { out <- unname(tr_forma[as.character(x)]); ifelse(is.na(out), as.character(x), out) }
+
+# Rich popup for trees (empty fields are simply not shown)
+popup_arbol <- function(df) {
+  titulo <- ifelse(tiene_valor(df$nombre_comun), df$nombre_comun,
+             ifelse(tiene_valor(df$nombre_cientifico), df$nombre_cientifico, df$ID))
+  paste0(
+    "<h3>", titulo, "</h3>",
+    ifelse(tiene_valor(df$nombre_cientifico), paste0(sci_html(df$nombre_cientifico, df$autor), "<br><br>"), "<br>"),
+    ifelse(tiene_valor(df$foto), paste0("<img src='../fotos/", df$foto,
+           "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), ""),
+    ifelse(tiene_valor(df$familia),    paste0("<b>Family:</b> ", df$familia, "<br>"), ""),
+    ifelse(tiene_valor(df$forma_vida), paste0("<b>Type:</b> ", forma_en(df$forma_vida), "<br>"), ""),
+    ifelse(tiene_valor(df$continente),paste0("<b>Origin:</b> ", df$continente, "<br>"), ""),
+    ifelse(tiene_valor(df$año_plantacion), paste0("<b>Planted:</b> ", df$año_plantacion, "<br>"), ""),
+    ifelse(tiene_valor(df$padrino), paste0("<b>Sponsored by:</b> ", df$padrino, "<br>"), ""),
+    ifelse(tiene_valor(df$slug), paste0("<div style='margin-top:.55rem;'><a href='../fichas/", df$slug, ".html'><b>See full profile →</b></a></div>"), ""),
+    "<div style='margin-top:.35rem;font-size:.8rem;'><a href='sponsor.html'><i class='bi bi-tree'></i> Sponsor a specimen like this →</a></div>"
+  )
+}
+
+# Sponsored trees: shown separately, with their own marker.
+apad <- con_coord(dplyr::filter(arboles, tiene_valor(padrino)))
+
+base_np <- dplyr::filter(arboles, !tiene_valor(padrino))
+fv <- function(patron) con_coord(dplyr::filter(base_np,
+        tiene_valor(forma_vida), grepl(patron, forma_vida, ignore.case = TRUE)))
+coni <- fv("con[ií]fera")
+lati <- fv("latifoliad")
+arbu <- fv("arbusto")
+palm <- fv("palmera")
+otro <- con_coord(dplyr::filter(base_np,
+          !tiene_valor(forma_vida) |
+          !grepl("con[ií]fera|latifoliad|arbusto|palmera", forma_vida, ignore.case = TRUE)))
+avs  <- con_coord(aves)
+pts  <- con_coord(puntos)
+```
+
+```{r}
+m <- leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") %>%
+  addProviderTiles(providers$CartoDB.Positron, group = "Map (streets)") %>%
+  addScaleBar(position = "bottomleft") %>%
+
+  addMarkers(
+    data = coni, lng = ~longitud, lat = ~latitud,
+    icon = icono_conif, group = "Conifers",
+    popup = popup_arbol(coni)
+  ) %>%
+
+  addMarkers(
+    data = lati, lng = ~longitud, lat = ~latitud,
+    icon = icono_arbol, group = "Broadleaf trees",
+    popup = popup_arbol(lati)
+  ) %>%
+
+  addMarkers(
+    data = arbu, lng = ~longitud, lat = ~latitud,
+    icon = icono_arbusto, group = "Shrubs",
+    popup = popup_arbol(arbu)
+  ) %>%
+
+  addMarkers(
+    data = palm, lng = ~longitud, lat = ~latitud,
+    icon = icono_palmera, group = "Palms",
+    popup = popup_arbol(palm)
+  ) %>%
+
+  addMarkers(
+    data = apad, lng = ~longitud, lat = ~latitud,
+    icon = icono_apadrinado, group = "Sponsored trees",
+    popup = popup_arbol(apad)
+  ) %>%
+
+  addMarkers(
+    data = otro, lng = ~longitud, lat = ~latitud,
+    icon = icono_arbol, group = "Other species",
+    popup = popup_arbol(otro)
+  ) %>%
+
+  addMarkers(
+    data = avs, lng = ~longitud, lat = ~latitud,
+    icon = icono_ave, group = "Birds",
+    popup = ~paste0(
+      "<h3>", ifelse(tiene_valor(especie), especie, "Bird"), "</h3>",
+      ifelse(tiene_valor(nombre_cientifico), paste0(sci_html(nombre_cientifico), "<br><br>"), "<br>"),
+      ifelse(tiene_valor(foto), paste0("<img src='../fotos/", foto,
+             "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), ""),
+      ifelse(tiene_valor(observacion), paste0("<b>Season observed:</b> ", observacion), "")
+    )
+  ) %>%
+
+  addMarkers(
+    data = pts, lng = ~longitud, lat = ~latitud,
+    icon = icono_poi, group = "Points of interest",
+    popup = ~paste0(
+      "<h3>", ifelse(tiene_valor(nombre), nombre, "Point of interest"), "</h3>",
+      ifelse(tiene_valor(descripcion), paste0("<i>", descripcion, "</i><br><br>"), ""),
+      ifelse(tiene_valor(foto), paste0("<img src='../fotos/", foto,
+             "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), "")
+    )
+  )
+
+# --- GIS layers: auto-loaded if the file exists in gis/ ---
+capas_gis <- list(
+  list(archivo = "gis/senderos.geojson",         grupo = "Trails", color = "#B8860B", relleno = FALSE, peso = 2),
+  list(archivo = "gis/sectores.geojson",         grupo = "Sectors", color = "#1E4A38", relleno = TRUE,  peso = 2),
+  list(archivo = "gis/lagunas.geojson",          grupo = "Ponds",  color = "#1f78b4", relleno = TRUE,  peso = 2),
+  list(archivo = "gis/recorrido_largo.geojson",  grupo = "Long route", color = "#7A3CC8", relleno = FALSE, peso = 4),
+  list(archivo = "gis/recorrido_medio.geojson",  grupo = "Medium route", color = "#D22828", relleno = FALSE, peso = 4),
+  list(archivo = "gis/recorrido_corto.geojson",  grupo = "Short route", color = "#FFD400", relleno = FALSE, peso = 4)
+)
+
+grupos_gis <- character(0)
+for (capa in capas_gis) {
+  if (file.exists(capa$archivo)) {
+    gj <- paste(readLines(capa$archivo, warn = FALSE), collapse = "\n")
+    m <- m %>% addGeoJSON(
+      gj, group = capa$grupo,
+      color = capa$color, weight = capa$peso, opacity = 0.95,
+      fill = capa$relleno, fillColor = capa$color, fillOpacity = 0.2
+    )
+    grupos_gis <- c(grupos_gis, capa$grupo)
+  }
+}
+
+# --- Illustrated sector layer (tree icons, plan style) ------------
+grupo_sectores <- character(0)
+if (file.exists("gis/iconos_sectores.geojson")) {
+  grupo_sectores <- tryCatch({
+    ic <- jsonlite::fromJSON("gis/iconos_sectores.geojson", simplifyVector = TRUE)
+    fr <- ic$features
+    coords <- do.call(rbind, fr$geometry$coordinates)
+    sec_df <- data.frame(
+      lng = as.numeric(coords[, 1]), lat = as.numeric(coords[, 2]),
+      icono = as.character(fr$properties$icono),
+      sector = as.character(fr$properties$sector),
+      stringsAsFactors = FALSE
+    )
+    uri_por_icono <- vapply(unique(sec_df$icono), function(a) {
+      svg <- paste(readLines(file.path("fotos", paste0(a, ".svg")), warn = FALSE), collapse = "")
+      paste0("data:image/svg+xml,", utils::URLencode(svg, reserved = TRUE))
+    }, character(1))
+    sec_icons <- icons(
+      iconUrl = unname(uri_por_icono[sec_df$icono]),
+      iconWidth = 22, iconHeight = 26, iconAnchorX = 11, iconAnchorY = 25
+    )
+    m <<- m %>% addMarkers(
+      data = sec_df, lng = ~lng, lat = ~lat,
+      icon = sec_icons, group = "Sectors (illustrated)",
+      options = markerOptions(interactive = FALSE, keyboard = FALSE, zIndexOffset = -1000)
+    )
+    "Sectors (illustrated)"
+  }, error = function(e) { message("map.qmd: sector layer omitted (", conditionMessage(e), ")"); character(0) })
+}
+
+m <- m %>%
+  addLayersControl(
+    baseGroups = c("Satellite", "Map (streets)"),
+    overlayGroups = c("Conifers", "Broadleaf trees", "Shrubs", "Palms",
+                      "Sponsored trees", "Other species", "Birds", "Points of interest",
+                      grupos_gis, grupo_sectores),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+# Suggested routes: hidden by default, activated from the layers panel
+m <- m %>% hideGroup(c("Long route", "Medium route", "Short route"))
+
+# --- Visual legend (uses the same markers as the map) -------------------
+leyenda_items <- c(
+  "marcador_conifera.svg"   = "Conifer",
+  "marcador_arbol.svg"      = "Broadleaf",
+  "marcador_arbusto.svg"    = "Shrub",
+  "marcador_palmera.svg"    = "Palm",
+  "marcador_apadrinado.svg" = "Sponsored",
+  "marcador_ave.svg"        = "Bird",
+  "marcador_poi.svg"        = "Point of interest"
+)
+leyenda_html <- paste0(
+  "<div style='background:rgba(255,255,255,.92);padding:4px 9px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,.2);font-size:.72rem;display:flex;flex-wrap:wrap;gap:1px 10px;align-items:center;max-width:92vw;'>",
+  paste0("<span style='display:inline-flex;align-items:center;white-space:nowrap;'>",
+         "<img src='../fotos/", names(leyenda_items),
+         "' style='height:15px;vertical-align:middle;margin-right:3px;'>", leyenda_items, "</span>",
+         collapse = ""),
+  "</div>"
+)
+m <- m %>% addControl(html = leyenda_html, position = "bottomright")
+
+# --- Sector-layer legend (tree icons) ----------------------
+if (length(grupo_sectores) > 0) {
+  sec_leg <- c(
+    "sector_pinar.svg"       = "Pine grove",
+    "sector_eucaliptos.svg"  = "Eucalyptus wood",
+    "sector_cipres.svg"      = "Cypress screens",
+    "sector_robledal.svg"    = "Oak grove",
+    "sector_cedros.svg"      = "Cedars",
+    "sector_sauces.svg"      = "Willows & lowland"
+  )
+  sec_leg_html <- paste0(
+    "<div style='background:rgba(255,255,255,.92);padding:5px 9px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,.2);font-size:.72rem;max-width:92vw;'>",
+    "<b style='display:block;margin-bottom:2px;color:#1E4A38;'>Sectors</b>",
+    "<div style='display:flex;flex-wrap:wrap;gap:1px 10px;align-items:center;'>",
+    paste0("<span style='display:inline-flex;align-items:center;white-space:nowrap;'>",
+           "<img src='../fotos/", names(sec_leg),
+           "' style='height:18px;vertical-align:middle;margin-right:3px;'>", sec_leg, "</span>",
+           collapse = ""),
+    "</div></div>"
+  )
+  m <- m %>% addControl(html = sec_leg_html, position = "bottomright")
+}
+
+# --- Auto-fit to all surveyed points ----------------------
+.bb <- rbind(
+  con_coord(arboles)[, c("longitud", "latitud")],
+  avs[, c("longitud", "latitud")],
+  pts[, c("longitud", "latitud")]
+)
+if (nrow(.bb) > 0) {
+  m <- m %>% fitBounds(min(.bb$longitud), min(.bb$latitud),
+                       max(.bb$longitud), max(.bb$latitud))
+}
+
+# --- On-map search (pure JavaScript; no external packages) --------
+m <- tryCatch({
+  ab  <- con_coord(arboles)
+  av2 <- con_coord(aves)
+  b1 <- data.frame(
+    nombre = ifelse(tiene_valor(ab$nombre_comun), as.character(ab$nombre_comun),
+             ifelse(tiene_valor(ab$nombre_cientifico), as.character(ab$nombre_cientifico), as.character(ab$ID))),
+    cientifico = ifelse(tiene_valor(ab$nombre_cientifico), as.character(ab$nombre_cientifico), ""),
+    lat = as.numeric(ab$latitud), lng = as.numeric(ab$longitud),
+    stringsAsFactors = FALSE)
+  b2 <- data.frame(
+    nombre = ifelse(tiene_valor(av2$especie), as.character(av2$especie),
+             ifelse(tiene_valor(av2$nombre_cientifico), as.character(av2$nombre_cientifico), "Bird")),
+    cientifico = ifelse(tiene_valor(av2$nombre_cientifico), as.character(av2$nombre_cientifico), ""),
+    lat = as.numeric(av2$latitud), lng = as.numeric(av2$longitud),
+    stringsAsFactors = FALSE)
+  buscables <- rbind(b1, b2)
+  buscables <- buscables[!is.na(buscables$lat) & !is.na(buscables$lng) & buscables$nombre != "", ]
+  datos_json <- jsonlite::toJSON(buscables, dataframe = "rows", auto_unbox = TRUE)
+
+  js <- paste0(
+"function(el, x) {
+  var map = this;
+  var pts = ", datos_json, ";
+  setTimeout(function(){ map.invalidateSize(); }, 200);
+  window.addEventListener('resize', function(){ map.invalidateSize(); });
+  function norm(s){ return (s==null?'':String(s)).toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }
+  var Ctrl = L.Control.extend({
+    options: { position: 'topleft' },
+    onAdd: function(){
+      var box = L.DomUtil.create('div','arb-buscador');
+      var input = L.DomUtil.create('input','arb-input', box);
+      input.type = 'text';
+      input.placeholder = 'Search species...';
+      input.setAttribute('aria-label','Search species');
+      var out = L.DomUtil.create('div','arb-resultados', box);
+      out.style.display = 'none';
+      L.DomEvent.disableClickPropagation(box);
+      L.DomEvent.disableScrollPropagation(box);
+      function cerrar(){ out.style.display='none'; while(out.firstChild) out.removeChild(out.firstChild); }
+      function ir(p){
+        map.setView([p.lat, p.lng], 19);
+        var html = '<b>'+(p.nombre||'')+'</b>' + (p.cientifico ? '<br><i>'+p.cientifico+'</i>' : '');
+        L.popup().setLatLng([p.lat, p.lng]).setContent(html).openOn(map);
+        input.value = p.nombre; cerrar();
+      }
+      function buscar(){
+        var q = norm(input.value); cerrar();
+        if(q.length < 2) return;
+        var n = 0;
+        for(var i=0; i<pts.length && n<8; i++){
+          var p = pts[i];
+          if(norm(p.nombre).indexOf(q)>=0 || norm(p.cientifico).indexOf(q)>=0){
+            var it = L.DomUtil.create('div','arb-item', out);
+            var s = L.DomUtil.create('span','', it); s.textContent = p.nombre;
+            if(p.cientifico){ var em = L.DomUtil.create('em','', it); em.textContent = ' '+p.cientifico; }
+            (function(pp){ it.addEventListener('click', function(){ ir(pp); }); })(p);
+            n++;
+          }
+        }
+        out.style.display = n ? 'block' : 'none';
+      }
+      L.DomEvent.on(input,'input',buscar);
+      L.DomEvent.on(input,'focus',buscar);
+      L.DomEvent.on(input,'keydown',function(e){
+        if(e.keyCode===13){ var f=out.querySelector('.arb-item'); if(f) f.click(); }
+        else if(e.keyCode===27){ cerrar(); }
+      });
+      return box;
+    }
+  });
+  map.addControl(new Ctrl());
+
+  // --- 'My location' button (browser native geolocation) ---
+  var LocateCtrl = L.Control.extend({
+    options: { position: 'topleft' },
+    onAdd: function(){
+      var b = L.DomUtil.create('div','leaflet-bar arb-locate');
+      var a = L.DomUtil.create('a','', b);
+      a.href = '#'; a.title = 'Show my location';
+      a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>';
+      a.style.cssText = 'font-size:15px;line-height:26px;text-align:center;color:#1E4A38;';
+      L.DomEvent.disableClickPropagation(b);
+      L.DomEvent.on(a,'click',function(e){
+        L.DomEvent.stop(e);
+        if(!navigator.geolocation){ return; }
+        a.innerHTML = '…';
+        navigator.geolocation.getCurrentPosition(function(pos){
+          a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>';
+          var ll = [pos.coords.latitude, pos.coords.longitude];
+          map.setView(ll, 18);
+          L.circleMarker(ll, {radius:9, color:'#1E4A38', fillColor:'#2f6b4f', fillOpacity:.9, weight:2})
+            .addTo(map).bindPopup('You are here').openPopup();
+        }, function(){ a.innerHTML = '<i class=\"bi bi-geo-alt-fill\"></i>'; });
+      });
+      return b;
+    }
+  });
+  map.addControl(new LocateCtrl());
+}")
+  htmlwidgets::onRender(m, js)
+}, error = function(e) { message('map.qmd: search omitted (', conditionMessage(e), ')'); m })
+
+m
+```
