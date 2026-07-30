@@ -18,11 +18,11 @@ format: html
   <a href="../mapa.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html" class="current">Visit</a>
-  <a href="../apadrina.html">Sponsor a tree</a>
-  <a href="../empresas.html">Companies</a>
-  <a href="../contacto.html">Contact</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
   <span class="spacer"></span>
-  <a href="../experiencias.html" class="cta">Book a visit</a>
+  <a href="experiences.html" class="cta">Book a visit</a>
   <a href="../visita.html" class="lang">Español ▸</a>
 </div>
 ```
@@ -33,7 +33,7 @@ visits **by advance booking**, so that each group enjoys a personalized, safe an
 highly educational experience.
 
 <div style="text-align:center; margin:1.5rem 0 2rem;">
-<a href="../experiencias.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
+<a href="experiences.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
 &nbsp;
 <a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg" role="button"><i class="bi bi-geo-alt"></i> How to get here</a>
 </div>
@@ -58,7 +58,7 @@ Educational tours by level.
 ### <i class="bi bi-flower2"></i> Groups
 Guided visits and experiences.
 
-[See experiences →](../experiencias.html){.btn .btn-outline-success .btn-sm role="button"}
+[See experiences →](experiences.html){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
@@ -72,7 +72,7 @@ Guided forest bathing.
 ### <i class="bi bi-people"></i> Companies
 Events and corporate impact.
 
-[Company proposal →](../empresas.html){.btn .btn-outline-success .btn-sm role="button"}
+[Company proposal →](companies.html){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 :::
@@ -100,7 +100,7 @@ To make the most of the outdoor tour, we recommend:
 
 ::: {.callout-note collapse="true" title="Do I need to book? How do I do it?"}
 Yes, all visits are by advance booking. You can book from the
-[experiences](../experiencias.html) page, complete the
+[experiences](experiences.html) page, complete the
 [educational visits](../visitas_escolares.html) form, or write to us directly by
 email or WhatsApp (see below).
 :::
@@ -166,5 +166,5 @@ Camino 515, Mar del Plata · Buenos Aires · Argentina
 :::
 
 ::: {.cta-container style="text-align:center; margin:2rem 0 1rem;"}
-<a href="../experiencias.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
+<a href="experiences.html" class="btn btn-success btn-lg" role="button"><i class="bi bi-calendar-check"></i> Book a visit</a>
 :::

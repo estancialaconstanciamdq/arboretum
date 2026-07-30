@@ -1,0 +1,101 @@
+---
+title: "Seed bank"
+subtitle: "Seeds and cuttings from the collection"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html" class="current">The Collection</a>
+  <a href="../mapa.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../banco_semillas.html" class="lang">Español ▸</a>
+</div>
+```
+
+```{r}
+#| label: setup
+library(readxl)
+library(dplyr)
+
+tiene_valor <- function(x) !is.na(x) & !(trimws(as.character(x)) %in% c("", "-", "...", "NA"))
+
+bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
+  mutate(
+    familia = ifelse(tiene_valor(familia), familia, "—"),
+    nombre_comun = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
+    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
+  )
+
+esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);x<-gsub(">","&gt;",x,fixed=TRUE);gsub('"',"&quot;",x,fixed=TRUE)}
+opciones <- function(v) paste0("<option value=\"\">All</option>", paste0("<option value=\"",esc(v),"\">",esc(v),"</option>",collapse=""))
+```
+
+The arboretum conserves **`r nrow(bs)` accessions** of seeds and cuttings, a basis for
+propagation, restoration and educational activities. Search by name or filter by family.
+
+```{r results='asis'}
+cat(sprintf('
+<style>
+  .bs-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
+  .bs-controles label{font-size:.8rem;color:#555;display:block;}
+  .bs-controles input,.bs-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #bs-tabla{width:100%%;border-collapse:collapse;}
+  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;}
+  #bs-tabla thead th{border-bottom:2px solid #1E4A38;color:#1E4A38;}
+  #bs-tabla tr:hover td{background:#f4f8f5;}
+  #bs-conteo{color:#666;font-size:.85rem;margin:.3rem 0 1rem;}
+</style>
+<div class="bs-controles">
+  <div><label>Search</label><input type="text" id="bs-q" placeholder="name or species..."></div>
+  <div><label>Family</label><select id="bs-fam">%s</select></div>
+</div>
+<div id="bs-conteo"></div>
+<div class="tabla-scroll">
+<table id="bs-tabla"><thead><tr><th>Id</th><th>Family</th><th>Scientific name</th><th>Common name</th></tr></thead><tbody>',
+  opciones(sort(unique(bs$familia[bs$familia != "—"])))))
+
+for (i in seq_len(nrow(bs))) {
+  r <- bs[i, ]
+  buscar <- tolower(iconv(paste(r$nombre_comun, r$nombre_cientifico, r$id), to = "ASCII//TRANSLIT"))
+  cat(sprintf('<tr data-fam="%s" data-buscar="%s"><td>%s</td><td>%s</td><td><em>%s</em></td><td>%s</td></tr>',
+    esc(r$familia), esc(buscar), esc(r$id), esc(r$familia), esc(r$nombre_cientifico), esc(r$nombre_comun)))
+}
+
+cat('</tbody></table>
+</div>
+<script>
+(function(){
+  var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
+      filas=document.querySelectorAll("#bs-tabla tbody tr"), conteo=document.getElementById("bs-conteo");
+  function aplica(){
+    var qs=(q.value||"").toLowerCase(), vf=ff.value, n=0;
+    filas.forEach(function(tr){
+      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf);
+      tr.style.display=ok?"":"none"; if(ok)n++;
+    });
+    conteo.textContent=n+" of "+filas.length+" accessions";
+  }
+  [q,ff].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  aplica();
+})();
+</script>')
+```
+
+---
+
+*Source: list of seeds and cuttings from Estancia La Constancia. Updated by editing
+`data/banco_semillas.xlsx`.*

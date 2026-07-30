@@ -1,0 +1,151 @@
+---
+title: "Species catalogue"
+subtitle: "All the trees surveyed in the arboretum"
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html" class="current">The Collection</a>
+  <a href="../mapa.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../catalogo.html" class="lang">Español ▸</a>
+</div>
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+source("scripts/cargar_datos.R")
+
+col_ori <- if ("continente_norm" %in% names(arboles)) "continente_norm" else "continente"
+
+# English labels for life-form and origin (data values are in Spanish)
+tr_forma <- c("Conífera"="Conifer", "Árbol latifoliado"="Broadleaf tree",
+              "Arbusto"="Shrub", "Palmera"="Palm", "Otro"="Other")
+tr_ori <- c("América del Norte"="North America", "América del Sur"="South America",
+            "América Central"="Central America", "Hemisferio Norte"="Northern Hemisphere",
+            "Hemisferio Sur"="Southern Hemisphere", "Varias regiones"="Various regions",
+            "Europa"="Europe", "Asia"="Asia", "África"="Africa", "Oceanía"="Oceania",
+            "Australasia"="Australasia")
+tr_map <- function(x, dic) { out <- unname(dic[as.character(x)]); ifelse(is.na(out), as.character(x), out) }
+
+df <- arboles %>%
+  mutate(
+    nombre_mostrar = dplyr::case_when(
+      tiene_valor(nombre_comun)      ~ nombre_comun,
+      tiene_valor(nombre_cientifico) ~ nombre_cientifico,
+      TRUE                           ~ ID
+    ),
+    sci = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, ""),
+    aut = ifelse(tiene_valor(autor), autor, ""),
+    fam = ifelse(tiene_valor(familia), familia, "—"),
+    grp = ifelse(tiene_valor(forma_vida), tr_map(forma_vida, tr_forma), "Unclassified"),
+    ori = ifelse(tiene_valor(.data[[col_ori]]), tr_map(.data[[col_ori]], tr_ori), "No data"),
+    clave = gsub("^[^A-Za-z0-9]+", "", toupper(iconv(nombre_mostrar, to = "ASCII//TRANSLIT")))
+  ) %>%
+  arrange(clave)
+
+esc <- function(x) {
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  gsub('"', "&quot;", x, fixed = TRUE)
+}
+opciones <- function(vals) paste0(
+  "<option value=\"\">All</option>",
+  paste0("<option value=\"", esc(vals), "\">", esc(vals), "</option>", collapse = "")
+)
+```
+
+Explore the `r nrow(df)` specimens. Type in the search box or combine the filters;
+each name opens its profile.
+
+<p style="margin:.6rem 0 0;">
+  <a href="../recursos/catalogo_arboretum.csv" download class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Download catalogue (CSV)</a>
+  <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Open data · free to use with attribution</span>
+</p>
+
+```{r results='asis', echo=FALSE}
+cat(sprintf('
+<style>
+  .cat-controles { display:flex; flex-wrap:wrap; gap:.6rem; align-items:end; margin:1rem 0; }
+  .cat-controles label { font-size:.8rem; color:#555; display:block; }
+  .cat-controles input, .cat-controles select { padding:.4rem .5rem; border:1px solid #ccc; border-radius:6px; }
+  #cat-q { min-width:220px; }
+  #cat-tabla { width:100%%; border-collapse:collapse; }
+  #cat-tabla th, #cat-tabla td { text-align:left; padding:.45rem .6rem; border-bottom:1px solid #eee; vertical-align:top; }
+  #cat-tabla thead th { border-bottom:2px solid #1E4A38; color:#1E4A38; }
+  #cat-tabla tr:hover td { background:#f4f8f5; }
+  #cat-conteo { color:#666; font-size:.85rem; margin:.3rem 0 1rem; }
+</style>
+
+<div class="cat-controles">
+  <div><label>Search</label><input type="text" id="cat-q" placeholder="name or species..."></div>
+  <div><label>Family</label><select id="cat-fam">%s</select></div>
+  <div><label>Type</label><select id="cat-grp">%s</select></div>
+  <div><label>Origin</label><select id="cat-ori">%s</select></div>
+</div>
+<div id="cat-conteo"></div>
+
+<div class="tabla-scroll">
+<table id="cat-tabla">
+<thead><tr><th>Common name</th><th>Scientific name</th><th>Family</th><th>Type</th><th>Origin</th></tr></thead>
+<tbody>',
+  opciones(sort(unique(df$fam[df$fam != "—"]))),
+  opciones(sort(unique(df$grp))),
+  opciones(sort(unique(df$ori)))
+))
+
+for (i in seq_len(nrow(df))) {
+  r <- df[i, ]
+  buscar <- tolower(iconv(paste(r$nombre_mostrar, r$sci), to = "ASCII//TRANSLIT"))
+  cat(sprintf(
+    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
+<td><a href="../fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
+    esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
+    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori)
+  ))
+}
+
+cat('</tbody></table>
+</div>
+
+<script>
+(function(){
+  var q=document.getElementById("cat-q"),
+      ff=document.getElementById("cat-fam"),
+      fg=document.getElementById("cat-grp"),
+      fo=document.getElementById("cat-ori"),
+      filas=document.querySelectorAll("#cat-tabla tbody tr"),
+      conteo=document.getElementById("cat-conteo");
+  function norm(s){return (s||"").toLowerCase();}
+  function aplica(){
+    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, n=0;
+    filas.forEach(function(tr){
+      var ok = tr.dataset.buscar.indexOf(qs)>=0 &&
+               (!vf || tr.dataset.fam===vf) &&
+               (!vg || tr.dataset.grp===vg) &&
+               (!vo || tr.dataset.ori===vo);
+      tr.style.display = ok ? "" : "none";
+      if(ok) n++;
+    });
+    conteo.textContent = n + " of " + filas.length + " specimens";
+  }
+  [q,ff,fg,fo].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
+  aplica();
+})();
+</script>')
+```

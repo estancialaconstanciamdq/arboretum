@@ -12,11 +12,11 @@ page-layout: full
   <a href="../mapa.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
-  <a href="../apadrina.html">Sponsor a tree</a>
-  <a href="../empresas.html">Companies</a>
-  <a href="../contacto.html">Contact</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
   <span class="spacer"></span>
-  <a href="../experiencias.html" class="cta">Book a visit</a>
+  <a href="experiences.html" class="cta">Book a visit</a>
   <a href="../index.html" class="lang">Español ▸</a>
 </div>
 
@@ -44,8 +44,8 @@ page-layout: full
     <p class="home-hero-lema">A place where nature educates, inspires and heals</p>
     <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
     <div class="home-hero-btns">
-      <a href="../experiencias.html" class="btn btn-success btn-lg" role="button">See experiences</a>
-      <a href="../apadrina.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Sponsor a tree</a>
+      <a href="experiences.html" class="btn btn-success btn-lg" role="button">See experiences</a>
+      <a href="sponsor.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Sponsor a tree</a>
     </div>
   </div>
 </section>
@@ -87,7 +87,7 @@ discover everything you can experience here.
 </div>
 ```
 
-[See experiences](../experiencias.html){.btn .btn-success role="button"} &nbsp; [<i class="bi bi-tree"></i> Sponsor a tree](../apadrina.html){.btn .btn-outline-success role="button"}
+[See experiences](experiences.html){.btn .btn-success role="button"} &nbsp; [<i class="bi bi-tree"></i> Sponsor a tree](sponsor.html){.btn .btn-outline-success role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-5}
@@ -125,14 +125,14 @@ Forest bathing and guided wellbeing experiences among the trees.
 ### <i class="bi bi-tree"></i> Sponsor a tree
 Join conservation by sponsoring a specimen and following its story.
 
-[Sponsor →](../apadrina.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[Sponsor →](sponsor.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
 ### <i class="bi bi-people"></i> Purpose-driven companies
 Bring your organization into conservation, with **traceable and verifiable** impact.
 
-[See proposal →](../empresas.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[See proposal →](companies.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
@@ -146,7 +146,7 @@ Lend a hand to a living botanical garden. We are building the team.
 ### <i class="bi bi-calendar-check"></i> Book your visit
 General visits and experiences to enjoy the arboretum all year round.
 
-[See experiences →](../experiencias.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[See experiences →](experiences.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 :::
@@ -172,14 +172,14 @@ Walk the trails, sectors and points of interest, and search for any species by n
 Meet the most representative specimens of the arboretum's flora, of great botanical
 and historical interest.
 
-[Explore species →](../especies.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[Explore species →](species.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
 ### <i class="bi bi-binoculars"></i> Birds
 Photo gallery and seasonal record of the birds observed on the estate.
 
-[Explore birds →](../aves.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[Explore birds →](birds.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 :::

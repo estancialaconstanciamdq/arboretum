@@ -15,11 +15,11 @@ format: html
   <a href="../mapa.html">Map</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
-  <a href="../apadrina.html">Sponsor a tree</a>
-  <a href="../empresas.html">Companies</a>
-  <a href="../contacto.html">Contact</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
   <span class="spacer"></span>
-  <a href="../experiencias.html" class="cta">Book a visit</a>
+  <a href="experiences.html" class="cta">Book a visit</a>
   <a href="../explorar.html" class="lang">Español ▸</a>
 </div>
 ```
@@ -40,7 +40,7 @@ The arboretum, documented specimen by specimen. Choose how you want to explore i
     </div>
   </a>
 
-  <a class="hub-card" href="../catalogo.html">
+  <a class="hub-card" href="catalogue.html">
     <div class="hub-ph" style="background-image:url('../fotos/galeria/flora_liquidambar.jpg')"></div>
     <div class="hub-body">
       <h3>Catalogue</h3>
@@ -49,7 +49,7 @@ The arboretum, documented specimen by specimen. Choose how you want to explore i
     </div>
   </a>
 
-  <a class="hub-card" href="../especies.html">
+  <a class="hub-card" href="species.html">
     <div class="hub-ph" style="background-image:url('../fotos/Araucaria.jpg')"></div>
     <div class="hub-body">
       <h3>Featured species</h3>
@@ -58,7 +58,7 @@ The arboretum, documented specimen by specimen. Choose how you want to explore i
     </div>
   </a>
 
-  <a class="hub-card" href="../aves.html">
+  <a class="hub-card" href="birds.html">
     <div class="hub-ph" style="background-image:url('../fotos/galeria/ave_tijereta.jpg')"></div>
     <div class="hub-body">
       <h3>Birds</h3>
@@ -67,7 +67,7 @@ The arboretum, documented specimen by specimen. Choose how you want to explore i
     </div>
   </a>
 
-  <a class="hub-card" href="../banco_semillas.html">
+  <a class="hub-card" href="seedbank.html">
     <div class="hub-ph" style="background-image:url('../fotos/galeria/alameda_eucaliptos.jpg')"></div>
     <div class="hub-body">
       <h3>Seed bank</h3>
@@ -76,7 +76,7 @@ The arboretum, documented specimen by specimen. Choose how you want to explore i
     </div>
   </a>
 
-  <a class="hub-card" href="../plano.html">
+  <a class="hub-card" href="plan.html">
     <div class="hub-ph" style="background-image:url('../fotos/mapa_jardines.jpg')"></div>
     <div class="hub-body">
       <h3>Illustrated plan</h3>
