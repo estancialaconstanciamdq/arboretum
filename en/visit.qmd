@@ -51,7 +51,7 @@ alternative** in case the weather does not cooperate.
 ### <i class="bi bi-mortarboard"></i> Schools
 Educational tours by level.
 
-[Educational visits →](../visitas_escolares.html){.btn .btn-outline-success .btn-sm role="button"}
+[Educational visits →](educational-visits.html){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .card .p-3 .shadow-sm .text-center}
@@ -101,7 +101,7 @@ To make the most of the outdoor tour, we recommend:
 ::: {.callout-note collapse="true" title="Do I need to book? How do I do it?"}
 Yes, all visits are by advance booking. You can book from the
 [experiences](experiences.html) page, complete the
-[educational visits](../visitas_escolares.html) form, or write to us directly by
+[educational visits](educational-visits.html) form, or write to us directly by
 email or WhatsApp (see below).
 :::
 

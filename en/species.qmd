@@ -59,7 +59,7 @@ for (i in seq_len(nrow(arboles_destacados))) {
 
   # Name -> link to the generated profile (same slug as generar_fichas.R)
   cat(paste0(
-    "####  [", a$nombre_comun, "](../fichas/", a$slug, ".qmd)\n\n"
+    "####  [", a$nombre_comun, "](fichas/", a$slug, ".qmd)\n\n"
   ))
 
   # Small photo

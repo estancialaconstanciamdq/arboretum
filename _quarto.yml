@@ -2,7 +2,9 @@ project:
   type: website
   output-dir: docs
   execute-dir: project
-  pre-render: scripts/generar_fichas.R
+  pre-render:
+    - scripts/generar_fichas.R
+    - scripts/generar_fichas_en.R
 
 resources:
    - fotos/**

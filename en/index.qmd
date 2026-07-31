@@ -111,7 +111,7 @@ discover everything you can experience here.
 ### <i class="bi bi-mortarboard"></i> Educational visits
 Tours and activities for schools and groups, designed by educational level.
 
-[See visits →](../visitas_escolares.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[See visits →](educational-visits.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
@@ -139,7 +139,7 @@ Bring your organization into conservation, with **traceable and verifiable** imp
 ### <i class="bi bi-hand-thumbs-up"></i> Volunteering
 Lend a hand to a living botanical garden. We are building the team.
 
-[Become a volunteer →](../voluntariado.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
+[Become a volunteer →](volunteer.html){.btn .btn-outline-success .btn-sm .mt-auto role="button"}
 :::
 
 ::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}

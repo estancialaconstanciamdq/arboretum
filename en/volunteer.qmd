@@ -1,0 +1,133 @@
+---
+title: "Volunteering"
+toc: true
+toc-title: "On this page"
+toc-location: right
+subtitle: "Lend a hand to a living botanical garden"
+title-block-banner: ../fotos/eventos/gente_guia.jpg
+title-block-banner-color: white
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../voluntariado.html" class="lang">Español ▸</a>
+</div>
+```
+
+In the world's great arboreta, volunteers are the **heart of the project**: they
+guide visits, care for the collections, record data, propagate species in the nursery
+and bring events to life. At the Arboretum of Estancia La Constancia we are **building
+our volunteer program**, and we invite you to be part of it from the start.
+
+::: {.callout-tip}
+**The program is taking its first steps.** If you're interested, leave us your details
+and we'll get in touch to get to know you, tell you about the available tasks and find
+the best way for you to contribute together.
+:::
+
+<div style="text-align:center; margin:1.5rem 0 2rem;">
+[<i class="bi bi-hand-thumbs-up"></i> I want to volunteer](contact.html){.btn .btn-success .btn-lg role="button"}
+</div>
+
+## How you can help
+
+Inspired by the volunteer programs of leading arboreta, these are the areas we are
+opening. For most, no prior experience is needed: we support and train you.
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-flower2"></i> Guides and hosts
+Welcome groups, accompany tours and share the story of the arboretum.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📋 Survey and data
+Map specimens, fill in profiles, measure trees and record phenology (flowering,
+fruiting).
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-binoculars"></i> Birdwatching
+Monitoring resident and migratory birds, and logging observations on citizen-science
+platforms.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 🌱 Nursery and planting
+Propagating species, sowing, planting and caring for the new collections.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-mortarboard"></i> Educational support
+Assisting with school visits, workshops and activities for all ages.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### 📣 Events and outreach
+Helping with events, social media, photography and communication of the project.
+:::
+
+:::
+
+## Who can join?
+
+Volunteering is **open to all ages and backgrounds**: students looking for field
+experience, retirees with time and enthusiasm, nature lovers, teachers, photographers,
+bird enthusiasts… For many tasks **no prior knowledge is required**; what matters is
+commitment and a willingness to learn.
+
+## What you'll take away
+
+- <i class="bi bi-tree"></i> **Real learning** in botany, ecology, birds and conservation, alongside professionals.
+- <i class="bi bi-people"></i> **Community**: being part of a team with purpose.
+- <i class="bi bi-sun"></i> **Nature and wellbeing**: quality time outdoors.
+- 📜 **Certificate of participation** recognizing your contribution.
+- 💚 **Concrete impact**: your work helps conserve and share the natural heritage.
+
+## Frequently asked questions
+
+::: {.callout-note collapse="true" title="Do I need prior experience or training?"}
+For most tasks, no. We support and train you according to the area you choose. If you
+already have experience (in botany, birds, education, communication), even better!
+:::
+
+::: {.callout-note collapse="true" title="How much time do I need to give?"}
+We arrange it around your availability. It can be a one-off day, help at an event, or a
+more regular involvement. We talk and find the format that suits you.
+:::
+
+::: {.callout-note collapse="true" title="Is there a minimum age?"}
+Volunteering is open to different ages. If you are a minor or would like to bring a
+group of young people, write to us and we'll arrange the conditions for taking part.
+:::
+
+::: {.callout-note collapse="true" title="Is there any cost?"}
+No. Volunteering is a **collaboration**: you give your time and we welcome, train and
+support you.
+:::
+
+## Join in
+
+Tell us who you are, what you'd like to do and your availability. We'll reply shortly
+to take the first step together.
+
+::: {.cta-container style="text-align:center; margin:1.5rem 0;"}
+[<i class="bi bi-hand-thumbs-up"></i> I want to volunteer](contact.html){.btn .btn-success .btn-lg role="button"}
+:::
+
+**Email:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+**WhatsApp:** [+54 9 11 5736 0940](https://wa.me/5491157360940)

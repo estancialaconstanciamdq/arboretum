@@ -1,0 +1,204 @@
+---
+title: "Educational Visits"
+toc: true
+toc-title: "On this page"
+toc-location: right
+subtitle: "Learning in direct contact with nature"
+title-block-banner: ../fotos/fotobanner.jpg
+title-block-banner-color: white
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../visitas_escolares.html" class="lang">Español ▸</a>
+</div>
+
+<style>
+.download-label { margin-top: 1.6rem; margin-bottom: 0.4rem; font-weight: 600; }
+.button-group { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.cta-container { text-align: center; margin: 2rem 0 3rem; }
+.footer-logo { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1); }
+.arboretum-footer-logo { width: 170px; max-width: 45%; opacity: 0.95; }
+</style>
+```
+
+The Arboretum at Estancia La Constancia opens its doors to educational institutions, teachers and school groups interested in learning directly in contact with nature.
+
+Through guided tours, hands-on activities and ecological observation, we foster a living understanding of biodiversity and the local ecosystems.
+
+::: {.callout-tip title="What is an arboretum?"}
+An arboretum is a **living, documented** collection of trees and woody plants, grown for scientific, educational and conservation purposes: in essence, a **"living museum" of trees**. [Learn more »](https://en.wikipedia.org/wiki/Arboretum){target="_blank" rel="noopener"}
+:::
+
+::: {.callout-note}
+**Schools that have already lived the experience:** Colegio Newton · Colegio Naciones Unidas · Colegio San José de Balcarce.
+:::
+
+## What schools say
+
+**Fernanda Uren**, from **Colegio Newton** (Mar del Plata), shares her experience of the educational visit to the Arboretum:
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.8rem;">
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DJKKuqjP7nj/" data-instgrm-version="14" style="max-width:400px; width:100%; margin:0 auto;"></blockquote>
+</div>
+<script async src="https://www.instagram.com/embed.js"></script>
+```
+
+---
+
+## Educational experiences
+
+::: {.panel-tabset}
+
+### <i class="bi bi-search"></i> Educational tour
+
+- Students recognize herbs, shrubs and trees, in a unique and safe environment, with programs designed by level and topic.
+
+- Birds or fowl? Vertebrate or invertebrate animals? Questions that will be answered through observation and play, sparking an interest that continues in the classroom.
+
+- Interpretation of local ecosystems.
+
+- Observation of ecological interactions.
+
+### <i class="bi bi-mortarboard"></i> Benefits
+
+- Students gain knowledge of biology, ecology and geography in a dynamic and enjoyable way.
+
+- We encourage teamwork among classmates, awakening curiosity and critical thinking in a natural environment.
+
+- Outdoor exploration and learning, with programs co-created with the institution.
+
+- Guided walks, flora observation, interactive activities — all created to awaken curiosity and a love for the environment.
+
+### <i class="bi bi-signpost-2"></i> Learning on the trails
+
+- Activities adapted by educational level.
+
+- Guided tours: accompanied by specialized professionals who adapt the explanations to the age and level of the students.
+
+- Exploration of local ecosystems: identifying tree species and analysing native and exotic flora and fauna.
+
+- Fun, hands-on activities: identifying plant and tree species, species propagation, birdwatching (resident and migratory), collecting samples for the lab, teamwork, and much more!
+
+:::
+
+---
+
+## School visits
+
+**Duration:** 3–4 hours
+**Level:** Primary / Secondary
+**Minimum number of students:** 30 students
+
+Designed to complement curricular content in natural sciences, biology and environmental education.
+
+## Visit content
+
+Each tour is adapted to the educational level and pedagogical goals of the institution, integrating observation, exploration and learning activities in direct contact with nature.
+
+### <i class="bi bi-tree"></i> Some of the topics we cover
+
+* **History and transformation of the landscape:** how a former field became a 33-hectare arboretum with more than 30,000 plants.
+
+* **Biodiversity and conservation:** recognizing native and exotic species, and the role of botanical gardens and arboreta in protecting flora.
+
+* **Ecology and how ecosystems work:** relationships between plants, animals and the environment.
+
+* **Botany in action:** observing leaves, flowers, seeds, bark and other plant structures to understand how scientists identify and study species.
+
+* **Environmental education and sustainability:** reflecting on caring for the environment, ecological restoration and the importance of individual and collective action.
+
+* **Sensory exploration of nature:** activities to discover the sounds, colours, shapes and scents of the garden through playful, participatory proposals.
+
+### <i class="bi bi-clipboard-check"></i> Methodology
+
+Visits combine guided walks, scientific observation, educational games, teamwork and moments for reflection, fostering curiosity, critical thinking and a bond with nature.
+
+<p class="download-label">Download the full brochure:</p>
+<div class="button-group">
+  <a href="https://drive.google.com/file/d/14D3vhpElerGzZ7zvj4Bl9eC0NmbUTvj6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
+    <i class="bi bi-file-earmark-text"></i> Educational Visits Brochure <span style="font-weight:400;">(in Spanish)</span>
+  </a>
+</div>
+
+<p class="download-label">Download the tentative programs:</p>
+<div class="button-group">
+  <a href="../programas/programa_inicial.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
+    <i class="bi bi-balloon"></i> Early-years Program
+  </a>
+  <a href="../programas/programa_primaria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
+    <i class="bi bi-mortarboard"></i> Primary Program
+  </a>
+  <a href="../programas/programa_secundaria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-success" role="button">
+    <i class="bi bi-book"></i> Secondary Program
+  </a>
+</div>
+
+---
+
+## General information
+
+### <i class="bi bi-flower2"></i> Educational visits at the Arboretum
+
+We offer a living learning space designed to complement your institution's teaching program. To ensure a safe, well-organized and highly educational experience, all our visits are by advance booking only.
+
+#### <i class="bi bi-pin-angle"></i> General booking conditions
+
+- Weather guarantee: when arranging the visit, we set two dates — a main one and an alternative in case of rain.
+
+- Confirmation: the activity slot is secured through payment of the corresponding deposit.
+
+- Tailored design: once the booking is requested, our team will contact you to align the teaching objectives with the group's educational level.
+
+### <i class="bi bi-tree"></i> The path to the experience (step by step)
+
+Enrolling your school group is very simple. Just follow these steps:
+
+- **Send your request:** complete our web form expressing your interest and tentative dates.
+
+- **Pedagogical coordination:** we get in touch to define the teaching objectives and logistics.
+
+- **Date confirmation:** the deposit is paid and the dates are locked in (main and alternative).
+
+Enjoy the visit! On the day, your group will live the guided experience in nature.
+
+### Request your educational visit
+
+Complete the form and our team will get in touch to coordinate goals, date and details.
+
+::: {.cta-container}
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd1-Oi-DCJGZEpt_HwZ_fHCrvYpAXkwree5-bHszaBJ84eKLg/viewform" target="_blank" rel="noopener" class="btn btn-success btn-lg" role="button">
+Request an educational visit
+</a>
+:::
+
+---
+
+## Contact and location
+
+**Email:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+**Location:** Arboretum at Estancia La Constancia, Camino 515, Mar del Plata, Argentina
+
+<a href="https://maps.app.goo.gl/jQaTGHeaecL4icSg9" target="_blank" class="btn btn-outline-success" role="button">
+<i class="bi bi-geo-alt"></i> Open in Google Maps
+</a>
+
+<br>
+
+::: {.footer-logo}
+![](../fotos/LogoARBN.jpg){.arboretum-footer-logo}
+:::

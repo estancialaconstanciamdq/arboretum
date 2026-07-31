@@ -1,0 +1,41 @@
+---
+title: "Guided tours"
+subtitle: "Guided walks through the arboretum"
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../visitas_guiadas.html" class="lang">Español ▸</a>
+</div>
+```
+
+We offer **guided tours** of the arboretum for the general public and groups: walks
+through the collections —conifers, broadleaf trees, shrubs and palms—, observation of
+the flora and fauna, and themed botanical tours by group.
+
+Tours are **by advance booking**. Complete the form and our team will get in touch to
+arrange the date and details.
+
+<div style="text-align:center; margin:1.5rem 0;">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfPfe_--UakdPwsknpYmNka_ithUyZeqDQtb-CHc9zEp807jQ/viewform" target="_blank" rel="noopener" class="btn btn-success btn-lg" role="button">
+Request a guided tour
+</a>
+</div>
+
+::: {.callout-tip}
+Would you rather write to us directly? You can do so from the [**Contact**](contact.html)
+page.
+:::

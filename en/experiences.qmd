@@ -41,7 +41,7 @@ Tours led by professionals for **families, schools and groups**, adapted by leve
 goal. Ideal to complement natural science, biology and environmental education
 content.
 
-[See educational visits →](../visitas_escolares.html){.btn .btn-success role="button"}
+[See educational visits →](educational-visits.html){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
@@ -50,7 +50,7 @@ Guided walks through the arboretum's collections —conifers, broadleaf trees, s
 and palms— for the general public, clubs, nurseries, gardeners and botany
 enthusiasts.
 
-[Book / enquire →](../visitas_guiadas.html){.btn .btn-success role="button"}
+[Book / enquire →](guided-tours.html){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
@@ -82,7 +82,7 @@ arboretum projects, with traceable and verifiable impact.
 Team-building, offsites, celebrations and productions in a 33-hectare botanical
 garden, minutes from Mar del Plata.
 
-[See corporate events →](../eventos.html){.btn .btn-success role="button"}
+[See corporate events →](events.html){.btn .btn-success role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}

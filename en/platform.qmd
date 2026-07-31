@@ -1,0 +1,95 @@
+---
+title: "The system behind the atlas"
+subtitle: "A digital atlas for your botanical collection"
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../el-sistema.html" class="lang">Español ▸</a>
+</div>
+```
+
+This site is not just a web page: it is the **public interface of a scientific
+database**. Behind it runs a simple, powerful system — *you maintain the information
+once and everything else is generated automatically*.
+
+We developed and applied this system at the Arboretum of Estancia La Constancia, and
+it can be replicated for **other botanical collections**.
+
+## What it solves
+
+Many gardens, nurseries and reserves have their information scattered across
+spreadsheets, folders and photos. This system unifies it into a single database and,
+from it, automatically generates:
+
+::: grid
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-map"></i> Interactive map
+Location of each specimen, trails and sectors.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-tree"></i> Species profiles
+One page per specimen, with no coding.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 📖 Catalogue with filters
+Search by family, origin and group.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### <i class="bi bi-bar-chart"></i> Statistics
+Recalculated automatically with every update.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🔗 QR labels
+One code per tree that opens its profile.
+:::
+
+::: {.g-col-4 .card .p-3 .shadow-sm .text-center}
+### 🔄 Automatic publishing
+You update the database and the site rebuilds itself.
+:::
+
+:::
+
+## Who it's for
+
+Botanical gardens, arboreta, nurseries, municipalities, nature reserves, universities
+and **estates** that want to document and showcase their natural heritage in a
+professional way, sustainable over time.
+
+## Why it works in the long run
+
+- **Low maintenance:** a single spreadsheet feeds the whole site.
+- **No daily technical dependency:** you don't need a programmer to load data.
+- **Scalable:** it works the same for 50 or for 5,000 specimens.
+- **Scientific and educational value:** the database supports research, conservation and outreach.
+
+## Let's talk
+
+Do you have a collection you'd like to bring to a digital atlas like this one? Write to
+us and we'll arrange a demonstration:
+
+- <i class="bi bi-envelope"></i> Email: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+- 📱 WhatsApp: [+54 9 11 5736 0940](https://wa.me/5491157360940)
+
+---
+
+*See a real example in action: explore the [Arboretum of La Constancia](index.html).*

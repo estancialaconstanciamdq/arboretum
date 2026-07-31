@@ -46,7 +46,7 @@ that best fits your organization.
 *Team-building* days, **wellbeing and forest bathing**, retreats, birdwatching and
 events in a unique setting. Network membership is not required.
 
-[See corporate events →](../eventos.html){.btn .btn-outline-success .btn-sm role="button"}
+[See corporate events →](events.html){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
@@ -70,7 +70,7 @@ with local reach.
 ### <i class="bi bi-map"></i> The platform
 Do you have a green space or collection? Bring it to a **digital atlas** like this one.
 
-[Learn about the system →](../el-sistema.html){.btn .btn-outline-success .btn-sm role="button"}
+[Learn about the system →](platform.html){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ::: {.g-col-6 .card .p-4 .shadow-sm}
