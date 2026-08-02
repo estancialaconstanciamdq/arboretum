@@ -89,8 +89,8 @@ tr_forma <- c("Conífera"="Conifer", "Árbol latifoliado"="Broadleaf tree",
 forma_en <- function(x) { out <- unname(tr_forma[as.character(x)]); ifelse(is.na(out), as.character(x), out) }
 
 # Translate Spanish geographic values into English (ordered phrase replacement).
+# Vectorised: receives whole columns from the map popups (NA passes through).
 region_en <- function(x) {
-  if (!tiene_valor(x)) return(x)
   s <- as.character(x)
   reps <- c("América del Norte"="North America","América del Sur"="South America",
             "América Central"="Central America","Norte América"="North America",

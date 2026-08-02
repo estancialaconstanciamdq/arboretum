@@ -697,5 +697,11 @@
   },
   "en/donate.qmd": {
     "donate.html": "d643527b"
+  },
+  "en/self-guided-tour.qmd": {
+    "self-guided-tour.html": "25b5d0dc"
+  },
+  "recorrido-autoguiado.qmd": {
+    "recorrido-autoguiado.html": "0ee2c858"
   }
 }
