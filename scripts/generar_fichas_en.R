@@ -17,6 +17,55 @@ tr_forma_en <- c("Conífera"="Conifer", "Árbol latifoliado"="Broadleaf tree",
                  "Arbusto"="Shrub", "Palmera"="Palm", "Otro"="Other")
 forma_en <- function(x) { o <- unname(tr_forma_en[as.character(x)]); ifelse(is.na(o), as.character(x), o) }
 
+# Translate Spanish geographic values (origin/continent) into English. Works on
+# the free-text compound strings ("Europa / Asia Occidental / África del Norte")
+# via ordered phrase replacement (longest phrases first). Unknown text passes
+# through unchanged, so it degrades gracefully.
+region_en <- function(x) {
+  if (!tiene_valor(x)) return(x)
+  s <- as.character(x)
+  reps <- c(
+    "América del Norte" = "North America",
+    "América del Sur"   = "South America",
+    "América Central"   = "Central America",
+    "Norte América"     = "North America",
+    "Sudamérica"        = "South America",
+    "Hemisferio Norte"  = "Northern Hemisphere",
+    "Asia Occidental"   = "Western Asia",
+    "Sudeste Asiático"  = "Southeast Asia",
+    "África del Norte"  = "North Africa",
+    "Islas Canarias"    = "Canary Islands",
+    "Mediterráneo"      = "Mediterranean",
+    "Origen hortícola/Híbrido" = "Horticultural/hybrid origin",
+    "Origen hortícola/híbrido" = "Horticultural/hybrid origin",
+    "Origen Híbrido"    = "Hybrid origin",
+    "Cosmopolita tropical" = "Pantropical",
+    "Cosmopolita"       = "Cosmopolitan",
+    "Varias regiones"   = "Various regions",
+    "Sin dato"          = "No data",
+    "Balcanes"          = "Balkans",
+    "Patagonia"         = "Patagonia",
+    "Andes"             = "Andes",
+    "Japón"             = "Japan",
+    "Taiwán"            = "Taiwan",
+    "China"             = "China",
+    "México"            = "Mexico",
+    "E.E.U.U"           = "USA",
+    "Australia"         = "Australia",
+    "Oceanía"           = "Oceania",
+    "América"           = "Americas",
+    "Europa"            = "Europe",
+    "Asia"              = "Asia",
+    "África"            = "Africa",
+    "Global"            = "Global",
+    "Variable"          = "Variable",
+    "Central"           = "Central",
+    "Norte"             = "North"
+  )
+  for (k in names(reps)) s <- gsub(k, reps[[k]], s, fixed = TRUE)
+  s
+}
+
 yaml_title <- function(x) gsub('"', "'", x)
 
 campo <- function(etiqueta, valor, italic = FALSE, sufijo = "") {
@@ -40,6 +89,7 @@ nav_en <- function(slug) paste0(
   "  <a href=\"../wellbeing.html\">Wellbeing</a>\n",
   "  <a href=\"../visit.html\">Visit</a>\n",
   "  <a href=\"../sponsor.html\">Sponsor a tree</a>\n",
+  "  <a href=\"../donate.html\">Donate</a>\n",
   "  <a href=\"../companies.html\">Companies</a>\n",
   "  <a href=\"../contact.html\">Contact</a>\n",
   "  <span class=\"spacer\"></span>\n",
@@ -77,8 +127,16 @@ construir_ficha <- function(t) {
   add(campo("Family",          t$familia))
   add(campo("Type",            forma_en(t$forma_vida)))
 
-  add(campo("Origin",     t$origen))
-  add(campo("Continent",  t$continente))
+  add(campo("Origin",     region_en(t$origen)))
+  add(campo("Continent",  region_en(t$continente)))
+
+  # Conservation status (IUCN Red List) — only if the species is assessed
+  if ("iucn" %in% names(t) && nzchar(t$iucn)) {
+    add(sprintf(
+      "**Conservation status (IUCN):** %s  \n<span style=\"font-size:.8rem;color:#777;\">Global species category · [IUCN Red List](https://www.iucnredlist.org)</span>\n\n",
+      iucn_badge(t$iucn, "en")
+    ))
+  }
 
   add(campo("Planting year",  fmt_anio(t$año_plantacion)))
   add(campo("Height",         t$altura_m,     sufijo = " m"))

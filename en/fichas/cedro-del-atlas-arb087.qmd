@@ -17,6 +17,7 @@ format: html
   <a href="../wellbeing.html">Wellbeing</a>
   <a href="../visit.html">Visit</a>
   <a href="../sponsor.html">Sponsor a tree</a>
+  <a href="../donate.html">Donate</a>
   <a href="../companies.html">Companies</a>
   <a href="../contact.html">Contact</a>
   <span class="spacer"></span>
@@ -36,10 +37,14 @@ format: html
 **Type:** Conifer
 
 
-**Origin:** África-Europa
+**Origin:** Africa-Europe
 
 
-**Continent:** África (Norte)
+**Continent:** Africa (North)
+
+
+**Conservation status (IUCN):** <span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>  
+<span style="font-size:.8rem;color:#777;">Global species category · [IUCN Red List](https://www.iucnredlist.org)</span>
 
 
 ## Location

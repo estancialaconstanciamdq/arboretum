@@ -128,6 +128,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Plano ilustrado</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./recorrido-autoguiado.html">
+ <span class="dropdown-text">Recorrido autoguiado</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./catalogo.html">
  <span class="dropdown-text">Catálogo</span></a>
   </li>  
@@ -202,6 +206,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Apadriná</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./donar.html"> 
+<span class="menu-text">Doná</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./contacto.html"> 
 <span class="menu-text">Contacto</span></a>
   </li>  
@@ -244,6 +252,27 @@ ul.task-list li input[type="checkbox"] {
 <p style="margin:.6rem 0 0;">
 <a href="recursos/catalogo_arboretum.csv" download="" class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Descargar catálogo (CSV)</a> <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Datos abiertos · uso libre con atribución</span>
 </p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sobre estos datos y el estado de conservación
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El relevamiento de flora <strong>está en desarrollo</strong>. La identificación de algunas especies es preliminar y proviene de <strong>tickets de compra de vivero</strong>, aún <strong>no verificada en terreno</strong>; puede corregirse a medida que avanza el trabajo de campo.</p>
+<p>La columna <strong>Conservación</strong> muestra la categoría de la <strong>Lista Roja de la UICN</strong> para las especies evaluadas (a nivel global de la especie, no de este ejemplar):</p>
+<div class="iucn-legend">
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span> <span class="iucn-badge iucn-VU" title="UICN/IUCN: Vulnerable">VU · Vulnerable</span> <span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span> <span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</div>
+<p>Fuente: <a href="https://www.iucnredlist.org">IUCN Red List of Threatened Species</a>. Las especies sin insignia no tienen una evaluación asignada en este catálogo (por ejemplo, ejemplares identificados solo a nivel de género).</p>
+</div>
+</div>
+</div>
 <style>
   .cat-controles { display:flex; flex-wrap:wrap; gap:.6rem; align-items:end; margin:1rem 0; }
   .cat-controles label { font-size:.8rem; color:#555; display:block; }
@@ -268,6 +297,9 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <label>Origen</label><select id="cat-ori"><option value="">Todos</option><option value="África">África</option><option value="América">América</option><option value="América del Norte">América del Norte</option><option value="América del Sur">América del Sur</option><option value="Asia">Asia</option><option value="Cosmopolita">Cosmopolita</option><option value="Europa">Europa</option><option value="Hemisferio Norte">Hemisferio Norte</option><option value="Oceanía">Oceanía</option><option value="Origen hortícola/híbrido">Origen hortícola/híbrido</option><option value="Sin dato">Sin dato</option><option value="Varias regiones">Varias regiones</option></select>
 </div>
+<div>
+<label>Conservación</label><select id="cat-con"><option value="">Todas</option><option value="EN">En peligro</option><option value="VU">Vulnerable</option><option value="NT">Casi amenazada</option><option value="LC">Preocupación menor</option></select>
+</div>
 </div>
 <div id="cat-conteo">
 
@@ -291,10 +323,13 @@ Tipo
 <th>
 Origen
 </th>
+<th>
+Conservación
+</th>
 </tr>
 </thead>
 <tbody>
-<tr data-fam="Caprifoliaceae" data-grp="Arbusto" data-ori="Origen hortícola/híbrido" data-buscar="abelia abelia x grandiflora l.">
+<tr data-fam="Caprifoliaceae" data-grp="Arbusto" data-ori="Origen hortícola/híbrido" data-con="" data-buscar="abelia abelia x grandiflora l.">
 <td>
 <a href="fichas/abelia.html">Abelia</a>
 </td>
@@ -310,8 +345,10 @@ Arbusto
 <td>
 Origen hortícola/híbrido
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América" data-buscar="abeto abies concolor (gordon &amp; glend.) lindl. ex hildebr.">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América" data-con="LC" data-buscar="abeto abies concolor (gordon &amp; glend.) lindl. ex hildebr.">
 <td>
 <a href="fichas/abeto.html">Abeto</a>
 </td>
@@ -327,8 +364,11 @@ Conífera
 <td>
 América
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Rhamnaceae" data-grp="Arbusto" data-ori="América del Norte" data-buscar="abeto de douglas ceanothus thyrsiflorus">
+<tr data-fam="Rhamnaceae" data-grp="Arbusto" data-ori="América del Norte" data-con="" data-buscar="abeto de douglas ceanothus thyrsiflorus">
 <td>
 <a href="fichas/abeto-de-douglas.html">Abeto de Douglas</a>
 </td>
@@ -344,8 +384,10 @@ Arbusto
 <td>
 América del Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fabaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-buscar="acacia mimosa acacia dealbata">
+<tr data-fam="Fabaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-con="" data-buscar="acacia mimosa acacia dealbata">
 <td>
 <a href="fichas/acacia-mimosa-arb058.html">Acacia mimosa</a>
 </td>
@@ -361,8 +403,10 @@ Fabaceae
 <td>
 Oceanía
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fabaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-buscar="acacia mimosa acacia dealbata">
+<tr data-fam="Fabaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-con="" data-buscar="acacia mimosa acacia dealbata">
 <td>
 <a href="fichas/acacia-mimosa-arb061.html">Acacia mimosa</a>
 </td>
@@ -378,8 +422,10 @@ Fabaceae
 <td>
 Oceanía
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="ahuehuete taxodium mucronatum">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="LC" data-buscar="ahuehuete taxodium mucronatum">
 <td>
 <a href="fichas/ahuehuete-arb035.html">Ahuehuete</a>
 </td>
@@ -395,8 +441,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="ahuehuete taxodium mucronatum">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="LC" data-buscar="ahuehuete taxodium mucronatum">
 <td>
 <a href="fichas/ahuehuete-arb078.html">Ahuehuete</a>
 </td>
@@ -412,8 +461,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="ahuehuete taxodium mucronatum">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="LC" data-buscar="ahuehuete taxodium mucronatum">
 <td>
 <a href="fichas/ahuehuete-arb089.html">Ahuehuete</a>
 </td>
@@ -429,13 +481,16 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Salicaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="alamo blanco populu alba l.">
+<tr data-fam="Salicaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="" data-buscar="alamo blanco populus alba l.">
 <td>
 <a href="fichas/alamo-blanco.html">Álamo blanco</a>
 </td>
 <td>
-<i>Populu</i> <i>alba</i> L.
+<i>Populus</i> <i>alba</i> L.
 </td>
 <td>
 Salicaceae
@@ -446,13 +501,15 @@ Salicaceae
 <td>
 América del Norte
 </td>
-</tr>
-<tr data-fam="Lauraceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="?alcanforero ?cinnamomum camphora">
 <td>
-<a href="fichas/alcanforero.html">?Alcanforero</a>
+</td>
+</tr>
+<tr data-fam="Lauraceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="" data-buscar="alcanforero cinnamomum camphora">
+<td>
+<a href="fichas/alcanforero.html">Alcanforero</a>
 </td>
 <td>
-<i>?Cinnamomum</i> <i>camphora</i>
+<i>Cinnamomum</i> <i>camphora</i>
 </td>
 <td>
 Lauraceae
@@ -463,8 +520,10 @@ Lauraceae
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América" data-buscar="aliso andino abies concolor (gordon &amp; glend.) lindl. ex hildebr.">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América" data-con="LC" data-buscar="aliso andino abies concolor (gordon &amp; glend.) lindl. ex hildebr.">
 <td>
 <a href="fichas/aliso-andino.html">Aliso andino</a>
 </td>
@@ -480,8 +539,11 @@ Conífera
 <td>
 América
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Oceanía" data-buscar="araucaria australiana araucaria bidwillii hook.">
+<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Oceanía" data-con="LC" data-buscar="araucaria australiana araucaria bidwillii hook.">
 <td>
 <a href="fichas/araucariaaustraliana-arb022.html">Araucaria Australiana</a>
 </td>
@@ -497,8 +559,11 @@ Conífera
 <td>
 Oceanía
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Oceanía" data-buscar="araucaria australiana araucaria bidwillii hook.">
+<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Oceanía" data-con="LC" data-buscar="araucaria australiana araucaria bidwillii hook.">
 <td>
 <a href="fichas/araucariaaustraliana-arb028.html">Araucaria Australiana</a>
 </td>
@@ -514,8 +579,11 @@ Conífera
 <td>
 Oceanía
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-grp="Otro" data-ori="Sin dato" data-buscar="arb010 ">
+<tr data-fam="Myrtaceae" data-grp="Otro" data-ori="Sin dato" data-con="" data-buscar="arb010 ">
 <td>
 <a href="fichas/arb010.html">ARB010</a>
 </td>
@@ -530,8 +598,10 @@ Otro
 <td>
 Sin dato
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Magnoliaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="arbol de los tulipanes liriodendron tulipifera">
+<tr data-fam="Magnoliaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="LC" data-buscar="arbol de los tulipanes liriodendron tulipifera">
 <td>
 <a href="fichas/arboldelostulipanes.html">Árbol de los tulipanes</a>
 </td>
@@ -547,8 +617,11 @@ Magnoliaceae
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Otro" data-ori="Varias regiones" data-buscar="boj revisar">
+<tr data-fam="—" data-grp="Otro" data-ori="Varias regiones" data-con="" data-buscar="boj revisar">
 <td>
 <a href="fichas/boj-arb057.html">Boj</a>
 </td>
@@ -564,8 +637,10 @@ Otro
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Otro" data-ori="Varias regiones" data-buscar="boj revisar">
+<tr data-fam="—" data-grp="Otro" data-ori="Varias regiones" data-con="" data-buscar="boj revisar">
 <td>
 <a href="fichas/boj-arb068.html">Boj</a>
 </td>
@@ -581,8 +656,10 @@ Otro
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Oleaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="boj comun fraxinus angustifolia">
+<tr data-fam="Oleaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="" data-buscar="boj comun fraxinus angustifolia">
 <td>
 <a href="fichas/boj-comun.html">Boj común</a>
 </td>
@@ -598,8 +675,10 @@ Oleaceae
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Lauraceae" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="canforero cinnamomum camphora">
+<tr data-fam="Lauraceae" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="canforero cinnamomum camphora">
 <td>
 <a href="fichas/canforero.html">Canforero</a>
 </td>
@@ -615,8 +694,10 @@ Lauraceae
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-buscar="carex celtis tala">
+<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-con="" data-buscar="carex celtis tala">
 <td>
 <a href="fichas/carex-arb040.html">Carex</a>
 </td>
@@ -632,8 +713,10 @@ Cannabaceae
 <td>
 Cosmopolita
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-buscar="carex celtis tala">
+<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-con="" data-buscar="carex celtis tala">
 <td>
 <a href="fichas/carex-arb083.html">Carex</a>
 </td>
@@ -649,8 +732,10 @@ Cannabaceae
 <td>
 Cosmopolita
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-buscar="carex celtis tala">
+<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-con="" data-buscar="carex celtis tala">
 <td>
 <a href="fichas/carex-arb085.html">Carex</a>
 </td>
@@ -666,8 +751,10 @@ Cannabaceae
 <td>
 Cosmopolita
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-buscar="carex celtis tala">
+<tr data-fam="Cannabaceae" data-grp="Árbol latifoliado" data-ori="Cosmopolita" data-con="" data-buscar="carex celtis tala">
 <td>
 <a href="fichas/carex-arb086.html">Carex</a>
 </td>
@@ -683,8 +770,10 @@ Cannabaceae
 <td>
 Cosmopolita
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-grp="Árbol latifoliado" data-ori="Europa" data-buscar="castano de indias aesculus hippocastanum l.">
+<tr data-fam="Sapindaceae" data-grp="Árbol latifoliado" data-ori="Europa" data-con="VU" data-buscar="castano de indias aesculus hippocastanum l.">
 <td>
 <a href="fichas/castanodeindias.html">Castaño de Indias</a>
 </td>
@@ -700,8 +789,11 @@ Sapindaceae
 <td>
 Europa
 </td>
+<td>
+<span class="iucn-badge iucn-VU" title="UICN/IUCN: Vulnerable">VU · Vulnerable</span>
+</td>
 </tr>
-<tr data-fam="Casuarinaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-buscar="casuarina casuarina equisetifolia l.">
+<tr data-fam="Casuarinaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-con="" data-buscar="casuarina casuarina equisetifolia l.">
 <td>
 <a href="fichas/casuarina-arb006.html">Casuarina</a>
 </td>
@@ -717,8 +809,10 @@ Casuarinaceae
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Casuarinaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-buscar="casuarina casuarina equisetifolia l.">
+<tr data-fam="Casuarinaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-con="" data-buscar="casuarina casuarina equisetifolia l.">
 <td>
 <a href="fichas/casuarina-arb025.html">Casuarina</a>
 </td>
@@ -734,8 +828,10 @@ Casuarinaceae
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-buscar="cedro cedrus sp.">
+<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="cedro cedrus sp.">
 <td>
 <a href="fichas/cedro-arb049.html">Cedro</a>
 </td>
@@ -751,13 +847,15 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-buscar="cedro cedrus sp.`">
+<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="cedro cedrus sp.">
 <td>
 <a href="fichas/cedro-arb055.html">Cedro</a>
 </td>
 <td>
-<i>Cedrus</i> <i>sp.`</i>
+<i>Cedrus</i> sp.
 </td>
 <td>
 —
@@ -768,8 +866,10 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-buscar="cedro cedrus sp.">
+<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="cedro cedrus sp.">
 <td>
 <a href="fichas/cedro-arb064.html">Cedro</a>
 </td>
@@ -785,8 +885,10 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-buscar="cedro cedrus sp.">
+<tr data-fam="—" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="cedro cedrus sp.">
 <td>
 <a href="fichas/cedro-arb075.html">Cedro</a>
 </td>
@@ -802,8 +904,10 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-buscar="cedro azul cedrus atlantica (endl.) manetti ex carriere">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-con="EN" data-buscar="cedro azul cedrus atlantica (endl.) manetti ex carriere">
 <td>
 <a href="fichas/cedroazul.html">Cedro azul</a>
 </td>
@@ -819,8 +923,11 @@ Conífera
 <td>
 África
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-buscar="cedro del atlas cedrus atlantica (endl.) manetti ex carriere">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-con="EN" data-buscar="cedro del atlas cedrus atlantica (endl.) manetti ex carriere">
 <td>
 <a href="fichas/cedro-del-atlas-arb087.html">Cedro del Atlas</a>
 </td>
@@ -836,8 +943,11 @@ Conífera
 <td>
 África
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-buscar="cedro del atlas cedrus atlantica (endl.) manetti ex carriere">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="África" data-con="EN" data-buscar="cedro del atlas cedrus atlantica (endl.) manetti ex carriere">
 <td>
 <a href="fichas/cedro-del-atlas-arb088.html">Cedro del Atlas</a>
 </td>
@@ -853,8 +963,11 @@ Conífera
 <td>
 África
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Asia" data-buscar="cedro del himalaya cedrus deodara (roxb. ex d. don) g. don">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Asia" data-con="LC" data-buscar="cedro del himalaya cedrus deodara (roxb. ex d. don) g. don">
 <td>
 <a href="fichas/cedrodelhimalaya.html">Cedro del Himalaya</a>
 </td>
@@ -870,8 +983,11 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Asia" data-buscar="cedro del himalaya dodonaea viscosa">
+<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Asia" data-con="" data-buscar="cedro del himalaya dodonaea viscosa">
 <td>
 <a href="fichas/cedro-del-himalaya.html">Cedro del Himalaya</a>
 </td>
@@ -887,8 +1003,10 @@ Arbusto
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-buscar="cedro japones cryptomeria japonica (thunb. ex l. f.) d. don">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-con="NT" data-buscar="cedro japones cryptomeria japonica (thunb. ex l. f.) d. don">
 <td>
 <a href="fichas/cedrojapones.html">Cedro japonés</a>
 </td>
@@ -904,8 +1022,11 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-buscar="cipres cupressus sp.">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-con="" data-buscar="cipres cupressus sp.">
 <td>
 <a href="fichas/cipres.html">Cipres</a>
 </td>
@@ -921,8 +1042,10 @@ Conífera
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-buscar="cipres de hinoki chamaecyparis obtusa">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-con="" data-buscar="cipres de hinoki chamaecyparis obtusa">
 <td>
 <a href="fichas/cipres-de-hinoki.html">Ciprés de Hinoki</a>
 </td>
@@ -938,8 +1061,10 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Sur" data-buscar="cipres de las guaitecas austrocedrus chilensis">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Sur" data-con="" data-buscar="cipres de las guaitecas austrocedrus chilensis">
 <td>
 <a href="fichas/cipres-de-las-guaitecas.html">Ciprés de las Guaitecas</a>
 </td>
@@ -955,8 +1080,10 @@ Conífera
 <td>
 América del Sur
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="cipres de monterrey cupressus macrocarpa var. lutea topacio">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="" data-buscar="cipres de monterrey cupressus macrocarpa var. lutea topacio">
 <td>
 <a href="fichas/cipres-de-monterrey.html">Ciprés de Monterrey</a>
 </td>
@@ -972,8 +1099,10 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-buscar="cipreses cupressus sp.">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-con="" data-buscar="cipreses cupressus sp.">
 <td>
 <a href="fichas/cipreses.html">Cipreses</a>
 </td>
@@ -989,8 +1118,10 @@ Conífera
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Nothofagaceae" data-grp="Árbol latifoliado" data-ori="América del Sur" data-buscar="coihue nothofagus dombeyi">
+<tr data-fam="Nothofagaceae" data-grp="Árbol latifoliado" data-ori="América del Sur" data-con="LC" data-buscar="coihue nothofagus dombeyi">
 <td>
 <a href="fichas/coihue.html">Coihue</a>
 </td>
@@ -1006,8 +1137,11 @@ Nothofagaceae
 <td>
 América del Sur
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-buscar="corona de novia spiraea cantoniensis">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-con="" data-buscar="corona de novia spiraea cantoniensis">
 <td>
 <a href="fichas/corona-de-novia-arb047.html">Corona de novia</a>
 </td>
@@ -1023,8 +1157,10 @@ Arbusto
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-buscar="corona de novia spiraea cantoniensis">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-con="" data-buscar="corona de novia spiraea cantoniensis">
 <td>
 <a href="fichas/corona-de-novia-arb048.html">Corona de novia</a>
 </td>
@@ -1040,8 +1176,10 @@ Arbusto
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-buscar="corona de novia spiraea cantoniensis">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Asia" data-con="" data-buscar="corona de novia spiraea cantoniensis">
 <td>
 <a href="fichas/corona-de-novia-arb063.html">Corona de novia</a>
 </td>
@@ -1057,8 +1195,10 @@ Arbusto
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Hemisferio Norte" data-buscar="crataegus crataegus sp.">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Hemisferio Norte" data-con="" data-buscar="crataegus crataegus sp.">
 <td>
 <a href="fichas/crataegus.html">Crataegus</a>
 </td>
@@ -1074,13 +1214,15 @@ Arbusto
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-buscar="criptomeria cryptomeria japonica">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-con="NT" data-buscar="criptomeria cryptomeria japonica">
 <td>
 <a href="fichas/criptomeria.html">Criptomeria</a>
 </td>
 <td>
-<i>Cryptomeria</i> <i>japónica</i>
+<i>Cryptomeria</i> <i>japonica</i>
 </td>
 <td>
 Cupressaceae
@@ -1091,8 +1233,11 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Asia" data-buscar="damara agathis dammara">
+<tr data-fam="Araucariaceae" data-grp="Conífera" data-ori="Asia" data-con="" data-buscar="damara agathis dammara">
 <td>
 <a href="fichas/damara.html">Damara</a>
 </td>
@@ -1108,8 +1253,10 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Arecaceae" data-grp="Palmera" data-ori="Asia" data-buscar="damasco brahea armata palmatum">
+<tr data-fam="Arecaceae" data-grp="Palmera" data-ori="Asia" data-con="" data-buscar="damasco brahea armata palmatum">
 <td>
 <a href="fichas/damasco.html">Damasco</a>
 </td>
@@ -1125,8 +1272,10 @@ Palmera
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Cosmopolita" data-buscar="dodonea dodonaea viscosa">
+<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Cosmopolita" data-con="" data-buscar="dodonea dodonaea viscosa">
 <td>
 <a href="fichas/dodonea-arb052.html">Dodonea</a>
 </td>
@@ -1142,8 +1291,10 @@ Arbusto
 <td>
 Cosmopolita
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Varias regiones" data-buscar="dodonea dodonaea viscosa">
+<tr data-fam="Sapindaceae" data-grp="Arbusto" data-ori="Varias regiones" data-con="" data-buscar="dodonea dodonaea viscosa">
 <td>
 <a href="fichas/dodonea-arb066.html">Dodonea</a>
 </td>
@@ -1159,8 +1310,10 @@ Arbusto
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Oleaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="duraznero fraxinus exelsior">
+<tr data-fam="Oleaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="duraznero fraxinus exelsior">
 <td>
 <a href="fichas/duraznero.html">Duraznero</a>
 </td>
@@ -1176,8 +1329,10 @@ Oleaceae
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="encina quercus baloot griff.">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="LC" data-buscar="encina quercus baloot griff.">
 <td>
 <a href="fichas/encina.html">Encina</a>
 </td>
@@ -1193,8 +1348,11 @@ Fagaceae
 <td>
 Varias regiones
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-buscar="espino eucalyptus sp.">
+<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-con="" data-buscar="espino eucalyptus sp.">
 <td>
 <a href="fichas/espino.html">Espino</a>
 </td>
@@ -1210,8 +1368,10 @@ Varias regiones
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Hemisferio Norte" data-buscar="espino blanco crataegus sp.">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Hemisferio Norte" data-con="" data-buscar="espino blanco crataegus sp.">
 <td>
 <a href="fichas/espino-blanco.html">Espino blanco</a>
 </td>
@@ -1227,8 +1387,10 @@ Arbusto
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Varias regiones" data-buscar="espino de fuego pyracantha coccinea">
+<tr data-fam="Rosaceae" data-grp="Arbusto" data-ori="Varias regiones" data-con="" data-buscar="espino de fuego pyracantha coccinea">
 <td>
 <a href="fichas/espino-de-fuego.html">Espino de fuego</a>
 </td>
@@ -1244,8 +1406,10 @@ Arbusto
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-buscar="eucalipto blanco eucalyptus globulus labill.">
+<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-con="LC" data-buscar="eucalipto blanco eucalyptus globulus labill.">
 <td>
 <a href="fichas/eucalipto-blanco.html">Eucalipto blanco</a>
 </td>
@@ -1261,8 +1425,11 @@ Myrtaceae
 <td>
 Oceanía
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-buscar="eucalipto medicinal eucalyptus cinerea">
+<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-con="" data-buscar="eucalipto medicinal eucalyptus cinerea">
 <td>
 <a href="fichas/eucalipto-medicinal.html">Eucalipto medicinal</a>
 </td>
@@ -1278,8 +1445,10 @@ Myrtaceae
 <td>
 Oceanía
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-buscar="eucalyptus globulus labill. eucalyptus globulus labill.">
+<tr data-fam="Myrtaceae" data-grp="Árbol latifoliado" data-ori="Oceanía" data-con="LC" data-buscar="eucalyptus globulus labill. eucalyptus globulus labill.">
 <td>
 <a href="fichas/arb011.html">Eucalyptus globulus Labill.</a>
 </td>
@@ -1295,8 +1464,11 @@ Myrtaceae
 <td>
 Oceanía
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Apocynaceae" data-grp="Arbusto" data-ori="Varias regiones" data-buscar="falso laurel nerium oleander l.">
+<tr data-fam="Apocynaceae" data-grp="Arbusto" data-ori="Varias regiones" data-con="" data-buscar="falso laurel nerium oleander l.">
 <td>
 <a href="fichas/falso-laurel.html">Falso laurel</a>
 </td>
@@ -1312,8 +1484,10 @@ Arbusto
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="falso muerdago ilex aquifolium l.">
+<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="LC" data-buscar="falso muerdago ilex aquifolium l.">
 <td>
 <a href="fichas/falso-muerdago.html">Falso muérdago</a>
 </td>
@@ -1329,8 +1503,11 @@ Varias regiones
 <td>
 Varias regiones
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="ginkgo acer palmatum">
+<tr data-fam="Sapindaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="ginkgo acer palmatum">
 <td>
 <a href="fichas/gingko.html">Ginkgo</a>
 </td>
@@ -1346,8 +1523,10 @@ Sapindaceae
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Ginkgoaceae" data-grp="Otro" data-ori="Asia" data-buscar="ginkgo ginkgo biloba">
+<tr data-fam="Ginkgoaceae" data-grp="Otro" data-ori="Asia" data-con="EN" data-buscar="ginkgo ginkgo biloba">
 <td>
 <a href="fichas/ginkgo.html">Ginkgo</a>
 </td>
@@ -1363,8 +1542,11 @@ Otro
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Europa" data-buscar="haya comun fagus sylvatica">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Europa" data-con="LC" data-buscar="haya comun fagus sylvatica">
 <td>
 <a href="fichas/haya-comun.html">Haya común</a>
 </td>
@@ -1380,8 +1562,11 @@ Fagaceae
 <td>
 Europa
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Hypericaceae" data-grp="Arbusto" data-ori="África" data-buscar="hipericon canario hypericum x moserianum">
+<tr data-fam="Hypericaceae" data-grp="Arbusto" data-ori="África" data-con="" data-buscar="hipericon canario hypericum x moserianum">
 <td>
 <a href="fichas/hipericon-canario.html">Hipericón canario</a>
 </td>
@@ -1397,8 +1582,10 @@ Arbusto
 <td>
 África
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="libocedro de california calocedrus decurrens (torr.) florin">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="LC" data-buscar="libocedro de california calocedrus decurrens (torr.) florin">
 <td>
 <a href="fichas/libocedro-de-california.html">Libocedro de California</a>
 </td>
@@ -1414,8 +1601,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Olives" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="ligustro ligustrum lucidum">
+<tr data-fam="Olives" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="ligustro ligustrum lucidum">
 <td>
 <a href="fichas/ligustro-arb054.html">Ligustro</a>
 </td>
@@ -1431,8 +1621,10 @@ Olives
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Olives" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="ligustro ligustrum lucidum">
+<tr data-fam="Olives" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="ligustro ligustrum lucidum">
 <td>
 <a href="fichas/ligustro-arb067.html">Ligustro</a>
 </td>
@@ -1448,8 +1640,10 @@ Olives
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-grp="Arbusto" data-ori="América del Sur" data-buscar="limpiatubos callistemon imperialis">
+<tr data-fam="Myrtaceae" data-grp="Arbusto" data-ori="América del Sur" data-con="" data-buscar="limpiatubos callistemon imperialis">
 <td>
 <a href="fichas/limpiatubos.html">Limpiatubos</a>
 </td>
@@ -1465,8 +1659,10 @@ Arbusto
 <td>
 América del Sur
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Altingiaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="liquidambar liquidambar sp.">
+<tr data-fam="Altingiaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="" data-buscar="liquidambar liquidambar sp.">
 <td>
 <a href="fichas/liquidambar.html">Liquidambar</a>
 </td>
@@ -1482,8 +1678,10 @@ Altingiaceae
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Altingiaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-buscar="liquidambar de formosa liquidambar formosana">
+<tr data-fam="Altingiaceae" data-grp="Árbol latifoliado" data-ori="Asia" data-con="" data-buscar="liquidambar de formosa liquidambar formosana">
 <td>
 <a href="fichas/liquidambar-de-formosa.html">Liquidámbar de Formosa</a>
 </td>
@@ -1499,8 +1697,10 @@ Altingiaceae
 <td>
 Asia
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-buscar="macasar chamaecyparis lawsoniana">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-con="NT" data-buscar="macasar chamaecyparis lawsoniana">
 <td>
 <a href="fichas/macasar-arb045.html">Macasar</a>
 </td>
@@ -1516,8 +1716,11 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-buscar="macasar chamaecyparis lawsoniana">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="Asia" data-con="NT" data-buscar="macasar chamaecyparis lawsoniana">
 <td>
 <a href="fichas/macasar-arb053.html">Macasar</a>
 </td>
@@ -1533,8 +1736,11 @@ Conífera
 <td>
 Asia
 </td>
+<td>
+<span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>
+</td>
 </tr>
-<tr data-fam="Magnoliaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="magnolia magnolia grandiflora l.">
+<tr data-fam="Magnoliaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="LC" data-buscar="magnolia magnolia grandiflora l.">
 <td>
 <a href="fichas/magnolia.html">Magnolia</a>
 </td>
@@ -1550,8 +1756,11 @@ Magnoliaceae
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-buscar="olmo quercus sp.">
+<tr data-fam="—" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-con="" data-buscar="olmo quercus sp.">
 <td>
 <a href="fichas/olmo.html">Olmo</a>
 </td>
@@ -1567,8 +1776,10 @@ América del Norte
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Sin dato" data-buscar="picea sp. picea sp.">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Sin dato" data-con="" data-buscar="picea sp. picea sp.">
 <td>
 <a href="fichas/arb015.html">Picea sp.</a>
 </td>
@@ -1584,8 +1795,10 @@ Conífera
 <td>
 Sin dato
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-buscar="pino pinus sp.">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Hemisferio Norte" data-con="" data-buscar="pino pinus sp.">
 <td>
 <a href="fichas/pino.html">Pino</a>
 </td>
@@ -1601,8 +1814,10 @@ Conífera
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="pino insigne pinus radiata">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América del Norte" data-con="EN" data-buscar="pino insigne pinus radiata">
 <td>
 <a href="fichas/pino-insigne.html">Pino insigne</a>
 </td>
@@ -1618,8 +1833,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Varias regiones" data-buscar="pino mexicano amarillo pinus patula schltdl. &amp; cham.">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="pino mexicano amarillo pinus patula schltdl. &amp; cham.">
 <td>
 <a href="fichas/pino-mexicano-amarillo.html">Pino mexicano amarillo</a>
 </td>
@@ -1635,8 +1853,10 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="pino radiata pinus radiata">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="América del Norte" data-con="EN" data-buscar="pino radiata pinus radiata">
 <td>
 <a href="fichas/pino-radiata.html">Pino radiata</a>
 </td>
@@ -1652,8 +1872,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Platanaceae" data-grp="Árbol latifoliado" data-ori="Origen hortícola/híbrido" data-buscar="platano platanus x hispanica">
+<tr data-fam="Platanaceae" data-grp="Árbol latifoliado" data-ori="Origen hortícola/híbrido" data-con="" data-buscar="platano platanus x hispanica">
 <td>
 <a href="fichas/platano.html">Plátano</a>
 </td>
@@ -1669,8 +1892,10 @@ Platanaceae
 <td>
 Origen hortícola/híbrido
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-buscar="roble comun quercus robur l.">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="Varias regiones" data-con="LC" data-buscar="roble comun quercus robur l.">
 <td>
 <a href="fichas/roblecomun.html">Roble común</a>
 </td>
@@ -1686,13 +1911,16 @@ Fagaceae
 <td>
 Varias regiones
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Nothofagaceae" data-grp="Árbol latifoliado" data-ori="América del Sur" data-buscar="roble pellin nothofagus obliqua 2">
+<tr data-fam="Nothofagaceae" data-grp="Árbol latifoliado" data-ori="América del Sur" data-con="LC" data-buscar="roble pellin nothofagus obliqua">
 <td>
 <a href="fichas/roble-pellin.html">Roble pellín</a>
 </td>
 <td>
-<i>Nothofagus</i> <i>obliqua</i> 2
+<i>Nothofagus</i> <i>obliqua</i>
 </td>
 <td>
 Nothofagaceae
@@ -1703,8 +1931,11 @@ Nothofagaceae
 <td>
 América del Sur
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="roble rojo quercus rubra l.">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="LC" data-buscar="roble rojo quercus rubra l.">
 <td>
 <a href="fichas/roble-rojo-arb043.html">Roble rojo</a>
 </td>
@@ -1720,8 +1951,11 @@ Fagaceae
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="roble rojo quercus rubra l.">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="LC" data-buscar="roble rojo quercus rubra l.">
 <td>
 <a href="fichas/roble-rojo-arb059.html">Roble rojo</a>
 </td>
@@ -1737,8 +1971,11 @@ Fagaceae
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-buscar="roble rojo americano quercus rubra l.">
+<tr data-fam="Fagaceae" data-grp="Árbol latifoliado" data-ori="América del Norte" data-con="LC" data-buscar="roble rojo americano quercus rubra l.">
 <td>
 <a href="fichas/roblerojo.html">Roble rojo americano</a>
 </td>
@@ -1754,8 +1991,11 @@ Fagaceae
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="sabina de virginia sabina virginiana (l.) antoine">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="" data-buscar="sabina de virginia sabina virginiana (l.) antoine">
 <td>
 <a href="fichas/sabina.html">Sabina de Virginia</a>
 </td>
@@ -1771,13 +2011,15 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="secuoya sequoia semprevirens">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="EN" data-buscar="secuoya sequoia sempervirens">
 <td>
 <a href="fichas/secuoya.html">Secuoya</a>
 </td>
 <td>
-<i>Sequoia</i> <i>semprevirens</i>
+<i>Sequoia</i> <i>sempervirens</i>
 </td>
 <td>
 Cupressaceae
@@ -1788,8 +2030,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-buscar="secuoya roja sequoiadendron giganteum">
+<tr data-fam="Cupressaceae" data-grp="Conífera" data-ori="América del Norte" data-con="EN" data-buscar="secuoya roja sequoiadendron giganteum">
 <td>
 <a href="fichas/secuoiaroja.html">Secuoya roja</a>
 </td>
@@ -1805,8 +2050,11 @@ Conífera
 <td>
 América del Norte
 </td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Varias regiones" data-buscar="tejo comun larix decidua">
+<tr data-fam="Pinaceae" data-grp="Conífera" data-ori="Varias regiones" data-con="" data-buscar="tejo comun larix decidua">
 <td>
 <a href="fichas/tejo-comun.html">Tejo común</a>
 </td>
@@ -1822,8 +2070,10 @@ Conífera
 <td>
 Varias regiones
 </td>
+<td>
+</td>
 </tr>
-<tr data-fam="Malvaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-buscar="tilo tilia sp.">
+<tr data-fam="Malvaceae" data-grp="Árbol latifoliado" data-ori="Hemisferio Norte" data-con="" data-buscar="tilo tilia sp.">
 <td>
 <a href="fichas/tilo.html">Tilo</a>
 </td>
@@ -1839,6 +2089,8 @@ Malvaceae
 <td>
 Hemisferio Norte
 </td>
+<td>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1849,22 +2101,24 @@ Hemisferio Norte
       ff=document.getElementById("cat-fam"),
       fg=document.getElementById("cat-grp"),
       fo=document.getElementById("cat-ori"),
+      fc=document.getElementById("cat-con"),
       filas=document.querySelectorAll("#cat-tabla tbody tr"),
       conteo=document.getElementById("cat-conteo");
   function norm(s){return (s||"").toLowerCase();}
   function aplica(){
-    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, n=0;
+    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
       var ok = tr.dataset.buscar.indexOf(qs)>=0 &&
                (!vf || tr.dataset.fam===vf) &&
                (!vg || tr.dataset.grp===vg) &&
-               (!vo || tr.dataset.ori===vo);
+               (!vo || tr.dataset.ori===vo) &&
+               (!vc || tr.dataset.con===vc);
       tr.style.display = ok ? "" : "none";
       if(ok) n++;
     });
     conteo.textContent = n + " de " + filas.length + " ejemplares";
   }
-  [q,ff,fg,fo].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
+  [q,ff,fg,fo,fc].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
   aplica();
 })();
 </script>

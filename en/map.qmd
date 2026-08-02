@@ -15,9 +15,11 @@ execute:
   <a href="index.html">Home</a>
   <a href="collection.html">The Collection</a>
   <a href="map.html" class="current">Map</a>
+  <a href="self-guided-tour.html">Self-guided tour</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>
+  <a href="donate.html">Donate</a>
   <a href="companies.html">Companies</a>
   <a href="contact.html">Contact</a>
   <span class="spacer"></span>
@@ -86,6 +88,26 @@ tr_forma <- c("Conífera"="Conifer", "Árbol latifoliado"="Broadleaf tree",
               "Arbusto"="Shrub", "Palmera"="Palm", "Otro"="Other")
 forma_en <- function(x) { out <- unname(tr_forma[as.character(x)]); ifelse(is.na(out), as.character(x), out) }
 
+# Translate Spanish geographic values into English (ordered phrase replacement).
+region_en <- function(x) {
+  if (!tiene_valor(x)) return(x)
+  s <- as.character(x)
+  reps <- c("América del Norte"="North America","América del Sur"="South America",
+            "América Central"="Central America","Norte América"="North America",
+            "Sudamérica"="South America","Hemisferio Norte"="Northern Hemisphere",
+            "Asia Occidental"="Western Asia","Sudeste Asiático"="Southeast Asia",
+            "África del Norte"="North Africa","Islas Canarias"="Canary Islands",
+            "Mediterráneo"="Mediterranean","Origen hortícola/Híbrido"="Horticultural/hybrid origin",
+            "Origen hortícola/híbrido"="Horticultural/hybrid origin","Origen Híbrido"="Hybrid origin",
+            "Cosmopolita tropical"="Pantropical","Cosmopolita"="Cosmopolitan",
+            "Varias regiones"="Various regions","Sin dato"="No data","Balcanes"="Balkans",
+            "Japón"="Japan","Taiwán"="Taiwan","México"="Mexico","E.E.U.U"="USA",
+            "Oceanía"="Oceania","América"="Americas","Europa"="Europe","África"="Africa",
+            "Central"="Central","Norte"="North")
+  for (k in names(reps)) s <- gsub(k, reps[[k]], s, fixed = TRUE)
+  s
+}
+
 # Rich popup for trees (empty fields are simply not shown)
 popup_arbol <- function(df) {
   titulo <- ifelse(tiene_valor(df$nombre_comun), df$nombre_comun,
@@ -97,7 +119,8 @@ popup_arbol <- function(df) {
            "' style='max-width:120px; height:auto; border-radius:8px;'><br><br>"), ""),
     ifelse(tiene_valor(df$familia),    paste0("<b>Family:</b> ", df$familia, "<br>"), ""),
     ifelse(tiene_valor(df$forma_vida), paste0("<b>Type:</b> ", forma_en(df$forma_vida), "<br>"), ""),
-    ifelse(tiene_valor(df$continente),paste0("<b>Origin:</b> ", df$continente, "<br>"), ""),
+    ifelse(tiene_valor(df$continente),paste0("<b>Origin:</b> ", region_en(df$continente), "<br>"), ""),
+    ifelse(nzchar(df$iucn), paste0("<b>Conservation (IUCN):</b> ", iucn_badge(df$iucn, "en"), "<br>"), ""),
     ifelse(tiene_valor(df$año_plantacion), paste0("<b>Planted:</b> ", df$año_plantacion, "<br>"), ""),
     ifelse(tiene_valor(df$padrino), paste0("<b>Sponsored by:</b> ", df$padrino, "<br>"), ""),
     ifelse(tiene_valor(df$slug), paste0("<div style='margin-top:.55rem;'><a href='fichas/", df$slug, ".html'><b>See full profile →</b></a></div>"), ""),

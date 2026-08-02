@@ -1,0 +1,155 @@
+---
+title: "Recorrido autoguiado"
+subtitle: "Un paseo botánico para hacer a tu ritmo"
+toc: true
+toc-title: "Las paradas"
+toc-location: right
+title-block-banner: fotos/galeria/alameda_eucaliptos.jpg
+title-block-banner-color: white
+format: html
+---
+
+Este recorrido te invita a caminar el arboretum **a tu propio ritmo**, siguiendo
+los senderos del mapa. En cada parada vas a encontrar una historia y una pequeña
+**invitación** para conectar con la naturaleza a través de los sentidos. Podés
+hacerlo con el celular mientras caminás —escaneando el **código QR** de la
+etiqueta de cada árbol para abrir su ficha— o leerlo tranquilo desde tu casa
+antes de venir.
+
+::: {.callout-tip title="Cómo usar este recorrido"}
+1. Abrí el [**mapa interactivo**](mapa.qmd) y elegí un recorrido: **corto**,
+   **medio** o **largo** (aparecen como líneas de colores).
+2. Caminá el sendero y buscá los árboles de las paradas de abajo.
+3. En cada ejemplar, **escaneá el QR** de su etiqueta para ver su ficha, su foto
+   y su ubicación.
+4. Tomate tu tiempo. Las "invitaciones" son eso, invitaciones: nadie está
+   obligado a nada. Explorá lo que te haga bien.
+:::
+
+## Antes de empezar
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-3 .shadow-sm}
+### <i class="bi bi-bag"></i> Qué traer
+Agua, **calzado cómodo**, repelente y una bolsa para llevarte tu basura (dentro
+de los parques no hay tachos). Un mate o algo para compartir siempre suma.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-3 .shadow-sm}
+### <i class="bi bi-heart"></i> Con respeto y ternura
+Podés **tocar** las plantas con cuidado, pedirles permiso, olerlas… pero **no
+arrancar**. Son seres vivos. Esto no es un museo para mirar de lejos: es un
+lugar vivo para habitar con cariño.
+:::
+
+:::
+
+## La historia de estos jardines
+
+Hace más de **40 años**, donde hoy ves estos jardines había un **campo de papas**.
+Imaginá todo esto como un potrero, sin nada más que cultivo.
+
+¿Cómo se transforma un potrero en un jardín botánico? Hicieron falta plantas,
+agua, trabajo y muchísimo cuidado. Pero por sobre todo hizo falta una **visión**,
+un **sueño** sostenido durante décadas. Ese soñador fue **Héctor Biocca**, que
+dedicó su vida a recuperar este entorno y transformarlo en un espacio para la
+conservación y el estudio de la flora.
+
+Héctor estudió a fondo las plantas —su desarrollo, sus colores a lo largo del
+año— y **diseñó a mano alzada, con lápiz y papel**, la configuración de tres
+parques: el I (donde estás ahora, cerca de la casa), el II (que comenzó en el
+año 2000) y el III (a partir de 2007). Viajaba mucho para buscar ejemplares,
+sobre todo a viveros de la zona de la cordillera. Con su familia los plantó, los
+cuidó y siguió su adaptación —la mayoría son especies exóticas— y llegó a ver
+crecer sus parques durante 30 años.
+
+Hoy, su familia se dedica a **preservar y compartir** este legado. Junto a
+doctores en Biología del CONICET, naturalistas y equipos de la **Fundación
+Caburé-í** y del **GEMAF**, se realizó un relevamiento de flora y fauna que ya
+identificó **más de 45 especies de aves** y **más de 300 especies de plantas**.
+Por esa diversidad —y porque **Mar del Plata nunca tuvo un jardín botánico**— los
+biólogos sugirieron abrir estos jardines al conocimiento de la comunidad.
+
+## Las paradas
+
+A lo largo del paseo vas a cruzarte con árboles que valen una pausa. Estas son
+tres paradas imperdibles, cada una con una pequeña invitación para vivirla con
+todos los sentidos.
+
+### Parada 1 · La Sabina de Virginia {#parada-1}
+
+**Juego de los sentidos**
+
+La [**Sabina de Virginia**](fichas/sabina.html) (*Sabina virginiana*) es un buen
+lugar para empezar a mirar de otra manera. Muchas veces recorremos la naturaleza
+solo con la vista, y nos perdemos casi todo lo demás.
+
+::: {.callout-note title="🌿 Te invitamos a…"}
+Cerrá los ojos un momento. Tocá la **corteza** del árbol, o frotá suavemente una
+**hoja** entre tus dedos. ¿Qué sentís? ¿Es áspero o liso? ¿Tiene aroma o no?
+¿Frío, cálido? No hay respuestas correctas: es tu manera de conectar con este ser
+vivo. Es solo una invitación; explorá hasta donde te sientas cómodo.
+:::
+
+### Parada 2 · Las secuoyas {#parada-2}
+
+**¿Quién es más viejo?**
+
+Antes de leer, una pregunta: de todos los árboles del recorrido, **¿cuál pensás
+que es el más antiguo?**
+
+Aquí conviven dos gigantes emparentados: la
+[**Secuoya roja**](fichas/secuoiaroja.html) (*Sequoiadendron giganteum*), el ser
+vivo **más grande del planeta** por volumen, y la
+[**Secuoya**](fichas/secuoya.html) (*Sequoia sempervirens*), el **árbol más alto
+del mundo**, capaz de superar los 100 metros. En su tierra natal, California,
+algunos ejemplares viven **más de 2.000 años**.
+
+::: {.callout-important title="En peligro"}
+Ambas especies están clasificadas como **En peligro** <span class="iucn-badge iucn-EN">EN · En peligro</span>
+en la **Lista Roja de la UICN**. Verlas crecer acá, tan lejos de su hogar, es
+también una invitación a cuidarlas. [Más sobre conservación en el catálogo »](catalogo.qmd)
+:::
+
+### Parada 3 · Pinos y araucarias {#parada-3}
+
+**Adiviná para qué se usa**
+
+Frente a un [**pino**](fichas/pino-insigne.html) (*Pinus radiata*) o a una
+[**araucaria**](fichas/araucariaaustraliana-arb022.html) (*Araucaria bidwillii*),
+mirá una hoja, una piña o una semilla y preguntate: **¿para qué creés que sirve
+esta planta?**
+
+::: {.callout-note title="🔎 Pistas"}
+Muchas coníferas dan **madera** para construcción; algunas, **resinas** usadas en
+medicina y perfumería. Las semillas de ciertas araucarias —los **piñones**— son
+alimento desde hace siglos para pueblos enteros. Un solo árbol puede ser refugio,
+alimento y material a la vez. ¿Se te ocurren otros usos?
+:::
+
+## Para cerrar
+
+Si podés, terminá el paseo sentándote un momento —mejor cerca del agua— y quedate
+con una de estas preguntas. No hace falta responderla en voz alta; a veces basta
+con dejarla resonar:
+
+- ¿Qué te **llevás** de esta visita? Si querés, resumilo en **una palabra**.
+- Si pudieras plantar un árbol acá, **¿cuál elegirías y por qué?**
+- ¿Qué **emoción o sensación** te quedó después de recorrer el jardín?
+- ¿Qué nueva idea o reflexión te llevás hoy sobre la naturaleza y la conservación?
+
+## ¿Preferís que te acompañen?
+
+Este recorrido lo podés hacer solo, pero también ofrecemos **visitas guiadas** con
+nuestro equipo, paseos fotográficos, visitas escolares y jornadas de recolección
+de semillas.
+
+::: {.cta-container style="text-align:center; margin:1.5rem 0;"}
+[<i class="bi bi-calendar-check"></i> Reservar una visita guiada](experiencias.qmd){.btn .btn-success .btn-lg role="button"}
+&nbsp;
+[<i class="bi bi-map"></i> Abrir el mapa](mapa.qmd){.btn .btn-outline-success .btn-lg role="button"}
+:::
+
+*Fuente del contenido: guion de guiado del Paseo Botánico de Estancia La
+Constancia. Estado de conservación: [Lista Roja de la UICN](https://www.iucnredlist.org).*

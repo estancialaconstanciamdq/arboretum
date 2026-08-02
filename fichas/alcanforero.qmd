@@ -3,11 +3,11 @@
      Para cambiar esta página, editá el Excel y volvé a renderizar. -->
 
 ---
-title: "?Alcanforero"
+title: "Alcanforero"
 format: html
 ---
 
-**Nombre científico:** <i>?Cinnamomum</i> <i>camphora</i>
+**Nombre científico:** <i>Cinnamomum</i> <i>camphora</i>
 
 
 **Familia:** Lauraceae

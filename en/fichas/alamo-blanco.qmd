@@ -17,6 +17,7 @@ format: html
   <a href="../wellbeing.html">Wellbeing</a>
   <a href="../visit.html">Visit</a>
   <a href="../sponsor.html">Sponsor a tree</a>
+  <a href="../donate.html">Donate</a>
   <a href="../companies.html">Companies</a>
   <a href="../contact.html">Contact</a>
   <span class="spacer"></span>
@@ -25,7 +26,7 @@ format: html
 </div>
 ```
 
-**Scientific name:** <i>Populu</i> <i>alba</i> L.
+**Scientific name:** <i>Populus</i> <i>alba</i> L.
 
 
 **Family:** Salicaceae
@@ -34,10 +35,10 @@ format: html
 **Type:** Broadleaf tree
 
 
-**Origin:** Europa-Asia
+**Origin:** Europe-Asia
 
 
-**Continent:** América del Norte
+**Continent:** North America
 
 
 ## Location

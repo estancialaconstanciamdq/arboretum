@@ -24,6 +24,10 @@ format: html
 **Continente:** Europa (Balcanes)
 
 
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-VU" title="UICN/IUCN: Vulnerable">VU · Vulnerable</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
+
+
 ## Ubicación
 
 Coordenadas: -38.056127, -57.679297

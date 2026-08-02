@@ -691,5 +691,11 @@
   },
   "en/volunteer.qmd": {
     "volunteer.html": "65204f3e"
+  },
+  "donar.qmd": {
+    "donar.html": "4acb6930"
+  },
+  "en/donate.qmd": {
+    "donate.html": "d643527b"
   }
 }

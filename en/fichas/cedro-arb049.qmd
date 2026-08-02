@@ -17,6 +17,7 @@ format: html
   <a href="../wellbeing.html">Wellbeing</a>
   <a href="../visit.html">Visit</a>
   <a href="../sponsor.html">Sponsor a tree</a>
+  <a href="../donate.html">Donate</a>
   <a href="../companies.html">Companies</a>
   <a href="../contact.html">Contact</a>
   <span class="spacer"></span>
@@ -31,7 +32,7 @@ format: html
 **Type:** Conifer
 
 
-**Continent:** África / Asia / Europa
+**Continent:** Africa / Asia / Europe
 
 
 ## Location

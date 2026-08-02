@@ -17,6 +17,7 @@ format: html
   <a href="../wellbeing.html">Wellbeing</a>
   <a href="../visit.html">Visit</a>
   <a href="../sponsor.html">Sponsor a tree</a>
+  <a href="../donate.html">Donate</a>
   <a href="../companies.html">Companies</a>
   <a href="../contact.html">Contact</a>
   <span class="spacer"></span>
@@ -27,7 +28,7 @@ format: html
 
 ![](../../fotos/Cedrojapones.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Scientific name:** <i>Cryptomeria</i> <i>japónica</i>
+**Scientific name:** <i>Cryptomeria</i> <i>japonica</i>
 
 
 **Family:** Cupressaceae
@@ -39,7 +40,11 @@ format: html
 **Origin:** Asia
 
 
-**Continent:** Asia (Japón)
+**Continent:** Asia (Japan)
+
+
+**Conservation status (IUCN):** <span class="iucn-badge iucn-NT" title="UICN/IUCN: Near Threatened">NT · Near Threatened</span>  
+<span style="font-size:.8rem;color:#777;">Global species category · [IUCN Red List](https://www.iucnredlist.org)</span>
 
 
 ## Location

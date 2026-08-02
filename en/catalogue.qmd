@@ -11,9 +11,11 @@ format: html
   <a href="index.html">Home</a>
   <a href="collection.html" class="current">The Collection</a>
   <a href="map.html">Map</a>
+  <a href="self-guided-tour.html">Self-guided tour</a>
   <a href="wellbeing.html">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>
+  <a href="donate.html">Donate</a>
   <a href="companies.html">Companies</a>
   <a href="contact.html">Contact</a>
   <span class="spacer"></span>
@@ -53,9 +55,19 @@ df <- arboles %>%
     fam = ifelse(tiene_valor(familia), familia, "—"),
     grp = ifelse(tiene_valor(forma_vida), tr_map(forma_vida, tr_forma), "Unclassified"),
     ori = ifelse(tiene_valor(.data[[col_ori]]), tr_map(.data[[col_ori]], tr_ori), "No data"),
+    con = ifelse(nzchar(iucn), iucn, ""),
+    con_html = iucn_badge(iucn, "en"),
     clave = gsub("^[^A-Za-z0-9]+", "", toupper(iconv(nombre_mostrar, to = "ASCII//TRANSLIT")))
   ) %>%
   arrange(clave)
+
+# Conservation selector, ordered by threat (not alphabetical)
+sel_con <- paste0(
+  "<option value=\"\">All</option>",
+  paste0(vapply(c("EN","VU","NT","LC"), function(k)
+    sprintf("<option value=\"%s\">%s</option>", k, iucn_label(k, "en")),
+    character(1)), collapse = "")
+)
 
 esc <- function(x) {
   x <- as.character(x)
@@ -78,6 +90,27 @@ each name opens its profile.
   <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Open data · free to use with attribution</span>
 </p>
 
+::: {.callout-note collapse="true"}
+## About this data and conservation status
+
+The flora survey is **ongoing**. Some species were identified from **nursery
+purchase records** and are **not yet verified in the field**; identifications may
+be corrected as fieldwork progresses.
+
+The **Conservation** column shows the **IUCN Red List** category for assessed
+species (at the global species level, not for the individual specimen):
+
+```{r results='asis', echo=FALSE}
+cat('<div class="iucn-legend">',
+    paste(vapply(c("EN","VU","NT","LC"), function(k) iucn_badge(k, "en"), character(1)), collapse = " "),
+    '</div>')
+```
+
+Source: [IUCN Red List of Threatened Species](https://www.iucnredlist.org).
+Species without a badge have no assessment assigned in this catalogue (for
+example, specimens identified only to genus).
+:::
+
 ```{r results='asis', echo=FALSE}
 cat(sprintf('
 <style>
@@ -97,26 +130,28 @@ cat(sprintf('
   <div><label>Family</label><select id="cat-fam">%s</select></div>
   <div><label>Type</label><select id="cat-grp">%s</select></div>
   <div><label>Origin</label><select id="cat-ori">%s</select></div>
+  <div><label>Conservation</label><select id="cat-con">%s</select></div>
 </div>
 <div id="cat-conteo"></div>
 
 <div class="tabla-scroll">
 <table id="cat-tabla">
-<thead><tr><th>Common name</th><th>Scientific name</th><th>Family</th><th>Type</th><th>Origin</th></tr></thead>
+<thead><tr><th>Common name</th><th>Scientific name</th><th>Family</th><th>Type</th><th>Origin</th><th>Conservation</th></tr></thead>
 <tbody>',
   opciones(sort(unique(df$fam[df$fam != "—"]))),
   opciones(sort(unique(df$grp))),
-  opciones(sort(unique(df$ori)))
+  opciones(sort(unique(df$ori))),
+  sel_con
 ))
 
 for (i in seq_len(nrow(df))) {
   r <- df[i, ]
   buscar <- tolower(iconv(paste(r$nombre_mostrar, r$sci), to = "ASCII//TRANSLIT"))
   cat(sprintf(
-    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
-<td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
-    esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
-    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori)
+    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-con="%s" data-buscar="%s">
+<td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
+    esc(r$fam), esc(r$grp), esc(r$ori), esc(r$con), esc(buscar),
+    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori), r$con_html
   ))
 }
 
@@ -129,22 +164,24 @@ cat('</tbody></table>
       ff=document.getElementById("cat-fam"),
       fg=document.getElementById("cat-grp"),
       fo=document.getElementById("cat-ori"),
+      fc=document.getElementById("cat-con"),
       filas=document.querySelectorAll("#cat-tabla tbody tr"),
       conteo=document.getElementById("cat-conteo");
   function norm(s){return (s||"").toLowerCase();}
   function aplica(){
-    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, n=0;
+    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
       var ok = tr.dataset.buscar.indexOf(qs)>=0 &&
                (!vf || tr.dataset.fam===vf) &&
                (!vg || tr.dataset.grp===vg) &&
-               (!vo || tr.dataset.ori===vo);
+               (!vo || tr.dataset.ori===vo) &&
+               (!vc || tr.dataset.con===vc);
       tr.style.display = ok ? "" : "none";
       if(ok) n++;
     });
     conteo.textContent = n + " of " + filas.length + " specimens";
   }
-  [q,ff,fg,fo].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
+  [q,ff,fg,fo,fc].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
   aplica();
 })();
 </script>')

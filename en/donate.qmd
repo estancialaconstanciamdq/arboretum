@@ -1,0 +1,187 @@
+---
+title: "Friends of the Arboretum"
+subtitle: "Help sustain the first botanical garden of Mar del Plata"
+title-block-banner: ../fotos/eventos/arbol_otono.jpg
+title-block-banner-color: white
+toc: true
+toc-title: "On this page"
+toc-location: right
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="self-guided-tour.html">Self-guided tour</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="donate.html" class="current">Donate</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../donar.html" class="lang">Español ▸</a>
+</div>
+```
+
+<!-- BEFORE PUBLISHING, replace the payment links: PAYPAL_URL, CAFECITO_URL. -->
+
+Mar del Plata **never had a botanical garden**. Now it does: a living, 33-hectare
+arboretum with more than **300 species**, every tree **documented and traceable**, and
+international recognition ([ArbNet Level I](https://arbnet.org/morton-register/la-constancia-de-biocca/){target="_blank" rel="noopener"} · [BGCI](https://gardensearch.bgci.org/garden/7214){target="_blank" rel="noopener"}). Sustaining it and opening it to the community has a cost — and your gift makes it possible.
+
+::: {.callout-note appearance="simple"}
+**Your gift goes 100% to the arboretum:** care of the collections, education, research and conservation of the natural heritage. Open data, traceable impact, no greenwashing.
+:::
+
+## Become a Friend of the Arboretum
+
+The best way to help is a **monthly gift**: small, steady, and it gives the project
+predictability. Join the community that sustains the garden.
+
+```{=html}
+<div class="stats-band" style="grid-template-columns:repeat(2,1fr); max-width:720px; margin:1.2rem auto;">
+  <a class="stat cred" href="PAYPAL_URL" target="_blank" rel="noopener" style="background:#1E4A38; color:#fff;">
+    <div class="num" style="color:#fff;"><i class="bi bi-heart-fill"></i></div>
+    <div class="lbl" style="color:#eaf3ee;">Become a Friend (monthly)</div>
+  </a>
+  <a class="stat cred" href="PAYPAL_URL" target="_blank" rel="noopener">
+    <div class="num"><i class="bi bi-gift"></i></div>
+    <div class="lbl">Make a one-time gift</div>
+  </a>
+</div>
+```
+
+### Friendship levels
+
+::: grid
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌱 Seed
+**Accessible gift**
+
+- Your name on the site's **Wall of Friends**.
+- Newsletter with arboretum news.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌿 Sprout
+**Everything above, plus:**
+
+- Early access to events and walks.
+- Digital Friend certificate.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm style="border-top:3px solid #1E4A38;"}
+### 🌳 Tree
+**Everything above, plus:**
+
+- A **guided visit** for two, once a year.
+- A mention on our social media.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌲 Forest
+**Everything above, plus:**
+
+- Featured recognition.
+- Ideal for families or small companies.
+:::
+
+:::
+
+::: {.callout-tip}
+Would you rather support a specific specimen than give in general? You can
+[**sponsor a tree**](sponsor.html) in your name, as a gift or in honour of someone.
+:::
+
+## What your gift funds
+
+Every contribution turns into something concrete that improves the garden and the
+visitor's experience:
+
+::: grid
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🪧 **Educational signage** and species identification.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-signpost-2"></i> **Interpretive trails** and accessibility.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🌱 **Nursery and new collections**: propagation and planting.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-mortarboard"></i> **School scholarships**: educational visits for schools.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-binoculars"></i> **Wildlife monitoring** and scientific survey.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🪑 **Benches and spaces** for rest and observation.
+:::
+
+:::
+
+## Ways to give
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-paypal"></i> From abroad (PayPal)
+Give in your currency, one-time or monthly:
+
+<a href="PAYPAL_URL" target="_blank" rel="noopener" class="btn btn-outline-success" role="button"><i class="bi bi-paypal"></i> Donate with PayPal</a>
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-globe-americas"></i> From Argentina
+Local donors can also give through Cafecito / bank transfer — see the
+[Spanish page](../donar.html) or write to us.
+:::
+
+:::
+
+## Why trust us
+
+::: grid
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**Full traceability**<br>One profile and one QR code per tree. Open, verifiable data.
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**International recognition**<br>Accredited by ArbNet (Level I) and in the global BGCI network.
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**Real local impact**<br>The first botanical garden of Mar del Plata, open to the community.
+:::
+
+:::
+
+## Wall of Friends
+
+Those who sustain the arboretum have their place here. **Join and be among the first
+to appear.**
+
+*Coming soon: the list of Friends of the Arboretum.*
+
+::: {.cta-band}
+## Questions, or want to arrange your gift?
+
+Write to us and we'll gladly help.
+
+**Email:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+· **WhatsApp:** [+54 9 11 5736 0940](https://wa.me/5491157360940)
+:::

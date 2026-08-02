@@ -24,6 +24,10 @@ format: html
 **Continente:** Oceanía (Australia)
 
 
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
+
+
 ## Ubicación
 
 Coordenadas: -38.05622, -57.681656

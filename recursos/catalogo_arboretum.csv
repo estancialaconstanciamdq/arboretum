@@ -27,9 +27,9 @@
 "ARB026","Encina","Quercus baloot Griff.",,"Fagaceae","Árbol latifoliado","Europa","Europa (Mediterráneo) / África del Norte",,,,,-38.055929,-57.680409
 "ARB027","Pino mexicano amarillo","Pinus patula Schltdl. & Cham.",,"Pinaceae","Conífera","México","Europa (Mediterráneo) / África del Norte",,,,,-38.056056,-57.679651
 "ARB028","Araucaria Australiana","Araucaria bidwillii Hook.",,"Araucariaceae","Conífera","Australia","Oceanía (Australia)",,,,,-38.056057,-57.679449
-"ARB029","Álamo blanco","Populu alba L.",,"Salicaceae","Árbol latifoliado","Europa-Asia","América del Norte",,,,,-38.056168,-57.679357
+"ARB029","Álamo blanco","Populus alba L.",,"Salicaceae","Árbol latifoliado","Europa-Asia","América del Norte",,,,,-38.056168,-57.679357
 "ARB030","Castaño de Indias","Aesculus hippocastanum L.",,"Sapindaceae","Árbol latifoliado","Europa","Europa (Balcanes)",,,,,-38.056127,-57.679297
-"ARB031","?Alcanforero","?Cinnamomum camphora",,"Lauraceae","Árbol latifoliado","Asia","Asia / Europa",,,,,-38.056093,-57.679557
+"ARB031","Alcanforero","Cinnamomum camphora",,"Lauraceae","Árbol latifoliado","Asia","Asia / Europa",,,,,-38.056093,-57.679557
 "ARB032","Cedro japonés","Cryptomeria japonica (Thunb. ex L. f.) D. Don",,"Cupressaceae","Conífera","Asia","Asia (Japón)",,,,,-38.056374,-57.679314
 "ARB033","Liquidambar","Liquidambar sp.",,"Altingiaceae","Árbol latifoliado","-","América del Norte / Asia",,,,,-38.056545,-57.679395
 "ARB034","Secuoya roja","Sequoiadendron giganteum",,"Cupressaceae","Conífera",,"América del Norte",,,,,,
@@ -53,7 +53,7 @@
 "ARB052","Dodonea","Dodonaea viscosa",,"Sapindaceae","Arbusto","Australia","Oceanía / América / África (Cosmopolita tropical)",,,,,-38.05572,-57.682395
 "ARB053","Macasar","Chamaecyparis lawsoniana",,"Cupressaceae","Conífera","Norte América","Asia (China)",,,,,-38.05574,-57.68213
 "ARB054","Ligustro","Ligustrum lucidum",,"Olives","Árbol latifoliado","Asia","Asia (China)",,,,,-38.05569,-57.68208
-"ARB055","Cedro","Cedrus sp.`",,,"Conífera",,"África / Asia / Europa",,,,,-38.05572,-57.68198
+"ARB055","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.05572,-57.68198
 "ARB056","Canforero","Cinnamomum camphora",,"Lauraceae","Árbol latifoliado","Asia","Asia (China / Japón)",,,,,-38.05585,-57.681933
 "ARB057","Boj","Revisar",,,"Otro",,"Europa / Asia / África",,,,,-38.05578,-57.68175
 "ARB058","Acacia mimosa","Acacia dealbata",,"Fabaceae","Árbol latifoliado","Acacia dealbata","Oceanía (Australia)",,,,,-38.0559,-57.681743
@@ -68,11 +68,11 @@
 "ARB067","Ligustro","Ligustrum lucidum",,"Olives","Árbol latifoliado","Asia","Asia (China)",,,,,-38.05521,-57.681096
 "ARB068","Boj","Revisar",,,"Otro",,"Europa / Asia / África",,,,,-38.05508,-57.680938
 "ARB069","Eucalipto medicinal","Eucalyptus cinerea",,"Myrtaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.05502,-57.680618
-"ARB070","Secuoya","Sequoia semprevirens",,"Cupressaceae","Conífera",,"América del Norte",,,,,-38.05503,-57.680501
+"ARB070","Secuoya","Sequoia sempervirens",,"Cupressaceae","Conífera",,"América del Norte",,,,,-38.05503,-57.680501
 "ARB071","Pino insigne","Pinus radiata",,"Pinaceae","Conífera","Norte América","América del Norte",,,,,-38.05532,-57.680429
 "ARB072","Coihue","Nothofagus dombeyi",,"Nothofagaceae","Árbol latifoliado","Sudamérica","América del Sur (Patagonia)",,,,,-38.05529,-57.680601
-"ARB073","Roble pellín","Nothofagus obliqua 2",,"Nothofagaceae","Árbol latifoliado","Sudamérica","América del Sur (Patagonia)",,,,,-38.05553,-57.680985
-"ARB074","Criptomeria","Cryptomeria japónica",,"Cupressaceae","Conífera","Asia","Asia (Japón)",,,,,-38.05566,-57.681065
+"ARB073","Roble pellín","Nothofagus obliqua",,"Nothofagaceae","Árbol latifoliado","Sudamérica","América del Sur (Patagonia)",,,,,-38.05553,-57.680985
+"ARB074","Criptomeria","Cryptomeria japonica",,"Cupressaceae","Conífera","Asia","Asia (Japón)",,,,,-38.05566,-57.681065
 "ARB075","Cedro","Cedrus sp.",,,"Conífera",,"África / Asia / Europa",,,,,-38.05593,-57.681297
 "ARB076","Ginkgo","Ginkgo biloba",,"Ginkgoaceae","Otro","Asia","Asia (China)",,,,,-38.056,-57.681529
 "ARB077","Eucalipto blanco","Eucalyptus globulus Labill.",,"Myrtaceae","Árbol latifoliado","Australia","Oceanía (Australia)",,,,,-38.05622,-57.681656

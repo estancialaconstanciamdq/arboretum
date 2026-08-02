@@ -1,0 +1,178 @@
+---
+title: "Amigos del Arboretum"
+subtitle: "Ayudá a sostener el primer jardín botánico de Mar del Plata"
+title-block-banner: fotos/eventos/arbol_otono.jpg
+title-block-banner-color: white
+toc: true
+toc-title: "En esta página"
+toc-location: right
+format: html
+---
+
+<!-- =========================================================================
+  IMPORTANTE — ANTES DE PUBLICAR, reemplazá los enlaces de pago:
+   · CAFECITO_URL   -> tu enlace de Cafecito (https://cafecito.app/tu-usuario)
+   · PAYPAL_URL     -> tu enlace de PayPal (para donantes del exterior)
+   · ALIAS_MP       -> tu alias / CBU para transferencia
+  Están marcados con "COMPLETAR". Los montos de los niveles también son
+  ejemplos: ajustalos a lo que definan.
+========================================================================= -->
+
+Mar del Plata **nunca tuvo un jardín botánico**. Hoy lo tiene: un arboretum vivo de
+33 hectáreas, con más de **300 especies**, cada árbol **documentado y trazable**, y
+reconocimiento internacional ([ArbNet Nivel I](https://arbnet.org/morton-register/la-constancia-de-biocca/){target="_blank" rel="noopener"} · [BGCI](https://gardensearch.bgci.org/garden/7214){target="_blank" rel="noopener"}). Sostenerlo y abrirlo a la comunidad tiene un costo — y tu aporte lo hace posible.
+
+::: {.callout-note appearance="simple"}
+**Tu aporte es 100% para el arboretum:** cuidado de las colecciones, educación, investigación y conservación del patrimonio natural. Datos abiertos, impacto trazable, sin *greenwashing*.
+:::
+
+## Sumate como Amigo del Arboretum
+
+La mejor forma de ayudar es un **aporte mensual**: pequeño, sostenido, y es lo que le da previsibilidad al proyecto. Sé parte de la comunidad que sostiene el jardín.
+
+```{=html}
+<div class="stats-band" style="grid-template-columns:repeat(2,1fr); max-width:720px; margin:1.2rem auto;">
+  <a class="stat cred" href="CAFECITO_URL" target="_blank" rel="noopener" style="background:#1E4A38; color:#fff;">
+    <div class="num" style="color:#fff;"><i class="bi bi-heart-fill"></i></div>
+    <div class="lbl" style="color:#eaf3ee;">Quiero ser Amigo/a (aporte mensual)</div>
+  </a>
+  <a class="stat cred" href="CAFECITO_URL" target="_blank" rel="noopener">
+    <div class="num"><i class="bi bi-gift"></i></div>
+    <div class="lbl">Prefiero donar una vez</div>
+  </a>
+</div>
+```
+
+### Niveles de Amigos
+
+<!-- COMPLETAR: ajustá los montos mensuales a lo que definan. -->
+
+::: grid
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌱 Semilla
+**Aporte accesible**
+
+- Tu nombre en el **Muro de Amigos** del sitio.
+- Newsletter con novedades del arboretum.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌿 Brote
+**Todo lo anterior, y:**
+
+- Acceso anticipado a eventos y caminatas.
+- Certificado digital de Amigo/a.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm style="border-top:3px solid #1E4A38;"}
+### 🌳 Árbol
+**Todo lo anterior, y:**
+
+- Una **visita guiada** para dos personas al año.
+- Mención en nuestras redes.
+:::
+
+::: {.g-col-12 .g-col-md-3 .card .p-3 .shadow-sm}
+### 🌲 Bosque
+**Todo lo anterior, y:**
+
+- Reconocimiento destacado.
+- Ideal para familias o pequeñas empresas.
+:::
+
+:::
+
+::: {.callout-tip}
+¿Preferís apoyar un ejemplar puntual en vez de un aporte general? Podés
+[**apadrinar un árbol**](apadrina.qmd) a tu nombre, como regalo o en homenaje.
+:::
+
+## Tu aporte financia
+
+Cada peso se traduce en algo concreto que mejora el jardín y la experiencia de quien lo visita:
+
+::: grid
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🪧 **Señalética educativa** e identificación de especies.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-signpost-2"></i> **Senderos interpretativos** y accesibilidad.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🌱 **Vivero y nuevas colecciones**: reproducción y plantación.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-mortarboard"></i> **Becas escolares**: visitas educativas para escuelas.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+<i class="bi bi-binoculars"></i> **Monitoreo de fauna** y relevamiento científico.
+:::
+
+::: {.g-col-6 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+🪑 **Bancos y espacios** de descanso y observación.
+:::
+
+:::
+
+## Otras formas de donar
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-bank"></i> Transferencia
+Sin comisiones, directo:
+
+**Alias:** `COMPLETAR_ALIAS`
+**Titular:** COMPLETAR
+
+Si nos avisás por correo, te enviamos el comprobante y el certificado.
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-4 .shadow-sm}
+### <i class="bi bi-globe"></i> Desde el exterior
+¿Estás fuera de Argentina? Podés donar en dólares:
+
+<a href="PAYPAL_URL" target="_blank" rel="noopener" class="btn btn-outline-success" role="button"><i class="bi bi-paypal"></i> Donar con PayPal</a>
+:::
+
+:::
+
+## Por qué confiar en nosotros
+
+::: grid
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**Trazabilidad total**<br>Una ficha y un QR por árbol. Datos abiertos y verificables.
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**Reconocimiento internacional**<br>Acreditado por ArbNet (Nivel I) y en la red mundial de BGCI.
+:::
+
+::: {.g-col-12 .g-col-md-4 .card .p-3 .shadow-sm .text-center}
+**Impacto local real**<br>El primer jardín botánico de Mar del Plata, abierto a la comunidad.
+:::
+
+:::
+
+## Muro de Amigos
+
+Quienes sostienen el arboretum tienen su lugar acá. **Sumate y sé de los primeros en aparecer.**
+
+<!-- COMPLETAR: a medida que se sumen Amigos, listalos acá (con su permiso). -->
+*Próximamente: la lista de Amigos del Arboretum.*
+
+::: {.cta-band}
+## ¿Dudas o querés coordinar tu aporte?
+
+Escribinos y con gusto te ayudamos.
+
+**Correo:** [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)
+· **WhatsApp:** [+54 9 11 5736 0940](https://wa.me/5491157360940)
+:::

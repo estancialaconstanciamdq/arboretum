@@ -134,3 +134,84 @@ estimar_agb_kg <- function(diametro_cm, altura_m, rho = DENSIDAD_MADERA) {
 arboles$agb_kg     <- estimar_agb_kg(arboles$diametro_cm, arboles$altura_m)
 arboles$carbono_kg <- arboles$agb_kg * 0.47
 arboles$co2_kg     <- arboles$carbono_kg * 3.667
+
+# --- Estado de conservación (Lista Roja de la UICN) ------------------------
+# Búsqueda curada por binomio (género + epíteto). Solo se etiquetan especies
+# cuya categoría fue verificada; el resto queda sin insignia (degradación
+# elegante). Fuente: IUCN Red List of Threatened Species (iucnredlist.org).
+# Códigos: EN = En peligro, VU = Vulnerable, NT = Casi amenazada,
+#          LC = Preocupación menor. Verificado: julio 2025.
+
+IUCN_CAT <- c(
+  # En peligro (EN)
+  "sequoiadendron giganteum" = "EN",
+  "sequoia sempervirens"     = "EN",
+  "cedrus atlantica"         = "EN",
+  "pinus radiata"            = "EN",
+  "ginkgo biloba"            = "EN",
+  # Vulnerable (VU)
+  "aesculus hippocastanum"   = "VU",
+  # Casi amenazada (NT)
+  "chamaecyparis lawsoniana" = "NT",
+  "cryptomeria japonica"     = "NT",
+  # Preocupación menor (LC)
+  "cedrus deodara"           = "LC",
+  "quercus robur"            = "LC",
+  "quercus rubra"            = "LC",
+  "quercus baloot"           = "LC",
+  "fagus sylvatica"          = "LC",
+  "abies concolor"           = "LC",
+  "magnolia grandiflora"     = "LC",
+  "nothofagus dombeyi"       = "LC",
+  "nothofagus obliqua"       = "LC",
+  "araucaria bidwillii"      = "LC",
+  "taxodium mucronatum"      = "LC",
+  "eucalyptus globulus"      = "LC",
+  "liriodendron tulipifera"  = "LC",
+  "ilex aquifolium"          = "LC",
+  "calocedrus decurrens"     = "LC"
+)
+
+# Extrae el binomio (género + epíteto en minúsculas) de un nombre científico,
+# ignorando autor, "sp."/"spp.", híbridos y rangos infraespecíficos.
+binomio <- function(nombre) {
+  vapply(nombre, function(x) {
+    if (!tiene_valor(x)) return("")
+    x <- iconv(trimws(as.character(x)), to = "ASCII//TRANSLIT")
+    x <- gsub("[^A-Za-z ]", " ", x)              # quita ?, `, dígitos, etc.
+    toks <- strsplit(tolower(trimws(x)), "\\s+")[[1]]
+    if (length(toks) < 2) return("")
+    if (toks[2] %in% c("sp", "spp", "x", "cf", "aff")) return("")
+    paste(toks[1], toks[2])
+  }, character(1), USE.NAMES = FALSE)
+}
+
+# Devuelve el código UICN de un nombre científico ("" si no está en la lista).
+iucn_de <- function(nombre) {
+  b <- binomio(nombre)
+  out <- unname(IUCN_CAT[b])
+  ifelse(is.na(out), "", out)
+}
+
+# Etiqueta legible de una categoría, en español o inglés.
+iucn_label <- function(code, lang = "es") {
+  es <- c(EN = "En peligro", VU = "Vulnerable", NT = "Casi amenazada",
+          LC = "Preocupación menor")
+  en <- c(EN = "Endangered", VU = "Vulnerable", NT = "Near Threatened",
+          LC = "Least Concern")
+  dic <- if (lang == "en") en else es
+  out <- unname(dic[code]); ifelse(is.na(out), "", out)
+}
+
+# Insignia HTML de conservación (vacía si no hay categoría).
+iucn_badge <- function(code, lang = "es") {
+  vapply(seq_along(code), function(i) {
+    cc <- code[i]
+    if (is.na(cc) || !nzchar(cc)) return("")
+    lab <- iucn_label(cc, lang)
+    sprintf("<span class=\"iucn-badge iucn-%s\" title=\"UICN/IUCN: %s\">%s · %s</span>",
+            cc, lab, cc, lab)
+  }, character(1))
+}
+
+arboles$iucn <- iucn_de(arboles$nombre_cientifico)

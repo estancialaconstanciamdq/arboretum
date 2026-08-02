@@ -22,6 +22,10 @@ format: html
 **Continente:** Asia (China)
 
 
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
+
+
 ## Ubicación
 
 Coordenadas: -38.05573, -57.682739

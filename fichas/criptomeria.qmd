@@ -9,7 +9,7 @@ format: html
 
 ![](../fotos/Cedrojapones.jpg){style="max-width:320px; border-radius:10px;"}
 
-**Nombre científico:** <i>Cryptomeria</i> <i>japónica</i>
+**Nombre científico:** <i>Cryptomeria</i> <i>japonica</i>
 
 
 **Familia:** Cupressaceae
@@ -22,6 +22,10 @@ format: html
 
 
 **Continente:** Asia (Japón)
+
+
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-NT" title="UICN/IUCN: Casi amenazada">NT · Casi amenazada</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
 
 
 ## Ubicación

@@ -7,7 +7,7 @@ title: "Roble pellín"
 format: html
 ---
 
-**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i> 2
+**Nombre científico:** <i>Nothofagus</i> <i>obliqua</i>
 
 
 **Familia:** Nothofagaceae
@@ -20,6 +20,10 @@ format: html
 
 
 **Continente:** América del Sur (Patagonia)
+
+
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-LC" title="UICN/IUCN: Preocupación menor">LC · Preocupación menor</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
 
 
 ## Ubicación

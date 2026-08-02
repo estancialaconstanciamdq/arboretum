@@ -1,0 +1,172 @@
+---
+title: "Self-guided tour"
+subtitle: "A botanical walk to take at your own pace"
+toc: true
+toc-title: "The stops"
+toc-location: right
+title-block-banner: ../fotos/galeria/alameda_eucaliptos.jpg
+title-block-banner-color: white
+format: html
+---
+
+```{=html}
+<style>#quarto-header,.navbar{display:none !important;}</style>
+<div class="en-nav">
+  <span class="brand">Arboretum</span>
+  <a href="index.html">Home</a>
+  <a href="collection.html">The Collection</a>
+  <a href="map.html">Map</a>
+  <a href="self-guided-tour.html" class="current">Self-guided tour</a>
+  <a href="wellbeing.html">Wellbeing</a>
+  <a href="visit.html">Visit</a>
+  <a href="sponsor.html">Sponsor a tree</a>
+  <a href="donate.html">Donate</a>
+  <a href="companies.html">Companies</a>
+  <a href="contact.html">Contact</a>
+  <span class="spacer"></span>
+  <a href="experiences.html" class="cta">Book a visit</a>
+  <a href="../recorrido-autoguiado.html" class="lang">Español ▸</a>
+</div>
+```
+
+This tour invites you to walk the arboretum **at your own pace**, following the
+trails on the map. At each stop you'll find a story and a small **invitation** to
+connect with nature through your senses. You can do it on your phone as you walk
+—scanning the **QR code** on each tree's label to open its profile— or read it
+calmly from home before you visit.
+
+::: {.callout-tip title="How to use this tour"}
+1. Open the [**interactive map**](map.html) and pick a route: **short**,
+   **medium** or **long** (shown as coloured lines).
+2. Walk the trail and look for the trees in the stops below.
+3. At each specimen, **scan the QR code** on its label to see its profile, photo
+   and location.
+4. Take your time. The "invitations" are just that —invitations. Explore whatever
+   feels good to you.
+:::
+
+## Before you start
+
+::: grid
+
+::: {.g-col-12 .g-col-md-6 .card .p-3 .shadow-sm}
+### <i class="bi bi-bag"></i> What to bring
+Water, **comfortable shoes**, insect repellent and a bag to carry out your own
+litter (there are no bins inside the parks).
+:::
+
+::: {.g-col-12 .g-col-md-6 .card .p-3 .shadow-sm}
+### <i class="bi bi-heart"></i> With respect and care
+You may gently **touch** the plants, ask their permission, smell them… but please
+**do not pick** anything. They are living beings. This is not a museum to view
+from afar: it is a living place to inhabit with tenderness.
+:::
+
+:::
+
+## The story of these gardens
+
+More than **40 years ago**, where you now see these gardens there was a **potato
+field**. Picture all of this as bare farmland, nothing but crops.
+
+How do you turn a field into a botanical garden? It took plants, water, work and
+a great deal of care. But above all it took a **vision**, a **dream** sustained
+over decades. That dreamer was **Héctor Biocca**, who devoted his life to
+restoring this landscape and turning it into a space for the conservation and
+study of flora.
+
+Héctor studied plants deeply —their growth, their colours through the year— and
+**designed by hand, with pencil and paper**, the layout of three parks: Park I
+(where you are now, near the house), Park II (begun in 2000) and Park III (from
+2007). He travelled widely to find specimens, especially to nurseries near the
+Andes. With his family he planted them, cared for them and followed their
+adaptation —most are exotic species— and lived to watch his parks grow for 30
+years.
+
+Today his family is dedicated to **preserving and sharing** this legacy. Together
+with biology PhDs from CONICET, naturalists and teams from the **Caburé-í
+Foundation** and **GEMAF**, a flora and fauna survey has already identified **more
+than 45 bird species** and **more than 300 plant species**. Because of that
+diversity —and because **Mar del Plata never had a botanical garden**— the
+biologists suggested opening these gardens to the community.
+
+## The stops
+
+Along the walk you'll meet trees worth pausing for. Here are three not-to-miss
+stops, each with a small invitation to experience it with all your senses.
+
+### Stop 1 · The Eastern red cedar {#stop-1}
+
+**The game of the senses**
+
+The [**Eastern red cedar**](fichas/sabina.html) (*Sabina virginiana*) is a good
+place to start looking differently. We often move through nature using only our
+eyes, and miss nearly everything else.
+
+::: {.callout-note title="🌿 We invite you to…"}
+Close your eyes for a moment. Touch the **bark**, or gently rub a **leaf** between
+your fingers. What do you feel? Is it rough or smooth? Does it have a scent or
+not? Cool, warm? There are no right answers: this is your own way of connecting
+with a living being. It's only an invitation —go as far as feels comfortable.
+:::
+
+### Stop 2 · The redwoods {#stop-2}
+
+**Who is older?**
+
+Before reading on, a question: of all the trees on the route, **which do you think
+is the oldest?**
+
+Here two related giants grow side by side: the
+[**Giant sequoia**](fichas/secuoiaroja.html) (*Sequoiadendron giganteum*), the
+**largest living being on Earth** by volume, and the
+[**Coast redwood**](fichas/secuoya.html) (*Sequoia sempervirens*), the **tallest
+tree in the world**, able to exceed 100 metres. In their native California, some
+specimens live **more than 2,000 years**.
+
+::: {.callout-important title="Endangered"}
+Both species are classified as **Endangered** <span class="iucn-badge iucn-EN">EN · Endangered</span>
+on the **IUCN Red List**. Seeing them grow here, so far from home, is also an
+invitation to protect them. [More on conservation in the catalogue »](collection.html)
+:::
+
+### Stop 3 · Pines and araucarias {#stop-3}
+
+**Guess what it's used for**
+
+Standing before a [**pine**](fichas/pino-insigne.html) (*Pinus radiata*) or an
+[**araucaria**](fichas/araucariaaustraliana-arb022.html) (*Araucaria bidwillii*),
+look at a leaf, a cone or a seed and ask yourself: **what do you think this plant
+is used for?**
+
+::: {.callout-note title="🔎 Clues"}
+Many conifers provide **timber** for construction; some, **resins** used in
+medicine and perfumery. The seeds of certain araucarias —the **pine nuts**— have
+fed whole peoples for centuries. A single tree can be shelter, food and material
+all at once. Can you think of other uses?
+:::
+
+## To close
+
+If you can, end the walk by sitting for a moment —ideally near the water— and stay
+with one of these questions. You don't have to answer out loud; sometimes it's
+enough to let it linger:
+
+- What do you **take away** from this visit? If you like, sum it up in **one word**.
+- If you could plant a tree here, **which would you choose and why?**
+- What **emotion or feeling** stayed with you after walking the garden?
+- What new idea or reflection about nature and conservation do you take home today?
+
+## Would you rather be accompanied?
+
+You can do this tour on your own, but we also offer **guided tours** with our team,
+photography walks, school visits and seed-collecting days.
+
+::: {.cta-container style="text-align:center; margin:1.5rem 0;"}
+[<i class="bi bi-calendar-check"></i> Book a guided visit](experiences.html){.btn .btn-success .btn-lg role="button"}
+&nbsp;
+[<i class="bi bi-map"></i> Open the map](map.html){.btn .btn-outline-success .btn-lg role="button"}
+:::
+
+*Content adapted from the guiding script of the Botanical Walk at Estancia La
+Constancia. Conservation status: [IUCN Red List](https://www.iucnredlist.org).*

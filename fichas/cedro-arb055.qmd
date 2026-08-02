@@ -7,7 +7,7 @@ title: "Cedro"
 format: html
 ---
 
-**Nombre científico:** <i>Cedrus</i> <i>sp.`</i>
+**Nombre científico:** <i>Cedrus</i> sp.
 
 
 **Tipo:** Conífera

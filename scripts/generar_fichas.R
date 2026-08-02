@@ -65,6 +65,14 @@ construir_ficha <- function(t) {
   add(campo("Origen",     t$origen))
   add(campo("Continente", t$continente))
 
+  # Estado de conservación (Lista Roja UICN) — solo si la especie está evaluada
+  if ("iucn" %in% names(t) && nzchar(t$iucn)) {
+    add(sprintf(
+      "**Estado de conservación (UICN):** %s  \n<span style=\"font-size:.8rem;color:#777;\">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>\n\n",
+      iucn_badge(t$iucn, "es")
+    ))
+  }
+
   # Life / management data
   add(campo("Año de plantación", fmt_anio(t$año_plantacion)))
   add(campo("Altura",            t$altura_m,          sufijo = " m"))

@@ -17,6 +17,7 @@ format: html
   <a href="../wellbeing.html">Wellbeing</a>
   <a href="../visit.html">Visit</a>
   <a href="../sponsor.html">Sponsor a tree</a>
+  <a href="../donate.html">Donate</a>
   <a href="../companies.html">Companies</a>
   <a href="../contact.html">Contact</a>
   <span class="spacer"></span>
@@ -37,7 +38,7 @@ format: html
 **Origin:** Australia
 
 
-**Continent:** Oceanía / América / África
+**Continent:** Oceania / Americas / Africa
 
 
 ## Location

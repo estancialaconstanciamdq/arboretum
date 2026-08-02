@@ -25,9 +25,19 @@ df <- arboles %>%
     fam = ifelse(tiene_valor(familia), familia, "—"),
     grp = ifelse(tiene_valor(forma_vida), forma_vida, "Sin clasificar"),
     ori = ifelse(tiene_valor(.data[[col_ori]]), .data[[col_ori]], "Sin dato"),
+    con = ifelse(nzchar(iucn), iucn, ""),
+    con_html = iucn_badge(iucn, "es"),
     clave = gsub("^[^A-Za-z0-9]+", "", toupper(iconv(nombre_mostrar, to = "ASCII//TRANSLIT")))
   ) %>%
   arrange(clave)
+
+# Selector de conservación en orden de amenaza (no alfabético)
+sel_con <- paste0(
+  "<option value=\"\">Todas</option>",
+  paste0(vapply(c("EN","VU","NT","LC"), function(k)
+    sprintf("<option value=\"%s\">%s</option>", k, iucn_label(k, "es")),
+    character(1)), collapse = "")
+)
 
 esc <- function(x) {
   x <- as.character(x)
@@ -49,6 +59,27 @@ Explorá los `r nrow(df)` ejemplares. Escribí en el buscador o combiná los fil
   <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Datos abiertos · uso libre con atribución</span>
 </p>
 
+::: {.callout-note collapse="true"}
+## Sobre estos datos y el estado de conservación
+
+El relevamiento de flora **está en desarrollo**. La identificación de algunas
+especies es preliminar y proviene de **tickets de compra de vivero**, aún **no
+verificada en terreno**; puede corregirse a medida que avanza el trabajo de campo.
+
+La columna **Conservación** muestra la categoría de la **Lista Roja de la UICN**
+para las especies evaluadas (a nivel global de la especie, no de este ejemplar):
+
+```{r results='asis', echo=FALSE}
+cat('<div class="iucn-legend">',
+    paste(vapply(c("EN","VU","NT","LC"), function(k) iucn_badge(k, "es"), character(1)), collapse = " "),
+    '</div>')
+```
+
+Fuente: [IUCN Red List of Threatened Species](https://www.iucnredlist.org). Las
+especies sin insignia no tienen una evaluación asignada en este catálogo (por
+ejemplo, ejemplares identificados solo a nivel de género).
+:::
+
 ```{r results='asis', echo=FALSE}
 cat(sprintf('
 <style>
@@ -68,26 +99,28 @@ cat(sprintf('
   <div><label>Familia</label><select id="cat-fam">%s</select></div>
   <div><label>Tipo</label><select id="cat-grp">%s</select></div>
   <div><label>Origen</label><select id="cat-ori">%s</select></div>
+  <div><label>Conservación</label><select id="cat-con">%s</select></div>
 </div>
 <div id="cat-conteo"></div>
 
 <div class="tabla-scroll">
 <table id="cat-tabla">
-<thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Tipo</th><th>Origen</th></tr></thead>
+<thead><tr><th>Nombre común</th><th>Nombre científico</th><th>Familia</th><th>Tipo</th><th>Origen</th><th>Conservación</th></tr></thead>
 <tbody>',
   opciones(sort(unique(df$fam[df$fam != "—"]))),
   opciones(sort(unique(df$grp))),
-  opciones(sort(unique(df$ori)))
+  opciones(sort(unique(df$ori))),
+  sel_con
 ))
 
 for (i in seq_len(nrow(df))) {
   r <- df[i, ]
   buscar <- tolower(iconv(paste(r$nombre_mostrar, r$sci), to = "ASCII//TRANSLIT"))
   cat(sprintf(
-    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-buscar="%s">
-<td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
-    esc(r$fam), esc(r$grp), esc(r$ori), esc(buscar),
-    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori)
+    '<tr data-fam="%s" data-grp="%s" data-ori="%s" data-con="%s" data-buscar="%s">
+<td><a href="fichas/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n',
+    esc(r$fam), esc(r$grp), esc(r$ori), esc(r$con), esc(buscar),
+    esc(r$slug), esc(r$nombre_mostrar), sci_html(r$sci, r$aut), esc(r$fam), esc(r$grp), esc(r$ori), r$con_html
   ))
 }
 
@@ -100,22 +133,24 @@ cat('</tbody></table>
       ff=document.getElementById("cat-fam"),
       fg=document.getElementById("cat-grp"),
       fo=document.getElementById("cat-ori"),
+      fc=document.getElementById("cat-con"),
       filas=document.querySelectorAll("#cat-tabla tbody tr"),
       conteo=document.getElementById("cat-conteo");
   function norm(s){return (s||"").toLowerCase();}
   function aplica(){
-    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, n=0;
+    var qs=norm(q.value), vf=ff.value, vg=fg.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
       var ok = tr.dataset.buscar.indexOf(qs)>=0 &&
                (!vf || tr.dataset.fam===vf) &&
                (!vg || tr.dataset.grp===vg) &&
-               (!vo || tr.dataset.ori===vo);
+               (!vo || tr.dataset.ori===vo) &&
+               (!vc || tr.dataset.con===vc);
       tr.style.display = ok ? "" : "none";
       if(ok) n++;
     });
     conteo.textContent = n + " de " + filas.length + " ejemplares";
   }
-  [q,ff,fg,fo].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
+  [q,ff,fg,fo,fc].forEach(function(e){ e.addEventListener("input",aplica); e.addEventListener("change",aplica); });
   aplica();
 })();
 </script>')

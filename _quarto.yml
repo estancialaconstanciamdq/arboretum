@@ -41,6 +41,8 @@ website:
             href: mapa.qmd
           - text: "Plano ilustrado"
             href: plano.qmd
+          - text: "Recorrido autoguiado"
+            href: recorrido-autoguiado.qmd
           - text: "Catálogo"
             href: catalogo.qmd
           - text: "Especies destacadas"
@@ -74,6 +76,8 @@ website:
         href: empresas.qmd
       - text: "Apadriná"
         href: apadrina.qmd
+      - text: "Doná"
+        href: donar.qmd
       - text: "Contacto"
         href: contacto.qmd
   page-footer:

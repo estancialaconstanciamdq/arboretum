@@ -13,9 +13,11 @@ format: html
   <a href="index.html">Home</a>
   <a href="collection.html">The Collection</a>
   <a href="map.html">Map</a>
+  <a href="self-guided-tour.html">Self-guided tour</a>
   <a href="wellbeing.html" class="current">Wellbeing</a>
   <a href="visit.html">Visit</a>
   <a href="sponsor.html">Sponsor a tree</a>
+  <a href="donate.html">Donate</a>
   <a href="companies.html">Companies</a>
   <a href="contact.html">Contact</a>
   <span class="spacer"></span>

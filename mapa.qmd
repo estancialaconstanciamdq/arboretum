@@ -81,6 +81,7 @@ popup_arbol <- function(df) {
     ifelse(tiene_valor(df$familia),    paste0("<b>Familia:</b> ", df$familia, "<br>"), ""),
     ifelse(tiene_valor(df$forma_vida), paste0("<b>Tipo:</b> ", df$forma_vida, "<br>"), ""),
     ifelse(tiene_valor(df$continente),paste0("<b>Origen:</b> ", df$continente, "<br>"), ""),
+    ifelse(nzchar(df$iucn), paste0("<b>Conservación (UICN):</b> ", iucn_badge(df$iucn, "es"), "<br>"), ""),
     ifelse(tiene_valor(df$año_plantacion), paste0("<b>Plantado:</b> ", df$año_plantacion, "<br>"), ""),
     ifelse(tiene_valor(df$padrino), paste0("<b>Apadrinado por:</b> ", df$padrino, "<br>"), ""),
     ifelse(tiene_valor(df$slug), paste0("<div style='margin-top:.55rem;'><a href='fichas/", df$slug, ".html'><b>Ver ficha completa →</b></a></div>"), ""),

@@ -24,6 +24,10 @@ format: html
 **Continente:** África (Norte)
 
 
+**Estado de conservación (UICN):** <span class="iucn-badge iucn-EN" title="UICN/IUCN: En peligro">EN · En peligro</span>  
+<span style="font-size:.8rem;color:#777;">Categoría global de la especie · [Lista Roja UICN](https://www.iucnredlist.org)</span>
+
+
 ## Ubicación
 
 Coordenadas: -38.056201, -57.680907

@@ -553,3 +553,17 @@ a.stat { text-decoration: none; color: inherit; display: block; }
 .en-nav .sep{ opacity:.35; }
 /* La barra global en español se oculta desde cada página /en/ con un <style> propio,
    para que la ocultación afecte SOLO a las páginas en inglés. */
+
+/* --- Insignias de estado de conservación (Lista Roja UICN / IUCN) --------- */
+.iucn-badge{
+  display:inline-block; font-size:.72rem; font-weight:700; line-height:1;
+  padding:.28em .55em; border-radius:999px; white-space:nowrap;
+  letter-spacing:.2px; vertical-align:middle;
+}
+.iucn-EN{ background:#c0392b; color:#fff; }   /* En peligro / Endangered */
+.iucn-VU{ background:#e67e22; color:#fff; }   /* Vulnerable */
+.iucn-NT{ background:#f4d03f; color:#5b4a00; }/* Casi amenazada / Near Threatened */
+.iucn-LC{ background:#dff2e6; color:#1E4A38; }/* Preocupación menor / Least Concern */
+/* Leyenda compacta reutilizable */
+.iucn-legend{ display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin:.4rem 0 0; }
+.iucn-legend .iucn-badge{ cursor:default; }
