@@ -102,6 +102,19 @@ exercises, pauses for observation and a shared closing. It can be adapted for
 
 > "The forest is the therapist. The guide opens the doors."
 
+## A gift for the soul
+
+The Biocca family shares **"Madre, Naturaleza. Frases e imágenes para conectar con
+la vida"**, a collection of inspiring phrases and images gathered by Juan Manuel
+Biocca. A small book to read slowly and keep nurturing a love for trees and nature.
+
+::: {.card .p-4 .shadow-sm}
+### <i class="bi bi-book"></i> Madre, Naturaleza
+*Phrases and images to connect with life* · Estancia La Constancia (2023) · *in Spanish*
+
+[<i class="bi bi-download"></i> Download ebook (PDF)](../recursos/madre_naturaleza_ebook.pdf){.btn .btn-success role="button"}
+:::
+
 ::: {.callout-tip}
 Would you like to arrange a wellbeing experience, individually or for your team?
 Write to us from the [**Contact**](contact.html) page.

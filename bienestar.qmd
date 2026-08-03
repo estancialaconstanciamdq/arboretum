@@ -86,6 +86,20 @@ bienestar corporativo).
 
 > "El bosque es el terapeuta. El guía abre las puertas."
 
+## Un regalo para el alma
+
+La familia Biocca comparte **«Madre, Naturaleza. Frases e imágenes para conectar
+con la vida»**, una colección de frases e imágenes inspiradoras reunida por Juan
+Manuel Biocca. Un pequeño libro para leer sin apuro y seguir sembrando el amor por
+los árboles y la naturaleza.
+
+::: {.card .p-4 .shadow-sm}
+### <i class="bi bi-book"></i> Madre, Naturaleza
+*Frases e imágenes para conectar con la vida* · Estancia La Constancia (2023)
+
+[<i class="bi bi-download"></i> Descargar ebook (PDF)](recursos/madre_naturaleza_ebook.pdf){.btn .btn-success role="button"}
+:::
+
 ::: {.callout-tip}
 ¿Querés coordinar una experiencia de bienestar, en forma individual o para tu
 equipo? Escribinos desde la página de [**Contacto**](contacto.qmd).
