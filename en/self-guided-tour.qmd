@@ -124,6 +124,22 @@ Here two related giants grow side by side: the
 tree in the world**, able to exceed 100 metres. In their native California, some
 specimens live **more than 2,000 years**.
 
+::: {.callout-tip title="🎥 Hear from the biologist"}
+One of the biologists supporting the project tells the story of this giant sequoia
+in the arboretum (in Spanish):
+:::
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.6rem;">
+  <iframe style="width:315px; max-width:100%; aspect-ratio:9/16; border:0; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,.18);"
+    src="https://www.youtube-nocookie.com/embed/T_y67t926ME"
+    title="A biologist explains the giant sequoia at La Constancia"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>
+```
+
 ::: {.callout-important title="Endangered"}
 Both species are classified as **Endangered** <span class="iucn-badge iucn-EN">EN · Endangered</span>
 on the **IUCN Red List**. Seeing them grow here, so far from home, is also an

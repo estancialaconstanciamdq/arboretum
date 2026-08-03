@@ -49,6 +49,21 @@ An arboretum is a **living, documented** collection of trees and woody plants, g
 **Schools that have already lived the experience:** Colegio Newton · Colegio Naciones Unidas · Colegio San José de Balcarce.
 :::
 
+## See the experience
+
+A short video look at an educational visit to the Arboretum:
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.8rem;">
+  <iframe style="width:315px; max-width:100%; aspect-ratio:9/16; border:0; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,.18);"
+    src="https://www.youtube-nocookie.com/embed/Dmi8d2moaVg"
+    title="Institutional video — Educational Visits at the Arboretum"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>
+```
+
 ## What schools say
 
 **Fernanda Uren**, from **Colegio Newton** (Mar del Plata), shares her experience of the educational visit to the Arboretum:

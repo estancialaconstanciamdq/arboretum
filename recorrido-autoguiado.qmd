@@ -106,6 +106,22 @@ vivo **más grande del planeta** por volumen, y la
 del mundo**, capaz de superar los 100 metros. En su tierra natal, California,
 algunos ejemplares viven **más de 2.000 años**.
 
+::: {.callout-tip title="🎥 Escuchá al biólogo"}
+Uno de los biólogos que acompaña el proyecto cuenta la historia de esta secuoya
+gigante del arboretum:
+:::
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.6rem;">
+  <iframe style="width:315px; max-width:100%; aspect-ratio:9/16; border:0; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,.18);"
+    src="https://www.youtube-nocookie.com/embed/T_y67t926ME"
+    title="Un biólogo explica la secuoya gigante de La Constancia"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>
+```
+
 ::: {.callout-important title="En peligro"}
 Ambas especies están clasificadas como **En peligro** <span class="iucn-badge iucn-EN">EN · En peligro</span>
 en la **Lista Roja de la UICN**. Verlas crecer acá, tan lejos de su hogar, es
