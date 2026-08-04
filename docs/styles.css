@@ -1,0 +1,569 @@
+/* =====================================================
+   Tipografía — Opción B: Fraunces (títulos) + Inter (cuerpo)
+   Reversible: borrando este bloque se vuelve al tema Cosmo.
+===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+h1, h2, h3 { color: #1E4A38; }
+
+/* Subtítulo de página en serif itálica */
+.quarto-title-block .subtitle, .subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #3f5a4e;
+}
+
+/* Wordmark de la barra en serif; los ítems del menú y botones quedan en Inter */
+.navbar-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
+.navbar .nav-link, .btn { font-family: 'Inter', sans-serif; }
+
+/* Hero del home: título serif más refinado + lema en itálica */
+.home-hero-title { font-weight: 600 !important; letter-spacing: 0 !important; }
+.home-hero-lema { font-family: 'Fraunces', Georgia, serif; font-style: italic; }
+
+/* Tarjetas con sombra más suave y elegante */
+.card { box-shadow: 0 4px 18px rgba(0,0,0,0.06) !important; }
+
+/* ---- Navbar institucional: verde oscuro La Constancia ---- */
+.navbar {
+  background-color: #1E4A38 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-title,
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #cfe8dd !important;
+}
+
+/* Tamaño del logo en la barra */
+.navbar-logo {
+  max-height: 40px;
+  width: auto;
+}
+
+/* ---- Responsive / móvil ---- */
+
+/* En teléfonos y tablets en vertical, las tarjetas en grilla se apilan
+   (por defecto Quarto las mantiene lado a lado y quedan muy angostas). */
+@media (max-width: 767.98px) {
+  .grid > [class*="g-col-"] {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Las tablas anchas (catálogo, banco de semillas) se desplazan
+   horizontalmente en lugar de romper el diseño. */
+.tabla-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Evitar que cualquier imagen se desborde del ancho de pantalla. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Fotos de coordinación (redondas) ---- */
+.admin-photo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 0.6rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---- CTA "Reservar visita" en la barra: pastilla ámbar destacada ---- */
+.navbar .nav-link[href$="experiencias.html"] {
+  background-color: #E0A82E;
+  color: #1E3A2E !important;
+  border-radius: 999px;
+  padding: 0.3rem 0.95rem !important;
+  margin: 0.1rem 0.25rem;
+  font-weight: 700;
+}
+.navbar .nav-link[href$="experiencias.html"]:hover,
+.navbar .nav-link[href$="experiencias.html"]:focus {
+  background-color: #c9931f;
+  color: #14281f !important;
+}
+
+/* ---- "Apadriná" en la barra: píldora sutil con borde (secundario al CTA ámbar) ---- */
+.navbar .nav-link[href$="apadrina.html"] {
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem !important;
+  margin: 0.1rem 0.25rem;
+}
+.navbar .nav-link[href$="apadrina.html"]:hover,
+.navbar .nav-link[href$="apadrina.html"]:focus {
+  background-color: rgba(255,255,255,0.16);
+}
+
+/* ---- Footer institucional: mismo verde que la barra ---- */
+.nav-footer {
+  background-color: #1E4A38 !important;
+  color: #ffffff !important;
+  border-top: none !important;
+  font-size: 0.9rem;
+}
+.nav-footer a {
+  color: #cfe8dd !important;
+  text-decoration: none;
+}
+.nav-footer a:hover,
+.nav-footer a:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+/* Separadores entre los enlaces del centro del footer */
+.nav-footer .nav-footer-center .toc-actions,
+.nav-footer .nav-footer-center {
+  gap: 0.4rem 1.1rem;
+}
+
+/* =====================================================
+   Ganancias rápidas — pulido estético
+   (botones, tarjetas, ritmo de secciones, íconos, banda CTA)
+===================================================== */
+
+/* ---- Sistema de botones unificado ---- */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: .005em;
+  padding: .55rem 1.3rem;
+  transition: background-color .18s ease, color .18s ease,
+              transform .18s ease, box-shadow .18s ease;
+}
+.btn-lg { padding: .7rem 1.7rem; font-size: 1.02rem; }
+.btn-sm { padding: .38rem .95rem; }
+
+.btn-success {
+  background-color: #2f6b4f;
+  border-color: #2f6b4f;
+  color: #fff;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: #244f3b;
+  border-color: #244f3b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30,74,56,.22);
+}
+.btn-outline-success {
+  color: #2f6b4f;
+  border-color: #2f6b4f;
+}
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background-color: #2f6b4f;
+  border-color: #2f6b4f;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30,74,56,.18);
+}
+
+/* ---- Tarjetas: elevación uniforme al pasar el mouse ---- */
+.card {
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10) !important;
+}
+
+/* ---- Ritmo de secciones + acento editorial bajo cada título ---- */
+#quarto-document-content h2 {
+  margin-top: 3.4rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: .35rem;
+}
+#quarto-document-content h2::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: .55rem;
+  background: #8FA98F;
+  border-radius: 2px;
+}
+/* Los ## dentro de tarjetas o columnas de grilla no llevan el acento */
+#quarto-document-content .card h2::after,
+#quarto-document-content .grid h2::after { display: none; }
+#quarto-document-content .grid h2 { margin-top: .4rem; }
+
+/* ---- Íconos de línea (Bootstrap Icons) integrados al texto ---- */
+h1 .bi, h2 .bi, h3 .bi, h4 .bi { vertical-align: -0.08em; }
+.card h3 .bi, .card h4 .bi { color: #4a7c59; margin-right: .45rem; }
+.btn .bi { margin-right: .4rem; vertical-align: -0.08em; }
+
+/* ---- Banda tenue para bloques destacados (CTA / newsletter) ---- */
+.cta-band {
+  background: linear-gradient(135deg, #f5f8f3 0%, #e9f0e6 100%);
+  border-radius: 18px;
+  padding: 2.4rem 1.6rem 2.6rem;
+  margin: 3.2rem 0 2rem;
+  text-align: center;
+}
+.cta-band h2 { margin-top: .4rem; }
+.cta-band h2::after { margin-left: auto; margin-right: auto; }
+
+/* =====================================================
+   Detalles finos — micro-pulido
+   (callouts, enlaces, lead, epígrafes, citas, fotos,
+    divisores, navbar activo)
+===================================================== */
+
+/* Desplazamiento suave al saltar a anclas internas */
+html { scroll-behavior: smooth; }
+
+/* ---- Callouts en la paleta verde de marca ---- */
+.callout.callout-style-default { border-radius: 12px; overflow: hidden; }
+.callout-tip { border-left-color: #2f6b4f !important; }
+.callout-tip.callout-titled .callout-header { background-color: #eef4ee !important; }
+.callout .callout-title-container {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  color: #1E4A38;
+}
+
+/* ---- Enlaces de contenido: subrayado sutil y hover de marca ---- */
+#quarto-document-content a:not(.btn):not(.nav-link) {
+  color: #2f6b4f;
+  text-decoration-color: rgba(47,107,79,.35);
+  text-underline-offset: 2px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+#quarto-document-content a:not(.btn):not(.nav-link):hover {
+  color: #1E4A38;
+  text-decoration-color: #1E4A38;
+}
+
+/* ---- Párrafo de entrada (lead) ---- */
+.lead-intro, .lead-intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #46564e;
+  font-weight: 400;
+}
+.lead-intro { max-width: 820px; margin: 0 auto 1.4rem; text-align: center; }
+.lead-intro strong { color: #1E4A38; font-weight: 600; }
+
+/* ---- Epígrafes de figuras en itálica serif ---- */
+figure figcaption, .figure-caption, .quarto-figure figcaption {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: #6b7d73;
+  font-size: .9rem;
+  text-align: center;
+  margin-top: .45rem;
+}
+
+/* ---- Citas / testimonios ---- */
+#quarto-document-content blockquote {
+  border-left: 4px solid #8FA98F;
+  background: #f6f9f5;
+  padding: 1rem 1.3rem;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: #3f5a4e;
+}
+
+/* ---- Divisores sutiles con degradé ---- */
+#quarto-document-content hr {
+  border: 0;
+  height: 1px;
+  width: 60%;
+  margin: 3rem auto;
+  background: linear-gradient(90deg, transparent, rgba(30,74,56,.28), transparent);
+  opacity: 1;
+}
+
+/* ---- Fotos de galería: leve elevación al pasar el mouse ---- */
+#quarto-document-content .grid > [class*="g-col"]:not(.card) img {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+#quarto-document-content .grid > [class*="g-col"]:not(.card) img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.15);
+}
+
+/* ---- Fotos dentro de tarjetas (destacados): zoom contenido ---- */
+#quarto-document-content .card img { transition: transform .45s ease; }
+#quarto-document-content .card:hover img { transform: scale(1.06); }
+
+/* ---- Indicador de página activa en el navbar ---- */
+.navbar .nav-link.active {
+  font-weight: 700;
+  color: #ffffff !important;
+  box-shadow: inset 0 -2px 0 0 #E0A82E;
+}
+
+/* =====================================================
+   Paleta ampliada — verde + acento cálido (ocre/tierra)
+===================================================== */
+:root {
+  --arb-verde-osc: #1E4A38;
+  --arb-verde: #2f6b4f;
+  --arb-salvia: #8FA98F;
+  --arb-ocre: #C08A3E;
+  --arb-ocre-osc: #a5722d;
+  --arb-crema: #FAF7F0;
+}
+
+/* Selección de texto con tinte cálido */
+::selection { background: rgba(192,138,62,.22); }
+
+/* Callout "note" en tono cálido (diferenciado del tip, que es verde) */
+.callout-note { border-left-color: var(--arb-ocre) !important; }
+.callout-note.callout-titled .callout-header { background-color: #f8f1e4 !important; }
+
+/* Banda cálida crema — alterna el ritmo con la banda verde del CTA */
+.band-warm {
+  background: var(--arb-crema);
+  border: 1px solid rgba(192,138,62,.14);
+  border-radius: 18px;
+  padding: 2.2rem 1.8rem 2.6rem;
+  margin: 3.2rem 0;
+}
+.band-warm > h2:first-child { margin-top: .4rem; }
+
+/* =====================================================
+   Banners de título con foto (full-bleed)
+===================================================== */
+.quarto-title-banner {
+  position: relative;
+  background-size: cover !important;
+  background-position: center 35% !important;
+  padding-top: 3.4rem;
+  padding-bottom: 3.4rem;
+}
+.quarto-title-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Degradé reforzado del lado del texto (izquierda) + leve oscurecido general,
+     para legibilidad sobre fotos aéreas muy detalladas */
+  background:
+    linear-gradient(90deg, rgba(20,55,40,.68) 0%, rgba(20,55,40,.38) 48%, rgba(20,55,40,.20) 100%),
+    linear-gradient(rgba(20,55,40,.10), rgba(20,55,40,.44));
+  pointer-events: none;
+}
+.quarto-title-banner .quarto-title,
+.quarto-title-banner .quarto-title-meta,
+.quarto-title-banner .subtitle,
+.quarto-title-banner > * {
+  position: relative;
+  z-index: 1;
+}
+.quarto-title-banner .title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+}
+.quarto-title-banner .subtitle,
+header#title-block-header:has(.quarto-title-banner) .subtitle {
+  color: #eef5f0 !important;
+  font-style: italic;
+  opacity: .96;
+  text-shadow: 0 1px 12px rgba(0,0,0,.6);
+}
+
+/* Galerías con proporción uniforme */
+.galeria img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Galería de destacados (flora / aves): grilla propia, sin superposición,
+   con el nombre siempre visible (también en móvil) */
+.galeria-dest {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.1rem;
+  margin: 1.4rem 0 2rem;
+}
+.galeria-dest figure { margin: 0; }
+.galeria-dest img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 3px 12px rgba(0,0,0,.10);
+}
+.galeria-dest figcaption {
+  margin-top: .5rem;
+  text-align: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: #3f5a4e;
+  font-size: .92rem;
+  line-height: 1.3;
+}
+
+/* =====================================================
+   Hub "Explorá la colección" — tarjetas con foto
+===================================================== */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 1.6rem 0 2.4rem;
+}
+.hub-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,.07);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+.hub-card .hub-ph {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+.hub-card .hub-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.hub-card h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: #1E4A38;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: .15rem 0 .5rem;
+}
+.hub-card p {
+  font-size: .92rem;
+  color: #4a5a52;
+  line-height: 1.5;
+  flex: 1;
+  margin: 0 0 1.1rem;
+}
+.hub-card .hub-cta {
+  align-self: center;
+  border: 1.5px solid #2f6b4f;
+  color: #2f6b4f;
+  border-radius: 8px;
+  padding: .45rem 1.1rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: background-color .18s ease, color .18s ease;
+}
+.hub-card:hover .hub-cta {
+  background: #2f6b4f;
+  color: #fff;
+}
+
+/* =====================================================
+   Panel de estadísticas (stat tiles) — cifras de la colección
+===================================================== */
+.stats-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2.4rem 0 2.8rem;
+}
+.stats-band .stat {
+  text-align: center;
+  padding: 1.3rem .7rem;
+  background: #f5f8f3;
+  border: 1px solid rgba(30,74,56,.09);
+  border-radius: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+a.stat { text-decoration: none; color: inherit; display: block; }
+.stats-band a.stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(30,74,56,.10);
+  border-color: rgba(224,168,46,.5);
+}
+.stats-band .num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1E4A38;
+  line-height: 1;
+}
+.stats-band .stat.cred .num { font-size: 1.7rem; padding-top: .35rem; }
+.stats-band .lbl {
+  font-size: .82rem;
+  color: #4a5a52;
+  margin-top: .5rem;
+  letter-spacing: .02em;
+  line-height: 1.3;
+}
+@media (max-width: 820px) {
+  .stats-band { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =====================================================
+   Barra de idioma para las páginas en inglés (/en/)
+   ===================================================== */
+.en-nav{
+  display:flex; flex-wrap:wrap; align-items:center; gap:.2rem 1.1rem;
+  background:#1E4A38; color:#fff; padding:.55rem 1rem; border-radius:10px;
+  margin:0 0 1.6rem; font-size:.92rem;
+}
+.en-nav .brand{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.05rem; margin-right:.4rem; }
+.en-nav a{ color:#eaf3ee !important; text-decoration:none; padding:.15rem .1rem; }
+.en-nav a:hover{ color:#fff !important; text-decoration:underline; }
+.en-nav a.current{ color:#fff !important; font-weight:600; border-bottom:2px solid #9ccbb4; }
+.en-nav .spacer{ margin-left:auto; }
+.en-nav .lang{ background:rgba(255,255,255,.14); border-radius:16px; padding:.15rem .7rem; }
+.en-nav .lang:hover{ background:rgba(255,255,255,.28); text-decoration:none !important; }
+.en-nav .cta{ background:#e8b53c; color:#1E4A38 !important; border-radius:16px; padding:.15rem .8rem; font-weight:600; }
+.en-nav .cta:hover{ background:#f0c458; color:#1E4A38 !important; text-decoration:none !important; }
+.en-nav .sep{ opacity:.35; }
+/* La barra global en español se oculta desde cada página /en/ con un <style> propio,
+   para que la ocultación afecte SOLO a las páginas en inglés. */
+
+/* --- Insignias de estado de conservación (Lista Roja UICN / IUCN) --------- */
+.iucn-badge{
+  display:inline-block; font-size:.72rem; font-weight:700; line-height:1;
+  padding:.28em .55em; border-radius:999px; white-space:nowrap;
+  letter-spacing:.2px; vertical-align:middle;
+}
+.iucn-EN{ background:#c0392b; color:#fff; }   /* En peligro / Endangered */
+.iucn-VU{ background:#e67e22; color:#fff; }   /* Vulnerable */
+.iucn-NT{ background:#f4d03f; color:#5b4a00; }/* Casi amenazada / Near Threatened */
+.iucn-LC{ background:#dff2e6; color:#1E4A38; }/* Preocupación menor / Least Concern */
+/* Leyenda compacta reutilizable */
+.iucn-legend{ display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin:.4rem 0 0; }
+.iucn-legend .iucn-badge{ cursor:default; }
