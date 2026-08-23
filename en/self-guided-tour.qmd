@@ -155,6 +155,22 @@ Standing before a [**pine**](fichas/pino-insigne.html) (*Pinus radiata*) or an
 look at a leaf, a cone or a seed and ask yourself: **what do you think this plant
 is used for?**
 
+::: {.callout-tip title="🎥 The araucaria on video"}
+Learn more about the **bunya araucaria** (*Araucaria bidwillii*) with the arboretum
+team (in Spanish):
+:::
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.6rem;">
+  <iframe style="width:315px; max-width:100%; aspect-ratio:9/16; border:0; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,.18);"
+    src="https://www.youtube-nocookie.com/embed/w3nUtpXOM58"
+    title="The bunya araucaria at the La Constancia arboretum"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>
+```
+
 ::: {.callout-note title="🔎 Clues"}
 Many conifers provide **timber** for construction; some, **resins** used in
 medicine and perfumery. The seeds of certain araucarias —the **pine nuts**— have

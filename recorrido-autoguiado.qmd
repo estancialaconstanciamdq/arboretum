@@ -137,6 +137,22 @@ Frente a un [**pino**](fichas/pino-insigne.html) (*Pinus radiata*) o a una
 mirá una hoja, una piña o una semilla y preguntate: **¿para qué creés que sirve
 esta planta?**
 
+::: {.callout-tip title="🎥 La araucaria en video"}
+Conocé más sobre la **araucaria australiana** (*Araucaria bidwillii*, la bunya) de
+la mano del equipo del arboretum:
+:::
+
+```{=html}
+<div style="display:flex; justify-content:center; margin:1.2rem 0 1.6rem;">
+  <iframe style="width:315px; max-width:100%; aspect-ratio:9/16; border:0; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,.18);"
+    src="https://www.youtube-nocookie.com/embed/w3nUtpXOM58"
+    title="La araucaria australiana (bunya) del arboretum de La Constancia"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</div>
+```
+
 ::: {.callout-note title="🔎 Pistas"}
 Muchas coníferas dan **madera** para construcción; algunas, **resinas** usadas en
 medicina y perfumería. Las semillas de ciertas araucarias —los **piñones**— son

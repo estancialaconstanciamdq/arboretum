@@ -30,51 +30,99 @@ execute:
 
 ```{r}
 #| label: setup
-library(readxl)
-library(dplyr)
-
-tiene_valor <- function(x) !is.na(x) & !(trimws(as.character(x)) %in% c("", "-", "...", "NA"))
-
-bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
-  mutate(
-    familia = ifelse(tiene_valor(familia), familia, "—"),
-    nombre_comun = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
-    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
-  )
+source("scripts/cargar_datos.R")   # arboles + helpers
 
 esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);x<-gsub(">","&gt;",x,fixed=TRUE);gsub('"',"&quot;",x,fixed=TRUE)}
 opciones <- function(v) paste0("<option value=\"\">All</option>", paste0("<option value=\"",esc(v),"\">",esc(v),"</option>",collapse=""))
+
+bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
+  mutate(
+    familia           = ifelse(tiene_valor(familia), familia, "—"),
+    nombre_comun      = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
+    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, ""),
+    bkey              = binomio(nombre_cientifico),
+    iucn              = iucn_de(nombre_cientifico)
+  )
+bs$con_html <- iucn_badge(bs$iucn, "en")
+
+col_ori <- if ("continente_norm" %in% names(arboles)) "continente_norm" else "continente"
+lut <- arboles %>%
+  mutate(bkey = binomio(nombre_cientifico)) %>%
+  filter(nzchar(bkey)) %>%
+  transmute(bkey, slug, ori = ifelse(tiene_valor(.data[[col_ori]]), .data[[col_ori]], "")) %>%
+  distinct(bkey, .keep_all = TRUE)
+bs <- bs %>% left_join(lut, by = "bkey")
+bs$ori[is.na(bs$ori)] <- ""
+bs$slug[is.na(bs$slug)] <- ""
+
+n_acc <- nrow(bs)
+n_fam <- length(unique(bs$familia[bs$familia != "—"]))
+n_esp <- length(unique(bs$bkey[nzchar(bs$bkey)]))
+
+try({
+  dir.create("recursos", showWarnings = FALSE)
+  out <- bs %>% transmute(id, familia, nombre_cientifico, nombre_comun, origin = ori, conservation = iucn)
+  write.csv(out, "recursos/banco_semillas.csv", row.names = FALSE, fileEncoding = "UTF-8")
+}, silent = TRUE)
+
+sel_con <- paste0("<option value=\"\">All</option>",
+  paste0(vapply(c("EN","VU","NT","LC"), function(k) sprintf("<option value=\"%s\">%s</option>", k, iucn_label(k,"en")), character(1)), collapse=""))
 ```
 
-The arboretum conserves **`r nrow(bs)` accessions** of seeds and cuttings, a basis for
-propagation, restoration and educational activities. Search by name or filter by family.
+The arboretum conserves **`r n_acc` accessions** of seeds and cuttings — a basis for
+**propagation**, **restoration**, **education** and **exchange** with other botanical
+institutions. Each species links to its profile; where available we show its
+**conservation status (IUCN)** and its **origin**. Search by name or combine the filters.
+
+<p style="margin:.6rem 0 0;">
+  <a href="../recursos/banco_semillas.csv" download class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Download catalogue (CSV)</a>
+  <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Open data · free to use with attribution</span>
+</p>
 
 ```{r results='asis'}
 cat(sprintf('
 <style>
+  .bs-stats{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.1rem 0;}
+  .bs-stat{background:#f4f8f5;border-radius:10px;padding:.55rem 1.1rem;text-align:center;min-width:110px;}
+  .bs-stat .n{display:block;font-size:1.6rem;font-weight:700;color:#B8860B;line-height:1.1;}
+  .bs-stat .l{font-size:.78rem;color:#555;}
   .bs-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
   .bs-controles label{font-size:.8rem;color:#555;display:block;}
   .bs-controles input,.bs-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #bs-q{min-width:220px;}
   #bs-tabla{width:100%%;border-collapse:collapse;}
-  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;}
+  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;vertical-align:top;}
   #bs-tabla thead th{border-bottom:2px solid #1E4A38;color:#1E4A38;}
   #bs-tabla tr:hover td{background:#f4f8f5;}
   #bs-conteo{color:#666;font-size:.85rem;margin:.3rem 0 1rem;}
 </style>
+<div class="bs-stats">
+  <div class="bs-stat"><span class="n">%d</span><span class="l">accessions</span></div>
+  <div class="bs-stat"><span class="n">%d</span><span class="l">families</span></div>
+  <div class="bs-stat"><span class="n">%d</span><span class="l">species</span></div>
+</div>
 <div class="bs-controles">
   <div><label>Search</label><input type="text" id="bs-q" placeholder="name or species..."></div>
   <div><label>Family</label><select id="bs-fam">%s</select></div>
+  <div><label>Origin</label><select id="bs-ori">%s</select></div>
+  <div><label>Conservation</label><select id="bs-con">%s</select></div>
 </div>
 <div id="bs-conteo"></div>
 <div class="tabla-scroll">
-<table id="bs-tabla"><thead><tr><th>Id</th><th>Family</th><th>Scientific name</th><th>Common name</th></tr></thead><tbody>',
-  opciones(sort(unique(bs$familia[bs$familia != "—"])))))
+<table id="bs-tabla"><thead><tr><th>Id</th><th>Family</th><th>Scientific name</th><th>Common name</th><th>Origin</th><th>Conservation</th></tr></thead><tbody>',
+  n_acc, n_fam, n_esp,
+  opciones(sort(unique(bs$familia[bs$familia != "—"]))),
+  opciones(sort(unique(bs$ori[nzchar(bs$ori)]))),
+  sel_con))
 
 for (i in seq_len(nrow(bs))) {
   r <- bs[i, ]
   buscar <- tolower(iconv(paste(r$nombre_comun, r$nombre_cientifico, r$id), to = "ASCII//TRANSLIT"))
-  cat(sprintf('<tr data-fam="%s" data-buscar="%s"><td>%s</td><td>%s</td><td><em>%s</em></td><td>%s</td></tr>',
-    esc(r$familia), esc(buscar), esc(r$id), esc(r$familia), esc(r$nombre_cientifico), esc(r$nombre_comun)))
+  sci <- sci_html(r$nombre_cientifico)
+  sci_cell <- if (nzchar(r$slug)) sprintf('<a href="fichas/%s.html">%s</a>', esc(r$slug), sci) else sci
+  cat(sprintf('<tr data-fam="%s" data-ori="%s" data-con="%s" data-buscar="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',
+    esc(r$familia), esc(r$ori), esc(r$iucn), esc(buscar),
+    esc(r$id), esc(r$familia), sci_cell, esc(r$nombre_comun), esc(r$ori), r$con_html))
 }
 
 cat('</tbody></table>
@@ -82,22 +130,31 @@ cat('</tbody></table>
 <script>
 (function(){
   var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
+      fo=document.getElementById("bs-ori"), fc=document.getElementById("bs-con"),
       filas=document.querySelectorAll("#bs-tabla tbody tr"), conteo=document.getElementById("bs-conteo");
   function aplica(){
-    var qs=(q.value||"").toLowerCase(), vf=ff.value, n=0;
+    var qs=(q.value||"").toLowerCase(), vf=ff.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
-      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf);
+      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf) && (!vo || tr.dataset.ori===vo) && (!vc || tr.dataset.con===vc);
       tr.style.display=ok?"":"none"; if(ok)n++;
     });
     conteo.textContent=n+" of "+filas.length+" accessions";
   }
-  [q,ff].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  [q,ff,fo,fc].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
   aplica();
 })();
 </script>')
 ```
 
+## Requesting or exchanging seeds
+
+As part of the botanic-garden network (**ArbNet** accreditation and **BGCI** registration),
+we make our collection available to institutions, researchers and restoration projects
+through an **Index Seminum** (a list of seeds available for exchange). To request material,
+propose an exchange or donate seeds of regional species, get in touch via our
+[contact](contact.qmd) page.
+
 ---
 
-*Source: list of seeds and cuttings from Estancia La Constancia. Updated by editing
-`data/banco_semillas.xlsx`.*
+*Source: list of seeds and cuttings from Estancia La Constancia. Conservation status from the
+[IUCN Red List](https://www.iucnredlist.org). Updated by editing `data/banco_semillas.xlsx`.*

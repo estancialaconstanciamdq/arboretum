@@ -10,52 +10,102 @@ execute:
 
 ```{r}
 #| label: setup
-library(readxl)
-library(dplyr)
-
-tiene_valor <- function(x) !is.na(x) & !(trimws(as.character(x)) %in% c("", "-", "...", "NA"))
-
-bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
-  mutate(
-    familia = ifelse(tiene_valor(familia), familia, "—"),
-    nombre_comun = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
-    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, "")
-  )
+source("scripts/cargar_datos.R")   # arboles + helpers (tiene_valor, sci_html, binomio, iucn_de, iucn_badge)
 
 esc <- function(x){x<-as.character(x);x<-gsub("&","&amp;",x,fixed=TRUE);x<-gsub("<","&lt;",x,fixed=TRUE);x<-gsub(">","&gt;",x,fixed=TRUE);gsub('"',"&quot;",x,fixed=TRUE)}
 opciones <- function(v) paste0("<option value=\"\">Todas</option>", paste0("<option value=\"",esc(v),"\">",esc(v),"</option>",collapse=""))
+
+bs <- read_excel("data/banco_semillas.xlsx", sheet = "Semillas") %>%
+  mutate(
+    familia           = ifelse(tiene_valor(familia), familia, "—"),
+    nombre_comun      = ifelse(tiene_valor(nombre_comun), nombre_comun, ""),
+    nombre_cientifico = ifelse(tiene_valor(nombre_cientifico), nombre_cientifico, ""),
+    bkey              = binomio(nombre_cientifico),
+    iucn              = iucn_de(nombre_cientifico)
+  )
+bs$con_html <- iucn_badge(bs$iucn, "es")
+
+# Cruce con el maestro para enlazar a la ficha y traer el origen (sin cargar datos nuevos)
+col_ori <- if ("continente_norm" %in% names(arboles)) "continente_norm" else "continente"
+lut <- arboles %>%
+  mutate(bkey = binomio(nombre_cientifico)) %>%
+  filter(nzchar(bkey)) %>%
+  transmute(bkey, slug, ori = ifelse(tiene_valor(.data[[col_ori]]), .data[[col_ori]], "")) %>%
+  distinct(bkey, .keep_all = TRUE)
+bs <- bs %>% left_join(lut, by = "bkey")
+bs$ori[is.na(bs$ori)] <- ""
+bs$slug[is.na(bs$slug)] <- ""
+
+# Cifras de resumen
+n_acc <- nrow(bs)
+n_fam <- length(unique(bs$familia[bs$familia != "—"]))
+n_esp <- length(unique(bs$bkey[nzchar(bs$bkey)]))
+
+# Catálogo abierto (CSV) — se regenera en cada render
+try({
+  dir.create("recursos", showWarnings = FALSE)
+  out <- bs %>% transmute(id, familia, nombre_cientifico, nombre_comun, origen = ori, conservacion = iucn)
+  write.csv(out, "recursos/banco_semillas.csv", row.names = FALSE, fileEncoding = "UTF-8")
+}, silent = TRUE)
+
+sel_con <- paste0("<option value=\"\">Todas</option>",
+  paste0(vapply(c("EN","VU","NT","LC"), function(k) sprintf("<option value=\"%s\">%s</option>", k, iucn_label(k,"es")), character(1)), collapse=""))
 ```
 
-El arboretum conserva **`r nrow(bs)` accesiones** de semillas y esquejes, base para
-la propagación, la restauración y las actividades educativas. Buscá por nombre o
-filtrá por familia.
+El arboretum conserva **`r n_acc` accesiones** de semillas y esquejes: la base para la
+**propagación**, la **restauración**, la **educación** y el **intercambio** con otras
+instituciones botánicas. Cada especie enlaza a su ficha; donde corresponde se muestra su
+**estado de conservación (UICN)** y su **origen**. Buscá por nombre o combiná los filtros.
+
+<p style="margin:.6rem 0 0;">
+  <a href="recursos/banco_semillas.csv" download class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Descargar catálogo (CSV)</a>
+  <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Datos abiertos · uso libre con atribución</span>
+</p>
 
 ```{r results='asis'}
 cat(sprintf('
 <style>
+  .bs-stats{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.1rem 0;}
+  .bs-stat{background:#f4f8f5;border-radius:10px;padding:.55rem 1.1rem;text-align:center;min-width:110px;}
+  .bs-stat .n{display:block;font-size:1.6rem;font-weight:700;color:#B8860B;line-height:1.1;}
+  .bs-stat .l{font-size:.78rem;color:#555;}
   .bs-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
   .bs-controles label{font-size:.8rem;color:#555;display:block;}
   .bs-controles input,.bs-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #bs-q{min-width:220px;}
   #bs-tabla{width:100%%;border-collapse:collapse;}
-  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;}
+  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;vertical-align:top;}
   #bs-tabla thead th{border-bottom:2px solid #1E4A38;color:#1E4A38;}
   #bs-tabla tr:hover td{background:#f4f8f5;}
   #bs-conteo{color:#666;font-size:.85rem;margin:.3rem 0 1rem;}
 </style>
+<div class="bs-stats">
+  <div class="bs-stat"><span class="n">%d</span><span class="l">accesiones</span></div>
+  <div class="bs-stat"><span class="n">%d</span><span class="l">familias</span></div>
+  <div class="bs-stat"><span class="n">%d</span><span class="l">especies</span></div>
+</div>
 <div class="bs-controles">
   <div><label>Buscar</label><input type="text" id="bs-q" placeholder="nombre o especie..."></div>
   <div><label>Familia</label><select id="bs-fam">%s</select></div>
+  <div><label>Origen</label><select id="bs-ori">%s</select></div>
+  <div><label>Conservación</label><select id="bs-con">%s</select></div>
 </div>
 <div id="bs-conteo"></div>
 <div class="tabla-scroll">
-<table id="bs-tabla"><thead><tr><th>Id</th><th>Familia</th><th>Nombre científico</th><th>Nombre común</th></tr></thead><tbody>',
-  opciones(sort(unique(bs$familia[bs$familia != "—"])))))
+<table id="bs-tabla"><thead><tr><th>Id</th><th>Familia</th><th>Nombre científico</th><th>Nombre común</th><th>Origen</th><th>Conservación</th></tr></thead><tbody>',
+  n_acc, n_fam, n_esp,
+  opciones(sort(unique(bs$familia[bs$familia != "—"]))),
+  opciones(sort(unique(bs$ori[nzchar(bs$ori)]))),
+  sel_con))
 
 for (i in seq_len(nrow(bs))) {
   r <- bs[i, ]
   buscar <- tolower(iconv(paste(r$nombre_comun, r$nombre_cientifico, r$id), to = "ASCII//TRANSLIT"))
-  cat(sprintf('<tr data-fam="%s" data-buscar="%s"><td>%s</td><td>%s</td><td><em>%s</em></td><td>%s</td></tr>',
-    esc(r$familia), esc(buscar), esc(r$id), esc(r$familia), esc(r$nombre_cientifico), esc(r$nombre_comun)))
+  sci <- sci_html(r$nombre_cientifico)
+  sci_cell <- if (nzchar(r$slug)) sprintf('<a href="fichas/%s.html">%s</a>', esc(r$slug), sci) else sci
+  cat(sprintf('<tr data-fam="%s" data-ori="%s" data-con="%s" data-buscar="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',
+    esc(r$familia), esc(r$ori), esc(r$iucn), esc(buscar),
+    esc(r$id), esc(r$familia), sci_cell, esc(r$nombre_comun), esc(r$ori), r$con_html))
 }
 
 cat('</tbody></table>
@@ -63,22 +113,32 @@ cat('</tbody></table>
 <script>
 (function(){
   var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
+      fo=document.getElementById("bs-ori"), fc=document.getElementById("bs-con"),
       filas=document.querySelectorAll("#bs-tabla tbody tr"), conteo=document.getElementById("bs-conteo");
   function aplica(){
-    var qs=(q.value||"").toLowerCase(), vf=ff.value, n=0;
+    var qs=(q.value||"").toLowerCase(), vf=ff.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
-      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf);
+      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf) && (!vo || tr.dataset.ori===vo) && (!vc || tr.dataset.con===vc);
       tr.style.display=ok?"":"none"; if(ok)n++;
     });
     conteo.textContent=n+" de "+filas.length+" accesiones";
   }
-  [q,ff].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  [q,ff,fo,fc].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
   aplica();
 })();
 </script>')
 ```
 
+## ¿Cómo solicitar o intercambiar semillas?
+
+Como parte de la red de jardines botánicos (acreditación **ArbNet** y registro en **BGCI**),
+ponemos nuestra colección a disposición de instituciones, investigadores y proyectos de
+restauración mediante un **Index Seminum** (listado de semillas disponibles para intercambio).
+Si querés solicitar material, proponer un intercambio o donar semillas de especies de la
+región, escribinos desde la página de [contacto](contacto.qmd).
+
 ---
 
-*Fuente: listado de semillas y esquejes de Estancia La Constancia. Se actualiza
-editando `data/banco_semillas.xlsx`.*
+*Fuente: listado de semillas y esquejes de Estancia La Constancia. El estado de conservación
+proviene de la [Lista Roja de la UICN](https://www.iucnredlist.org). Se actualiza editando
+`data/banco_semillas.xlsx`.*

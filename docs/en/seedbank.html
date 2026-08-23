@@ -265,23 +265,48 @@ ul.task-list li input[type="checkbox"] {
   <a href="experiences.html" class="cta">Book a visit</a>
   <a href="../banco_semillas.html" class="lang">Español ▸</a>
 </div>
-<p>The arboretum conserves <strong>55 accessions</strong> of seeds and cuttings, a basis for propagation, restoration and educational activities. Search by name or filter by family.</p>
+<p>The arboretum conserves <strong>55 accessions</strong> of seeds and cuttings — a basis for <strong>propagation</strong>, <strong>restoration</strong>, <strong>education</strong> and <strong>exchange</strong> with other botanical institutions. Each species links to its profile; where available we show its <strong>conservation status (IUCN)</strong> and its <strong>origin</strong>. Search by name or combine the filters.</p>
+<p style="margin:.6rem 0 0;">
+<a href="../recursos/banco_semillas.csv" download="" class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-download"></i> Download catalogue (CSV)</a> <span style="font-size:.8rem;color:#777;margin-left:.4rem;">Open data · free to use with attribution</span>
+</p>
 <style>
+  .bs-stats{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.1rem 0;}
+  .bs-stat{background:#f4f8f5;border-radius:10px;padding:.55rem 1.1rem;text-align:center;min-width:110px;}
+  .bs-stat .n{display:block;font-size:1.6rem;font-weight:700;color:#B8860B;line-height:1.1;}
+  .bs-stat .l{font-size:.78rem;color:#555;}
   .bs-controles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:end;margin:1rem 0;}
   .bs-controles label{font-size:.8rem;color:#555;display:block;}
   .bs-controles input,.bs-controles select{padding:.4rem .5rem;border:1px solid #ccc;border-radius:6px;}
+  #bs-q{min-width:220px;}
   #bs-tabla{width:100%;border-collapse:collapse;}
-  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;}
+  #bs-tabla th,#bs-tabla td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #eee;vertical-align:top;}
   #bs-tabla thead th{border-bottom:2px solid #1E4A38;color:#1E4A38;}
   #bs-tabla tr:hover td{background:#f4f8f5;}
   #bs-conteo{color:#666;font-size:.85rem;margin:.3rem 0 1rem;}
 </style>
+<div class="bs-stats">
+<div class="bs-stat">
+<span class="n">55</span><span class="l">accessions</span>
+</div>
+<div class="bs-stat">
+<span class="n">23</span><span class="l">families</span>
+</div>
+<div class="bs-stat">
+<span class="n">44</span><span class="l">species</span>
+</div>
+</div>
 <div class="bs-controles">
 <div>
 <label>Search</label><input type="text" id="bs-q" placeholder="name or species...">
 </div>
 <div>
 <label>Family</label><select id="bs-fam"><option value="">All</option><option value="Altingiaceae">Altingiaceae</option><option value="Apocynaceae">Apocynaceae</option><option value="Araucariaceae">Araucariaceae</option><option value="Cannabaceae">Cannabaceae</option><option value="Caprifoliaceae">Caprifoliaceae</option><option value="Casuarinaceae">Casuarinaceae</option><option value="Cupressaceae">Cupressaceae</option><option value="Fabaceae">Fabaceae</option><option value="Fagaceae">Fagaceae</option><option value="Ginkgoaceae">Ginkgoaceae</option><option value="Hypericaceae">Hypericaceae</option><option value="Lauraceae">Lauraceae</option><option value="Magnoliaceae">Magnoliaceae</option><option value="Malvaceae">Malvaceae</option><option value="Myrtaceae">Myrtaceae</option><option value="Nothofagaceae">Nothofagaceae</option><option value="Oleaceae">Oleaceae</option><option value="Pinaceae">Pinaceae</option><option value="Platanaceae">Platanaceae</option><option value="Rhamnaceae">Rhamnaceae</option><option value="Rosaceae">Rosaceae</option><option value="Salicaceae">Salicaceae</option><option value="Sapindaceae">Sapindaceae</option></select>
+</div>
+<div>
+<label>Origin</label><select id="bs-ori"><option value="">All</option><option value="África">África</option><option value="América">América</option><option value="América del Norte">América del Norte</option><option value="América del Sur">América del Sur</option><option value="Asia">Asia</option><option value="Cosmopolita">Cosmopolita</option><option value="Europa">Europa</option><option value="Hemisferio Norte">Hemisferio Norte</option><option value="Oceanía">Oceanía</option><option value="Varias regiones">Varias regiones</option></select>
+</div>
+<div>
+<label>Conservation</label><select id="bs-con"><option value="">All</option><option value="EN">Endangered</option><option value="VU">Vulnerable</option><option value="NT">Near Threatened</option><option value="LC">Least Concern</option></select>
 </div>
 </div>
 <div id="bs-conteo">
@@ -303,10 +328,16 @@ Scientific name
 <th>
 Common name
 </th>
+<th>
+Origin
+</th>
+<th>
+Conservation
+</th>
 </tr>
 </thead>
 <tbody>
-<tr data-fam="Cupressaceae" data-buscar="sabina de virginia sabina virginiana (l.) antoine a1">
+<tr data-fam="Cupressaceae" data-ori="América del Norte" data-con="" data-buscar="sabina de virginia sabina virginiana (l.) antoine a1">
 <td>
 A1
 </td>
@@ -314,13 +345,18 @@ A1
 Cupressaceae
 </td>
 <td>
-<em>Sabina virginiana (L.) Antoine</em>
+<a href="fichas/sabina.html"><i>Sabina</i> <i>virginiana</i> (L.) Antoine</a>
 </td>
 <td>
 Sabina de Virginia
 </td>
+<td>
+América del Norte
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="pino pinus ponderosa a2">
+<tr data-fam="Pinaceae" data-ori="" data-con="" data-buscar="pino pinus ponderosa a2">
 <td>
 A2
 </td>
@@ -328,13 +364,17 @@ A2
 Pinaceae
 </td>
 <td>
-<em>Pinus ponderosa</em>
+<i>Pinus</i> <i>ponderosa</i>
 </td>
 <td>
 Pino
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-buscar="roble comun quercus robur l. a3">
+<tr data-fam="Fagaceae" data-ori="Varias regiones" data-con="LC" data-buscar="roble comun quercus robur l. a3">
 <td>
 A3
 </td>
@@ -342,13 +382,19 @@ A3
 Fagaceae
 </td>
 <td>
-<em>Quercus robur L.</em>
+<a href="fichas/roblecomun.html"><i>Quercus</i> <i>robur</i> L.</a>
 </td>
 <td>
 Roble común
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="—" data-buscar="falso muerdago ilex aquifolium l. a4">
+<tr data-fam="—" data-ori="Varias regiones" data-con="LC" data-buscar="falso muerdago ilex aquifolium l. a4">
 <td>
 A4
 </td>
@@ -356,13 +402,19 @@ A4
 —
 </td>
 <td>
-<em>Ilex aquifolium L.</em>
+<a href="fichas/falso-muerdago.html"><i>Ilex</i> <i>aquifolium</i> L.</a>
 </td>
 <td>
 Falso muérdago
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="cedro del himalaya cedrus deodara (roxb. ex d. don) g. don a5">
+<tr data-fam="Pinaceae" data-ori="Asia" data-con="LC" data-buscar="cedro del himalaya cedrus deodara (roxb. ex d. don) g. don a5">
 <td>
 A5
 </td>
@@ -370,13 +422,19 @@ A5
 Pinaceae
 </td>
 <td>
-<em>Cedrus deodara (Roxb. ex D. Don) G. Don</em>
+<a href="fichas/cedrodelhimalaya.html"><i>Cedrus</i> <i>deodara</i> (Roxb. ex D. Don) G. Don</a>
 </td>
 <td>
 Cedro del Himalaya
 </td>
+<td>
+Asia
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Casuarinaceae" data-buscar="casuarina casuarina equisetifolia l. a6">
+<tr data-fam="Casuarinaceae" data-ori="Hemisferio Norte" data-con="" data-buscar="casuarina casuarina equisetifolia l. a6">
 <td>
 A6
 </td>
@@ -384,13 +442,18 @@ A6
 Casuarinaceae
 </td>
 <td>
-<em>Casuarina equisetifolia L.</em>
+<a href="fichas/casuarina-arb006.html"><i>Casuarina</i> <i>equisetifolia</i> L.</a>
 </td>
 <td>
 Casuarina
 </td>
+<td>
+Hemisferio Norte
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Apocynaceae" data-buscar="falso laurel nerium oleander l. a7">
+<tr data-fam="Apocynaceae" data-ori="Varias regiones" data-con="" data-buscar="falso laurel nerium oleander l. a7">
 <td>
 A7
 </td>
@@ -398,13 +461,18 @@ A7
 Apocynaceae
 </td>
 <td>
-<em>Nerium oleander L.</em>
+<a href="fichas/falso-laurel.html"><i>Nerium</i> <i>oleander</i> L.</a>
 </td>
 <td>
 Falso laurel
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="libocedro de california calocedrus decurrens (torr.) florin a8">
+<tr data-fam="Cupressaceae" data-ori="América del Norte" data-con="LC" data-buscar="libocedro de california calocedrus decurrens (torr.) florin a8">
 <td>
 A8
 </td>
@@ -412,13 +480,19 @@ A8
 Cupressaceae
 </td>
 <td>
-<em>Calocedrus decurrens (Torr.) Florin</em>
+<a href="fichas/libocedro-de-california.html"><i>Calocedrus</i> <i>decurrens</i> (Torr.) Florin</a>
 </td>
 <td>
 Libocedro de California
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="cedro azul cedrus atlantica (endl.) manetti ex carriere a9">
+<tr data-fam="Pinaceae" data-ori="África" data-con="EN" data-buscar="cedro azul cedrus atlantica (endl.) manetti ex carriere a9">
 <td>
 A9
 </td>
@@ -426,13 +500,19 @@ A9
 Pinaceae
 </td>
 <td>
-<em>Cedrus atlantica (Endl.) Manetti ex Carrière</em>
+<a href="fichas/cedroazul.html"><i>Cedrus</i> <i>atlantica</i> (Endl.) Manetti ex Carrière</a>
 </td>
 <td>
 Cedro azul
 </td>
+<td>
+África
+</td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-buscar=" eucalyptus globulus labill. a11">
+<tr data-fam="Myrtaceae" data-ori="Oceanía" data-con="LC" data-buscar=" eucalyptus globulus labill. a11">
 <td>
 A11
 </td>
@@ -440,12 +520,18 @@ A11
 Myrtaceae
 </td>
 <td>
-<em>Eucalyptus globulus Labill.</em>
+<a href="fichas/arb011.html"><i>Eucalyptus</i> <i>globulus</i> Labill.</a>
 </td>
 <td>
 </td>
+<td>
+Oceanía
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="cipres cupressus sp. a12">
+<tr data-fam="Cupressaceae" data-ori="" data-con="" data-buscar="cipres cupressus sp. a12">
 <td>
 A12
 </td>
@@ -453,13 +539,17 @@ A12
 Cupressaceae
 </td>
 <td>
-<em>Cupressus sp.</em>
+<i>Cupressus</i> sp.
 </td>
 <td>
 Cipres
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-buscar="roble rojo americano quercus rubra l. a13jb1 jb14">
+<tr data-fam="Fagaceae" data-ori="América del Norte" data-con="LC" data-buscar="roble rojo americano quercus rubra l. a13jb1 jb14">
 <td>
 A13Jb1 Jb14
 </td>
@@ -467,13 +557,19 @@ A13Jb1 Jb14
 Fagaceae
 </td>
 <td>
-<em>Quercus rubra L.</em>
+<a href="fichas/roblerojo.html"><i>Quercus</i> <i>rubra</i> L.</a>
 </td>
 <td>
 Roble rojo americano
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="abeto abies concolor (gordon &amp; glend.) lindl. ex hildebr. a14">
+<tr data-fam="Pinaceae" data-ori="América" data-con="LC" data-buscar="abeto abies concolor (gordon &amp; glend.) lindl. ex hildebr. a14">
 <td>
 A14
 </td>
@@ -481,13 +577,19 @@ A14
 Pinaceae
 </td>
 <td>
-<em>Abies concolor (Gordon &amp; Glend.) Lindl. ex Hildebr.</em>
+<a href="fichas/abeto.html"><i>Abies</i> <i>concolor</i> (Gordon &amp; Glend.) Lindl. ex Hildebr.</a>
 </td>
 <td>
 Abeto
 </td>
+<td>
+América
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar=" picea sp. a15jb2">
+<tr data-fam="Pinaceae" data-ori="" data-con="" data-buscar=" picea sp. a15jb2">
 <td>
 A15Jb2
 </td>
@@ -495,12 +597,16 @@ A15Jb2
 Pinaceae
 </td>
 <td>
-<em>Picea sp.</em>
+<i>Picea</i> sp.
+</td>
+<td>
+</td>
+<td>
 </td>
 <td>
 </td>
 </tr>
-<tr data-fam="Myrtaceae" data-buscar="limpiatubos callistemon imperialis a16">
+<tr data-fam="Myrtaceae" data-ori="América del Sur" data-con="" data-buscar="limpiatubos callistemon imperialis a16">
 <td>
 A16
 </td>
@@ -508,13 +614,18 @@ A16
 Myrtaceae
 </td>
 <td>
-<em>Callistemon imperialis</em>
+<a href="fichas/limpiatubos.html"><i>Callistemon</i> <i>imperialis</i></a>
 </td>
 <td>
 Limpiatubos
 </td>
+<td>
+América del Sur
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Caprifoliaceae" data-buscar="abelia abelia x grandiflora l. a17">
+<tr data-fam="Caprifoliaceae" data-ori="" data-con="" data-buscar="abelia abelia x grandiflora l. a17">
 <td>
 A17
 </td>
@@ -522,13 +633,17 @@ A17
 Caprifoliaceae
 </td>
 <td>
-<em>Abelia x grandiflora L.</em>
+<i>Abelia</i> x <i>grandiflora</i> L.
 </td>
 <td>
 Abelia
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-buscar=" crataegus sp. a18">
+<tr data-fam="Rosaceae" data-ori="" data-con="" data-buscar=" crataegus sp. a18">
 <td>
 A18
 </td>
@@ -536,12 +651,16 @@ A18
 Rosaceae
 </td>
 <td>
-<em>Crataegus sp.</em>
+<i>Crataegus</i> sp.
+</td>
+<td>
+</td>
+<td>
 </td>
 <td>
 </td>
 </tr>
-<tr data-fam="Magnoliaceae" data-buscar="magnolia magnolia grandiflora l. a19">
+<tr data-fam="Magnoliaceae" data-ori="América del Norte" data-con="LC" data-buscar="magnolia magnolia grandiflora l. a19">
 <td>
 A19
 </td>
@@ -549,13 +668,19 @@ A19
 Magnoliaceae
 </td>
 <td>
-<em>Magnolia grandiflora L.</em>
+<a href="fichas/magnolia.html"><i>Magnolia</i> <i>grandiflora</i> L.</a>
 </td>
 <td>
 Magnolia
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Platanaceae" data-buscar="platano platanus x hispanica a20">
+<tr data-fam="Platanaceae" data-ori="" data-con="" data-buscar="platano platanus x hispanica a20">
 <td>
 A20
 </td>
@@ -563,13 +688,17 @@ A20
 Platanaceae
 </td>
 <td>
-<em>Platanus x hispanica</em>
+<i>Platanus</i> x <i>hispanica</i>
 </td>
 <td>
 Plátano
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Malvaceae" data-buscar="tilo tilia sp. a21">
+<tr data-fam="Malvaceae" data-ori="" data-con="" data-buscar="tilo tilia sp. a21">
 <td>
 A21
 </td>
@@ -577,13 +706,17 @@ A21
 Malvaceae
 </td>
 <td>
-<em>Tilia sp.</em>
+<i>Tilia</i> sp.
 </td>
 <td>
 Tilo
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-buscar="araucaria australiana araucaria bidwillii hook. a22">
+<tr data-fam="Araucariaceae" data-ori="Oceanía" data-con="LC" data-buscar="araucaria australiana araucaria bidwillii hook. a22">
 <td>
 A22
 </td>
@@ -591,13 +724,19 @@ A22
 Araucariaceae
 </td>
 <td>
-<em>Araucaria bidwillii Hook.</em>
+<a href="fichas/araucariaaustraliana-arb022.html"><i>Araucaria</i> <i>bidwillii</i> Hook.</a>
 </td>
 <td>
 Araucaria Australiana
 </td>
+<td>
+Oceanía
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar=" cupressus macrocarpa var. lutea topacio a23">
+<tr data-fam="Cupressaceae" data-ori="América del Norte" data-con="" data-buscar=" cupressus macrocarpa var. lutea topacio a23">
 <td>
 A23
 </td>
@@ -605,12 +744,17 @@ A23
 Cupressaceae
 </td>
 <td>
-<em>Cupressus macrocarpa var. lutea topacio</em>
+<a href="fichas/cipres-de-monterrey.html"><i>Cupressus</i> <i>macrocarpa</i> var. <i>lutea</i> topacio</a>
+</td>
+<td>
+</td>
+<td>
+América del Norte
 </td>
 <td>
 </td>
 </tr>
-<tr data-fam="Casuarinaceae" data-buscar="casuarina casuarina equisetifolia l. a25">
+<tr data-fam="Casuarinaceae" data-ori="Hemisferio Norte" data-con="" data-buscar="casuarina casuarina equisetifolia l. a25">
 <td>
 A25
 </td>
@@ -618,13 +762,18 @@ A25
 Casuarinaceae
 </td>
 <td>
-<em>Casuarina equisetifolia L.</em>
+<a href="fichas/casuarina-arb006.html"><i>Casuarina</i> <i>equisetifolia</i> L.</a>
 </td>
 <td>
 Casuarina
 </td>
+<td>
+Hemisferio Norte
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-buscar="encina quercus baloot griff. a26">
+<tr data-fam="Fagaceae" data-ori="Varias regiones" data-con="LC" data-buscar="encina quercus baloot griff. a26">
 <td>
 A26
 </td>
@@ -632,13 +781,19 @@ A26
 Fagaceae
 </td>
 <td>
-<em>Quercus baloot Griff.</em>
+<a href="fichas/encina.html"><i>Quercus</i> <i>baloot</i> Griff.</a>
 </td>
 <td>
 Encina
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="pino mexicano amarillo pinus patula schltdl. &amp; cham. a27">
+<tr data-fam="Pinaceae" data-ori="Varias regiones" data-con="" data-buscar="pino mexicano amarillo pinus patula schltdl. &amp; cham. a27">
 <td>
 A27
 </td>
@@ -646,13 +801,18 @@ A27
 Pinaceae
 </td>
 <td>
-<em>Pinus patula Schltdl. &amp; Cham.</em>
+<a href="fichas/pino-mexicano-amarillo.html"><i>Pinus</i> <i>patula</i> Schltdl. &amp; Cham.</a>
 </td>
 <td>
 Pino mexicano amarillo
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-buscar="araucaria australiana araucaria bidwillii hook. a28">
+<tr data-fam="Araucariaceae" data-ori="Oceanía" data-con="LC" data-buscar="araucaria australiana araucaria bidwillii hook. a28">
 <td>
 A28
 </td>
@@ -660,13 +820,19 @@ A28
 Araucariaceae
 </td>
 <td>
-<em>Araucaria bidwillii Hook.</em>
+<a href="fichas/araucariaaustraliana-arb022.html"><i>Araucaria</i> <i>bidwillii</i> Hook.</a>
 </td>
 <td>
 Araucaria Australiana
 </td>
+<td>
+Oceanía
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Salicaceae" data-buscar="alamo blanco populu alba l. a29">
+<tr data-fam="Salicaceae" data-ori="" data-con="" data-buscar="alamo blanco populu alba l. a29">
 <td>
 A29
 </td>
@@ -674,13 +840,17 @@ A29
 Salicaceae
 </td>
 <td>
-<em>Populu alba L.</em>
+<i>Populu</i> <i>alba</i> L.
 </td>
 <td>
 Álamo blanco
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-buscar="castano de indias aesculus hippocastanum l. a30">
+<tr data-fam="Sapindaceae" data-ori="Europa" data-con="VU" data-buscar="castano de indias aesculus hippocastanum l. a30">
 <td>
 A30
 </td>
@@ -688,13 +858,19 @@ A30
 Sapindaceae
 </td>
 <td>
-<em>Aesculus hippocastanum L.</em>
+<a href="fichas/castanodeindias.html"><i>Aesculus</i> <i>hippocastanum</i> L.</a>
 </td>
 <td>
 Castaño de Indias
 </td>
+<td>
+Europa
+</td>
+<td>
+<span class="iucn-badge iucn-VU" title="UICN/IUCN: Vulnerable">VU · Vulnerable</span>
+</td>
 </tr>
-<tr data-fam="Lauraceae" data-buscar="alcanforero cinnamomum camphora a31jb14">
+<tr data-fam="Lauraceae" data-ori="Varias regiones" data-con="" data-buscar="alcanforero cinnamomum camphora a31jb14">
 <td>
 A31Jb14
 </td>
@@ -702,13 +878,18 @@ A31Jb14
 Lauraceae
 </td>
 <td>
-<em>Cinnamomum camphora</em>
+<a href="fichas/alcanforero.html"><i>Cinnamomum</i> <i>camphora</i></a>
 </td>
 <td>
 Alcanforero
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="cedro japones cryptomeria japonica (thunb. ex l. f.) d. don a32">
+<tr data-fam="Cupressaceae" data-ori="Asia" data-con="NT" data-buscar="cedro japones cryptomeria japonica (thunb. ex l. f.) d. don a32">
 <td>
 A32
 </td>
@@ -716,13 +897,19 @@ A32
 Cupressaceae
 </td>
 <td>
-<em>Cryptomeria japonica (Thunb. ex L. f.) D. Don</em>
+<a href="fichas/cedrojapones.html"><i>Cryptomeria</i> <i>japonica</i> (Thunb. ex L. f.) D. Don</a>
 </td>
 <td>
 Cedro japonés
 </td>
+<td>
+Asia
+</td>
+<td>
+<span class="iucn-badge iucn-NT" title="UICN/IUCN: Near Threatened">NT · Near Threatened</span>
+</td>
 </tr>
-<tr data-fam="Altingiaceae" data-buscar="liquidambar liquidambar sp. a33">
+<tr data-fam="Altingiaceae" data-ori="" data-con="" data-buscar="liquidambar liquidambar sp. a33">
 <td>
 A33
 </td>
@@ -730,13 +917,17 @@ A33
 Altingiaceae
 </td>
 <td>
-<em>Liquidambar sp.</em>
+<i>Liquidambar</i> sp.
 </td>
 <td>
 Liquidambar
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="secuoya roja sequoia sempervirens (d.don) endl. a34jb28">
+<tr data-fam="Cupressaceae" data-ori="América del Norte" data-con="EN" data-buscar="secuoya roja sequoia sempervirens (d.don) endl. a34jb28">
 <td>
 A34Jb28
 </td>
@@ -744,13 +935,19 @@ A34Jb28
 Cupressaceae
 </td>
 <td>
-<em>Sequoia sempervirens (D.Don) Endl.</em>
+<a href="fichas/secuoya.html"><i>Sequoia</i> <i>sempervirens</i> (D.Don) Endl.</a>
 </td>
 <td>
 Secuoya roja
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="secuoya gigante sequoiadendron giganteum (lindl.) a34">
+<tr data-fam="Cupressaceae" data-ori="América del Norte" data-con="EN" data-buscar="secuoya gigante sequoiadendron giganteum (lindl.) a34">
 <td>
 A34
 </td>
@@ -758,13 +955,19 @@ A34
 Cupressaceae
 </td>
 <td>
-<em>Sequoiadendron giganteum (Lindl.)</em>
+<a href="fichas/secuoiaroja.html"><i>Sequoiadendron</i> <i>giganteum</i> (Lindl.)</a>
 </td>
 <td>
 Secuoya gigante
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="cipres mexicano. taxodium ?distichum var. mexicanum (carriere) gordon &amp; glend. a35">
+<tr data-fam="Cupressaceae" data-ori="" data-con="" data-buscar="cipres mexicano. taxodium ?distichum var. mexicanum (carriere) gordon &amp; glend. a35">
 <td>
 A35
 </td>
@@ -772,13 +975,17 @@ A35
 Cupressaceae
 </td>
 <td>
-<em>Taxodium ?distichum var. mexicanum (Carrière) Gordon &amp; Glend.</em>
+<i>Taxodium</i> <i>?distichum</i> var. <i>mexicanum</i> (Carrière) Gordon &amp; Glend.
 </td>
 <td>
 Ciprés mexicano.
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="cipres mexicano. taxodium ?distichum var. mexicanum (carriere) gordon &amp; glend. jb36">
+<tr data-fam="Cupressaceae" data-ori="" data-con="" data-buscar="cipres mexicano. taxodium ?distichum var. mexicanum (carriere) gordon &amp; glend. jb36">
 <td>
 Jb36
 </td>
@@ -786,13 +993,17 @@ Jb36
 Cupressaceae
 </td>
 <td>
-<em>Taxodium ?distichum var. mexicanum (Carrière) Gordon &amp; Glend.</em>
+<i>Taxodium</i> <i>?distichum</i> var. <i>mexicanum</i> (Carrière) Gordon &amp; Glend.
 </td>
 <td>
 Ciprés mexicano.
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cupressaceae" data-buscar="cipres de la cordillera austrocedrus chilensis (d.don) pic.serm. &amp; bizzarri a36">
+<tr data-fam="Cupressaceae" data-ori="América del Sur" data-con="" data-buscar="cipres de la cordillera austrocedrus chilensis (d.don) pic.serm. &amp; bizzarri a36">
 <td>
 A36
 </td>
@@ -800,13 +1011,18 @@ A36
 Cupressaceae
 </td>
 <td>
-<em>Austrocedrus chilensis (D.Don) Pic.Serm. &amp; Bizzarri</em>
+<a href="fichas/cipres-de-las-guaitecas.html"><i>Austrocedrus</i> <i>chilensis</i> (D.Don) Pic.Serm. &amp; Bizzarri</a>
 </td>
 <td>
 Ciprés de la cordillera
 </td>
+<td>
+América del Sur
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="alerce europeo larix decidua mill. a37">
+<tr data-fam="Pinaceae" data-ori="Varias regiones" data-con="" data-buscar="alerce europeo larix decidua mill. a37">
 <td>
 A37
 </td>
@@ -814,13 +1030,18 @@ A37
 Pinaceae
 </td>
 <td>
-<em>Larix decidua Mill.</em>
+<a href="fichas/tejo-comun.html"><i>Larix</i> <i>decidua</i> Mill.</a>
 </td>
 <td>
 Alerce europeo
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rhamnaceae" data-buscar="ceanoto ceanothus thyrsiflorus eschw. a38">
+<tr data-fam="Rhamnaceae" data-ori="América del Norte" data-con="" data-buscar="ceanoto ceanothus thyrsiflorus eschw. a38">
 <td>
 A38
 </td>
@@ -828,13 +1049,18 @@ A38
 Rhamnaceae
 </td>
 <td>
-<em>Ceanothus thyrsiflorus Eschw.</em>
+<a href="fichas/abeto-de-douglas.html"><i>Ceanothus</i> <i>thyrsiflorus</i> Eschw.</a>
 </td>
 <td>
 Ceanoto
 </td>
+<td>
+América del Norte
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Hypericaceae" data-buscar="hiperico hypericum ? moserianum andre a39">
+<tr data-fam="Hypericaceae" data-ori="" data-con="" data-buscar="hiperico hypericum ? moserianum andre a39">
 <td>
 A39
 </td>
@@ -842,13 +1068,17 @@ A39
 Hypericaceae
 </td>
 <td>
-<em>Hypericum × moserianum André</em>
+<i>Hypericum</i> × <i>moserianum</i> André
 </td>
 <td>
 Hipérico
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Cannabaceae" data-buscar="tala celtis tala gillies ex planch. a40jb31">
+<tr data-fam="Cannabaceae" data-ori="Cosmopolita" data-con="" data-buscar="tala celtis tala gillies ex planch. a40jb31">
 <td>
 A40Jb31
 </td>
@@ -856,13 +1086,18 @@ A40Jb31
 Cannabaceae
 </td>
 <td>
-<em>Celtis tala Gillies ex Planch.</em>
+<a href="fichas/carex-arb040.html"><i>Celtis</i> <i>tala</i> Gillies ex Planch.</a>
 </td>
 <td>
 Tala
 </td>
+<td>
+Cosmopolita
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Araucariaceae" data-buscar="arbol de cristal agathis dammara (lamb.) poir. a41">
+<tr data-fam="Araucariaceae" data-ori="Asia" data-con="" data-buscar="arbol de cristal agathis dammara (lamb.) poir. a41">
 <td>
 A41
 </td>
@@ -870,13 +1105,18 @@ A41
 Araucariaceae
 </td>
 <td>
-<em>Agathis dammara (Lamb.) Poir.</em>
+<a href="fichas/damara.html"><i>Agathis</i> <i>dammara</i> (Lamb.) Poir.</a>
 </td>
 <td>
 Árbol de Cristal
 </td>
+<td>
+Asia
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Magnoliaceae" data-buscar="tulipanero liriodendron tulipifera l. a42">
+<tr data-fam="Magnoliaceae" data-ori="América del Norte" data-con="LC" data-buscar="tulipanero liriodendron tulipifera l. a42">
 <td>
 A42
 </td>
@@ -884,13 +1124,19 @@ A42
 Magnoliaceae
 </td>
 <td>
-<em>Liriodendron tulipifera L.</em>
+<a href="fichas/arboldelostulipanes.html"><i>Liriodendron</i> <i>tulipifera</i> L.</a>
 </td>
 <td>
 Tulipanero
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-buscar="corona de novia spiraea cantoniensis lour. jb5">
+<tr data-fam="Rosaceae" data-ori="Asia" data-con="" data-buscar="corona de novia spiraea cantoniensis lour. jb5">
 <td>
 Jb5
 </td>
@@ -898,13 +1144,18 @@ Jb5
 Rosaceae
 </td>
 <td>
-<em>Spiraea cantoniensis Lour.</em>
+<a href="fichas/corona-de-novia-arb047.html"><i>Spiraea</i> <i>cantoniensis</i> Lour.</a>
 </td>
 <td>
 Corona de Novia
 </td>
+<td>
+Asia
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-buscar="acer japones acer palmatum thunb. jb8">
+<tr data-fam="Sapindaceae" data-ori="Asia" data-con="" data-buscar="acer japones acer palmatum thunb. jb8">
 <td>
 Jb8
 </td>
@@ -912,13 +1163,18 @@ Jb8
 Sapindaceae
 </td>
 <td>
-<em>Acer palmatum Thunb.</em>
+<a href="fichas/gingko.html"><i>Acer</i> <i>palmatum</i> Thunb.</a>
 </td>
 <td>
 Acer Japonés
 </td>
+<td>
+Asia
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Sapindaceae" data-buscar="candela dodonaea viscosa jacq. jb10">
+<tr data-fam="Sapindaceae" data-ori="Cosmopolita" data-con="" data-buscar="candela dodonaea viscosa jacq. jb10">
 <td>
 Jb10
 </td>
@@ -926,13 +1182,18 @@ Jb10
 Sapindaceae
 </td>
 <td>
-<em>Dodonaea viscosa Jacq.</em>
+<a href="fichas/dodonea-arb052.html"><i>Dodonaea</i> <i>viscosa</i> Jacq.</a>
 </td>
 <td>
 Candela
 </td>
+<td>
+Cosmopolita
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Oleaceae" data-buscar="ligustro ligustrum lucidum w.t.aiton jb12">
+<tr data-fam="Oleaceae" data-ori="Asia" data-con="" data-buscar="ligustro ligustrum lucidum w.t.aiton jb12">
 <td>
 Jb12
 </td>
@@ -940,13 +1201,18 @@ Jb12
 Oleaceae
 </td>
 <td>
-<em>Ligustrum lucidum W.T.Aiton</em>
+<a href="fichas/ligustro-arb054.html"><i>Ligustrum</i> <i>lucidum</i> W.T.Aiton</a>
 </td>
 <td>
 Ligustro
 </td>
+<td>
+Asia
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fabaceae" data-buscar="acacia mimosa acacia dealbata link jb16">
+<tr data-fam="Fabaceae" data-ori="Oceanía" data-con="" data-buscar="acacia mimosa acacia dealbata link jb16">
 <td>
 Jb16
 </td>
@@ -954,13 +1220,18 @@ Jb16
 Fabaceae
 </td>
 <td>
-<em>Acacia dealbata Link</em>
+<a href="fichas/acacia-mimosa-arb058.html"><i>Acacia</i> <i>dealbata</i> Link</a>
 </td>
 <td>
 Acacia mimosa
 </td>
+<td>
+Oceanía
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Rosaceae" data-buscar="espino de fuego pyracantha coccinea m.roem. jb23">
+<tr data-fam="Rosaceae" data-ori="Varias regiones" data-con="" data-buscar="espino de fuego pyracantha coccinea m.roem. jb23">
 <td>
 Jb23
 </td>
@@ -968,13 +1239,18 @@ Jb23
 Rosaceae
 </td>
 <td>
-<em>Pyracantha coccinea M.Roem.</em>
+<a href="fichas/espino-de-fuego.html"><i>Pyracantha</i> <i>coccinea</i> M.Roem.</a>
 </td>
 <td>
 Espino de fuego
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Myrtaceae" data-buscar="eucalipto plateado eucalyptus cinerea f.muell. ex benth. jb27">
+<tr data-fam="Myrtaceae" data-ori="Oceanía" data-con="" data-buscar="eucalipto plateado eucalyptus cinerea f.muell. ex benth. jb27">
 <td>
 Jb27
 </td>
@@ -982,13 +1258,18 @@ Jb27
 Myrtaceae
 </td>
 <td>
-<em>Eucalyptus cinerea F.Muell. ex Benth.</em>
+<a href="fichas/eucalipto-medicinal.html"><i>Eucalyptus</i> <i>cinerea</i> F.Muell. ex Benth.</a>
 </td>
 <td>
 Eucalipto plateado
 </td>
+<td>
+Oceanía
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Pinaceae" data-buscar="pino insigne pinus radiata d.do jb29">
+<tr data-fam="Pinaceae" data-ori="América del Norte" data-con="EN" data-buscar="pino insigne pinus radiata d.do jb29">
 <td>
 Jb29
 </td>
@@ -996,13 +1277,19 @@ Jb29
 Pinaceae
 </td>
 <td>
-<em>Pinus radiata D.Do</em>
+<a href="fichas/pino-insigne.html"><i>Pinus</i> <i>radiata</i> D.Do</a>
 </td>
 <td>
 Pino insigne
 </td>
+<td>
+América del Norte
+</td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>
+</td>
 </tr>
-<tr data-fam="Nothofagaceae" data-buscar="depende sp. nothofagus spp. jb30jb31">
+<tr data-fam="Nothofagaceae" data-ori="" data-con="" data-buscar="depende sp. nothofagus spp. jb30jb31">
 <td>
 Jb30Jb31
 </td>
@@ -1010,13 +1297,17 @@ Jb30Jb31
 Nothofagaceae
 </td>
 <td>
-<em>Nothofagus spp.</em>
+<i>Nothofagus</i> spp.
 </td>
 <td>
 Depende sp.
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Ginkgoaceae" data-buscar="gingko ginkgo biloba l. jb34">
+<tr data-fam="Ginkgoaceae" data-ori="Asia" data-con="EN" data-buscar="gingko ginkgo biloba l. jb34">
 <td>
 Jb34
 </td>
@@ -1024,13 +1315,19 @@ Jb34
 Ginkgoaceae
 </td>
 <td>
-<em>Ginkgo biloba L.</em>
+<a href="fichas/ginkgo.html"><i>Ginkgo</i> <i>biloba</i> L.</a>
 </td>
 <td>
 Gingko
 </td>
+<td>
+Asia
+</td>
+<td>
+<span class="iucn-badge iucn-EN" title="UICN/IUCN: Endangered">EN · Endangered</span>
+</td>
 </tr>
-<tr data-fam="Oleaceae" data-buscar="fresno de hoja estrecha fraxinus angustifolia vahl jb37">
+<tr data-fam="Oleaceae" data-ori="Varias regiones" data-con="" data-buscar="fresno de hoja estrecha fraxinus angustifolia vahl jb37">
 <td>
 Jb37
 </td>
@@ -1038,13 +1335,18 @@ Jb37
 Oleaceae
 </td>
 <td>
-<em>Fraxinus angustifolia Vahl</em>
+<a href="fichas/boj-comun.html"><i>Fraxinus</i> <i>angustifolia</i> Vahl</a>
 </td>
 <td>
 Fresno de hoja estrecha
 </td>
+<td>
+Varias regiones
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Oleaceae" data-buscar="fresno norteno fraxinus excelsior l. jb38">
+<tr data-fam="Oleaceae" data-ori="" data-con="" data-buscar="fresno norteno fraxinus excelsior l. jb38">
 <td>
 Jb38
 </td>
@@ -1052,13 +1354,17 @@ Jb38
 Oleaceae
 </td>
 <td>
-<em>Fraxinus excelsior L.</em>
+<i>Fraxinus</i> <i>excelsior</i> L.
 </td>
 <td>
 Fresno norteño
 </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
-<tr data-fam="Fagaceae" data-buscar="haya comun fagus sylvatica l. jb49">
+<tr data-fam="Fagaceae" data-ori="Europa" data-con="LC" data-buscar="haya comun fagus sylvatica l. jb49">
 <td>
 Jb49
 </td>
@@ -1066,10 +1372,16 @@ Jb49
 Fagaceae
 </td>
 <td>
-<em>Fagus sylvatica L.</em>
+<a href="fichas/haya-comun.html"><i>Fagus</i> <i>sylvatica</i> L.</a>
 </td>
 <td>
 Haya común
+</td>
+<td>
+Europa
+</td>
+<td>
+<span class="iucn-badge iucn-LC" title="UICN/IUCN: Least Concern">LC · Least Concern</span>
 </td>
 </tr>
 </tbody>
@@ -1078,23 +1390,28 @@ Haya común
 <script>
 (function(){
   var q=document.getElementById("bs-q"), ff=document.getElementById("bs-fam"),
+      fo=document.getElementById("bs-ori"), fc=document.getElementById("bs-con"),
       filas=document.querySelectorAll("#bs-tabla tbody tr"), conteo=document.getElementById("bs-conteo");
   function aplica(){
-    var qs=(q.value||"").toLowerCase(), vf=ff.value, n=0;
+    var qs=(q.value||"").toLowerCase(), vf=ff.value, vo=fo.value, vc=fc.value, n=0;
     filas.forEach(function(tr){
-      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf);
+      var ok=tr.dataset.buscar.indexOf(qs)>=0 && (!vf || tr.dataset.fam===vf) && (!vo || tr.dataset.ori===vo) && (!vc || tr.dataset.con===vc);
       tr.style.display=ok?"":"none"; if(ok)n++;
     });
     conteo.textContent=n+" of "+filas.length+" accessions";
   }
-  [q,ff].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
+  [q,ff,fo,fc].forEach(function(e){e.addEventListener("input",aplica);e.addEventListener("change",aplica);});
   aplica();
 })();
 </script>
+<section id="requesting-or-exchanging-seeds" class="level2">
+<h2 class="anchored" data-anchor-id="requesting-or-exchanging-seeds">Requesting or exchanging seeds</h2>
+<p>As part of the botanic-garden network (<strong>ArbNet</strong> accreditation and <strong>BGCI</strong> registration), we make our collection available to institutions, researchers and restoration projects through an <strong>Index Seminum</strong> (a list of seeds available for exchange). To request material, propose an exchange or donate seeds of regional species, get in touch via our <a href="../en/contact.html">contact</a> page.</p>
 <hr>
-<p><em>Source: list of seeds and cuttings from Estancia La Constancia. Updated by editing <code>data/banco_semillas.xlsx</code>.</em></p>
+<p><em>Source: list of seeds and cuttings from Estancia La Constancia. Conservation status from the <a href="https://www.iucnredlist.org">IUCN Red List</a>. Updated by editing <code>data/banco_semillas.xlsx</code>.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
