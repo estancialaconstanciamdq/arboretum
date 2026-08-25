@@ -12,7 +12,7 @@ import os, re, unicodedata
 import openpyxl
 import qrcode
 
-BASE_URL = "https://estancialaconstanciamdq.github.io/arboretumdatalab/fichas/"
+BASE_URL = "https://estancialaconstanciamdq.github.io/arboretum/fichas/"
 ARCHIVO  = "data/Arboretum_Master.xlsx"
 SALIDA   = "qr"
 
