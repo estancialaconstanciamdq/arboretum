@@ -408,19 +408,36 @@ header#title-block-header:has(.quarto-title-banner) .subtitle {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.15rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
   line-height: 1.3;
   opacity: .96;
-  max-width: 40ch;
+  /* Ancho amplio para que los subtítulos entren en UNA línea en desktop
+     (así el bloque título+subtítulo queda idéntico en todas las secciones).
+     En pantallas angostas se limita por el 92vw y baja de línea, parejo en todas. */
+  max-width: min(92vw, 62ch);
   margin-left: auto; margin-right: auto;
   text-shadow: 0 1px 12px rgba(0,0,0,.6);
 }
 
-/* ==== Centrado del TÍTULO consistente en todas las secciones ====
-   Se ancla el centrado en el título (no en el bloque título+subtítulo), para que
-   el título quede SIEMPRE en la misma posición vertical, sin importar el largo del
-   subtítulo. El subtítulo flota justo debajo, fuera del flujo. */
-.quarto-title-banner .quarto-title { position: relative; }
+/* ==== Centrado ÓPTICO del conjunto título+subtítulo, consistente en todas las páginas ====
+   El subtítulo flota debajo del título (fuera del flujo) para que el título quede en
+   la MISMA posición en toda página, sin importar cuántas líneas tenga el subtítulo.
+   Luego se sube el conjunto una pizca (--hero-shift) para que título+subtítulo queden
+   ópticamente centrados (si no, el subtítulo debajo "pesa" y el título se ve alto). */
+:root { --hero-shift: 1.35rem; }
+.quarto-title-banner .quarto-title {
+  position: relative;
+  transform: translateY(calc(-1 * var(--hero-shift)));
+  /* Ocupar TODO el ancho e ignorar la columna reservada para la tabla de contenidos
+     (si no, en las páginas con TOC el título queda corrido a la izquierda). */
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: 1 / -1 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .quarto-title-banner .subtitle {
   position: absolute;
   top: 100%;
@@ -428,6 +445,8 @@ header#title-block-header:has(.quarto-title-banner) .subtitle {
   margin-top: .6rem;
 }
 .quarto-title-banner .quarto-title-meta { display: none; }
+/* Mismo desplazamiento en la portada, para que "Arboretum" quede a la misma altura */
+body:has(.home-hero) .home-hero-inner { transform: translateY(calc(-1 * var(--hero-shift))); }
 
 /* Galerías con proporción uniforme */
 .galeria img {
