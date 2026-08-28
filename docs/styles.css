@@ -390,13 +390,29 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
 }
 .quarto-title-banner .title {
   color: #ffffff !important;
-  text-shadow: 0 2px 20px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  /* Título grande y proporcional, estilo ArbNet (escala igual que el hero del inicio) */
+  font-size: clamp(2.6rem, 5.6vw, 5rem);
+  line-height: 1.06;
+  margin-bottom: .5rem;
+  /* En desktop entra en una línea (estilo ArbNet); en pantallas angostas baja de
+     línea solo — nunca se corta — gracias al padding del banner */
+  max-width: min(92vw, 1050px);
+  margin-left: auto; margin-right: auto;
+  text-shadow: 0 2px 22px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
 }
 .quarto-title-banner .subtitle,
 header#title-block-header:has(.quarto-title-banner) .subtitle {
   color: #eef5f0 !important;
+  font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.5vw, 1.8rem);
+  line-height: 1.3;
   opacity: .96;
+  max-width: 40ch;
+  margin-left: auto; margin-right: auto;
   text-shadow: 0 1px 12px rgba(0,0,0,.6);
 }
 
