@@ -30,10 +30,14 @@ destacados <- arboles %>%
   background:
     radial-gradient(ellipse 72% 58% at 50% 48%, rgba(0,0,0,.40) 0%, rgba(0,0,0,0) 70%),
     linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.05) 28%, rgba(0,0,0,0) 55%, rgba(12,20,15,.60) 100%); }
-.home-hero-inner{ position:relative; z-index:1; text-align:center; color:#fff; padding:3rem 1.5rem; max-width:820px; }
-.home-hero-mark{ font-size:.95rem; letter-spacing:.20em; text-transform:uppercase; font-weight:600; opacity:.97; margin-bottom:1rem; text-shadow:0 2px 12px rgba(0,0,0,.6); }
-.home-hero-title{ font-family:'Fraunces', Georgia, serif; color:#fff; font-size:clamp(3rem,7vw,5.4rem); font-weight:600; margin:.1rem 0; line-height:1.0; text-shadow:0 2px 22px rgba(0,0,0,.55); }
-.home-hero-lema{ font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:clamp(1.2rem,2.6vw,1.8rem); margin:.6rem auto 1.1rem; max-width:660px; text-shadow:0 2px 16px rgba(0,0,0,.7); }
+/* El título es el ancla del centrado: la marca (arriba) y el resto (abajo)
+   salen del flujo, así "Arboretum" queda centrado en el MISMO lugar que los
+   títulos de las secciones (no "salta" al navegar). */
+.home-hero-inner{ position:relative; z-index:1; text-align:center; color:#fff; padding:0 1.5rem; max-width:820px; width:100%; }
+.home-hero-mark{ position:absolute; bottom:100%; left:0; right:0; margin-bottom:1rem; font-size:.95rem; letter-spacing:.20em; text-transform:uppercase; font-weight:600; opacity:.97; text-shadow:0 2px 12px rgba(0,0,0,.6); white-space:nowrap; }
+.home-hero-title{ font-family:'Fraunces', Georgia, serif; color:#fff; font-size:clamp(3rem,7vw,5.4rem); font-weight:600; margin:0; line-height:1.0; text-shadow:0 2px 22px rgba(0,0,0,.55); }
+.home-hero-rest{ position:absolute; top:100%; left:0; right:0; margin-top:.9rem; }
+.home-hero-lema{ font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:clamp(1.2rem,2.6vw,1.8rem); margin:.2rem auto 1.1rem; max-width:660px; text-shadow:0 2px 16px rgba(0,0,0,.7); }
 .home-hero-loc{ font-size:.95rem; opacity:.95; margin-bottom:1.5rem; text-shadow:0 1px 10px rgba(0,0,0,.7); }
 .home-hero-btns{ display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; }
 .home-hero-ghost{ background:rgba(255,255,255,.14); color:#fff !important; border:2px solid #fff; }
@@ -44,11 +48,13 @@ destacados <- arboles %>%
   <div class="home-hero-inner">
     <div class="home-hero-mark">Estancia La Constancia</div>
     <h1 class="home-hero-title">Arboretum</h1>
-    <p class="home-hero-lema">Un espacio donde la naturaleza educa, inspira y sana</p>
-    <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
-    <div class="home-hero-btns">
-      <a href="experiencias.html" class="btn btn-success btn-lg" role="button">Ver experiencias</a>
-      <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Apadriná un árbol</a>
+    <div class="home-hero-rest">
+      <p class="home-hero-lema">Un espacio donde la naturaleza educa, inspira y sana</p>
+      <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
+      <div class="home-hero-btns">
+        <a href="experiencias.html" class="btn btn-success btn-lg" role="button">Ver experiencias</a>
+        <a href="apadrina.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Apadriná un árbol</a>
+      </div>
     </div>
   </div>
 </section>
