@@ -356,24 +356,30 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
 .quarto-title-banner {
   position: relative;
   background-size: cover !important;
-  background-position: center 45% !important;
-  min-height: 46vh;
+  background-position: center center !important;
+  min-height: 100vh;                 /* pantalla completa: la sección no queda partida */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 3.4rem;
-  padding-bottom: 2.8rem;
+  justify-content: center;           /* texto centrado vertical */
+  align-items: center;               /* y horizontal */
+  text-align: center;
+  padding: 5rem 1.5rem;
 }
 .quarto-title-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* Degradé suave sólo abajo: la foto se ve completa y cálida, y el texto queda legible */
-  background: linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 38%, rgba(10,20,15,.58) 100%);
+  /* Oscurecido suave + halo central para que el texto centrado se lea sobre cualquier foto
+     (incluidas las muy claras) sin perder calidez */
+  background:
+    radial-gradient(ellipse 72% 58% at 50% 48%, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.10) 26%, rgba(0,0,0,0) 45%, rgba(0,0,0,.30) 100%);
   pointer-events: none;
 }
+.quarto-title-banner .quarto-title-block,
+.quarto-title-banner .quarto-title { text-align: center; }
 @media (max-width: 768px){
-  .quarto-title-banner{ min-height: 40vh; padding-top: 2.4rem; padding-bottom: 2.2rem; }
+  .quarto-title-banner{ min-height: 90vh; padding: 4rem 1.2rem; }
 }
 .quarto-title-banner .quarto-title,
 .quarto-title-banner .quarto-title-meta,
@@ -384,7 +390,7 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
 }
 .quarto-title-banner .title {
   color: #ffffff !important;
-  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+  text-shadow: 0 2px 20px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
 }
 .quarto-title-banner .subtitle,
 header#title-block-header:has(.quarto-title-banner) .subtitle {
@@ -606,3 +612,57 @@ a.stat { text-decoration: none; color: inherit; display: block; }
   .mega-head p{ display:none; }
   .mega-cta{ display:inline-block; margin:.1rem 1rem .5rem; color:#E8B923 !important; font-weight:600; text-decoration:none; }
 }
+
+/* ============================================================
+   Navbar transparente sobre el hero (estilo ArbNet)
+   - Transparente sólo cuando está arriba del todo, sobre la foto
+   - Verde sólida al pasar el mouse, y al hacer scroll (headroom--not-top)
+   - En páginas SIN banner la barra sigue verde sólida (regla .navbar de arriba)
+   ============================================================ */
+.quarto-banner.headroom--top .navbar,
+body:has(.home-hero) #quarto-header.headroom--top .navbar{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background-color .28s ease;
+}
+.quarto-banner.headroom--top .navbar .navbar-title,
+.quarto-banner.headroom--top .navbar .nav-link,
+.quarto-banner.headroom--top .navbar .navbar-brand,
+body:has(.home-hero) #quarto-header.headroom--top .navbar .navbar-title,
+body:has(.home-hero) #quarto-header.headroom--top .navbar .nav-link,
+body:has(.home-hero) #quarto-header.headroom--top .navbar .navbar-brand{
+  text-shadow: 0 1px 2px rgba(0,0,0,.9), 0 1px 12px rgba(0,0,0,.55);
+}
+/* El logo (SVG) también necesita un halo para verse sobre fotos claras */
+.quarto-banner.headroom--top .navbar .navbar-brand img,
+.quarto-banner.headroom--top .navbar .navbar-logo,
+body:has(.home-hero) #quarto-header.headroom--top .navbar .navbar-brand img,
+body:has(.home-hero) #quarto-header.headroom--top .navbar .navbar-logo{
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.7));
+}
+.quarto-banner.headroom--top .navbar:hover .navbar-brand img,
+.quarto-banner.headroom--top .navbar:hover .navbar-logo,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover .navbar-brand img,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover .navbar-logo{
+  filter: none;
+}
+/* al pasar el mouse -> verde sólida (sin sombra de texto) */
+.quarto-banner.headroom--top .navbar:hover,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover{
+  background-color:#1E4A38 !important;
+}
+.quarto-banner.headroom--top .navbar:hover .navbar-title,
+.quarto-banner.headroom--top .navbar:hover .nav-link,
+.quarto-banner.headroom--top .navbar:hover .navbar-brand,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover .navbar-title,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover .nav-link,
+body:has(.home-hero) #quarto-header.headroom--top .navbar:hover .navbar-brand{
+  text-shadow:none;
+}
+
+/* En páginas con hero (portada o secciones con banner), el hero llega hasta
+   el borde superior, detrás de la barra fija -> la barra transparente muestra la foto */
+body:has(.quarto-title-banner),
+body:has(.home-hero){ padding-top:0 !important; }
+/* Portada: el hero es lo primero, sin margen superior, pegado a la barra */
+body:has(.home-hero) main#quarto-document-content{ margin-top:0 !important; padding-top:0 !important; }
