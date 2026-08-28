@@ -296,6 +296,46 @@ Tip
 </section>
 
 </main> <!-- /main -->
+<script>
+(function(){
+  var MEGA = {
+    "Explorar": {t:"Explorá la colección", d:"Recorré el arboretum: mapa interactivo, recorrido autoguiado, catálogo de especies, aves y banco de semillas.", href:"explorar.html"},
+    "Visitas Educativas": {t:"Aprender en la naturaleza", d:"Programas, materiales y actividades para escuelas y grupos, por nivel educativo.", href:"visitas_escolares.html"},
+    "Investigación": {t:"Ciencia y biodiversidad", d:"Relevamientos, estadísticas y monitoreo de la flora y la fauna del arboretum.", href:"biodiversidad.html"}
+  };
+  function build(){
+    document.querySelectorAll('.navbar .nav-item.dropdown').forEach(function(item){
+      if(item.dataset.mega) return;
+      var toggle=item.querySelector('.dropdown-toggle, .nav-link');
+      var key=(toggle?toggle.textContent:'').replace(/\s+/g,' ').trim();
+      var cfg=MEGA[key];
+      var menu=item.querySelector('.dropdown-menu'); if(!menu) return;
+      menu.querySelectorAll('.dropdown-divider, .dropdown-header').forEach(function(e){e.remove();});
+      var links=[].slice.call(menu.querySelectorAll('.dropdown-item'));
+      if(cfg){ links=links.filter(function(a){ return a.textContent.replace(/\s+/g,' ').trim()!==cfg.t; }); }
+      var wrap=document.createElement('div'); wrap.className='megawrap';
+      if(cfg){
+        var head=document.createElement('div'); head.className='mega-head';
+        head.innerHTML='<h3>'+cfg.t+'</h3><p>'+cfg.d+'</p><a class="mega-cta" href="'+cfg.href+'">Explorá &#8594;</a>';
+        wrap.appendChild(head);
+      }
+      var grid=document.createElement('div'); grid.className='mega-links';
+      links.forEach(function(a){ grid.appendChild(a); });
+      wrap.appendChild(grid);
+      menu.innerHTML=''; menu.appendChild(wrap);
+      item.dataset.mega="1";
+    });
+    if(location.search.indexOf('open')>=0){
+      var idx=1; var mm=location.search.match(/open=(\d+)/); if(mm) idx=parseInt(mm[1]);
+      var c=document.querySelector('.navbar-collapse'); if(c) c.classList.add('show');
+      var items=document.querySelectorAll('.navbar .nav-item.dropdown');
+      var d=items[idx-1];
+      if(d){ d.classList.add('show'); var m=d.querySelector('.dropdown-menu'); if(m) m.classList.add('show'); }
+    }
+  }
+  if(document.readyState!=='loading') build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

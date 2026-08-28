@@ -356,20 +356,24 @@ figure figcaption, .figure-caption, .quarto-figure figcaption {
 .quarto-title-banner {
   position: relative;
   background-size: cover !important;
-  background-position: center 35% !important;
+  background-position: center 45% !important;
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding-top: 3.4rem;
-  padding-bottom: 3.4rem;
+  padding-bottom: 2.8rem;
 }
 .quarto-title-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* Degradé reforzado del lado del texto (izquierda) + leve oscurecido general,
-     para legibilidad sobre fotos aéreas muy detalladas */
-  background:
-    linear-gradient(90deg, rgba(20,55,40,.68) 0%, rgba(20,55,40,.38) 48%, rgba(20,55,40,.20) 100%),
-    linear-gradient(rgba(20,55,40,.10), rgba(20,55,40,.44));
+  /* Degradé suave sólo abajo: la foto se ve completa y cálida, y el texto queda legible */
+  background: linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 38%, rgba(10,20,15,.58) 100%);
   pointer-events: none;
+}
+@media (max-width: 768px){
+  .quarto-title-banner{ min-height: 40vh; padding-top: 2.4rem; padding-bottom: 2.2rem; }
 }
 .quarto-title-banner .quarto-title,
 .quarto-title-banner .quarto-title-meta,
@@ -567,3 +571,38 @@ a.stat { text-decoration: none; color: inherit; display: block; }
 /* Leyenda compacta reutilizable */
 .iucn-legend{ display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin:.4rem 0 0; }
 .iucn-legend .iucn-badge{ cursor:default; }
+
+/* =====================================================
+   Mega-menú (estilo ArbNet): panel a todo el ancho con
+   título, descripción, CTA y grilla de secciones.
+   En mobile queda como acordeón (sin cortar palabras).
+===================================================== */
+.megawrap{ display:block; }
+.mega-head h3{ font-family:'Fraunces',Georgia,serif; font-weight:600; }
+.mega-links .dropdown-item{ white-space:normal; overflow-wrap:break-word; }
+@media (min-width:992px){
+  .navbar{ position:relative; }
+  .navbar .nav-item.dropdown{ position:static; }
+  .navbar .nav-item.dropdown:hover > .dropdown-menu{ display:block; }
+  .navbar .nav-item.dropdown:hover > .nav-link{ box-shadow:inset 0 -3px 0 #E8B923; }
+  .navbar .dropdown-menu{
+    position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    width:100vw; margin:0; border:0; border-radius:0; padding:34px 0 40px;
+    background:#173a2c; box-shadow:0 14px 26px rgba(0,0,0,.20);
+  }
+  .megawrap{ max-width:1180px; margin:0 auto; padding:0 24px; display:grid;
+    grid-template-columns:340px 1fr; gap:8px 48px; align-items:start; }
+  .mega-head h3{ color:#fff; font-size:1.9rem; margin:0 0 .5rem; }
+  .mega-head p{ color:#c7d3cb; font-size:.98rem; line-height:1.5; margin:0 0 1rem; max-width:300px; }
+  .mega-cta{ color:#E8B923 !important; font-weight:600; text-decoration:none; border-bottom:2px solid #E8B923; padding-bottom:3px; }
+  .mega-links{ display:grid; grid-template-columns:1fr 1fr; gap:0 44px; }
+  .navbar .dropdown-menu .dropdown-item{ color:#fff; font-size:1.15rem; padding:.75rem 0;
+    border-bottom:1px solid rgba(255,255,255,.14); background:transparent; }
+  .navbar .dropdown-menu .dropdown-item:hover,
+  .navbar .dropdown-menu .dropdown-item:focus{ color:#E8B923; background:transparent; }
+}
+@media (max-width:991.98px){
+  .mega-head h3{ color:#fff; font-size:1.05rem; margin:.5rem 1rem .2rem; }
+  .mega-head p{ display:none; }
+  .mega-cta{ display:inline-block; margin:.1rem 1rem .5rem; color:#E8B923 !important; font-weight:600; text-decoration:none; }
+}
