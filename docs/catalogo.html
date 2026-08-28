@@ -2166,6 +2166,22 @@ Hemisferio Norte
   if(document.readyState!=='loading') build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 </script>
+
+<!-- Barra EN: transparente sobre el hero, verde sólida al hacer scroll -->
+<script>
+(function(){
+  function initEnNav(){
+    var nav=document.querySelector('.en-nav');
+    if(!nav) return;
+    var hero=document.querySelector('.home-hero, .quarto-title-banner');
+    if(!hero) return; // páginas sin hero quedan siempre sólidas (CSS por defecto)
+    function upd(){ if(window.scrollY>40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+    upd();
+    window.addEventListener('scroll', upd, {passive:true});
+  }
+  if(document.readyState!=='loading') initEnNav(); else document.addEventListener('DOMContentLoaded', initEnNav);
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

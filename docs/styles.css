@@ -59,6 +59,16 @@ h1, h2, h3 { color: #1E4A38; }
   width: auto;
 }
 
+/* --- Nombre "Arboretum" en la barra ---
+   En desktop se muestra COMPLETO (por defecto Quarto lo recorta como "Arbor…").
+   En mobile se oculta (queda solo el logo de La Constancia), para una barra más limpia. */
+.navbar-brand-container{ max-width: none !important; }
+.navbar-brand-container a.navbar-brand{ overflow: visible !important; }
+.navbar-title{ overflow: visible !important; text-overflow: clip !important; max-width: none !important; }
+@media (max-width: 991.98px){
+  .navbar-brand-container a.navbar-brand:not(.navbar-brand-logo){ display: none !important; }
+}
+
 /* ---- Responsive / móvil ---- */
 
 /* En teléfonos y tablets en vertical, las tarjetas en grilla se apilan
@@ -595,10 +605,22 @@ a.stat { text-decoration: none; color: inherit; display: block; }
    Barra de idioma para las páginas en inglés (/en/)
    ===================================================== */
 .en-nav{
+  position:fixed; top:0; left:0; right:0; z-index:1030;
   display:flex; flex-wrap:wrap; align-items:center; gap:.2rem 1.1rem;
-  background:#1E4A38; color:#fff; padding:.55rem 1rem; border-radius:10px;
-  margin:0 0 1.6rem; font-size:.92rem;
+  background:#1E4A38; color:#fff; padding:.6rem 1.4rem; border-radius:0;
+  margin:0; font-size:.92rem;
+  transition:background-color .28s ease;
 }
+/* Transparente sobre el hero (portada y secciones con banner), arriba del todo;
+   se vuelve verde sólida al hacer scroll (clase .scrolled la agrega el JS). */
+body:has(.home-hero) .en-nav:not(.scrolled),
+body:has(.quarto-title-banner) .en-nav:not(.scrolled){ background:transparent; box-shadow:none; }
+body:has(.home-hero) .en-nav:not(.scrolled) a,
+body:has(.home-hero) .en-nav:not(.scrolled) .brand,
+body:has(.quarto-title-banner) .en-nav:not(.scrolled) a,
+body:has(.quarto-title-banner) .en-nav:not(.scrolled) .brand{ text-shadow:0 1px 8px rgba(0,0,0,.7); }
+/* En páginas EN sin hero, el contenido arranca debajo de la barra fija */
+body:has(.en-nav):not(:has(.home-hero)):not(:has(.quarto-title-banner)) main#quarto-document-content{ padding-top:4.2rem; }
 .en-nav .brand{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.05rem; margin-right:.4rem; }
 .en-nav a{ color:#eaf3ee !important; text-decoration:none; padding:.15rem .1rem; }
 .en-nav a:hover{ color:#fff !important; text-decoration:underline; }

@@ -250,31 +250,40 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <style>
+/* Hero a pantalla completa, a todo el ancho, cálido (mismo diseño que la versión ES) */
 .home-hero{
-  position:relative; width:100%; min-height:72vh; margin:0 0 2rem 0;
-  background-image:linear-gradient(rgba(30,74,56,.32),rgba(30,74,56,.52)), url('../fotos/eventos/aerea_1.jpg');
-  background-size:cover; background-position:center; border-radius:14px;
+  position:relative; width:100vw; margin-left:calc(50% - 50vw); margin-bottom:2rem; min-height:100vh;
+  background-image:url('../fotos/eventos/aerea_1.jpg');
+  background-size:cover; background-position:center;
   display:flex; align-items:center; justify-content:center;
 }
-.home-hero-inner{ text-align:center; color:#fff; padding:3rem 1.5rem; max-width:760px; }
-.home-hero-mark{ font-size:1rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; opacity:.95; margin-bottom:1.1rem; text-shadow:0 2px 12px rgba(0,0,0,.7); }
-.home-hero-title{ color:#fff; font-size:clamp(2.6rem,6vw,4.4rem); font-weight:800; margin:.1rem 0; line-height:1.05; text-shadow:0 2px 20px rgba(0,0,0,.75); }
-.home-hero-lema{ font-size:clamp(1.1rem,2.4vw,1.6rem); margin:.5rem auto 1rem; max-width:620px; text-shadow:0 2px 14px rgba(0,0,0,.85); }
-.home-hero-loc{ font-size:.95rem; opacity:.95; margin-bottom:1.6rem; text-shadow:0 1px 10px rgba(0,0,0,.85); }
+.home-hero::before{ content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 72% 58% at 50% 48%, rgba(0,0,0,.40) 0%, rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.05) 28%, rgba(0,0,0,0) 55%, rgba(12,20,15,.60) 100%); }
+/* El título es el ancla del centrado: la marca (arriba) y el resto (abajo) salen del flujo */
+.home-hero-inner{ position:relative; z-index:1; text-align:center; color:#fff; padding:0 1.5rem; max-width:820px; width:100%; }
+.home-hero-mark{ position:absolute; bottom:100%; left:0; right:0; margin-bottom:1rem; font-size:.95rem; letter-spacing:.20em; text-transform:uppercase; font-weight:600; opacity:.97; text-shadow:0 2px 12px rgba(0,0,0,.6); white-space:nowrap; }
+.home-hero-title{ font-family:'Fraunces', Georgia, serif; color:#fff; font-size:clamp(3rem,7vw,5.4rem); font-weight:600; margin:0; line-height:1.0; text-shadow:0 2px 22px rgba(0,0,0,.55); }
+.home-hero-rest{ position:absolute; top:100%; left:0; right:0; margin-top:.9rem; }
+.home-hero-lema{ font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:clamp(1.2rem,2.6vw,1.8rem); margin:.2rem auto 1.1rem; max-width:660px; text-shadow:0 2px 16px rgba(0,0,0,.7); }
+.home-hero-loc{ font-size:.95rem; opacity:.95; margin-bottom:1.5rem; text-shadow:0 1px 10px rgba(0,0,0,.7); }
 .home-hero-btns{ display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; }
 .home-hero-ghost{ background:rgba(255,255,255,.14); color:#fff !important; border:2px solid #fff; }
 .home-hero-ghost:hover{ background:rgba(255,255,255,.28); color:#fff !important; }
-@media(max-width:768px){ .home-hero{ min-height:58vh; } }
+@media(max-width:768px){ .home-hero{ min-height:88vh; } }
 </style>
 <section class="home-hero">
   <div class="home-hero-inner">
     <div class="home-hero-mark">Estancia La Constancia</div>
     <h1 class="home-hero-title">Arboretum</h1>
-    <p class="home-hero-lema">A place where nature educates, inspires and heals</p>
-    <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
-    <div class="home-hero-btns">
-      <a href="experiences.html" class="btn btn-success btn-lg" role="button">See experiences</a>
-      <a href="sponsor.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Sponsor a tree</a>
+    <div class="home-hero-rest">
+      <p class="home-hero-lema">A place where nature educates, inspires and heals</p>
+      <p class="home-hero-loc"><i class="bi bi-geo-alt"></i> Mar del Plata · Buenos Aires · Argentina</p>
+      <div class="home-hero-btns">
+        <a href="experiences.html" class="btn btn-success btn-lg" role="button">See experiences</a>
+        <a href="sponsor.html" class="btn btn-lg home-hero-ghost" role="button"><i class="bi bi-tree"></i> Sponsor a tree</a>
+      </div>
     </div>
   </div>
 </section>
@@ -443,6 +452,22 @@ ul.task-list li input[type="checkbox"] {
     }
   }
   if(document.readyState!=='loading') build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
+
+<!-- Barra EN: transparente sobre el hero, verde sólida al hacer scroll -->
+<script>
+(function(){
+  function initEnNav(){
+    var nav=document.querySelector('.en-nav');
+    if(!nav) return;
+    var hero=document.querySelector('.home-hero, .quarto-title-banner');
+    if(!hero) return; // páginas sin hero quedan siempre sólidas (CSS por defecto)
+    function upd(){ if(window.scrollY>40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+    upd();
+    window.addEventListener('scroll', upd, {passive:true});
+  }
+  if(document.readyState!=='loading') initEnNav(); else document.addEventListener('DOMContentLoaded', initEnNav);
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
