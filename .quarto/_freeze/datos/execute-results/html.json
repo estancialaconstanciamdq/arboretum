@@ -1,0 +1,15 @@
+{
+  "hash": "8ddc3190a05507b8baf32aecd84d7dbc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Datos abiertos\"\nsubtitle: \"Descargá la base del arboretum para investigación y educación\"\nformat: html\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n\n::: {.cell}\n\n:::\n\n\nToda la información del sitio proviene de una única base maestra. Aquí podés\ndescargar esa base en formato abierto (**CSV, UTF-8**) para reutilizarla en\ninvestigación, educación o análisis. Los archivos se regeneran automáticamente\nen cada actualización, así que siempre reflejan la versión más reciente.\n\n## Descargas\n\n| Conjunto | Registros | Descarga |\n|---|---:|---|\n| Árboles (inventario completo) | 91 | [arboles.csv](datos/arboles.csv) |\n| Aves registradas | 46 | [aves.csv](datos/aves.csv) |\n| Puntos de interés | 7 | [puntos_de_interes.csv](datos/puntos_de_interes.csv) |\n\nLas capas geográficas (límite, senderos, sectores, lagunas) estarán disponibles\nen formato **GeoJSON** a medida que se incorporen al sistema.\n\n## Contenido de los archivos\n\nEl archivo de árboles incluye, entre otros campos: identificador (`ID`), nombres\ncomún y científico, familia, coordenadas, origen (con la categoría normalizada\n`continente_norm`), grupo morfológico (`grupo`) y el enlace estable a la ficha\n(`slug`). La descripción completa de cada campo está en la hoja **Diccionario**\ndel libro maestro.\n\n## Cómo citar\n\n> *Arboretum de Estancia La Constancia.* Base de datos del arboretum.\n> Disponible en: https://estancialaconstanciamdq.github.io/arboretumdatalab/\n\n## Licencia y uso\n\nLos datos se comparten con fines de investigación, conservación y educación. Al\nreutilizarlos, se agradece citar la fuente. Para usos comerciales o publicaciones,\npor favor contactá al equipo del establecimiento.\n\n---\n\n*Los archivos se generan automáticamente desde `data/Arboretum_Master.xlsx` en cada render.*\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

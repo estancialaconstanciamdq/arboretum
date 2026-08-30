@@ -1,0 +1,15 @@
+{
+  "hash": "e0340df023df3eaab449abb1af8fe4cf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Apadriná un árbol\"\ntoc: true\ntoc-title: \"En esta página\"\ntoc-location: right\nsubtitle: \"Sumate a la conservación del Arboretum de La Constancia\"\nformat: html\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n\n::: {.cell}\n\n:::\n\n\nCada árbol del arboretum tiene una historia. **Apadrinando un ejemplar ayudás a\ncuidarlo, estudiarlo y darlo a conocer** — y dejás tu huella en un ser vivo que\npuede acompañar a varias generaciones.\n\nEs una forma hermosa de celebrar una fecha, homenajear a alguien o simplemente\nser parte de un proyecto de conservación.\n\n## Cómo funciona\n\n::: grid\n\n::: {.g-col-4 .card .p-3 .shadow-sm .text-center}\n### 1. Elegí tu árbol\nRecorré el [catálogo de especies](catalogo.qmd) o el [mapa](mapa.qmd) y elegí el\nejemplar que más te guste.\n:::\n\n::: {.g-col-4 .card .p-3 .shadow-sm .text-center}\n### 2. Apadrinalo\nEscribinos y coordinamos el padrinazgo. Podés hacerlo a tu nombre, como **regalo**\no en **homenaje** a alguien.\n:::\n\n::: {.g-col-4 .card .p-3 .shadow-sm .text-center}\n### 3. Dejá tu huella\nTu nombre (o el de la persona homenajeada) aparece en la **ficha del árbol** y\npodés visitarlo cuando quieras.\n:::\n\n:::\n\n## Niveles de padrinazgo\n\n::: grid\n\n::: {.g-col-4 .card .p-3 .shadow-sm}\n### 🌱 Amigo del Arboretum\n\n- Tu nombre en la ficha del árbol\n- Certificado digital de padrinazgo\n- Novedades del arboretum\n:::\n\n::: {.g-col-4 .card .p-3 .shadow-sm style=\"border-top:3px solid #1E4A38;\"}\n### <i class=\"bi bi-tree\"></i> Padrino / Madrina\n\n- Todo lo anterior\n- Tu nombre también en la **etiqueta física** junto al árbol\n- Una visita guiada para «2» personas\n:::\n\n::: {.g-col-4 .card .p-3 .shadow-sm}\n### 🌲 Benefactor\n\n- Todo lo anterior\n- Reconocimiento destacado en el sitio\n- Ideal para **empresas** o instituciones\n:::\n\n:::\n\n::: {.callout-note}\nLos montos y beneficios son un punto de partida para ajustar según el proyecto.\n:::\n\n## Un regalo con raíces\n\n¿Buscás un regalo distinto? Apadrinar un árbol es un obsequio original y con\nsentido para cumpleaños, casamientos, nacimientos o para recordar a un ser querido.\nEntregamos un **certificado personalizado** con el nombre del árbol y su ubicación.\n\n## Quiero apadrinar un árbol\n\nEscribinos y te contamos los pasos:\n\n- <i class=\"bi bi-envelope\"></i> Correo: [laconstanciaargentina@gmail.com](mailto:laconstanciaargentina@gmail.com)\n- 📱 WhatsApp: [+54 9 11 5736 0940](https://wa.me/5491157360940)\n- <i class=\"bi bi-instagram\"></i> Instagram: [@laconstanciadebiocca](https://instagram.com/laconstanciadebiocca)\n\n[Ver los árboles disponibles →](catalogo.qmd){.btn .btn-success role=\"button\"}\n\n---\n\n*Tu aporte se destina al cuidado, estudio y difusión del patrimonio natural de\nEstancia La Constancia.*\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

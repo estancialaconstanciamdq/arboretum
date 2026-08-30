@@ -10,8 +10,8 @@ resources:
    - fotos/**
    - qr/**
    - recursos/**
-   - videos/*.mp4
-   - videos/*.jpg
+   - videos/visitas_educativas.mp4
+   - videos/visitas_educativas_poster.jpg
    - programas/programa_inicial.pdf
    - programas/programa_primaria.pdf
    - programas/programa_secundaria.pdf

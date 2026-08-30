@@ -236,10 +236,11 @@ Agradecemos a las instituciones que apoyan y acompañan el desarrollo del arbore
 ```{=html}
 <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem 3rem; margin:1.2rem 0 .5rem;">
   <img src="fotos/rotary_mdp_sud.png" alt="Rotary Club Mar del Plata Sud" style="height:82px; width:auto;" loading="lazy">
-  <img src="fotos/somos.jpg" alt="SOMOS Recursos Humanos" style="height:66px; width:auto;" loading="lazy">
+  <img src="fotos/embassy_of_australia_argentina.png" alt="Embajada de Australia en Argentina" style="height:62px; width:auto;" loading="lazy">
 </div>
 ```
 
-<div style="text-align:center; margin-top:3rem;">
-  <img src="fotos/LogoARBN.jpg" alt="Estancia La Constancia" style="width:180px; max-width:45%; opacity:.95;">
+<div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem 3rem; margin-top:3rem;">
+  <img src="fotos/LogoARBN.jpg" alt="ArbNet Accredited Arboretum" style="width:180px; max-width:45%; opacity:.95;">
+  <img src="fotos/somos.jpg" alt="SOMOS Recursos Humanos" style="height:115px; width:auto;" loading="lazy">
 </div>

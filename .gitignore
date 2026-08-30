@@ -1,17 +1,15 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+# No versionar los videos grandes de origen.
+# El sitio usa YouTube; el único video local publicado es el clip educativo.
+videos/*
+!videos/visitas_educativas.mp4
+!videos/visitas_educativas_poster.jpg
 
-/.quarto/
+# La carpeta docs/videos la regenera Quarto en cada render;
+# solo se publica el clip educativo (el resto son copias pesadas innecesarias).
+docs/videos/*
+!docs/videos/visitas_educativas.mp4
+!docs/videos/visitas_educativas_poster.jpg
 
-# Archivos temporales de Excel (lock files)
-~$*.xlsx
-
-# Videos originales pesados: NO subir al repo (GitHub limita a 100 MB por archivo).
-# Usar las versiones .mp4 comprimidas, o embeber desde YouTube/Vimeo.
-videos/*.mov
-videos/Spot-Institucional*
-videos/visitas_educativas_maria.mp4
-
-**/*.quarto_ipynb
+# Sistema
+.DS_Store
+Thumbs.db
