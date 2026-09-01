@@ -13,3 +13,7 @@ docs/videos/*
 # Sistema
 .DS_Store
 Thumbs.db
+.Rproj.user
+
+/.quarto/
+**/*.quarto_ipynb

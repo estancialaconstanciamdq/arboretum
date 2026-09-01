@@ -31,6 +31,14 @@ campo <- function(etiqueta, valor, italic = FALSE, sufijo = "") {
 # Planting year comes in as numeric (2004) -> print without decimals
 fmt_anio <- function(x) if (tiene_valor(x)) as.character(as.integer(x)) else x
 
+# Dates -> dd/mm/aaaa. Acepta columnas de fecha de Excel (Date/POSIXt) o texto.
+fmt_fecha <- function(x) {
+  if (!tiene_valor(x)) return("")
+  if (inherits(x, "Date"))   return(format(x, "%d/%m/%Y"))
+  if (inherits(x, "POSIXt"))  return(format(as.Date(x), "%d/%m/%Y"))
+  trimws(as.character(x))
+}
+
 construir_ficha <- function(t) {
   titulo <- if (tiene_valor(t$nombre_comun)) t$nombre_comun
             else if (tiene_valor(t$nombre_cientifico)) t$nombre_cientifico
@@ -114,11 +122,27 @@ construir_ficha <- function(t) {
     ))
   }
 
-  # Padrinazgo (si existe la columna 'padrino' y tiene valor)
+  # Padrinazgo (si existe la columna 'padrino' y tiene valor).
+  # Columnas opcionales: 'dedicatoria' (ej. "en homenaje a ..."),
+  # 'padrino_desde' y 'padrino_hasta' (fechas de vigencia).
   if ("padrino" %in% names(t) && tiene_valor(t$padrino)) {
+    # Dedicatoria opcional, en cursiva a continuación del nombre
+    ded <- if ("dedicatoria" %in% names(t) && tiene_valor(t$dedicatoria))
+             sprintf(" — *%s*", trimws(t$dedicatoria)) else ""
+
+    # Vigencia opcional (una línea extra dentro de la cita)
+    vig <- ""
+    if ("padrino_desde" %in% names(t) && tiene_valor(t$padrino_desde)) {
+      desde <- fmt_fecha(t$padrino_desde)
+      hasta <- if ("padrino_hasta" %in% names(t) && tiene_valor(t$padrino_hasta))
+                 paste0(" al ", fmt_fecha(t$padrino_hasta)) else ""
+      vig <- sprintf("\n>\n> <span style=\"font-size:.85rem;color:#666;\">Apadrinado del %s%s.</span>",
+                     desde, hasta)
+    }
+
     add(sprintf(
-      "## Padrino / Madrina\n\n> 🌳 Este ejemplar fue apadrinado por **%s**.\n> ¡Gracias por apoyar la conservación del arboretum!\n\n[¿Querés apadrinar un árbol? »](../apadrina.qmd)\n",
-      trimws(t$padrino)
+      "## Padrino / Madrina\n\n> 🌳 Este ejemplar fue apadrinado por **%s**%s.%s\n>\n> ¡Gracias por apoyar la conservación del arboretum!\n\n[¿Querés apadrinar un árbol? »](../apadrina.qmd)\n",
+      trimws(t$padrino), ded, vig
     ))
   }
 
