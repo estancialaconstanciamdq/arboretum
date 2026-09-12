@@ -128,8 +128,8 @@ Cada peso se traduce en algo concreto que mejora el jardín y la experiencia de 
 ### <i class="bi bi-bank"></i> Transferencia
 Sin comisiones, directo:
 
-**Alias:** `COMPLETAR_ALIAS`
-**Titular:** COMPLETAR
+**Alias:** `MAGDALENA.ZURITA`
+**Titular:** Magdalena Zurita
 
 Si nos avisás por correo, te enviamos el comprobante y el certificado.
 :::

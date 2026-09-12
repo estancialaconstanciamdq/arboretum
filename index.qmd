@@ -79,6 +79,84 @@ Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **vi
 </div>
 ```
 
+```{=html}
+<style>
+.agenda{margin:.4rem 0 1rem;}
+.agenda .act{display:flex;align-items:center;gap:20px;background:#fff;border:1px solid #e5e2d8;border-left:5px solid #1E4A38;border-radius:14px;padding:16px 20px;margin-bottom:14px;box-shadow:0 3px 12px rgba(0,0,0,.05);}
+.agenda .date{flex:0 0 88px;text-align:center;background:#1E4A38;color:#fff;border-radius:12px;padding:12px 6px;}
+.agenda .date .d{font-size:2.1rem;font-weight:700;line-height:1;font-family:'Fraunces',Georgia,serif;}
+.agenda .date .m{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#e9c566;margin-top:3px;}
+.agenda .date .w{font-size:.72rem;opacity:.85;margin-top:2px;}
+.agenda .body{flex:1 1 auto;min-width:0;}
+.agenda .body h3{margin:0 0 4px;font-size:1.16rem;color:#2d3631;}
+.agenda .body p{margin:0 0 8px;color:#6b7169;font-size:.94rem;}
+.agenda .meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:#1E4A38;font-weight:600;}
+.agenda .meta span{white-space:nowrap;}
+.agenda .right{flex:0 0 auto;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center;}
+.agenda .price{font-weight:700;color:#1E4A38;font-size:1.02rem;line-height:1.15;}
+.agenda .chip{font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em;}
+.agenda .chip.ok{background:#e7f0ea;color:#1E4A38;}
+.agenda .chip.few{background:#f6eccf;color:#8a6d0b;}
+.agenda .chip.full{background:#eceae6;color:#8a8f88;}
+.agenda-empty{background:#fff;border:1px dashed #cfd2cb;border-radius:12px;padding:22px;text-align:center;color:#6b7169;}
+@media(max-width:640px){ .agenda .act{flex-wrap:wrap;} .agenda .right{width:100%;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;} .agenda .right .btn{flex:1 1 100%;text-align:center;} .agenda .price{font-size:1.1rem;} }
+</style>
+```
+
+::: {.band-warm}
+## Próximas actividades
+
+Visitas guiadas, talleres y experiencias en el arboretum. Reservá tu lugar con anticipación — los cupos son limitados.
+
+```{r}
+#| label: agenda
+#| results: asis
+ag_path <- "data/agenda.csv"
+ag <- if (file.exists(ag_path)) utils::read.csv(ag_path, stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM") else data.frame()
+if (nrow(ag) > 0) {
+  ag$fecha <- as.Date(ag$fecha)
+  ag <- ag[!is.na(ag$fecha) & ag$fecha >= Sys.Date(), ]
+  ag <- ag[order(ag$fecha), ]
+}
+meses <- c("Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic")
+dias  <- c("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado")
+g <- function(r, c, def = "") if (c %in% names(r) && !is.na(r[[c]]) && nzchar(trimws(as.character(r[[c]])))) trimws(as.character(r[[c]])) else def
+if (nrow(ag) == 0) {
+  cat('<div class="agenda-empty">Estamos preparando nuevas actividades. Seguinos en <a href="https://instagram.com/laconstanciadebiocca" target="_blank" rel="noopener">Instagram</a> o escribinos para enterarte primero.</div>')
+} else {
+  cat('<div class="agenda">')
+  for (i in seq_len(nrow(ag))) {
+    r <- ag[i, ]; f <- r$fecha
+    dia <- as.integer(format(f, "%d")); mes <- meses[as.integer(format(f, "%m"))]
+    wd <- dias[as.POSIXlt(f)$wday + 1]; estado <- tolower(g(r, "estado", "abierta"))
+    meta <- c()
+    if (nzchar(g(r, "hora"))) {
+      hp <- strsplit(g(r, "hora"), " · ", fixed = TRUE)[[1]]
+      meta <- c(meta, sprintf('<span>&#128336; %s</span>', hp[1]))
+      if (length(hp) > 1) for (k in 2:length(hp)) meta <- c(meta, sprintf('<span>%s</span>', hp[k]))
+    }
+    if (nzchar(g(r, "duracion"))) meta <- c(meta, sprintf('<span>&#9203; %s</span>', g(r, "duracion")))
+    if (nzchar(g(r, "lugar")))    meta <- c(meta, sprintf('<span>&#128205; %s</span>', g(r, "lugar")))
+    if (nzchar(g(r, "cupo")))     meta <- c(meta, sprintf('<span>&#128101; %s</span>', g(r, "cupo")))
+    url <- g(r, "inscripcion_url", "#")
+    pr <- g(r, "precio"); price_html <- if (nzchar(pr)) sprintf('<div class="price">%s</div>', gsub(" · ", "<br>", pr)) else ""
+    if (estado == "agotada") {
+      chip <- '<span class="chip full">Agotada</span>'; btn <- '<span class="btn btn-secondary btn-sm disabled">Sin cupo</span>'
+    } else if (estado %in% c("pocos", "pocos lugares")) {
+      chip <- '<span class="chip few">Pocos lugares</span>'; btn <- sprintf('<a class="btn btn-success btn-sm" href="%s" target="_blank" rel="noopener">Inscribirme &rarr;</a>', url)
+    } else {
+      chip <- '<span class="chip ok">Inscripción abierta</span>'; btn <- sprintf('<a class="btn btn-success btn-sm" href="%s" target="_blank" rel="noopener">Inscribirme &rarr;</a>', url)
+    }
+    cat(sprintf('<div class="act"><div class="date"><div class="d">%d</div><div class="m">%s</div><div class="w">%s</div></div><div class="body"><h3>%s</h3><p>%s</p><div class="meta">%s</div></div><div class="right">%s%s%s</div></div>',
+      dia, mes, wd, g(r, "titulo"), g(r, "descripcion"), paste(meta, collapse = ""), price_html, chip, btn))
+  }
+  cat('</div>')
+}
+```
+
+[Ver toda la agenda →](eventos.qmd){.btn .btn-outline-success .btn-sm role="button"}
+:::
+
 ## Conocé el Arboretum
 
 ::: grid

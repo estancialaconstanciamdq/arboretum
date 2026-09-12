@@ -2461,7 +2461,7 @@
     "href": "datos.html#descargas",
     "title": "Datos abiertos",
     "section": "Descargas",
-    "text": "Descargas\n\n\n\nConjunto\nRegistros\nDescarga\n\n\n\n\nÁrboles (inventario completo)\n91\narboles.csv\n\n\nAves registradas\n46\naves.csv\n\n\nPuntos de interés\n7\npuntos_de_interes.csv\n\n\n\nLas capas geográficas (límite, senderos, sectores, lagunas) estarán disponibles en formato GeoJSON a medida que se incorporen al sistema."
+    "text": "Descargas\n\n\n\nConjunto\nRegistros\nDescarga\n\n\n\n\nÁrboles (inventario completo)\n91\narboles.csv\n\n\nAves registradas\n46\naves.csv\n\n\nPuntos de interés\n10\npuntos_de_interes.csv\n\n\n\nLas capas geográficas (límite, senderos, sectores, lagunas) estarán disponibles en formato GeoJSON a medida que se incorporen al sistema."
   },
   {
     "objectID": "datos.html#contenido-de-los-archivos",
@@ -2657,7 +2657,7 @@
     "href": "donar.html#otras-formas-de-donar",
     "title": "Amigos del Arboretum",
     "section": "Otras formas de donar",
-    "text": "Otras formas de donar\n\n\n Transferencia\nSin comisiones, directo:\nAlias: COMPLETAR_ALIAS Titular: COMPLETAR\nSi nos avisás por correo, te enviamos el comprobante y el certificado.\n\n\n Desde el exterior\n¿Estás fuera de Argentina? Podés donar en dólares:\n Donar con PayPal"
+    "text": "Otras formas de donar\n\n\n Transferencia\nSin comisiones, directo:\nAlias: MAGDALENA.ZURITA Titular: Magdalena Zurita\nSi nos avisás por correo, te enviamos el comprobante y el certificado.\n\n\n Desde el exterior\n¿Estás fuera de Argentina? Podés donar en dólares:\n Donar con PayPal"
   },
   {
     "objectID": "donar.html#por-qué-confiar-en-nosotros",
@@ -5066,6 +5066,13 @@
     "title": "Arboretum",
     "section": "",
     "text": "Estancia La Constancia\n    \n    \n      Un espacio donde la naturaleza educa, inspira y sana\n       Mar del Plata · Buenos Aires · Argentina\n      \n        Ver experiencias\n         Apadriná un árbol"
+  },
+  {
+    "objectID": "index.html#próximas-actividades",
+    "href": "index.html#próximas-actividades",
+    "title": "Arboretum",
+    "section": "Próximas actividades",
+    "text": "Próximas actividades\nVisitas guiadas, talleres y experiencias en el arboretum. Reservá tu lugar con anticipación — los cupos son limitados.\n\n\n\n\n1\n\n\nNov\n\n\nDomingo\n\n\n\n\nRecorrido guiado de primavera\n\n\nDescubrí la colección en flor con nuestros guías y biólogos. Apto para todo público.\n\n\n🕐 10 a 12 h⏳ 2 horas📍 Entrada Principal👥 25 lugares\n\n\n\n\n$20.000 por persona\n\nInscripción abiertaInscribirme →\n\n\n\n\n\n13\n\n\nNov\n\n\nViernes\n\n\n\n\nPaseo Fotográfico de Primavera\n\n\nTres sesiones de dos clases cada una (teórica virtual + práctica): 13 y 14, 20 y 21, y 27 y 28 de noviembre. Podés tomar el paquete completo o una sesión suelta.\n\n\n🕐 Teórica viernes 19–20 h (virtual)Práctica sábados 9:30–12 h📍 Entrada Principal👥 10 lugares por sesión\n\n\n\n\nPaquete (3 sesiones) $50.000Sesión $30.000\n\nInscripción abiertaInscribirme →\n\n\n\n\n\n14\n\n\nNov\n\n\nSábado\n\n\n\n\nBaño de bosque · experiencia de bienestar\n\n\nPráctica guiada de conexión con la naturaleza.\n\n\n🕐 10 a 13 h⏳ 3 horas📍 Entrada Principal👥 15 lugares\n\n\n\n\n$30.000 por persona\n\nInscripción abiertaInscribirme →\n\n\n\n\n\n21\n\n\nNov\n\n\nSábado\n\n\n\n\nTaller de identificación de árboles\n\n\nAprendé a reconocer las especies del arboretum con claves sencillas.\n\n\n🕐 10 a 12 h⏳ 2 horas📍 Entrada Principal👥 15 lugares\n\n\n\n\n$25.000 por persona\n\nInscripción abiertaInscribirme →\n\n\n\nVer toda la agenda →"
   },
   {
     "objectID": "index.html#conocé-el-arboretum",
