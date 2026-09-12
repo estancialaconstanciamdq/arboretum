@@ -99,14 +99,21 @@ Un arboretum (o arboreto) es una colección de árboles y plantas leñosas, **vi
 .agenda .chip.few{background:#f6eccf;color:#8a6d0b;}
 .agenda .chip.full{background:#eceae6;color:#8a8f88;}
 .agenda-empty{background:#fff;border:1px dashed #cfd2cb;border-radius:12px;padding:22px;text-align:center;color:#6b7169;}
+.agenda-head{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:130px;margin-bottom:.6rem;}
+.agenda-head p{max-width:640px;margin:.3rem auto 0;}
+#quarto-document-content .agenda-head h2{margin-top:.3rem;margin-bottom:.4rem;}
+#quarto-document-content .agenda-head h2::after{margin-left:auto;margin-right:auto;}
 @media(max-width:640px){ .agenda .act{flex-wrap:wrap;} .agenda .right{width:100%;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;} .agenda .right .btn{flex:1 1 100%;text-align:center;} .agenda .price{font-size:1.1rem;} }
 </style>
 ```
 
 ::: {.band-warm}
+
+::: {.agenda-head}
 ## Próximas actividades
 
 Visitas guiadas, talleres y experiencias en el arboretum. Reservá tu lugar con anticipación — los cupos son limitados.
+:::
 
 ```{r}
 #| label: agenda
@@ -154,7 +161,6 @@ if (nrow(ag) == 0) {
 }
 ```
 
-[Ver toda la agenda →](eventos.qmd){.btn .btn-outline-success .btn-sm role="button"}
 :::
 
 ## Conocé el Arboretum

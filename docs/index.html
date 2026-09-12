@@ -314,11 +314,17 @@ ul.task-list li input[type="checkbox"] {
 .agenda .chip.few{background:#f6eccf;color:#8a6d0b;}
 .agenda .chip.full{background:#eceae6;color:#8a8f88;}
 .agenda-empty{background:#fff;border:1px dashed #cfd2cb;border-radius:12px;padding:22px;text-align:center;color:#6b7169;}
+.agenda-head{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:130px;margin-bottom:.6rem;}
+.agenda-head p{max-width:640px;margin:.3rem auto 0;}
+#quarto-document-content .agenda-head h2{margin-top:.3rem;margin-bottom:.4rem;}
+#quarto-document-content .agenda-head h2::after{margin-left:auto;margin-right:auto;}
 @media(max-width:640px){ .agenda .act{flex-wrap:wrap;} .agenda .right{width:100%;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;} .agenda .right .btn{flex:1 1 100%;text-align:center;} .agenda .price{font-size:1.1rem;} }
 </style>
-<section id="próximas-actividades" class="level2 band-warm">
+<div class="band-warm">
+<section id="próximas-actividades" class="level2 agenda-head">
 <h2 class="anchored" data-anchor-id="próximas-actividades">Próximas actividades</h2>
 <p>Visitas guiadas, talleres y experiencias en el arboretum. Reservá tu lugar con anticipación — los cupos son limitados.</p>
+</section>
 <div class="agenda">
 <div class="act">
 <div class="date">
@@ -441,8 +447,7 @@ $25.000 por persona
 </div>
 </div>
 </div>
-<p><a href="./eventos.html" class="btn btn-outline-success btn-sm" role="button">Ver toda la agenda →</a></p>
-</section>
+</div>
 <section id="conocé-el-arboretum" class="level2">
 <h2 class="anchored" data-anchor-id="conocé-el-arboretum">Conocé el Arboretum</h2>
 <div class="grid">
