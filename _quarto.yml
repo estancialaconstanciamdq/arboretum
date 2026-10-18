@@ -28,6 +28,7 @@ website:
   navbar:
     background: dark        # navbar oscuro (el verde exacto se aplica en styles.css)
     logo: fotos/logo_la_constancia.svg
+    logo-href: "https://estancialaconstanciamdq.com/"   # click en el logo → vuelve a la web madre
     title: "Arboretum"
     left:
       - text: "Visitá"
